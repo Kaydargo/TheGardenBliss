@@ -1,0 +1,45 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 10-Nov-2019, 10:45:28
+    Author     : Kaydargo
+*/
+
+body{
+    background: darkblue;
+}
+
+.fill{
+    background-image: url("../images/carrot.png");
+    background-color: green;
+    position: relative;
+    height: 150px;
+    width:150px;
+    top:5px;
+    left: 5px;
+    cursor:pointer;
+}
+
+.empty{
+    display: inline-block;
+    height: 160px;
+    width: 160px;
+    margin: 10px;
+    border: 3px solid;
+    background-color: white;
+}
+.hold{
+    border: solid yellow 4px;
+}
+
+.hovered{
+    background: grey;
+    border-style: dashed;
+}
+
+.invisible{
+    display:none;
+}
