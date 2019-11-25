@@ -19,8 +19,6 @@ for (const empty of empties){
     empty.addEventListener('dragleave', dragLeave);
     empty.addEventListener('drop', dragDrop);
 }
-
-
 //Drag Functions
 function dragStart (){
     //console.log('start');
@@ -31,25 +29,28 @@ function dragEnd(){
   //console.log('end');  
   this.className = 'fill';
 }
-
 function dragOver(e){
    e.preventDefault();
    //console.log('over'); 
 }
-
 function dragEnter(e){
     //console.log('enter');
     e.preventDefault();
-    this.className+= ' hovered'; ////Appends to it and hover class
+    this.className+= ' hovered'; //Appends to it and hover class
 }
-
 function dragLeave(){
     //console.log('leave');
-    this.className = 'empty'; ////Replaces hover
+    this.className = 'empty'; //Replaces hover
 }
-
 function dragDrop(){
     //Console.log('drop');
     this.className = 'empty'; //
     this.append(fill);  //Append fill element to empty
+}
+
+document.onDragOver = function(coordinates) {
+    coordinates = coordinates || window.event;
+    var x = coordinates.pageX,
+        y = coordinates.pageY;
+    console.log(x, y);
 }
