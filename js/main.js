@@ -54,11 +54,3 @@ document.onDragOver = function(coordinates) {
         y = coordinates.pageY;
     console.log(x, y);
 }
-
-
-
-
-
-
-
-
