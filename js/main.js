@@ -48,6 +48,7 @@ function dragDrop(){
     this.append(fill);  //Append fill element to empty
 }
 
+////Get co-ordinates from mouse X, Y 
 document.onDragOver = function(coordinates) {
     coordinates = coordinates || window.event;
     var x = coordinates.pageX,

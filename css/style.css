@@ -9,12 +9,12 @@ and open the template in the editor.
 */
 
 body{
-    background: darkblue;
+    background: white;
 }
 
 .fill{
     background-image: url("../images/carrot.png");
-    background-color: green;
+    background-color: grey;
     position: relative;
     height: 150px;
     width:150px;
@@ -31,8 +31,9 @@ body{
     border: 3px solid;
     background-color: white;
 }
+
 .hold{
-    border: solid yellow 4px;
+    border: solid white 4px;
 }
 
 .hovered{
