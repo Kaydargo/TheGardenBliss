@@ -25,6 +25,7 @@
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
 </div> -->
+
         <div class="empty">
             <div class="fill" draggable="true"></div>
              </div>
