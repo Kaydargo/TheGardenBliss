@@ -11,6 +11,7 @@
   <title>Drag&Drop Garden</title>
     </head>
     <body>
+
     <div class="container">
   <h2>Garden Dimensions</h2>
   <!-- <form action="#">
