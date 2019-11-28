@@ -1,4 +1,13 @@
-<!DOCTYPE html>
+<?php
+require('includes/database.php');
+
+    $queryPlant = "SELECT * FROM plant WHERE plantID = plantID"; 
+    $statement1 = $conn->prepare($queryPlant);
+    $statement1->execute();
+    $plants = $statement1->fetchAll();
+    $statement1->closeCursor();
+     ?>
+     <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -27,6 +36,37 @@
   </form>
 </div> -->
 
+        <table class ="table table-responsive">
+                <tr class="table-primary">
+                    <th>Name</th>
+                    <th>Plant</th>
+                </tr>
+                <?php foreach ($plants as $plant) : ?>
+                <tr>  
+                <div class="plants" draggable="true" style="width=200px">
+                    <td><?php echo $plant['plantName']; ?></td>
+                  <td><?php echo "<img src='images/".$plant['plantImage']."' />"; ?>
+                </div>
+                <?php endforeach; ?>
+            </table>
+
+            <h2>Products</h2>
+<div id="list">
+    <div class="plants">product 1</div>
+    <div class="plants">product 2</div>
+    <div class="plants">product 3</div>
+</div>
+
+<hr/>
+
+<h2>Basket</h2>
+<div id="basket">
+
+</div>
+
+
+
+
         <div class="empty">
             <div class="fill" draggable="true"></div>
              </div>
@@ -35,5 +75,6 @@
             <div class="empty"></div>
             <div class="empty"></div>       
         <script src="js/main.js"></script>
+        <script src="js/dragDrop.js"></script>
     </body>
 </html>

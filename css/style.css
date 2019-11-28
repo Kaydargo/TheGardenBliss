@@ -9,13 +9,17 @@ and open the template in the editor.
 */
 
 body{
-    background: white;
+    background-color: white;
+}
+
+img {
+    width: 50px;
 }
 
 .fill{
     background-image: url("../images/carrot.png");
-    background-color: grey;
     position: relative;
+    background-size:contain;
     height: 150px;
     width:150px;
     top:5px;
