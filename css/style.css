@@ -8,6 +8,10 @@ and open the template in the editor.
     Author     : Kaydargo
 */
 
+h1{
+    color: 9CAB6F;
+
+}
 body{
     background-color: white;
 }
@@ -47,4 +51,43 @@ img {
 
 .invisible{
     display:none;
+}
+
+/*
+Plants Page CSS
+*/
+/**************ROOMS/GALLREY CSS****************/
+
+.gallery-nav-links
+{
+  
+    font-size: 20px;
+/*    padding: 30px;   */
+    text-align: center;
+    font-family: 'KoHo', sans-serif;
+    color:#592724;
+}
+
+#vegetablesImages, #fruitsImages, #flowersImages{
+    font-family: 'KoHo', sans-serif;
+    color:#592724;
+}
+
+.galhead{
+    font-family: 'KoHo', sans-serif;
+    color:#592724;
+    margin-bottom: 50px;
+}
+
+.gal-buttons{
+    display: inline;
+    margin-left: 15px;
+    
+}
+.carouselimages{
+    width: 100%;
+    height: 75vh;
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
