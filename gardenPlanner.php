@@ -7,13 +7,15 @@ require('includes/database.php');
     $plants = $statement1->fetchAll();
     $statement1->closeCursor();
      ?>
-     <!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="css/style.css">
@@ -35,7 +37,6 @@ require('includes/database.php');
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
 </div> -->
-
         <table class ="table table-responsive">
                 <tr class="table-primary">
                     <th>Name</th>
@@ -50,7 +51,7 @@ require('includes/database.php');
                 <?php endforeach; ?>
             </table>
 
-            <h2>Products</h2>
+<!--<h2>Products</h2>
 <div id="list">
     <div class="plants">product 1</div>
     <div class="plants">product 2</div>
@@ -63,8 +64,7 @@ require('includes/database.php');
 <div id="basket">
 
 </div>
-
-
+-->
 
 
         <div class="empty">
@@ -74,7 +74,16 @@ require('includes/database.php');
             <div class="empty"></div>
             <div class="empty"></div>
             <div class="empty"></div>       
-        <script src="js/main.js"></script>
+
+
+            <div id="canvas">
+<div id="box"></div>
+</div>
+
+<div id="results"></div>
+
+
+        <!-- <script src="js/main.js"></script> -->
         <script src="js/dragDrop.js"></script>
     </body>
 </html>
