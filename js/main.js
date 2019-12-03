@@ -55,3 +55,40 @@ document.onDragOver = function(coordinates) {
         y = coordinates.pageY;
     console.log(x, y);
 }
+
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+
+
+$(document).ready(function() {
+    $('#media').carousel({
+      pause: true,
+      interval: false,
+    });
+  });
+  
+  $(document).ready(function() {
+    $('#media1').carousel({
+      pause: true,
+      interval: false,
+    });
+  });
+  
+  $(document).ready(function() {
+    $('#media2').carousel({
+      pause: true,
+      interval: false,
+    });
+  });
+  
+  $(document).ready(function() {
+    $('#media3').carousel({
+      pause: true,
+      interval: false,
+    });
+  });
+  
