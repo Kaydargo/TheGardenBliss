@@ -3,3 +3,22 @@
     width:60px;
     height:60px;
 }
+.image1
+{
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 0.75rem #748C1C);
+}
+.plantName 
+{
+text-transform: uppercase;
+text-align: center;
+color: #748C1C;
+font-family: Overpass;
+align-content: center;
+}
+.row1
+{
+    display: flex;
+   align-items:center;
+}
