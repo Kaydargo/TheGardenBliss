@@ -22,3 +22,22 @@ align-content: center;
     display: flex;
    align-items:center;
 }
+.info
+{
+    text-transform: uppercase;
+    text-align: center;
+    color: #748C1C;
+    font-family: Overpass;
+    align-content: center;   
+}
+.titles
+{
+text-align: center;
+}
+.icons
+{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
