@@ -20,9 +20,12 @@ require('includes/database.php');
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="css/style.css">
   <title>Drag&Drop Garden</title>
+  <?php
+    include('includes/header.php');
+        ?>
     </head>
     <body>
-
+<br><br>
     <div class="container">
   <h2>Garden Dimensions</h2>
   <!-- <form action="#">
@@ -37,6 +40,13 @@ require('includes/database.php');
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
 </div> -->
+  <br>
+
+  <!--Garden Planner -->
+  <div class="container-fluid planner">
+    <div class="row">
+        <div class="col-lg-3">
+        <br><br>
         <table class ="table table-responsive">
                 <tr class="table-primary">
                     <th>Name</th>
@@ -44,46 +54,28 @@ require('includes/database.php');
                 </tr>
                 <?php foreach ($plants as $plant) : ?>
                 <tr>  
-                <div class="plants" draggable="true" style="width=200px">
+                <div style="width=200px">
                     <td><?php echo $plant['plantName']; ?></td>
-                  <td><?php echo "<img src='images/".$plant['plantImage']."' />"; ?>
+                  <td><?php echo "<img class='plants' src='images/".$plant['plantIcon']."' />"; ?>
                 </div>
                 <?php endforeach; ?>
             </table>
+      </div>
 
-<!--<h2>Products</h2>
-<div id="list">
-    <div class="plants">product 1</div>
-    <div class="plants">product 2</div>
-    <div class="plants">product 3</div>
-</div>
+        <div class="col-lg-9 gardenPlanner">
+           <!--<div>
+              <div id="box"></div>
+            </div>
+            <div id="results"></div>
+        </div>-->
 
-<hr/>
+        </div>
+  </div>
+  </div>
 
-<h2>Basket</h2>
-<div id="basket">
+<!--Garden Planner End -->
 
-</div>
--->
-
-
-        <div class="empty">
-            <div class="fill" draggable="true"></div>
-             </div>
-            <div class="empty"></div>
-            <div class="empty"></div>
-            <div class="empty"></div>
-            <div class="empty"></div>       
-
-
-            <div id="canvas">
-<div id="box"></div>
-</div>
-
-<div id="results"></div>
-
-
-        <!-- <script src="js/main.js"></script> -->
+        <!--<script src="js/main.js"></script>-->
         <script src="js/dragDrop.js"></script>
     </body>
 </html>
