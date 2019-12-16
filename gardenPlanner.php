@@ -61,13 +61,16 @@ require('includes/database.php');
                 <?php endforeach; ?>
             </table>
       </div>
+
         <div class="col-lg-9 gardenPlanner">
-            <div>
+           <!--<div>
               <div id="box"></div>
             </div>
             <div id="results"></div>
+        </div>-->
+
         </div>
-        </div>
+  </div>
   </div>
 
 <!--Garden Planner End -->

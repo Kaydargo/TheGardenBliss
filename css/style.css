@@ -95,10 +95,11 @@ Plants Page CSS
 .gardenPlanner {
     width: 100%;
     height: 600px;
-    position: relative;
+    /*position: relative;*/
     margin: 2em auto;
     background-image: url('../images/grid.png');
     border: 1px solid black;
+    z-index: 0;
 }
 
 #box {
@@ -107,7 +108,7 @@ Plants Page CSS
     left: 0;
     width: 100px;
     height: 100px;
-    /*background-image: url("../images/carrot.png");*/
+    background-image: url("../images/carrot.png");
     cursor: move;
     background: yellowgreen;
 }
@@ -119,5 +120,4 @@ Plants Page CSS
     cursor: crosshair;
     height: 100px;
     width: 100px;
-    z-index: 10;
 }
