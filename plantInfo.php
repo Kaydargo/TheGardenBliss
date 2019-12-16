@@ -8,7 +8,8 @@ and open the template in the editor.
     include('includes/database.php');
 
 //Form Query
-$queryPlant = "SELECT * FROM plant WHERE plantID = '1'";
+$plant_id = $_GET['plantID'];
+$queryPlant = "SELECT * FROM plant WHERE plantID = $plant_id";
 $statement1 = $conn->prepare($queryPlant);
 $statement1->execute();
 $plants = $statement1->fetchAll();
@@ -37,28 +38,46 @@ $statement1->closeCursor();
       </div> 
    </div> 
 </div>
+<br><br>
 <div class="container"> 
-   <div class="row">
-<table class ="table table-responsive">
-                <tr class="table-primary">
-                    <th>Soil</th>
-                    <th>Placement</th>
-                    <th>Watering</th>
-                    <th>Distance</th>
-                    <th>Depth</th>
-                    <th>Type</th>
-                </tr>
-                <tr>  
-                    <td><?php echo $plant['soil']; ?></td>
-                    <td><?php echo $plant['placement']; ?></td>
-                    <td><?php echo $plant['watering']; ?></td>
-                    <td><?php echo $plant['distance']; ?></td>
-                    <td><?php echo $plant['depth']; ?></td>
-                    <td><?php echo $plant['type']; ?></td>
-                </tr>
-                
-            </table>
-    </div>
+<h3 class="plantName">Planting Information</h3>
+<br>
+<div class="row">
+  <div class="col"><h4 class="info">Soil</h4>
+  <?php
+  if($plant['soil'] == "Sandy")
+  {
+    echo "<img class='icons' src='icons/soil_2.png'>";
+  }
+  else
+  {
+    echo "<img class='icons' src='icons/soil_2.png'>";
+  }
+  ?>
+  <p class="titles"><?php echo $plant['soil']; ?></p>
+  </div>
+  <div class="col"><h4 class="info">Placement</h4>
+  <?php
+  if($plant['placement'] == "Shade")
+  {
+    echo "<img class='icons' src='icons/shade.png'>";
+  }
+  else
+  {
+    echo "<img class='icons' src='icons/sun_2.png'>";
+  }
+  ?>
+  <p class="titles"><?php echo $plant['placement']; ?></p>
+  </div>
+  <div class="col"><h4 class="info">Depth</h4>
+  <img class="icons" src='icons/depth.png'>
+  <p class="titles"><?php echo $plant['depth']; ?></p>
+  </div>
+  <div class="col"><h4 class="info">Distance</h4>
+  <img class="icons" src='icons/distance.png'>
+  <p class="titles"><?php echo $plant['distance']; ?></p>
+  </div>
+</div> 
 </div>
 <?php endforeach; ?>
     </body>
