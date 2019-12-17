@@ -23,8 +23,6 @@
 
   
   <link href="css/freelancer.min.css" rel="stylesheet">
-
-
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="js/main.js" type="text/javascript"></script>
   <script src="js/jquery-1.11.3min.js.js" type="text/javascript"></script>
