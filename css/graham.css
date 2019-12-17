@@ -36,8 +36,36 @@ text-align: center;
 }
 .icons
 {
-    display: block;
+  display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+}
+.row.display-flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .row.display-flex > [class*='col-'] {
+    flex-grow: 1;
+  }
+  .para
+  {
+      color: white;
+  }
+  .ctnCol
+  {
+      background-color: #748C1C; 
+  }
+.howTo 
+{
+text-transform: uppercase;
+text-align: center;
+color: white;
+font-family: Overpass;
+align-content: center;
+}
+.pad
+{
+    padding-top: 40px;
+    padding-bottom: 40px;
 }

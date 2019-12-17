@@ -14,6 +14,12 @@ $statement1 = $conn->prepare($queryPlant);
 $statement1->execute();
 $plants = $statement1->fetchAll();
 $statement1->closeCursor();
+
+$queryInfo = "SELECT * FROM plantinginfo WHERE plantID = $plant_id";
+$statement2 = $conn->prepare($queryInfo);
+$statement2->execute();
+$plantsInfo = $statement2->fetchAll();
+$statement2->closeCursor();
 ?>
 <html>
     <head>
@@ -29,10 +35,10 @@ $statement1->closeCursor();
     <div class="container"> 
     <?php foreach ($plants as $plant) : ?>
    <div class="row row1"> 
-      <div class="col img-responsive">
-        <?php echo "<img class='image1' src='images/".$plant['plantImage']. "' />"; ?>
+      <div class="col-sm-6">
+        <?php echo "<img class='image1 img-fluid' src='images/".$plant['plantImage']. "' />"; ?>
       </div>
-      <div class="col">
+      <div class="col-sm-6">
           <h3 class="plantName"><?php echo $plant['plantName']; ?></h3>
           <p><?php echo $plant['description']; ?></p>
       </div> 
@@ -42,43 +48,80 @@ $statement1->closeCursor();
 <div class="container"> 
 <h3 class="plantName">Planting Information</h3>
 <br>
-<div class="row">
-  <div class="col"><h4 class="info">Soil</h4>
+<div class="row display-flex">
+  <div class="col-sm"><h4 class="info">Soil</h4>
   <?php
   if($plant['soil'] == "Sandy")
   {
-    echo "<img class='icons' src='icons/soil_2.png'>";
+    echo "<img class='icons img-fluid' src='icons/soil_2.png'>";
   }
   else
   {
-    echo "<img class='icons' src='icons/soil_2.png'>";
+    echo "<img class='icons img-fluid' src='icons/soil_2.png'>";
   }
   ?>
   <p class="titles"><?php echo $plant['soil']; ?></p>
   </div>
-  <div class="col"><h4 class="info">Placement</h4>
+  <div class="col-sm"><h4 class="info">Placement</h4>
   <?php
   if($plant['placement'] == "Shade")
   {
-    echo "<img class='icons' src='icons/shade.png'>";
+    echo "<img class='icons img-fluid' src='icons/shade.png'>";
   }
   else
   {
-    echo "<img class='icons' src='icons/sun_2.png'>";
+    echo "<img class='icons img-fluid' src='icons/sun_2.png'>";
   }
   ?>
   <p class="titles"><?php echo $plant['placement']; ?></p>
   </div>
-  <div class="col"><h4 class="info">Depth</h4>
-  <img class="icons" src='icons/depth.png'>
+  <div class="col-sm"><h4 class="info">Depth</h4>
+  <img class="icons img-fluid" src='icons/depth.png'>
   <p class="titles"><?php echo $plant['depth']; ?></p>
   </div>
-  <div class="col"><h4 class="info">Distance</h4>
-  <img class="icons" src='icons/distance.png'>
+  <div class="col-sm"><h4 class="info">Distance</h4>
+  <img class="icons img-fluid" src='icons/distance.png'>
   <p class="titles"><?php echo $plant['distance']; ?></p>
   </div>
 </div> 
 </div>
+
+<br><br><br>
+<div class="container-fluid ctnCol"> 
+<div class="container pad"> 
+    <?php foreach ($plantsInfo as $plantInfo) : ?>
+   <div class="row row1"> 
+   <div class="col-sm-6">
+          <h3 class="howTo">How to plant</h3>
+          <p class="para"><strong>Step 1: </strong><?php echo $plantInfo['step1']; ?></p>
+          <p class="para"><strong>Step 2: </strong><?php echo $plantInfo['step2']; ?></p>
+          <p class="para"><strong>Step 3: </strong><?php echo $plantInfo['step3']; ?></p>
+          <p class="para"><strong>Step 4: </strong><?php echo $plantInfo['step4']; ?></p>
+      </div> 
+      <div class="col-sm-6">
+        <?php echo "<img class='image1' src='images/".$plantInfo['infoImage']. "' />"; ?>
+      </div>
+   </div> 
+    </div> 
+</div>
+<br><br>
+<div class="container"> 
+<h3 class="plantName">Care</h3>
+<br>
+<div class="row display-flex">
+  <div class="col-sm-4"><h4 class="info">Watering</h4>
+  <img class="icons img-fluid" src='icons/watering_2.png'>
+  <p class="titles"><?php echo $plant['watering']; ?></p>
+  </div>
+  <div class="col-sm-4"><h4 class="info">Aftercare</h4>
+  <p><?php echo $plantInfo['aftercare'] ?></p>
+  </div>
+  <div class="col-sm-4"><h4 class="info">Problems</h4>
+  <p><?php echo $plantInfo['problems'] ?></p>
+  </div>
+</div> 
+</div>
+<?php endforeach; ?>
 <?php endforeach; ?>
     </body>
 
