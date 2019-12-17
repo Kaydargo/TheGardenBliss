@@ -1,3 +1,17 @@
+font-face {
+    font-family: Raylway;
+    src: url(Raylway.ttf);
+}
+
+p{
+    font-size: 14px !important;
+}
+
+.navbar-nav .nav-link {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    font-size: 18px;
+}
 #logo
 {
     width:60px;
@@ -15,7 +29,7 @@ text-transform: uppercase;
 text-align: center;
 color: #748C1C;
 font-family: Overpass;
-align-content: center;
+align-content: left !important;
 }
 .row1
 {
@@ -40,4 +54,67 @@ text-align: center;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+}
+
+a.gal-name-link
+{
+    color:#FFF5DB;
+    font-size: 14px!important;
+}
+
+a.gal-name-link:hover {
+    color: #FFF5DB;
+    text-decoration: none;
+}
+
+
+p.gal-name > a {
+  position: relative;
+  color: #000;
+  text-decoration: none;
+}
+
+p.gal-name > a:hover {
+  color: #000;
+}
+
+p.gal-name > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #808381; /*wont change to #FFF5DB*/
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+
+p.gal-name > a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.carousel-control {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 5% !important;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(0,0,0,.6);
+    background-color: rgba(0,0,0,0);
+    filter: alpha(opacity=50);
+    opacity: .5;
+}
+
+.carousel-caption {
+font-size: 25px !important;
 }
