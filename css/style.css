@@ -127,6 +127,7 @@ Plants Page CSS
 a.gal-name-link
 {
     color:#FFF5DB;
+    font-size: 14px!important;
 }
 
 a.gal-name-link:hover {
@@ -172,7 +173,7 @@ p.gal-name > a:hover:before {
     top: 0;
     bottom: 0;
     left: 0;
-    width: 5%;
+    width: 5% !important;
     font-size: 20px;
     color: #fff;
     text-align: center;
@@ -180,4 +181,8 @@ p.gal-name > a:hover:before {
     background-color: rgba(0,0,0,0);
     filter: alpha(opacity=50);
     opacity: .5;
+}
+
+.carousel-caption {
+font-size: 25px !important;
 }
