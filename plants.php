@@ -11,9 +11,10 @@
   <title>Plants Page</title>
   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
   <!--Bootstrap core -->
- 
-  <!-- Custom fonts for this theme -->
+  <link href="css/graham.css" rel="style">
   <link href="css/style.css" rel="style">
+  <!-- Custom fonts for this theme -->
+
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
@@ -36,13 +37,18 @@
   include('includes/header.php');
   include('includes/database.php');  
   ?>
- <br></br>
- <br></br>
- <br></br>
+ 
 <?php
 //Selects all images, their id and userid with the tag animated
         require('includes/functions.php');
         ?>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
         <!-- Page Content -->
         <div class="container" style="text-align: center;">
         <h1 class="galhead" >Our Range of Plants</h1>
