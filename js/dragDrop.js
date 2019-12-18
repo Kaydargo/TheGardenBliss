@@ -12,10 +12,9 @@ $(".gardenPlanner").droppable({
     accept: ".plants",
     tolerance: "fit",
     drop: function(){
-        $(".plants").append(ui.draggable).draggable();
+        $(".plants").append(ui.draggable);
+        $(".plants").draggable();
     }
-       // ui.draggable.draggable('enable');
-    //}
 });
 
 var coordinates = function(element) {
