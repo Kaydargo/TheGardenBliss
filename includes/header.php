@@ -29,7 +29,7 @@
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="how-to.php">How-To</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="bee-helpful.php">Bee-Helpful</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="beeHelpful.php">Bee-Helpful</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="login.php">Login</a>
