@@ -15,6 +15,8 @@ $(".gardenPlanner").droppable({
         $(".plants").append(ui.draggable);
         $(".plants").draggable();
     }
+       // ui.draggable.draggable('enable');
+    //}
 });
 
 var coordinates = function(element) {
