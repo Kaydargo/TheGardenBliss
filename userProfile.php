@@ -3,7 +3,7 @@
 require('includes/database.php');
 
     $queryUser = "SELECT * FROM users WHERE userID = userID"; 
-    $statement2 = $db->prepare($queryUser);
+    $statement2 = $conn->prepare($queryUser);
     $statement2->execute();
     $users = $statement2->fetchAll();
     $statement2->closeCursor();

@@ -1,22 +1,18 @@
 <?php
-session_start();
 include("loginServ.php");
 include ('includes/header.php');
 ?>
- 
 <!doctype html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Login</title>
-<link href="css/graham.css" rel="stylesheet">
-<link href="css/style.css" rel="style">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/graham.css" rel="stylesheet">  
 </head>
 <body>
+<br><br><br><br><br>
 <div class="login">
-<br>
 <h1 align="center">Login</h1>
-<form method="post" action="loginServer.php">  
+<form method="post" action="loginServ.php">  
                      <label>Enter Username</label>  
                      <input type="text" name="username" required class="form-control" />  
                      <br />  
@@ -34,4 +30,5 @@ include ('includes/header.php');
         <?php unset($_SESSION['errMsg']); ?>
 </div>
 </body>
+<?php include 'includes/footer.php'; ?>
 </html>
