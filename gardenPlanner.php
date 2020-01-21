@@ -24,24 +24,54 @@ require('includes/database.php');
     include('includes/header.php');
         ?>
     </head>
+    <style>h1 {
+  text-align: center;
+  color: black;
+}
+table {
+  height: 525px;
+  width: 525px;
+}
+tr, td, table {
+  border-style: solid;
+  border-width: 1px;
+  background-color: white;
+  margin: auto;
+  margin-top: 20px;
+}
+td {
+  transition: .3s background-color;
+}
+td:hover {
+  background-color: grey;
+}
+button {
+  height: 25px;
+  width: 225px;
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  left: 40%;
+  margin-top: -40px;
+}
+</style>
     <body>
 <br><br>
-    <div class="container">
+    <br><div class="container">
   <h2>Garden Dimensions</h2>
-  <!-- <form action="#">
+ <form action="">
     <div class="form-group">
       <label for="gardenWidth">Garden Width:</label>
-      <input type="text" class="form-control" id="gWidth" placeholder="Enter width of garden" pattern="[0-9]+" name="width" min="0" max="1000">
+      <input type="text" class="form-control" id="gWidth" placeholder="Enter width of garden" pattern="[0-9]+" name="gWidth" min="0" max="30">
     </div>
     <div class="form-group">
       <label for="gardenHeight">Garden Height:</label>
-      <input type="text" class="form-control" id="gHeight" placeholder="Enter height of garden" pattern="[0-9]+" name="height" min="0" max="1000">
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+      <input type="text" class="form-control" id="gHeight" placeholder="Enter height of garden" pattern="[0-9]+" name="gHeight" min="0" max="30">
+    </div><br>
+    <button type="submit" class="btn btn-primary gBtn">Submit</button>
   </form>
-</div> -->
+</div> 
   <br>
-
   <!--Garden Planner -->
   <div class="container-fluid planner">
     <div class="row">
@@ -62,7 +92,7 @@ require('includes/database.php');
             </table>
       </div>
 
-        <div class="col-lg-9 gardenPlanner">
+        <div class="col-lg-9 gardenPlanner" style="height: 1000px;">
            <!--<div>
               <div id="box"></div>
             </div>
@@ -70,6 +100,7 @@ require('includes/database.php');
         </div>-->
 
         </div>
+        <!--<button class="button" type="button">Choose </button>-->
   </div>
   </div>
 
@@ -77,6 +108,6 @@ require('includes/database.php');
 
         <!--<script src="js/main.js"></script>-->
         <script src="js/dragDrop.js"></script>
-        <script src="js/drag2.js"></script>
+        <script src="js/gardenSize.js"></script>
     </body>
 </html>

@@ -1,8 +1,7 @@
 $(function() {
     $( ".draggable" ).draggable({
-        //helper: 'clone'
+        helper: 'clone'
     });
     $( "#droppable" ).droppable({
-
     });
   });

@@ -11,7 +11,7 @@ $(".plants").draggable({
 $(".gardenPlanner").droppable({
     accept: ".plants",
     tolerance: "fit",
-    drop: function(){
+    drop: function(ui){
         $(".plants").append(ui.draggable);
         $(".plants").draggable();
     }

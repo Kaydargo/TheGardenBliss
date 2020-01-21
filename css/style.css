@@ -97,8 +97,6 @@ Plants Page CSS
     height: 300px;
     /*position: relative;*/
     margin: 2em auto;
-    background-image: url('../images/grid.png');
-    border: 1px solid black;
     z-index: 0;
 }
 
@@ -118,6 +116,7 @@ Plants Page CSS
 }
 .plants{
     cursor: crosshair;
+    position: relative;
     height: 100px;
     width: 100px;
 }
@@ -190,7 +189,7 @@ p.gal-name > a:hover:before {
     background-image: linear-gradient(to right,rgba(0,0,0,.5) 0,rgba(0,0,0,.0001) 20%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
     background-repeat: repeat-x;
-
+}
 .carousel-caption {
 font-size: 25px !important;
 }
@@ -204,8 +203,7 @@ font-size: 25px !important;
     height: 800px !important;
     /* position: relative; */
     margin: 2em auto;
-    background-image: url(../images/grid.png);
-
+   /* background-image: url(../images/grid.png);*/
     z-index: 0;
 }
 
