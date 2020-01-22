@@ -34,3 +34,9 @@ $('#box').draggable({
         coordinates('#box');
     }
 });
+
+
+// Print page
+function printPageAppear() {
+    window.print();
+  }

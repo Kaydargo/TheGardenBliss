@@ -14,62 +14,35 @@ require('includes/database.php');
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="css/style.css">
+  
   <title>Drag&Drop Garden</title>
   <?php
     include('includes/header.php');
         ?>
     </head>
-    <style>h1 {
-  text-align: center;
-  color: black;
-}
-table {
-  height: 525px;
-  width: 525px;
-}
-tr, td, table {
-  border-style: solid;
-  border-width: 1px;
-  background-color: white;
-  margin: auto;
-  margin-top: 20px;
-}
-td {
-  transition: .3s background-color;
-}
-td:hover {
-  background-color: grey;
-}
-button {
-  height: 25px;
-  width: 225px;
-  margin: 0 auto;
-  position: relative;
-  top: 50%;
-  left: 40%;
-  margin-top: -40px;
-}
-</style>
     <body>
-<br><br>
-    <br><div class="container">
+<br><br><br>
+<div class="container">
   <h2>Garden Dimensions</h2>
- <form action="">
-    <div class="form-group">
-      <label for="gardenWidth">Garden Width:</label>
-      <input type="text" class="form-control" id="gWidth" placeholder="Enter width of garden" pattern="[0-9]+" name="gWidth" min="0" max="30">
+  <form>
+  <div class="row">
+    <div class="col">
+    <label for="gardenWidth">Garden Width:</label>
+    <input type="text" class="form-control" id="gWidth" placeholder="Enter width of garden" pattern="[0-9]+" name="gWidth" min="0" max="30">
     </div>
-    <div class="form-group">
-      <label for="gardenHeight">Garden Height:</label>
-      <input type="text" class="form-control" id="gHeight" placeholder="Enter height of garden" pattern="[0-9]+" name="gHeight" min="0" max="30">
-    </div><br>
-    <button type="submit" class="btn btn-primary gBtn">Submit</button>
-  </form>
+    <div class="col">
+    <label for="gardenHeight">Garden Height:</label>
+    <input type="text" class="form-control" id="gHeight" placeholder="Enter height of garden" pattern="[0-9]+" name="gHeight" min="0" max="30">
+    </div>
+  </div><br>
+  <button type="button" class="btn btn-primary gDimBtn" >Create Grid</button><!-- onClick="gridDimensions()" -->
+</form>
 </div> 
   <br>
   <!--Garden Planner -->
@@ -92,7 +65,7 @@ button {
             </table>
       </div>
 
-        <div class="col-lg-9 gardenPlanner" style="height: 1000px;">
+        <div class="col-lg-9 gardenPlanner">
            <!--<div>
               <div id="box"></div>
             </div>
@@ -100,14 +73,15 @@ button {
         </div>-->
 
         </div>
-        <!--<button class="button" type="button">Choose </button>-->
   </div>
   </div>
-
+  <!-- Print page -->
+  <i class="fa fa-print"></i><button type="button" class="btn" onClick="printPageAppear()"> Print Page</button>
+<div>
+  
+                </div>
 <!--Garden Planner End -->
-
-        <!--<script src="js/main.js"></script>-->
-        <script src="js/dragDrop.js"></script>
-        <script src="js/gardenSize.js"></script>
+        <script src="js/drag-drop.js"></script>
+        <script src="js/garden-size.js"></script>
     </body>
 </html>

@@ -198,15 +198,6 @@ font-size: 25px !important;
     background-color: #FFFFFF !important;
 }
 
-.gardenPlanner {
-    width: 100%;
-    height: 800px !important;
-    /* position: relative; */
-    margin: 2em auto;
-   /* background-image: url(../images/grid.png);*/
-    z-index: 0;
-}
-
 .table th, .table td {
     text-align:center !important;
 }
@@ -216,3 +207,40 @@ font-size: 25px !important;
     border-color: #748C1C !important;
     color: #FFFFFF !important;
 }
+
+/* Garden Planner */
+.gardenPlanner {
+    width: 100%;
+    height: auto;
+    /* position: relative; */
+    margin: 2em auto;
+   /* background-image: url(../images/grid.png);*/
+    z-index: 0;
+}
+.gardenGrid {
+    height: 500px;
+    width: 100%;
+  }
+  .gardenGridRow, .gardenGridColumn, .gardenGrid {
+    border-style: solid;
+    border-width: 1px;
+    background-color: white;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .gardenGridColumn {
+    transition: .3s background-color;
+  }
+  .gardenGridColumn:hover {
+    background-color: grey;
+  }
+  .gDimBtn {
+    height: 40px;
+    width: 225px;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    left: 40%;
+    margin-top: 40px;
+  }
