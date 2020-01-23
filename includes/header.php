@@ -20,19 +20,19 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Plants</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="plants.php">Plants</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">Garden Planner</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="planner.php">Garden Planner</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">How-To</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="how-to.php">How-To</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Bee-Helpful</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="bee-helpful.php">Bee-Helpful</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Login</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="login.php">Login</a>
           </li>
           
         </ul>

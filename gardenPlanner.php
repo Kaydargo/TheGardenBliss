@@ -56,7 +56,7 @@ require('includes/database.php');
                 <tr>  
                 <div style="width=200px">
                     <td><?php echo $plant['plantName']; ?></td>
-                  <td><?php echo "<img class='plants' src='images/".$plant['plantIcon']."' />"; ?>
+                  <td><?php echo "<img class='plants draggable' src='images/".$plant['plantIcon']."' />"; ?>
                 </div>
                 <?php endforeach; ?>
             </table>
@@ -77,5 +77,6 @@ require('includes/database.php');
 
         <!--<script src="js/main.js"></script>-->
         <script src="js/dragDrop.js"></script>
+        <script src="js/drag2.js"></script>
     </body>
 </html>

@@ -94,7 +94,7 @@ Plants Page CSS
 
 .gardenPlanner {
     width: 100%;
-    height: 600px;
+    height: 300px;
     /*position: relative;*/
     margin: 2em auto;
     background-image: url('../images/grid.png');
@@ -127,6 +127,7 @@ Plants Page CSS
 a.gal-name-link
 {
     color:#FFF5DB;
+    font-size: 14px!important;
 }
 
 a.gal-name-link:hover {
@@ -172,7 +173,7 @@ p.gal-name > a:hover:before {
     top: 0;
     bottom: 0;
     left: 0;
-    width: 5%;
+    width: 5% !important;
     font-size: 20px;
     color: #fff;
     text-align: center;
@@ -182,4 +183,38 @@ p.gal-name > a:hover:before {
     opacity: .5;
 }
 
+.carousel-control.left {
+    background-image: -webkit-linear-gradient(left,rgba(0,0,0,.5) 0,rgba(0,0,0,.0001) 100%);
+    background-image: -o-linear-gradient(left,rgba(0,0,0,.5) 0,rgba(0,0,0,.0001) 100%);
+    background-image: -webkit-gradient(linear,left top,right top,from(rgba(0,0,0,.5)),to(rgba(0,0,0,.0001)));
+    background-image: linear-gradient(to right,rgba(0,0,0,.5) 0,rgba(0,0,0,.0001) 20%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
+    background-repeat: repeat-x;
 
+.carousel-caption {
+font-size: 25px !important;
+}
+
+.table{
+    background-color: #FFFFFF !important;
+}
+
+.gardenPlanner {
+    width: 100%;
+    height: 800px !important;
+    /* position: relative; */
+    margin: 2em auto;
+    background-image: url(../images/grid.png);
+
+    z-index: 0;
+}
+
+.table th, .table td {
+    text-align:center !important;
+}
+
+.table th {
+    background-color: #748C1C !important;
+    border-color: #748C1C !important;
+    color: #FFFFFF !important;
+}

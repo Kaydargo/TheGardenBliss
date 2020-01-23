@@ -1,40 +1,37 @@
 <?php
- require_once 'includes/database.php';
-$error=''; //Variable to Store error message;
+session_start();
+require 'database.php';
+if(isset($_POST['login'])){
+    $userID = filter_input(INPUT_POST, 'userID', FILTER_VALIDATE_INT) . !empty($_POST['userID']) ? trim($_POST['userID']) : null;
+    $username = !empty($_POST['username']) ? trim($_POST['username']) : null;
+    $password = !empty($_POST['password']) ? trim($_POST['password']) : null;
 
-if(isset($_POST['submit'])){
-    
- if(empty($_POST['email']) || empty($_POST['userpass']))
-     { 
- $error = "Email address or Password is Invalid";
- }
- 
- else
- {
- //Define $user and $pass
- $usermail=$_POST['email'];
- $userpass=$_POST['userpass'];
- 
- //Establishing Connection with server by passing server_name, user_id and pass as a patameter
+    $getUser = "SELECT userID, username, password FROM users WHERE username = :uname";
+    $statement = $db->prepare($getUser);
+    $statement->bindValue(':uname', $username);
+    $statement->execute();
+    $user = $statement->fetch(PDO::FETCH_ASSOC);
 
- $conn = mysqli_connect("localhost", "root", '');
- //Selecting Database
- $db = mysqli_select_db($conn, "gardening");
- //sql query to fetch information of registerd user and finds user match.
- $query = mysqli_query($conn, "SELECT * FROM users WHERE  usermail='$email' AND userpass='$userpass' ");
- 
- $rows = mysqli_num_rows($query);
- 
- if($rows === 1){
-     header("Location: admin.php");
-die(); // Redirecting to other page
- }
- 
- else
- {
- $error = "Email Address or Password is Invalid";
- }
- mysqli_close($conn); // Closing connection
- }
- 
+    if($user === false){
+        $_SESSION['errMsg'] = "Invalid username or password";
+        header('location:login.php');
+        exit;
+    }
+     else{
+        $validPassword = password_verify($password, $user['password']);
+        
+        if($validPassword){
+            $_SESSION['userID'] = $user['userID'];
+            $_SESSION['lastLogin'] = time();
+
+            header('Location: admin.php');
+            exit;      
+        }
+        else{
+            $_SESSION['errMsg'] ='Invalid username or password';
+            header('location:login.php');
+        exit;
+        }
+    }
 }
+?>
