@@ -40,3 +40,5 @@ $('#box').draggable({
 function printPageAppear() {
     window.print();
   }
+
+  $('.dropdown-toggle').dropdown()

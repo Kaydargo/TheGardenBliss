@@ -2,7 +2,7 @@
 require_once('includes/database.php');
 
 //Display vegetable images in slider
-    $queryVeg = "SELECT * FROM plant WHERE type='Vegetable' LIMIT 4"; 
+    $queryVeg = "SELECT * FROM plant WHERE type='vegetable' LIMIT 4"; 
     $statement1 = $conn->prepare($queryVeg);
     $statement1->execute();
     $vegetables = $statement1->fetchAll();

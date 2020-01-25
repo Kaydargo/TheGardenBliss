@@ -13,17 +13,6 @@
 <h2>Play our Bee Helpful Game</h2>
 <iframe src="story.html" width="100%" height="500"></iframe>
 
-<div class='holder'>
-  <div class='myTitle'>SVG Coloring Book</div>
-  <div class='held' id='ActivityDIV'></div>
-  <div class='held'>
-    <a id="btnRandom"      class="button gray">Random Color</a>
-    <a id="btnClear"       class="button gray">Clear Color</a>
-    <a id="btnDownloadSVG" class="button gray">Download SVG</a>
-  </div>
-</div>
-
-
 <?php include 'includes/footer.php' ?>
 </body>
 </html>

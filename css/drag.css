@@ -1,0 +1,59 @@
+  .plant {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    top: 5px;
+    left: 5px;
+    cursor: pointer;
+  }
+  
+  .hold {
+    border: solid 5px #ccc;
+  }
+  
+  .gardenPlanner {
+    display: inline-block;
+    background: white;
+  }
+  
+  .hovered {
+    background: #f4f4f4;
+    border-style: dashed;
+  }
+  
+  /* Garden Planner */
+.gardenPlanner {
+    width: 1000;
+    height: auto;
+    /* position: relative; */
+    margin: 2em auto;
+   /* background-image: url(../images/grid.png);*/
+    z-index: 0;
+}
+.gardenGrid {
+    height: 500px;
+    width: 100%;
+  }
+  .gardenGridRow, .gardenGridColumn, .gardenGrid {
+    border-style: solid;
+    border-width: 1px;
+    background-color: white;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .gardenGridColumn {
+    transition: .3s background-color;
+  }
+  .gardenGridColumn:hover {
+    background-color: grey;
+  }
+  .gDimBtn {
+    height: 40px;
+    width: 225px;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    left: 40%;
+    margin-top: 40px;
+  }
