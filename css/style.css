@@ -295,3 +295,9 @@ font-size: 25px !important;
 	text-align: center;
 	margin: 4px 0px;
 }*/
+
+#weather{
+    margin: 0 auto;
+    background-color: beige;
+    border: 1px solid grey;
+}

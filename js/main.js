@@ -5,7 +5,7 @@
  */
 
 
-const plants = document.querySelectorAll('.fill'); //Singular element
+const plants = document.querySelectorAll('.plant'); //Singular element
 const grids = document.querySelectorAll('.gardenPlanner'); // Node list
 
 //Fill listeners

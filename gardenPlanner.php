@@ -138,13 +138,13 @@ require('includes/database.php');
                 <tr>  
                 <div style="width=200px">
                     <td><?php echo $plant['plantName']; ?></td>
-                  <td><?php echo "<img class='plants' draggable='true' src='images/".$plant['plantIcon']."' />"; ?>
+                  <td><?php echo "<img class='plants ui-widget-content'  draggable='true' src='images/".$plant['plantIcon']."' />"; ?>
                 </div>
                 <?php endforeach; ?>
             </table>
       </div>
 -->
-        <div class="col-lg-12 gardenPlanner">
+        <div class="col-lg-12 ui-widget-header gardenPlanner">
            <!--<div>
               <div id="box"></div>
             </div>
@@ -153,15 +153,18 @@ require('includes/database.php');
 
         </div>
   </div>
+  <!--Garden Planner End -->
   </div>
   <!-- Print page -->
   <i class="fa fa-print"></i><button type="button" class="btn" onClick="printPageAppear()"> Print Page</button>
-<div>
-  
-                </div>
-<!--Garden Planner End -->
+  <!-- Weather -->
+  <?php  include('includes/weather.php'); ?>
+
+  <?php  include('includes/footer.php'); ?>
+
         <script src="js/drag-drop.js"></script>
         <script src="js/garden-size.js"></script>
+        <script src="js/weather-api.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>
