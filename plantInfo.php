@@ -48,6 +48,81 @@ $statement2->closeCursor();
 <div class="container"> 
 <h3 class="plantName">Planting Information</h3>
 <br>
+<!--Display harvest table -->
+<div style="overflow-x:auto;">
+<table class="table">
+  <thead>
+    <tr>
+    <th scope="col">Month</th>
+      <th scope="col">Jan</th>
+      <th scope="col">Feb</th>
+      <th scope="col">Mar</th>
+      <th scope="col">Apr</th>
+      <th scope="col">May</th>
+      <th scope="col">Jun</th>
+      <th scope="col">Jul</th>
+      <th scope="col">Aug</th>
+      <th scope="col">Sep</th>
+      <th scope="col">Oct</th>
+      <th scope="col">Nov</th>
+      <th scope="col">Dec</th>
+    </tr>
+  </thead>
+  <tbody>
+  <?php
+$plantingSeason = $plant['season'];
+switch ($plantingSeason) {
+    case "January":
+        echo 
+        "Your favorite color is red!";
+        break;
+    case "Feburary":
+        echo "Your favorite color is blue!";
+        break;
+    case "March":
+        echo "Your favorite color is green!";
+        break;
+    case "April":
+        echo "Your favorite color is green!";
+        break;
+    default:
+        echo "Your favorite color is neither red, blue, nor green!";
+}
+?>
+         <tr>
+      <th scope="row">Plant</th>
+      <td id="pJan"></td>
+      <td id="pFeb"></td>
+      <td id="pMar"></td>
+      <td id="pApr"></td>
+      <td id="pMay"></td>
+      <td id="pJun"></td>
+      <td id="pJul"></td>
+      <td id="pAug"></td>
+      <td id="pSep"></td>
+      <td id="pOct"></td>
+      <td id="pNov"></td>
+      <td id="pDec"></td>    
+    </tr>
+    <tr>
+      <th scope="row">Harvest</th>
+      <td id="hJan"></td>
+      <td id="hFeb"></td>
+      <td id="hMar"></td>
+      <td id="hApr"></td>
+      <td id="hMay"></td>
+      <td id="hJun"></td>
+      <td id="hJul"></td>
+      <td id="hAug"></td>
+      <td id="hSep"></td>
+      <td id="hOct"></td>
+      <td id="hNov"></td>
+      <td id="hDec"></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<!-- Harvest table end -->
 <div class="row display-flex">
   <div class="col-sm"><h4 class="info">Soil</h4>
   <?php

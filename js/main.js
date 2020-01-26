@@ -5,19 +5,19 @@
  */
 
 
-const fill = document.querySelector('.fill'); //Singular element
-const empties = document.querySelectorAll('.empty'); // Node list
+const plants = document.querySelectorAll('.plant'); //Singular element
+const grids = document.querySelectorAll('.gardenPlanner'); // Node list
 
 //Fill listeners
-fill.addEventListener('dragstart', dragStart);
-fill.addEventListener('dragend', dragEnd);
+plants.addEventListener('dragstart', dragStart);
+plants.addEventListener('dragend', dragEnd);
 
 //Loop through empty containers and call drag events
-for (const empty of empties){
-    empty.addEventListener('dragover', dragOver);
-    empty.addEventListener('dragenter', dragEnter);
-    empty.addEventListener('dragleave', dragLeave);
-    empty.addEventListener('drop', dragDrop);
+for (const grid of grids){
+  grid.addEventListener('dragover', dragOver);
+  grid.addEventListener('dragenter', dragEnter);
+  grid.addEventListener('dragleave', dragLeave);
+  grid.addEventListener('drop', dragDrop);
 }
 //Drag Functions
 function dragStart (){
@@ -62,8 +62,6 @@ document.onDragOver = function(coordinates) {
  * and open the template in the editor.
  */
 
-
-
 $(document).ready(function() {
     $('#media').carousel({
       pause: true,
@@ -91,4 +89,3 @@ $(document).ready(function() {
       interval: false,
     });
   });
-  
