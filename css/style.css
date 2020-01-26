@@ -246,13 +246,13 @@ font-size: 25px !important;
   }
 
   #plantSlider{
-      border: 3px solid grey;
+      border: 1px solid grey;
   }
 
   .no-gutters > .col, .no-gutters > [class*="col-"] {
     /* padding-right: 0; */
     /* padding-left: 0; */
-    border: 3px solid grey;
+    border: 1px solid grey;
 }
 
   /*
