@@ -1,12 +1,32 @@
 //const fetch = require("node-fetch");
 
-function weatherLongLat(lat, long){
+var visitorCoords = document.getElementById("getLocation");
 
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    visitorCoords.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function getPosition(position) {
+    visitorCoords.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+/*
+  var lat = position.coords.latitude;
+  var long = position.coords.longitude;
+  return [lat, long]; */
+}
+
+
+function weatherLongLat(lat, long){
+//var coordinates = getPosition();
 // The Endpoint URL
 const url = 'https://api.openweathermap.org/data/2.5/weather?';
 const key = 'appid=6f58e1671e79c93bc5bc7fc488b6f9df';
-const longitude = 'lat='+ lat;
-const latitude = 'lon=' + long;
+const longitude = 'lat='+ lat; //coordinates[0];
+const latitude = 'lon=' + long; //coordinates[1];
 const weather = url + '&' + latitude + '&' + longitude + '&' + key;
 
 //Fetchs api service

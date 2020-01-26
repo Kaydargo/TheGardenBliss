@@ -34,9 +34,9 @@ require('includes/database.php');
 <div class="container">
   <h2>Garden Dimensions</h2>
   <div class="row">
-  <form>
-<h2>Select garden size:</h2>
-    <div class="col-lg-6">  
+
+<h2>Select garden size:</h2><br>
+ <form role="form">
     <div class="form-group">
     <select class="form-control" id="gardenWidthDrop">
     <option class="dropdown-item" value="1" >1</option> 
@@ -53,9 +53,7 @@ require('includes/database.php');
     <option class="dropdown-item" value="12" >12</option>
     </select>
     </div>
-    </div>
 
-    <div class="col-lg-6">
     <div class="form-group">
     <select class="form-control" id="gardenHeighDrop">
     <option class="dropdown-item" value="1" >1</option>
@@ -64,21 +62,13 @@ require('includes/database.php');
     <option class="dropdown-item" value="4" >4</option>
     <option class="dropdown-item" value="5" >5</option>
     </select>
+
     </div>
-    </div>
-<!--
-    <label for="gardenWidth">Garden Width:</label>
-    <input type="text" class="form-control" id="gWidth" placeholder="Enter width of garden" pattern="[0-9]+" name="gWidth" min="0" max="30">
-    </div>
-    <div class="col">
-    <label for="gardenHeight">Garden Height:</label>
-    <input type="text" class="form-control" id="gHeight" placeholder="Enter height of garden" pattern="[0-9]+" name="gHeight" min="0" max="30">
-    </div>
-  </div><br> -->
+  <br>
   <button type="button" class="btn btn-primary gDimBtn" >Create Grid</button><!-- onClick="gridDimensions()" -->
 </form>
 </div><br><br>
-
+</div>
 <!-- Vegetables Slider -->
 <div class="container text-center my-3 planner">
     <div id="plantSlider" class="carousel slide w-100" data-ride="carousel" data-interval="false">
@@ -154,11 +144,11 @@ require('includes/database.php');
         </div>
   </div>
   <!--Garden Planner End -->
-  </div>
-  <!-- Print page -->
-  <i class="fa fa-print"></i><button type="button" class="btn" onClick="printPageAppear()"> Print Page</button>
+    <!-- Print page -->
+    <i class="fa fa-print"></i><button type="button" class="btn" onClick="printPageAppear()"> Print Page</button>
   <!-- Weather -->
   <?php  include('includes/weather.php'); ?>
+  </div>
 
   <?php  include('includes/footer.php'); ?>
 

@@ -92,35 +92,6 @@ Plants Page CSS
     background-repeat: no-repeat;
 }
 
-.gardenPlanner {
-    width: 100%;
-    height: 300px;
-    /*position: relative;*/
-    margin: 2em auto;
-    z-index: 0;
-}
-
-#box {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100px;
-    height: 100px;
-    background-image: url("../images/carrot.png");
-    cursor: move;
-    background: yellowgreen;
-}
-
-#results {
-    text-align: center;
-}
-.plants{
-    cursor: crosshair;
-    position: relative;
-    height: 100px;
-    width: 100px;
-}
-
 /**************plant CSS HOVER LINK****************/
 
 a.gal-name-link
@@ -212,9 +183,7 @@ font-size: 25px !important;
 .gardenPlanner {
     width: 100%;
     height: auto;
-    /* position: relative; */
     margin: 2em auto;
-   /* background-image: url(../images/grid.png);*/
     z-index: 0;
 }
 .gardenGrid {
@@ -238,11 +207,6 @@ font-size: 25px !important;
   .gDimBtn {
     height: 40px;
     width: 225px;
-    margin: 0 auto;
-    position: relative;
-    top: 50%;
-    left: 40%;
-    margin-top: 40px;
   }
 
   #plantSlider{
@@ -250,9 +214,28 @@ font-size: 25px !important;
   }
 
   .no-gutters > .col, .no-gutters > [class*="col-"] {
-    /* padding-right: 0; */
-    /* padding-left: 0; */
     border: 1px solid grey;
+}
+
+
+#box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    cursor: move;
+    background: yellowgreen;
+}
+
+#results {
+    text-align: center;
+}
+.plants{
+    cursor: crosshair;
+    position: relative;
+    height: 100px;
+    width: 100px;
 }
 
   /*
@@ -296,9 +279,14 @@ font-size: 25px !important;
 	margin: 4px 0px;
 }*/
 
+/* Weather Forecast*/
 #weather{
     margin: 0 auto;
     background-color: beige;
     border: 1px solid grey;
     text-align: center;
+}
+
+#wicon{
+width: 5%;
 }

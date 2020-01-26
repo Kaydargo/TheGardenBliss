@@ -49,12 +49,3 @@
   .gardenGridColumn:hover {
     background-color: grey;
   }
-  .gDimBtn {
-    height: 40px;
-    width: 225px;
-    margin: 0 auto;
-    position: relative;
-    top: 50%;
-    left: 40%;
-    margin-top: 40px;
-  }
