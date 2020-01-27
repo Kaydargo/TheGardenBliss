@@ -9,9 +9,7 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <title></title>
     </head>
-    <?php
-    include('includes/header.php');
-        ?>
+    <?php include('includes/header.php'); ?>   
     <body>
     <br><br><br><br>
     <header class="masthead">

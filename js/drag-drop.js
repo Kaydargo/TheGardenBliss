@@ -8,15 +8,16 @@ $(".plants").draggable({
     revertDuration: 800 //duration of the revert animation in milliseconds
 });
 
-$(".gardenPlanner").droppable({
+$(".gardenGrid").droppable({
     accept: ".plants",
     tolerance: "fit",
-    drop: function(){
-        $(".plants").append(ui.draggable).draggable();
+    drop: function(ui){
+        $(".plants").append(ui.draggable);
+        $(".plants").appendTo(".gardenGridColumn");
+        $(".plants").draggable();
     }
        // ui.draggable.draggable('enable');
     //}
-    
 });
 
 var coordinates = function(element) {
@@ -34,3 +35,11 @@ $('#box').draggable({
         coordinates('#box');
     }
 });
+
+
+// Print page
+function printPageAppear() {
+    window.print();
+  }
+
+  $('.dropdown-toggle').dropdown()
