@@ -72,143 +72,90 @@ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deseru
 
     <!--First slide-->
     <div class="carousel-item active">
-
       <div class="row">
-        <div class="col-md-4">
-          <div class="card mb-2">
-            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
-              alt="Card image cap">
+      <?php foreach ($vegetables as $veg): ?>
+      <div class="col-md-4 clearfix d-md-block">
+    <div class="card mb-2">
+      <?php $counter = 0; ?>
+        <?php 
+          $counter++;
+    if ($counter > 3){
+    break;
+    }?>
+            <?= ($veg['plantImage'] <> " " ? "<img class='card-img-top' src='images/{$veg['plantImage']}'/>" : "") ?>
             <div class="card-body">
-              <h4 class="card-title">Card title</h4>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                card's content.</p>
+              <h4 class="card-title"><a href="plantInfo.php?plantID=<?php echo ($veg['plantID']); ?>"> <?php echo ($veg['plantName']); ?></a></h4>
+              <p class="card-text"><?php echo ($veg['description']);?></p>
               <a class="btn btn-primary">Button</a>
             </div>
+           
           </div>
         </div>
-
-        <div class="col-md-4 clearfix d-none d-md-block">
-          <div class="card mb-2">
-            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
-              alt="Card image cap">
-            <div class="card-body">
-              <h4 class="card-title">Card title</h4>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                card's content.</p>
-              <a class="btn btn-primary">Button</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 clearfix d-none d-md-block">
-          <div class="card mb-2">
-            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg"
-              alt="Card image cap">
-            <div class="card-body">
-              <h4 class="card-title">Card title</h4>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                card's content.</p>
-              <a class="btn btn-primary">Button</a>
-            </div>
-          </div>
-        </div>
+        <?php endforeach; ?> 
       </div>
 
     </div>
     <!--/.First slide-->
 
+
     <!--Second slide-->
-    <div class="carousel-item">
+   <div class="carousel-item">
 
       <div class="row">
-        <div class="col-md-4">
-          <div class="card mb-2">
-            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
-              alt="Card image cap">
+      <?php foreach ($vegetables1 as $veg1): ?>
+      <div class="col-md-4 clearfix d-md-block">
+    <div class="card mb-2">
+      <?php $counter = 0; ?>
+      
+        <?php 
+          $counter++;
+    if ($counter > 3){
+    break;
+    }?>
+            <?= ($veg1['plantImage'] <> " " ? "<img class='card-img-top' src='images/{$veg1['plantImage']}'/>" : "") ?>
             <div class="card-body">
-              <h4 class="card-title">Card title</h4>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                card's content.</p>
+              <h4 class="card-title"><a href="plantInfo.php?plantID=<?php echo ($veg1['plantID']); ?>"> <?php echo ($veg1['plantName']); ?></a></h4>
+              <p class="card-text"><?php echo ($veg1['description']);?></p>
               <a class="btn btn-primary">Button</a>
             </div>
+           
           </div>
         </div>
-
-        <div class="col-md-4 clearfix d-none d-md-block">
-          <div class="card mb-2">
-            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(47).jpg"
-              alt="Card image cap">
-            <div class="card-body">
-              <h4 class="card-title">Card title</h4>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                card's content.</p>
-              <a class="btn btn-primary">Button</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 clearfix d-none d-md-block">
-          <div class="card mb-2">
-            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(48).jpg"
-              alt="Card image cap">
-            <div class="card-body">
-              <h4 class="card-title">Card title</h4>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                card's content.</p>
-              <a class="btn btn-primary">Button</a>
-            </div>
-          </div>
+        <?php endforeach; ?> 
         </div>
       </div>
 
-    </div>
+  
     <!--/.Second slide-->
 
     <!--Third slide-->
     <div class="carousel-item">
 
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card mb-2">
-            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(53).jpg"
-              alt="Card image cap">
-            <div class="card-body">
-              <h4 class="card-title">Card title</h4>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                card's content.</p>
-              <a class="btn btn-primary">Button</a>
-            </div>
-          </div>
-        </div>
+<div class="row">
+<?php foreach ($vegetables2 as $veg2): ?>
+<div class="col-md-4 clearfix d-md-block">
+<div class="card mb-2">
+<?php $counter = 0; ?>
 
-        <div class="col-md-4 clearfix d-none d-md-block">
-          <div class="card mb-2">
-            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(45).jpg"
-              alt="Card image cap">
-            <div class="card-body">
-              <h4 class="card-title">Card title</h4>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                card's content.</p>
-              <a class="btn btn-primary">Button</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 clearfix d-none d-md-block">
-          <div class="card mb-2">
-            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(51).jpg"
-              alt="Card image cap">
-            <div class="card-body">
-              <h4 class="card-title">Card title</h4>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                card's content.</p>
-              <a class="btn btn-primary">Button</a>
-            </div>
-          </div>
-        </div>
+  <?php 
+    $counter++;
+if ($counter > 3){
+break;
+}?>
+      <?= ($veg2['plantImage'] <> " " ? "<img class='card-img-top' src='images/{$veg2['plantImage']}'/>" : "") ?>
+      <div class="card-body">
+        <h4 class="card-title"><a href="plantInfo.php?plantID=<?php echo ($veg2['plantID']); ?>"> <?php echo ($veg2['plantName']); ?></a></h4>
+        <p class="card-text"><?php echo ($veg2['description']);?></p>
+        <a class="btn btn-primary">Button</a>
       </div>
-
+     
     </div>
+  </div>
+  <?php endforeach; ?> 
+  </div>
+</div>
+
+</div>
     <!--/.Third slide-->
 
   </div>
@@ -216,7 +163,7 @@ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deseru
 
 </div>
 <!--/.Carousel Wrapper-->
-
+</div>
 
 </div>
 <br><br><br>

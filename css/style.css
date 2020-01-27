@@ -290,3 +290,29 @@ font-size: 25px !important;
 #wicon{
 width: 5%;
 }
+
+.card-text{
+        display: block;
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+}
+
+/* Plants page card carousels*/
+.card-title a {
+    color: #466f29 !important;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.carousel-indicators li{
+    color: grey;
+}
+
+.card-img-top {
+    width: 100%;
+    border-top-left-radius: calc(0.5rem - 0.125rem);
+    border-top-right-radius: calc(0.5rem - 0.125rem);
+    height: 200px;
+}
