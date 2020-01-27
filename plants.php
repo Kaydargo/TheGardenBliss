@@ -3,32 +3,19 @@
 
 <head>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>Plants Page</title>
-  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-  <!--Bootstrap core -->
-  <link href="css/graham.css" rel="style">
-  <link href="css/style.css" rel="style">
-  <!-- Custom fonts for this theme -->
-
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
-  <!-- Theme CSS -->
-
+<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/drag.css">
+  <script src="bootstrap.bundle.min.js / bootstrap.bundle.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   
-  <link href="css/freelancer.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="js/main.js" type="text/javascript"></script>
-  <script src="js/jquery-1.11.3min.js.js" type="text/javascript"></script>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
         
 </head>
 
@@ -60,216 +47,132 @@ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deseru
 
 <br><br>
 <br><br><br> 
- <!--Image slider for Vegetables  -->
-
- <h3 id="VegImages" style="text-align:left;">Vegetables</h3>
-            <hr class="divline">
-            <div class="container">
-                <div class='row'>
-                    <div class='col-md-12'>
-                        <div class="carousel slide media-carousel" id="media1">
-                            <div class="carousel-inner">
-                          
-                                <div class="item active" >
-                                    <div class="row"> 
 
 
-<?php $counter = 0; ?>
-                                        <?php foreach ($vegetables as $veg): ?>
-                                            <?php
-                                            $counter++; //increase counter number
-                                            if ($counter > 4) {
-                                                break;
-                                            }
-                                            ?>  
+<!--Carousel Wrapper-->
+<div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
 
-                                            <div class="col-md-3">
-    <?= ($veg['plantImage'] <> " " ? "<img style='width:250px; height:250px; margin-top:10px;' src='images/{$veg['plantImage']}'/>" : "") ?>
-    <div class="carousel-caption">
-                             <p> <a href="plantInfo.php?plantID=<?php echo ($veg['plantID']); ?>"> <?php echo ($veg['plantName']); ?></a></p>
-                             </div>   
-                            
-                                            </div> 
-                                            
-<?php endforeach; ?> 
+  <!--Controls-->
+  <div class="controls-top">
+    <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+    <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+  </div>
+  <!--/.Controls-->
 
+  <!--Indicators-->
+  <ol class="carousel-indicators">
+    <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+    <li data-target="#multi-item-example" data-slide-to="1"></li>
+    <li data-target="#multi-item-example" data-slide-to="2"></li>
+  </ol>
+  <!--/.Indicators-->
 
-                                    </div>
-                                </div>
+  <!--Slides-->
+  <div class="carousel-inner" role="listbox">
 
-
-                                <div class="item">
-                                    <div class="row">
-
-
-                                        <?php $counter1 = 0; ?><?php foreach ($vegetables1 as $veg1): ?>
-                                            <?php
-                                            $counter1++; //increase counter number
-                                            if ($counter1 > 4) {
-                                                break;
-                                            }
-                                            ?>  
-                                            <div class="col-md-3">
-
-                                            <?= ($veg1['plantImage'] <> " " ? "<img style='width:250px; height:250px; margin-top:10px;' src='images/{$veg1['plantImage']}'/>" : "") ?>
-                                            <div class="carousel-caption">
-                                            <p> <a href="plantInfo.php?plantID=<?php echo ($veg1['plantID']); ?>"> <?php echo ($veg1['plantName']); ?></a></p>
-                             </div>   
-                                           
-                                           
-                                            </div>  
-
-<?php endforeach; ?> 
-
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <a data-slide="prev" href="#media1" class="left carousel-control">&lt;</a>
-                            <a data-slide="next" href="#media1" class="right carousel-control">&gt;</a>
-                        </div>                          
-                    </div>
-                </div>
+    <!--First slide-->
+    <div class="carousel-item active">
+      <div class="row">
+      <?php foreach ($vegetables as $veg): ?>
+      <div class="col-md-4 clearfix d-md-block">
+    <div class="card mb-2">
+      <?php $counter = 0; ?>
+        <?php 
+          $counter++;
+    if ($counter > 3){
+    break;
+    }?>
+            <?= ($veg['plantImage'] <> " " ? "<img class='card-img-top' src='images/{$veg['plantImage']}'/>" : "") ?>
+            <div class="card-body">
+              <h4 class="card-title"><a href="plantInfo.php?plantID=<?php echo ($veg['plantID']); ?>"> <?php echo ($veg['plantName']); ?></a></h4>
+              <p class="card-text"><?php echo ($veg['description']);?></p>
+              <a class="btn btn-primary">Button</a>
             </div>
-
-                <!--Image slider for Fruits  -->
-                <br><br><br>
-
-
- <h3 id="FruitImages" style="text-align:left;">Fruits</h3>
-            <hr class="divline">
-            <div class="container">
-                <div class='row'>
-                    <div class='col-md-12'>
-                        <div class="carousel slide media-carousel" id="media2">
-                            <div class="carousel-inner">
-
-                                <div class="item active" >
-                                    <div class="row"> 
-
-
-<?php $counter = 0; ?>
-                                        <?php foreach ($fruits as $fruit): ?>
-                                            <?php
-                                            $counter++; //increase counter number
-                                            if ($counter > 4) {
-                                                break;
-                                            }
-                                            ?>  
-
-                                            <div class="col-md-3">
-    <?= ($fruit['plantImage'] <> " " ? "<img style='width:250px; height:250px; margin-top:10px;' src='images/{$fruit['plantImage']}'/>" : "") ?>
-    <div class="carousel-caption">
-    <p> <a href="plantInfo.php?plantID=<?php echo ($fruit['plantID']); ?>"> <?php echo ($fruit['plantName']); ?></a></p>
-                             </div>   
-
-                                            </div>   
-<?php endforeach; ?> 
-
-
-                                    </div>
-                                </div>
-
-
-                                <div class="item">
-                                    <div class="row">
-
-
-                                        <?php $counter1 = 0; ?><?php foreach ($fruits1 as $fruit1): ?>
-                                            <?php
-                                            $counter1++; //increase counter number
-                                            if ($counter1 > 4) {
-                                                break;
-                                            }
-                                            ?>  
-                                            <div class="col-md-3">
-
-                                            <?= ($fruit1['plantImage'] <> " " ? "<img style='width:250px; height:250px; margin-top:10px;' src='images/{$fruit1['plantImage']}'/>" : "") ?>
-                                            <div class="carousel-caption">
-                                            <p> <a href="plantInfo.php?plantID=<?php echo ($fruit1['plantID']); ?>"> <?php echo ($fruit1['plantName']); ?></a></p>
-                             </div> 
-                                            </div>   
-<?php endforeach; ?> 
-
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <a data-slide="prev" href="#media2" class="left carousel-control">&lt;</a>
-                            <a data-slide="next" href="#media2" class="right carousel-control">&gt;</a>
-                        </div>                          
-                    </div>
-                </div>
-
-            </div>
- <!--Image slider for Flowers  -->
- <br><br><br>    
-                <h2 id="roomImages"style= "text-align:left;">Flowers</h2>
-                <hr class="divline">
-                <div class="container">
-                    <div class='row'>
-                        <div class='col-md-12'>
-                            <div class="carousel slide media-carousel" id="media3">
-                                <div class="carousel-inner">
-
-
-                                    <div class="item active" >
-                                        <div class="row">
-
-                                            <?php $counter6 = 0; ?>
-<?php foreach ($flowers as $flower): ?>
-    <?php
-    $counter6++; //increase counter number
-    if ($counter6 > 4) {
-        break;
-    }
-    ?>
-                                                <div class="col-md-3">
-                                                <?= ($flower['plantImage'] <> " " ? "<img style='width:250px; height:250px; margin-top:10px;' src='images/{$flower['plantImage']}'/>" : "") ?>
-                                                <div class="carousel-caption">
-                                                <p> <a href="plantInfo.php?plantID=<?php echo ($flower['plantID']); ?>"> <?php echo ($flower['plantName']); ?></a></p>
-                             </div>                              
-                                                </div>   
-                                            <?php endforeach; ?> 
-
-
-                                        </div>
-                                    </div>
-
-
-                                    <div class="item">
-                                        <div class="row">
-
-<?php $counter7 = 0; ?>
-<?php foreach ($flowers1 as $flower1): ?>
-    <?php
-    $counter7++; //increase counter number
-    if ($counter7 > 4) {
-        break;
-    }
-    ?><div class="col-md-3">
-    <?= ($flower1['plantImage'] <> " " ? "<img style='width:250px; height:250px; margin-top:10px;' src='images/{$flower1['plantImage']}'/>" : "") ?>
-    <div class="carousel-caption">
-    <p> <a href="plantInfo.php?plantID=<?php echo ($flower1['plantID']); ?>"> <?php echo ($flower1['plantName']); ?></a></p>
-                             </div> 
-                                                </div>   
-<?php endforeach; ?> 
-
-
-                                        </div>   
-                                    </div>
-
-                                    <a data-slide="prev" href="#media3" class="left carousel-control">&lt;</a>
-                                    <a data-slide="next" href="#media3" class="right carousel-control">&gt;</a>
-                                </div>                          
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+           
+          </div>
         </div>
+        <?php endforeach; ?> 
+      </div>
+
+    </div>
+    <!--/.First slide-->
+
+
+    <!--Second slide-->
+   <div class="carousel-item">
+
+      <div class="row">
+      <?php foreach ($vegetables1 as $veg1): ?>
+      <div class="col-md-4 clearfix d-md-block">
+    <div class="card mb-2">
+      <?php $counter = 0; ?>
+      
+        <?php 
+          $counter++;
+    if ($counter > 3){
+    break;
+    }?>
+            <?= ($veg1['plantImage'] <> " " ? "<img class='card-img-top' src='images/{$veg1['plantImage']}'/>" : "") ?>
+            <div class="card-body">
+              <h4 class="card-title"><a href="plantInfo.php?plantID=<?php echo ($veg1['plantID']); ?>"> <?php echo ($veg1['plantName']); ?></a></h4>
+              <p class="card-text"><?php echo ($veg1['description']);?></p>
+              <a class="btn btn-primary">Button</a>
+            </div>
+           
+          </div>
+        </div>
+        <?php endforeach; ?> 
+        </div>
+      </div>
+
+  
+    <!--/.Second slide-->
+
+    <!--Third slide-->
+    <div class="carousel-item">
+
+<div class="row">
+<?php foreach ($vegetables2 as $veg2): ?>
+<div class="col-md-4 clearfix d-md-block">
+<div class="card mb-2">
+<?php $counter = 0; ?>
+
+  <?php 
+    $counter++;
+if ($counter > 3){
+break;
+}?>
+      <?= ($veg2['plantImage'] <> " " ? "<img class='card-img-top' src='images/{$veg2['plantImage']}'/>" : "") ?>
+      <div class="card-body">
+        <h4 class="card-title"><a href="plantInfo.php?plantID=<?php echo ($veg2['plantID']); ?>"> <?php echo ($veg2['plantName']); ?></a></h4>
+        <p class="card-text"><?php echo ($veg2['description']);?></p>
+        <a class="btn btn-primary">Button</a>
+      </div>
+     
+    </div>
+  </div>
+  <?php endforeach; ?> 
+  </div>
+</div>
+
+</div>
+    <!--/.Third slide-->
+
+  </div>
+  <!--/.Slides-->
+
+</div>
+<!--/.Carousel Wrapper-->
+</div>
+
+
+
+
+
+
+
+
+</div>
 <br><br><br>
 <br> <br>
 

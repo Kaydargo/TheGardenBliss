@@ -2,7 +2,7 @@
 require_once('includes/database.php');
 
 //Display vegetable images in slider
-    $queryVeg = "SELECT * FROM plant WHERE type='vegetable' LIMIT 4"; 
+    $queryVeg = "SELECT * FROM plant WHERE type='vegetable' LIMIT 3"; 
     $statement1 = $conn->prepare($queryVeg);
     $statement1->execute();
     $vegetables = $statement1->fetchAll();
@@ -10,11 +10,17 @@ require_once('includes/database.php');
     
     
     
-    $queryVeg1 = "SELECT * FROM plant WHERE type='vegetable' LIMIT 4,8"; 
+    $queryVeg1 = "SELECT * FROM plant WHERE type='vegetable' LIMIT 3,3"; 
     $statement2 = $conn->prepare($queryVeg1);
     $statement2->execute();
     $vegetables1 = $statement2->fetchAll();
     $statement2->closeCursor();
+
+    $queryVeg2 = "SELECT * FROM plant WHERE type='vegetable' LIMIT 6,3"; 
+    $statement3 = $conn->prepare($queryVeg2);
+    $statement3->execute();
+    $vegetables2 = $statement3->fetchAll();
+    $statement3->closeCursor();
 
 //Display fruit images in slider
 
