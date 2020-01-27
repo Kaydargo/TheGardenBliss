@@ -7,10 +7,11 @@ Web application for beginner gardeners to gain tips and practical insights into 
 - PHPMyAdmin - Database
 - HTML/CSS - Design and layout
 - JS - Drag and drop
+- OpenWeatherMap API - Weather Forecast
 
 
 # Authors
-- Kayleigh Hoey - PHP Programmer
+- Kayleigh Hoey - Programmer
 - Agnese Janusauska - Designer
 - Graham O' Mahony - Designer 
 - Folashade Badmos - Researcher

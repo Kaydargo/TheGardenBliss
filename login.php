@@ -1,22 +1,34 @@
 <?php
-
 include("loginServ.php");
+include ('includes/header.php');
 ?>
- 
 <!doctype html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Login</title>
-         <link href="css/style.css" rel="stylesheet" type="text/css"/>
+<link href="css/style.css" rel="stylesheet">
+<link href="css/graham.css" rel="stylesheet">  
 </head>
 <body>
+<br><br><br><br><br>
 <div class="login">
 <h1 align="center">Login</h1>
-<form action="" method="post" style="text-align:center;">
-<input type="text" placeholder="UserEmail" id="email" name="email"><br/><br/>
-<input type="password" placeholder="Password" id="userpass" name="userpass"><br/><br/>
-<input type="submit" value="Login" name="submit">
+<form method="post" action="loginServ.php">  
+                     <label>Enter Username</label>  
+                     <input type="text" name="username" required class="form-control" />  
+                     <br />  
+                     <label>Enter Password</label>  
+                     <input type="password" name="password" required class="form-control" />  
+                     <br />  
+                     <input type="submit" name="login" value="Login" class="btn btn-info" />  
+                     <br />  
+                     <p align="center"><a href="register.php">No account? Register</a></p>  
+                </form>  
+</div>
+<div id="errMsg" style="text-align:center;">
+            <?php if(!empty($_SESSION['errMsg'])) { echo $_SESSION['errMsg']; } ?>
+        </div>
+        <?php unset($_SESSION['errMsg']); ?>
 </div>
 </body>
+<?php include 'includes/footer.php'; ?>
 </html>

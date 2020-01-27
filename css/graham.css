@@ -1,0 +1,177 @@
+font-face {
+    font-family: Raylway;
+    src: url(Raylway.ttf);
+}
+
+p{
+    font-size: 14px !important;
+}
+
+.navbar-nav .nav-link {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    font-size: 18px;
+}
+#logo
+{
+    width:60px;
+    height:60px;
+}
+.image1
+{
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 0.75rem #748C1C);
+}
+.plantName 
+{
+text-transform: uppercase;
+text-align: center;
+color: #748C1C;
+font-family: Overpass;
+align-content: left !important;
+}
+.row1
+{
+    display: flex;
+   align-items:center;
+}
+.info
+{
+    text-transform: uppercase;
+    text-align: center;
+    color: #748C1C;
+    font-family: Overpass;
+    align-content: center;   
+}
+.titles
+{
+text-align: center;
+}
+.icons
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+a.gal-name-link
+{
+    color:#FFF5DB;
+    font-size: 14px!important;
+}
+
+a.gal-name-link:hover {
+    color: #FFF5DB;
+    text-decoration: none;
+}
+
+
+p.gal-name > a {
+  position: relative;
+  color: #000;
+  text-decoration: none;
+}
+
+p.gal-name > a:hover {
+  color: #000;
+}
+
+p.gal-name > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #808381; /*wont change to #FFF5DB*/
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+
+p.gal-name > a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.carousel-control {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 5% !important;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(0,0,0,.6);
+    background-color: rgba(0,0,0,0);
+    filter: alpha(opacity=50);
+    opacity: .5;
+}
+
+.carousel-caption {
+font-size: 25px !important;
+}
+
+.row.display-flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .row.display-flex > [class*='col-'] {
+    flex-grow: 1;
+  }
+  .para
+  {
+      color: white;
+  }
+  .ctnCol
+  {
+      background-color: #748C1C; 
+  }
+.howTo 
+{
+text-transform: uppercase;
+text-align: center;
+color: white;
+font-family: Overpass;
+align-content: center;
+}
+.pad
+{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.func
+{
+  text-align: center;
+  font-weight: 400;
+  font-family: Overpass;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.masthead {
+  height: 100vh;
+  min-height: 500px;
+  background-image: url('https://source.unsplash.com/BtbjCFUvBXs/1920x1080');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.footCol
+{
+  background-color: #41602d!important;
+}
+.ccolor
+{
+  color: white;
+}
+.socialsFoot
+{
+  align-content: center;
+}
