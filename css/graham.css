@@ -147,3 +147,31 @@ align-content: center;
     padding-top: 40px;
     padding-bottom: 40px;
 }
+.func
+{
+  text-align: center;
+  font-weight: 400;
+  font-family: Overpass;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.masthead {
+  height: 100vh;
+  min-height: 500px;
+  background-image: url('https://source.unsplash.com/BtbjCFUvBXs/1920x1080');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.footCol
+{
+  background-color: #41602d!important;
+}
+.ccolor
+{
+  color: white;
+}
+.socialsFoot
+{
+  align-content: center;
+}
