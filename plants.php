@@ -54,10 +54,7 @@
         <h1 class="galhead" >Our Range of Plants</h1>
         <br><br>
         
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
+        <p>Click on a plant and you will be taking to a page full of growing guides and useful information about how to grow the plant, how to care for the plant, problem and disease that can affect the plant and when to harvest.</p>
 <br><br>
 <br><br><br> 
  <!--Image slider for Vegetables  -->
