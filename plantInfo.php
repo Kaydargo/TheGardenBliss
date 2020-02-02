@@ -144,16 +144,18 @@ switch ($plantingSeason) {
 </div>
 
 <br><br><br>
-<div class="container-fluid ctnCol"> 
+<div class="container-fluid"> 
 <div class="container pad"> 
     <?php foreach ($plantsInfo as $plantInfo) : ?>
    <div class="row row1"> 
    <div class="col-sm-6">
-          <h3 class="howTo">How to plant</h3>
-          <p class="para"><strong>Step 1: </strong><?php echo $plantInfo['step1']; ?></p>
-          <p class="para"><strong>Step 2: </strong><?php echo $plantInfo['step2']; ?></p>
-          <p class="para"><strong>Step 3: </strong><?php echo $plantInfo['step3']; ?></p>
-          <p class="para"><strong>Step 4: </strong><?php echo $plantInfo['step4']; ?></p>
+          <h3 class="plantName">How to plant</h3>
+          <ol class="list">
+    <li><?php echo $plantInfo['step1']; ?></li>
+    <li><?php echo $plantInfo['step2']; ?></li>
+    <li><?php echo $plantInfo['step3']; ?></li>
+    <li><?php echo $plantInfo['step4']; ?></li>
+  </ol>
       </div> 
       <div class="col-sm-6">
         <?php echo "<img class='image1' src='images/".$plantInfo['infoImage']. "' />"; ?>
@@ -163,21 +165,19 @@ switch ($plantingSeason) {
 </div>
 <br><br>
 <div class="container"> 
-<h3 class="plantName">Care</h3>
-<br>
 <div class="row display-flex">
   <div class="col-sm-4"><h4 class="info">Watering</h4>
-  <img class="icons img-fluid" src='icons/watering_2.png'>
   <p class="titles"><?php echo $plant['watering']; ?></p>
   </div>
-  <div class="col-sm-4"><h4 class="info">Aftercare</h4>
+  <div class="col-sm-4 vert"><h4 class="info">Aftercare</h4>
   <p><?php echo $plantInfo['aftercare'] ?></p>
   </div>
-  <div class="col-sm-4"><h4 class="info">Problems</h4>
+  <div class="col-sm-4 vert"><h4 class="info">Problems</h4>
   <p><?php echo $plantInfo['problems'] ?></p>
   </div>
 </div> 
 </div>
+<br><br>
 <?php endforeach; ?>
 <?php endforeach; ?>
     </body>
@@ -195,4 +195,8 @@ switch ($plantingSeason) {
 
   <!-- Custom scripts for this template -->
   <script src="js/freelancer.min.js"></script>
+    
+  <?php
+    include('includes/footer2.php');
+        ?>
 </html>

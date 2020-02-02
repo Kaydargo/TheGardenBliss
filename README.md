@@ -12,6 +12,6 @@ Web application for beginner gardeners to gain tips and practical insights into 
 
 # Authors
 - Kayleigh Hoey - Programmer
-- Agnese Janusauska - Designer
+- Agnese Janusauska - Photographer
 - Graham O' Mahony - Designer 
 - Folashade Badmos - Researcher

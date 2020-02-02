@@ -13,11 +13,9 @@ and open the template in the editor.
     <?php include('includes/header.php'); ?>  
     <link href="css/hero.css" rel="stylesheet"> 
     <body>
-    
+    <br><br><br><br>
     <div class="hero">
-    <div class="container-fluid">
 	<h1>GARDEN BLISS<span>- Back to the basics gardening -</span></h1>
-</div>
 </div>
 <br><br>
     <div class="container"> 
@@ -27,7 +25,7 @@ and open the template in the editor.
       </div>
       <div class="col-sm-6">
           <h3 class="plantName">OUR MISSION</h3>
-          <p>Our mission is to create an interactive application that will assist aspiring gardeners to plan and create a fabulous gardening experience. We hope to achieve this by providing our users with quality reliable advice, and inspirational ideas to create gardens they aspire to have in their homes. We will show you how to grow most plants with limited effort so that you can enjoy all the benefits of your garden.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div> 
    </div> 
 </div>
@@ -76,7 +74,7 @@ and open the template in the editor.
    <div class="row row1"> 
    <div class="col-sm-6">
           <h3 class="howTo">About Us</h3>
-          <p class="para"><strong>We understand and belief that most homeowners want an attractive and beautiful garden, but realised that not everyone has the knowledge, time and inclination to achieve this. Our aim is to inspire beginner gardeners to grow a wide variety of popular, easy to grow plants and provide practical insight into garden planning process. We provide avenue for adults to explore a wide range of easy to grow flowers, fruits and vegetables easily in one place. Our website allows the users to create a custom plan for their garden using our drag and drop garden planner which they can save to their user profile for future reference.  </p>
+          <p class="para"><strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div> 
       <div class="col-sm-6">
       <img class='image1 img-fluid' src="" alt="">
