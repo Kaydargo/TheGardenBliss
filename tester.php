@@ -13,11 +13,9 @@ and open the template in the editor.
     <?php include('includes/header.php'); ?>  
     <link href="css/hero.css" rel="stylesheet"> 
     <body>
-    
+    <br><br><br><br>
     <div class="hero">
-    <div class="container-fluid">
 	<h1>GARDEN BLISS<span>- Back to the basics gardening -</span></h1>
-</div>
 </div>
 <br><br>
     <div class="container"> 
