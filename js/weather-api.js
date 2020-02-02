@@ -55,17 +55,22 @@ weatherLongLat(lat,long);
 
 
 function getWeather (weatherForecast){
-    var celcius = Math.round(parseFloat(weatherForecast.main.temp)-273.15);
-	  //var fahrenheit = Math.round(((parseFloat(weatherForecast.main.temp)-273.15)*1.8)+32); 
+  for (var i in weatherForecast.list) {
+    x += "<h2>" + weatherForecast.list.weather[i].main + "</h2>";
+    for (var j in myObj.cars[i].models) {
+      x += myObj.cars[i].models[j] + "<br>";
+    }
+  }
+    var minTempCelcius = Math.round(parseFloat(weatherForecast.main.temp_min)-273.15);
+    var maxTempCelcius = Math.round(parseFloat(weatherForecast.main.temp_max)-273.15);
     
     //document.querySelector('#id').innerHTML = weatherForecast.weather[0].description;
     //document.querySelector('#temp').innerHTML = celcius + '&deg;';
     //document.querySelector('#location').innerHTML = weatherForecast.name;
-    document.getElementById('description').innerHTML= weatherForecast.weather[0].description;
-    document.getElementById('temp').innerHTML = celcius + '&deg;';
+    document.getElementById('description').innerHTML= weatherForecast.weather[0].main;
+    document.getElementById('mintemp').innerHTML =  `<strong>Min:</strong> ${minTempCelcius} &deg;`;
+    document.getElementById('maxtemp').innerHTML = `<strong>Max:</strong> ${maxTempCelcius} &deg;`;
     document.getElementById('location').innerHTML = weatherForecast.name;
-    document.getElementById('date').innerHTML = weatherForecast.dt_txt;
-    
     var iconcode = weatherForecast.weather[0].icon;
     var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
     $('#wicon').attr('src', iconurl);
@@ -90,7 +95,6 @@ function getWeatherData() {
   });
 }
 
-
 getWeatherData().then(weatherData => {
   let city = weatherData.city.name;
   let dailyForecast = weatherData.list;
@@ -112,7 +116,7 @@ renderData = (location, forecast) => {
   // render each daily forecast
   forecast.forEach(day => {
     let date = new Date(day.dt * 1000);
-    let days = ['Sun', 'Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat'];
+    let days = ['Mon', 'Tue', 'Wed', 'Thurs', 'Fri', 'Sat', 'Sun'];
     let name = days[date.getDay()];
     let dayBlock = document.createElement("div");
     dayBlock.className = 'forecast__item';

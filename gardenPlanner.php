@@ -17,6 +17,7 @@ require('includes/database.php');
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/drag.css">
+  <link rel="stylesheet" href="css/graham.css">
   <script src="bootstrap.bundle.min.js / bootstrap.bundle.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -99,9 +100,10 @@ require('includes/database.php');
         </div>
     </div>
 </section>
-
-<!-- End section --><br>
-<h2>Select garden size:</h2><br>
+<!-- End Feature Cards -->
+<br>
+<!-- <h2>Design your Vegetable garden</h2><br> -->
+<!-- <h3>Select garden size</h3> -->
  <form role="form">
     <div class="form-group">
     <select class="form-control" id="gardenWidthDrop">
@@ -147,21 +149,21 @@ require('includes/database.php');
     <div id="plantSlider" class="carousel slide w-100" data-ride="carousel" data-interval="false">
         <div class="carousel-inner w-100" role="listbox">
             <div class="carousel-item row no-gutters active">      
-            <?php $counter1 = 0; ?><?php foreach ($vegetables1 as $veg1): ?>
+            <?php $counter1 = 0; ?><?php foreach ($vegGardens as $vegGarden): ?>
             <?php
             $counter1++; //increase counter number
             if ($counter1 > 4) {
             break;
             }?>
             <div class="col-3 float-left">  
-            <?= ($veg1['plantIcon'] <> " " ? "<img draggable='true' class='plants' style='width:100px; margin-top:10px;' src='images/{$veg1['plantIcon']}'/>" : "") ?>
+            <?= ($vegGarden['plantIcon'] <> " " ? "<img draggable='true' class='plants ui-widget-content draggable' style='width:100px; margin-top:10px;' src='images/{$vegGarden['plantIcon']}'/>" : "") ?>
             </div>
             <?php endforeach; ?>
             </div> 
             
             <div class="carousel-item row no-gutters">
             <?php $counter1 = 0; ?>
-            <?php foreach ($vegetables1 as $veg1): ?>
+            <?php foreach ($vegGardens1 as $vegGarden1): ?>
             <?php
             $counter1++; //increase counter number
             if ($counter1 > 4) {
@@ -169,7 +171,7 @@ require('includes/database.php');
             }
             ?>  
             <div class="col-3 float-left"> 
-            <?= ($veg1['plantIcon'] <> " " ? "<img draggable='true' class='plants' style='width:100px; margin-top:10px;' src='images/{$veg1['plantIcon']}'/>" : "") ?>                                                            
+            <?= ($vegGarden1['plantIcon'] <> " " ? "<img draggable='true' class='plants ui-widget-content draggable' style='width:100px; margin-top:10px;' src='images/{$vegGarden1['plantIcon']}'/>" : "") ?>                                                            
             </div>  
             <?php endforeach; ?> 
             </div>

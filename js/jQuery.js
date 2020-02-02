@@ -1,7 +1,3 @@
-
-
-
-
 $(document).ready(function() {
     $('#media').carousel({
       pause: true,
@@ -29,6 +25,3 @@ $(document).ready(function() {
       interval: false,
     });
   });
-
-
- 

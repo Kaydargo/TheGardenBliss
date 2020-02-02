@@ -32,17 +32,16 @@
 -->
 
 
-<div id="weather">
-     <h1>Weather Forecast</h1>
+<div id="weather"><br>
+     <h1>Todays Weather</h1>
+     <h4 id="location"></h4>
 <div id="icon"><img id="wicon" src="" alt="Weather icon"/></div>
- <h1 id="temp"></h1>
     <div id="description"></div>
-   
-    <div id="location"></div>
-    <div id="date"></div>
-  </div>
-  <button onclick="getLocation()">Get weather for current location</button>
-  <p id="getLocation"></p>
+    <span id="mintemp"></span>&nbsp;&nbsp;
+ <span id="maxtemp"></span><br><br>
+  <!-- Displays longitude and latitude using geolocation -->
+  <!-- <button onclick="getLocation()">Get weather for current location</button>
+  <p id="getLocation"></p> -->
 
 <!--
   <div class="component__weather-box">
