@@ -74,7 +74,7 @@ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deseru
     <div class="carousel-item active">
       <div class="row">
       <?php foreach ($vegetables as $veg): ?>
-      <div class="col-md-4 clearfix d-md-block">
+      <div class="col-md-4 clearfix d-md-block d-none">
     <div class="card mb-2">
       <?php $counter = 0; ?>
         <?php 

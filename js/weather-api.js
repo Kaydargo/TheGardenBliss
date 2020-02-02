@@ -1,7 +1,7 @@
 //const fetch = require("node-fetch");
 
+//Getting coordinates using GeoLocation
 var visitorCoords = document.getElementById("getLocation");
-
 function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
@@ -10,20 +10,30 @@ function getLocation() {
   }
 }
 
-function getPosition(position) {
-    visitorCoords.innerHTML = "Latitude: " + position.coords.latitude + 
+function showPosition(position) {
+  visitorCoords.innerHTML = "Latitude: " + position.coords.latitude +
   "<br>Longitude: " + position.coords.longitude;
-/*
-  var lat = position.coords.latitude;
-  var long = position.coords.longitude;
-  return [lat, long]; */
 }
 
+//Getting coordinates and linking with openweathermap api service
+var openWeatherMap = 'http://api.openweathermap.org/data/2.5/weather'
+
+if (window.navigator && window.navigator.geolocation) {
+    window.navigator.geolocation.getCurrentPosition(function(position) {
+        $.getJSON(openWeatherMap, {
+            lat: position.coords.latitude,
+            lon: position.coords.longitude,
+            APPID: '6f58e1671e79c93bc5bc7fc488b6f9df'
+        }).done(function(weather) {
+            getWeather(weather)
+        })
+    })
+}
 
 function weatherLongLat(lat, long){
 //var coordinates = getPosition();
 // The Endpoint URL
-const url = 'https://api.openweathermap.org/data/2.5/weather?';
+const url = 'https://api.openweathermap.org/data/2.5/forecast?';
 const key = 'appid=6f58e1671e79c93bc5bc7fc488b6f9df';
 const longitude = 'lat='+ lat; //coordinates[0];
 const latitude = 'lon=' + long; //coordinates[1];
@@ -39,18 +49,79 @@ fetch(weather)
 })
 .catch (error => console.error(error))
 }
-//Dundalk - lat=53.9979451&lon=-6.405957
-weatherLongLat(53.9979451,-6.405957);
 
-function formatWeather (weatherForecast){
+//Dundalk - lat=53.9979451&lon=-6.405957
+weatherLongLat(lat,long);
+
+
+function getWeather (weatherForecast){
     var celcius = Math.round(parseFloat(weatherForecast.main.temp)-273.15);
-	var fahrenheit = Math.round(((parseFloat(weatherForecast.main.temp)-273.15)*1.8)+32); 
+	  //var fahrenheit = Math.round(((parseFloat(weatherForecast.main.temp)-273.15)*1.8)+32); 
     
+    //document.querySelector('#id').innerHTML = weatherForecast.weather[0].description;
+    //document.querySelector('#temp').innerHTML = celcius + '&deg;';
+    //document.querySelector('#location').innerHTML = weatherForecast.name;
     document.getElementById('description').innerHTML= weatherForecast.weather[0].description;
     document.getElementById('temp').innerHTML = celcius + '&deg;';
     document.getElementById('location').innerHTML = weatherForecast.name;
-   
+    document.getElementById('date').innerHTML = weatherForecast.dt_txt;
+    
     var iconcode = weatherForecast.weather[0].icon;
     var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
     $('#wicon').attr('src', iconurl);
 }
+
+/*
+const CURRENT_LOCATION = document.getElementsByClassName('weather-content__overview')[0];
+const CURRENT_TEMP = document.getElementsByClassName('weather-content__temp')[0];
+const FORECAST = document.getElementsByClassName('component__forecast-box')[0];
+
+const URL = "https://api.openweathermap.org/data/2.5/forecast/daily?" +
+"lat=53.9979451&lon=-6.405957&units=imperial&APPID=appid=6f58e1671e79c93bc5bc7fc488b6f9df";
+
+function getWeatherData() {
+  let headers = new Headers();
+
+  return fetch(URL, {
+    method: 'GET',
+    headers: headers
+  }).then(data => {
+    return data.json();
+  });
+}
+
+
+getWeatherData().then(weatherData => {
+  let city = weatherData.city.name;
+  let dailyForecast = weatherData.list;
+
+  renderData(city, dailyForecast);
+});
+
+renderData = (location, forecast) => {
+  const currentWeather = forecast[0].weather[0];
+  const widgetHeader =
+  `<h1>${location}</h1><small>${currentWeather.description}</small>`;
+
+  CURRENT_TEMP.innerHTML =
+  `<i class="wi ${applyIcon(currentWeather.icon)}"></i>
+  ${Math.round(forecast[0].temp.day)} <i class="wi wi-degrees"></i>`;
+
+  CURRENT_LOCATION.innerHTML = widgetHeader;
+
+  // render each daily forecast
+  forecast.forEach(day => {
+    let date = new Date(day.dt * 1000);
+    let days = ['Sun', 'Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat'];
+    let name = days[date.getDay()];
+    let dayBlock = document.createElement("div");
+    dayBlock.className = 'forecast__item';
+    dayBlock.innerHTML =
+      `<div class="forecast-item__heading">${name}</div>
+      <div class="forecast-item__info">
+      <i class="wi ${applyIcon(day.weather[0].icon)}"></i>
+      <span class="degrees">${Math.round(day.temp.day)}
+      <i class="wi wi-degrees"></i></span></div>`;
+    FORECAST.appendChild(dayBlock);
+  });
+}*/
