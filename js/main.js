@@ -89,3 +89,105 @@ $(document).ready(function() {
       interval: false,
     });
   });
+
+var plantingSeason = document.getElementByClassName('plantSeason');
+
+    switch (plantingSeason) {
+      case 'January':
+      case 'February':
+      case 'March':
+        case 'April':
+          case 'May':
+            case 'June':
+              case 'July':
+                case 'August':
+                  case 'September':
+                    case 'October':
+                      case 'November':
+                        case 'December':
+            plantingSeason.css({backgroundColor: '#9518b8'});
+            break;
+      /*      
+      case 'February':
+        plantingSeason.css({backgroundColor: '#009fe3'});
+            
+      case 'March':
+        plantingSeason.css({backgroundColor: '#95c11f'});
+            
+      case 'April':
+            $(this).css({backgroundColor: '#d40d10'});
+            
+      case 'May':
+             $(this).css({backgroundColor: '#ffcc00'});
+            
+             case 'June':
+             $(this).css({backgroundColor: '#ffcc00'});
+
+             case 'July':
+              $(this).css({backgroundColor: '#ffcc00'});
+
+              case 'August':
+                $(this).css({backgroundColor: '#ffcc00'});
+
+                case 'September':
+                  $(this).css({backgroundColor: '#ffcc00'});
+
+                  case 'October':
+                    $(this).css({backgroundColor: '#ffcc00'});
+
+                    case 'November':
+                      $(this).css({backgroundColor: '#ffcc00'});
+
+                      case 'December':
+                        $(this).css({backgroundColor: '#ffcc00'});
+         */              
+        default:
+            $(this).text('Nix!');
+            break;
+    }
+
+
+/*
+  var plantingSeason = document.getElementsByClassName('plantSeason');
+  for(i=0; i<plantingSeason.length; i++) {
+    var plantSeasonText = plantingSeason[i].textContent.trim();
+
+    switch (plantSeasonText) {
+      case 'January':
+        plantingSeason[i].style.backgroundColor = '#9518b8';                
+              
+        case 'February':
+          plantingSeason[i].style.backgroundColor = '#9518b8'; 
+            
+        case 'March':
+          plantingSeason[i].style.backgroundColor = '#9518b8'; 
+            
+        case 'April':
+          plantingSeason[i].style.backgroundColor = '#9518b8'; 
+            
+        case 'May':
+          plantingSeason[i].style.backgroundColor = '#9518b8'; 
+            
+        case 'June':
+          plantingSeason[i].style.backgroundColor = '#9518b8'; 
+            
+        case 'July':
+          plantingSeason[i].style.backgroundColor = '#9518b8'; 
+            
+        case 'August':
+          plantingSeason[i].style.backgroundColor = '#9518b8'; 
+            
+        case 'September':
+          plantingSeason[i].style.backgroundColor = '#9518b8'; 
+            
+        case 'October':
+          plantingSeason[i].style.backgroundColor = '#9518b8'; 
+        case 'Novemeber':
+          plantingSeason[i].style.backgroundColor = '#9518b8'; 
+        case 'December':
+          plantingSeason[i].style.backgroundColor = '#9518b8'; 
+        default:
+            $(this).text('Nix!');
+            break;
+    }
+};*/

@@ -3,7 +3,9 @@ $(".plants").draggable({
     appendTo: 'body', // Append to the body.
     containment: $('.planner'), //Where drag and drop events are contained within
     helper: 'clone', //Clones the image - clone is moved
-    zIndex: 1000,
+    zIndex: 10,
+    snap: '#gardenGrid',
+    snapMode: 'inner',
     revert: "invalid", //If not dropped in a droppable zone it will revert to its original position
     revertDuration: 800 //duration of the revert animation in milliseconds
 });

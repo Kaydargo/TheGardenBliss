@@ -9,7 +9,7 @@ and open the template in the editor.
 */
 
 h1{
-    color: 9CAB6F;
+    color: #9CAB6F;
 
 }
 h2{
@@ -156,7 +156,6 @@ p.gal-name > a:hover:before {
 .carousel-control.left {
     background-image: -webkit-linear-gradient(left,rgba(0,0,0,.5) 0,rgba(0,0,0,.0001) 100%);
     background-image: -o-linear-gradient(left,rgba(0,0,0,.5) 0,rgba(0,0,0,.0001) 100%);
-    background-image: -webkit-gradient(linear,left top,right top,from(rgba(0,0,0,.5)),to(rgba(0,0,0,.0001)));
     background-image: linear-gradient(to right,rgba(0,0,0,.5) 0,rgba(0,0,0,.0001) 20%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
     background-repeat: repeat-x;
@@ -184,7 +183,13 @@ font-size: 25px !important;
     width: 100%;
     height: auto;
     margin: 2em auto;
-    z-index: 0;
+  
+}
+
+.planner{
+  position: relative;
+  z-index: 15;
+  
 }
 .gardenGrid {
     height: 500px;
@@ -211,29 +216,16 @@ font-size: 25px !important;
 
   #plantSlider{
       border: 1px solid grey;
+      position: relative;
   }
 
   .no-gutters > .col, .no-gutters > [class*="col-"] {
     border: 1px solid grey;
 }
 
-
-#box {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100px;
-    height: 100px;
-    cursor: move;
-    background: yellowgreen;
-}
-
-#results {
-    text-align: center;
-}
 .plants{
     cursor: crosshair;
-    position: relative;
+    position: absolute;
     height: 100px;
     width: 100px;
 }
@@ -242,7 +234,6 @@ font-size: 25px !important;
   .planner {
 	display: flex;
 	flex-flow: column;
-
 	width: 100vw;
 	height: 100vh;
 }
@@ -258,7 +249,6 @@ font-size: 25px !important;
 	display: flex;
 	flex-flow: column;
 	flex: 1;
-
 	width: 100%;
 	min-width: 250px;
 	max-width: 350px;

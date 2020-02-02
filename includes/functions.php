@@ -50,3 +50,25 @@ $statement6 = $conn->prepare($queryFlower1);
 $statement6->execute();
 $flowers1 = $statement6->fetchAll();
 $statement6->closeCursor();
+
+
+//Display vegetable for garden planner
+$queryVegGarden = "SELECT * FROM plant WHERE type='vegetable' LIMIT 4"; 
+$statement7 = $conn->prepare($queryVegGarden);
+$statement7->execute();
+$vegGardens = $statement7->fetchAll();
+$statement7->closeCursor();
+
+
+
+$queryVegGarden1 = "SELECT * FROM plant WHERE type='vegetable' LIMIT 4,4"; 
+$statement8 = $conn->prepare($queryVegGarden1);
+$statement8->execute();
+$vegGardens1 = $statement8->fetchAll();
+$statement8->closeCursor();
+
+$queryVegGarden2 = "SELECT * FROM plant WHERE type='vegetable' LIMIT 8,4"; 
+$statement9 = $conn->prepare($queryVegGarden2);
+$statement9->execute();
+$vegGardens2 = $statement9->fetchAll();
+$statement9->closeCursor();

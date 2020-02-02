@@ -17,6 +17,7 @@ require('includes/database.php');
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/drag.css">
+  <link rel="stylesheet" href="css/graham.css">
   <script src="bootstrap.bundle.min.js / bootstrap.bundle.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -34,33 +35,107 @@ require('includes/database.php');
 <div class="container">
   <h2>Garden Dimensions</h2>
   <div class="row">
+<p> Cupidatat pariatur elit velit dolor eiusmod Lorem anim. Cillum et aliqua velit laboris commodo dolore sint. Eiusmod fugiat consectetur aliqua sit fugiat fugiat. Aliquip occaecat aute occaecat tempor culpa minim occaecat laboris esse consequat aute id magna sit. Ipsum elit ea ut ad consectetur dolore sint. Ullamco velit proident nostrud minim ullamco ullamco cupidatat aute nostrud.
+</p><br>
 
-<h2>Select garden size:</h2><br>
+<!-- Feature Cards -->
+<section class="d-flex bg-light" id="feature-cards">
+    <div class="container d-flex justify-content-center">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-12 align-self-center">
+                <div class="row">
+                    <div class="col-12 col-lg-4">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col mx-auto text-center">
+                                    <i class="far fa-hand-pointer fa-4x"></i>
+                                    </div>
+                                </div>
+                                <div class="row mt-4">
+                                    <div class="col-12 text-center">
+                                        <h3>Select</h3><hr>
+                                        <p class="text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus dicta error.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col mx-auto text-center">
+                                    <i class="far fa-object-ungroup fa-4x"></i>
+                                    </div>
+                                </div>
+                                <div class="row mt-4">
+                                    <div class="col-12 text-center">
+                                        <h3>Design</h3><hr>
+                                        <p class="text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus dicta error.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col mx-auto text-center">
+                                    <i class="far fa-save fa-4x"></i>
+                                    </div>
+                                </div>
+                                <div class="row mt-4">
+                                    <div class="col-12 text-center">
+                                        <h3>Save</h3><hr>
+                                        <p class="text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus dicta error.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Feature Cards -->
+<br>
+<!-- <h2>Design your Vegetable garden</h2><br> -->
+<!-- <h3>Select garden size</h3> -->
  <form role="form">
     <div class="form-group">
     <select class="form-control" id="gardenWidthDrop">
-    <option class="dropdown-item" value="1" >1</option> 
-    <option class="dropdown-item" value="2" >2</option>
-    <option class="dropdown-item" value="3" >3</option>
-    <option class="dropdown-item" value="4" >4</option>
-    <option class="dropdown-item" value="5" >5</option>
-    <option class="dropdown-item" value="6" selected>6</option>
-    <option class="dropdown-item" value="7" >7</option>
-    <option class="dropdown-item" value="8" >8</option>
-    <option class="dropdown-item" value="9" >9</option>
-    <option class="dropdown-item" value="10" >10</option>
-    <option class="dropdown-item" value="11" >11</option>
-    <option class="dropdown-item" value="12" >12</option>
+    <?php for($i=1; $i<=12; $i++){
+      echo '<option class="dropdown-item" value='.$i.'>'.$i.'</option> ';
+
+    }?>
+    <!-- <option class="dropdown-item" value="1"> 1 </option> 
+    <option class="dropdown-item" value="2"> 2 </option>
+    <option class="dropdown-item" value="3"> 3 </option>
+    <option class="dropdown-item" value="4"> 4 </option>
+    <option class="dropdown-item" value="5"> 5 </option>
+    <option class="dropdown-item" value="6" selected> 6 </option>
+    <option class="dropdown-item" value="7"> 7 </option>
+    <option class="dropdown-item" value="8"> 8 </option>
+    <option class="dropdown-item" value="9"> 9 </option>
+    <option class="dropdown-item" value="10">10</option>
+    <option class="dropdown-item" value="11">11</option>
+    <option class="dropdown-item" value="12">12</option> -->
     </select>
     </div>
 
     <div class="form-group">
     <select class="form-control" id="gardenHeighDrop">
-    <option class="dropdown-item" value="1" >1</option>
+    <?Php for ($j=1; $j<=5; $j++){
+      echo '<option class="dropdown-item" value='.$j.'>'.$j.'</option> ';
+    } ?>
+    <!-- <option class="dropdown-item" value="1" >1</option>
     <option class="dropdown-item" value="2" >2</option>
     <option class="dropdown-item" value="3" selected>3</option>
     <option class="dropdown-item" value="4" >4</option>
-    <option class="dropdown-item" value="5" >5</option>
+    <option class="dropdown-item" value="5" >5</option> -->
     </select>
 
     </div>
@@ -74,21 +149,21 @@ require('includes/database.php');
     <div id="plantSlider" class="carousel slide w-100" data-ride="carousel" data-interval="false">
         <div class="carousel-inner w-100" role="listbox">
             <div class="carousel-item row no-gutters active">      
-            <?php $counter1 = 0; ?><?php foreach ($vegetables1 as $veg1): ?>
+            <?php $counter1 = 0; ?><?php foreach ($vegGardens as $vegGarden): ?>
             <?php
             $counter1++; //increase counter number
             if ($counter1 > 4) {
             break;
             }?>
             <div class="col-3 float-left">  
-            <?= ($veg1['plantIcon'] <> " " ? "<img draggable='true' class='plants' style='width:100px; margin-top:10px;' src='images/{$veg1['plantIcon']}'/>" : "") ?>
+            <?= ($vegGarden['plantIcon'] <> " " ? "<img draggable='true' class='plants ui-widget-content draggable' style='width:100px; margin-top:10px;' src='images/{$vegGarden['plantIcon']}'/>" : "") ?>
             </div>
             <?php endforeach; ?>
             </div> 
             
             <div class="carousel-item row no-gutters">
             <?php $counter1 = 0; ?>
-            <?php foreach ($vegetables1 as $veg1): ?>
+            <?php foreach ($vegGardens1 as $vegGarden1): ?>
             <?php
             $counter1++; //increase counter number
             if ($counter1 > 4) {
@@ -96,7 +171,7 @@ require('includes/database.php');
             }
             ?>  
             <div class="col-3 float-left"> 
-            <?= ($veg1['plantIcon'] <> " " ? "<img draggable='true' class='plants' style='width:100px; margin-top:10px;' src='images/{$veg1['plantIcon']}'/>" : "") ?>                                                            
+            <?= ($vegGarden1['plantIcon'] <> " " ? "<img draggable='true' class='plants ui-widget-content draggable' style='width:100px; margin-top:10px;' src='images/{$vegGarden1['plantIcon']}'/>" : "") ?>                                                            
             </div>  
             <?php endforeach; ?> 
             </div>

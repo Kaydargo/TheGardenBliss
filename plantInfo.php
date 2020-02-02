@@ -89,35 +89,17 @@ switch ($plantingSeason) {
         echo "Your favorite color is neither red, blue, nor green!";
 }
 ?>
-         <tr>
+     <tr>
       <th scope="row">Plant</th>
-      <td id="pJan"></td>
-      <td id="pFeb"></td>
-      <td id="pMar"></td>
-      <td id="pApr"></td>
-      <td id="pMay"></td>
-      <td id="pJun"></td>
-      <td id="pJul"></td>
-      <td id="pAug"></td>
-      <td id="pSep"></td>
-      <td id="pOct"></td>
-      <td id="pNov"></td>
-      <td id="pDec"></td>    
+      <?php for($i=1; $i <=10; $i++){
+        echo "<td id=".$plant['season']." class='plantSeason'></td>";
+        }?> 
     </tr>
     <tr>
       <th scope="row">Harvest</th>
-      <td id="hJan"></td>
-      <td id="hFeb"></td>
-      <td id="hMar"></td>
-      <td id="hApr"></td>
-      <td id="hMay"></td>
-      <td id="hJun"></td>
-      <td id="hJul"></td>
-      <td id="hAug"></td>
-      <td id="hSep"></td>
-      <td id="hOct"></td>
-      <td id="hNov"></td>
-      <td id="hDec"></td>
+      <?php for($j=1; $j <=10; $j++){
+        echo "<td id=".$j." class='harvestSeason'></td>";
+      } ?>
     </tr>
   </tbody>
 </table>
