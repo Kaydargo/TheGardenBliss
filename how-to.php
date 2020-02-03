@@ -206,7 +206,7 @@ ul {
         <img class="img" src="icons/watering_2.png" alt="">
         </div>
       <div class="col-md-4 mb-5">
-        <h3>Carring for your plant</h3>
+        <h3>Caring for your plant</h3>
         <hr>
         <address>
 <ul>

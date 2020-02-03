@@ -41,7 +41,8 @@
         <h1 class="galhead" >Our Range of Plants</h1>
         <br><br>
         
-        <p>Click on a plant and you will be taking to a page full of growing guides and useful information about how to grow the plant, how to care for the plant, problem and disease that can affect the plant and when to harvest.</p>
+        <p> Click on a plant and you will be taken to a page full of growing guides and useful information about how to grow the plant, how to care for the plant, when to harvest and problems and diseases that can affect the plant.</p>
+
 <br><br>
 <br><br><br> 
 
@@ -71,7 +72,7 @@
     <div class="carousel-item active">
       <div class="row">
       <?php foreach ($vegetables as $veg): ?>
-      <div class="col-md-4 clearfix d-md-block d-none">
+      <div class="col-md-4 clearfix d-md-block">
     <div class="card mb-2">
       <?php $counter = 0; ?>
         <?php 
