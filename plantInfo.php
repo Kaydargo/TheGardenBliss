@@ -90,14 +90,17 @@ switch ($plantingSeason) {
 }
 ?>
      <tr>
+     <!-- Creates plant table - 12 tds -->
       <th scope="row">Plant</th>
-      <?php for($i=1; $i <=10; $i++){
-        echo "<td id=".$plant['season']." class='plantSeason'></td>";
+      <?php for($i=0; $i < 12; $i++){
+        echo "<td id=".$i." class='plantSeason'></td>";
         }?> 
+
     </tr>
     <tr>
+    <!-- Creates harvest table - 12 tds -->
       <th scope="row">Harvest</th>
-      <?php for($j=1; $j <=10; $j++){
+      <?php for($j=0; $j < 12; $j++){
         echo "<td id=".$j." class='harvestSeason'></td>";
       } ?>
     </tr>

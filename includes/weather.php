@@ -43,13 +43,5 @@
   <!-- <button onclick="getLocation()">Get weather for current location</button>
   <p id="getLocation"></p> -->
 
-<!--
-  <div class="component__weather-box">
-  <div class="component__weather-content">
-    <div class="weather-content__overview"></div>
-    <div class="weather-content__temp"></div>
-  </div>
-  <div class="component__forecast-box"></div>
-</div>
--->  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
  <!-- <script src="../js/weather-api.js"></script>-->
