@@ -90,28 +90,18 @@ $(document).ready(function() {
     });
   });
 
-var plantingSeason = document.getElementByClassName('plantSeason');
-
-    switch (plantingSeason) {
+var plantingSeason = document.querySelector('.plantSeason');
+switch (plantingSeason) {
       case 'January':
+        //td[0]
+        plantingSeason.css({backgroundColor: '#009fe3'});
+
       case 'February':
-      case 'March':
-        case 'April':
-          case 'May':
-            case 'June':
-              case 'July':
-                case 'August':
-                  case 'September':
-                    case 'October':
-                      case 'November':
-                        case 'December':
-            plantingSeason.css({backgroundColor: '#9518b8'});
-            break;
-      /*      
-      case 'February':
+        //td[1]
         plantingSeason.css({backgroundColor: '#009fe3'});
             
       case 'March':
+        //td[2]
         plantingSeason.css({backgroundColor: '#95c11f'});
             
       case 'April':
@@ -120,10 +110,10 @@ var plantingSeason = document.getElementByClassName('plantSeason');
       case 'May':
              $(this).css({backgroundColor: '#ffcc00'});
             
-             case 'June':
+      case 'June':
              $(this).css({backgroundColor: '#ffcc00'});
 
-             case 'July':
+      case 'July':
               $(this).css({backgroundColor: '#ffcc00'});
 
               case 'August':
@@ -139,10 +129,9 @@ var plantingSeason = document.getElementByClassName('plantSeason');
                       $(this).css({backgroundColor: '#ffcc00'});
 
                       case 'December':
-                        $(this).css({backgroundColor: '#ffcc00'});
-         */              
+                        $(this).css({backgroundColor: '#ffcc00'});            
         default:
-            $(this).text('Nix!');
+  
             break;
     }
 
