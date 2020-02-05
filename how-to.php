@@ -30,7 +30,7 @@
         
 </head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>how-to</title>
     </head>
     <style>
 
@@ -147,7 +147,7 @@ ul {
 <div class="hero-image">
   <div class="hero-text">
     <h1 style="font-size:50px">How- TO</h1>
-    <p>plant and care for your carrots</p>
+        <p>Start a garden from scratch</p>
     
   </div>
 </div>
@@ -173,12 +173,12 @@ ul {
 
     <div class="row">
       <div class="col-md-8 mb-5">
-        <h3>Tips for growing carrots in your garden</h3>
+        <h3>starting a garden</h3>
         <hr>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/kueifr5Ve8Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="col-md-4 mb-5"> 
-        <h3>Sowing your Carrot seeds </h3>
+        <h3>What you need </h3>
         <hr>
         <address>
 <ul>
@@ -206,7 +206,7 @@ ul {
         <img class="img" src="icons/watering_2.png" alt="">
         </div>
       <div class="col-md-4 mb-5">
-        <h3>Caring for your plant</h3>
+        <h3>Preparing Your soil</h3>
         <hr>
         <address>
 <ul>
