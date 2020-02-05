@@ -55,8 +55,25 @@ if (window.navigator && window.navigator.geolocation) {
 // //Dundalk - lat=53.9979451&lon=-6.405957
 // weatherLongLat(lat,long);
 
-
 function get5dayWeather(weatherForecast){
+  const date = new Date();
+  const weekday = new Array(7);
+  weekday[0] = "Sunday";
+  weekday[1] = "Monday";
+  weekday[2] = "Tuesday";
+  weekday[3] = "Wednesday";
+  weekday[4] = "Thursday";
+  weekday[5] = "Friday";
+  weekday[6] = "Saturday";
+ 
+  let getCurrentDay = weekday[date.getDay()];
+ 
+ let currDateTitle = document.querySelector('.weatherTitle', [0]);
+ currDateTitle.innerText = getCurrentDay;
+
+ let tomorrowDateTitle = document.querySelectorAll('.weatherTitle',);
+ tomorrowDateTitle.innerText = getCurrentDay;
+ 
   //Name of forecast location
  //let forecastLocation = weatherForecast.city.name;
 
