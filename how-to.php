@@ -10,7 +10,7 @@
         <title></title>
 
         <!-- CSS -->
-		
+
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
 		<link rel="stylesheet" href="css/graham.css">
@@ -56,7 +56,7 @@
 	            <div class="row">
 	                <div class="col services section-description wow fadeIn">
 	                    <h2>Clearing your garden</h2>
-	                    <div class="divider-1 wow fadeInUp"><span></span></div>
+	                    <hr>
 	                </div>
 	            </div>
 	            <div class="row">
@@ -65,7 +65,7 @@
                 			<div class="col-md-4">
 			                	<div class="services-box-icon">
 
-                        <img src="icons/shovel.jpg" alt=""/> 
+                        <img src="icons/shovel.png" alt=""/> 
 
 			                	</div>
 		                	</div>
@@ -80,7 +80,7 @@
                 			<div class="col-md-4">
 			                	<div class="services-box-icon">
 
-                        <img src="icons/sun.png" alt=""/> 
+                        <img src="icons/rake.png" alt=""/> 
 			                	</div>
 
 		                	</div>
@@ -94,7 +94,7 @@
 	                	<div class="row">
                 			<div class="col-md-4">
 			                	<div class="services-box-icon">
-                        <img src="icons/soil.png" alt=""/> 
+                        <img src="icons/clearGround.png" alt=""/> 
 			                	</div>
 		                	</div>
 	                		<div class="col-md-8">
@@ -161,7 +161,7 @@
 	                		<div class="col-md-3">
 	                			<div class="more-services-box-icon">
 
-                        <img src="icons/shade.png" alt=""/>                   
+                        <img src="icons/gardenSpot.png" alt=""/>                   
 	                			</div>
 
 	                		</div>
@@ -181,7 +181,7 @@
 	                		<div class="col-md-3">
 	                			<div class="more-services-box-icon">
 
-                        <img src="icons/distance.png" alt=""/> 
+                        <img src="icons/toPlant.png" alt=""/> 
 	                			</div>
 
 	                		</div>
@@ -201,7 +201,7 @@
 	                	<div class="row">
 	                		<div class="col-md-3">
 	                			<div class="more-services-box-icon">
-                        <img src="icons/depth.png" alt=""/> 
+                        <img src="icons/prepareSoil.png" alt=""/> 
 	                			</div>
 	                		</div>
 	                		<div class="col-md-9">
@@ -217,7 +217,7 @@
 	                	<div class="row">
 	                		<div class="col-md-3">
 	                			<div class="more-services-box-icon">
-                        <img src="icons/sun.png" alt=""/> 
+                        <img src="icons/sowSeeds.png" alt=""/> 
 	                			</div>
 	                		</div>
 	                		<div class="col-md-9">

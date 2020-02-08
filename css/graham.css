@@ -298,6 +298,29 @@ img { max-width: 100%;
 	font-size: 17px;
 	line-height: 32px;
 }
+strong { font-weight: 600; }
+
+a, a:hover, a:focus { color: #9b59b6; text-decoration: none; transition: all .3s; }
+
+h1, h2 {
+  
+	margin-top: 10px;
+	font-family: overpass;
+	font-size: 38px;
+    font-weight: 300;
+    color: #555;
+    line-height: 50px;
+}
+
+h3 {
+	font-family: overpass;
+	font-size: 22px;
+    font-weight: 300;
+    color: #555;
+    line-height: 30px;
+}
+
+
 
 .colored-text { color: #9b59b6; }
 
@@ -636,17 +659,9 @@ color: #ccc;
 }
 .blog-box h3:hover i { padding-left: 15px; }
 
-.blog-box-date {
-padding-bottom: 10px;
-font-size: 14px;
-color: #aaa;
-text-transform: uppercase;
-}
 
-.blog-box-date i {
-padding-right: 5px;
-color: #ddd;
-}
+
+
 
 .blog-container .section-bottom-button {
 padding-top: 40px;
