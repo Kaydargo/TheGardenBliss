@@ -19,7 +19,7 @@ include ('includes/header.php');
                      <input type="text" name="username" required class="form-control" />  
                      <br />  
                      <label>Enter Password</label>  
-                     <input type="text" name="password" required class="form-control" />  
+                     <input type="password" name="password" required class="form-control" />  
                      <br />  
                      <input type="submit" name="login" value="Login" class="btn btn-info" />  
                      <br />                    

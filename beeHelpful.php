@@ -10,9 +10,10 @@
 <body>
 <?php include 'includes/header.php' ?>
 <br><br><br><br><br><br>
+<div class="container">
 <h2 style="text-align:center;">Play our Bee Helpful Game</h2><br>
 <iframe src="story.html" width="100%" height="500"></iframe>
-
+</div>
 <?php include 'includes/footer.php' ?>
 </body>
 </html>
