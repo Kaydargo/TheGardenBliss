@@ -230,7 +230,7 @@ require('includes/database.php');
 
         <script src="js/drag-drop.js"></script>
         <script src="js/garden-size.js"></script>
-        <script src="js/weather-api.js"></script>
+        <script src="js/weatherBit.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>
