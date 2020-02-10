@@ -31,12 +31,13 @@ require('includes/database.php');
         ?>
     </head>
     <body>
-<br><br><br>
+<br><br><br><br><br>
 <div class="container">
-  <h2>Garden Dimensions</h2>
+  <h2>Garden Planner</h2>
   <div class="row">
-<p> Cupidatat pariatur elit velit dolor eiusmod Lorem anim. Cillum et aliqua velit laboris commodo dolore sint. Eiusmod fugiat consectetur aliqua sit fugiat fugiat. Aliquip occaecat aute occaecat tempor culpa minim occaecat laboris esse consequat aute id magna sit. Ipsum elit ea ut ad consectetur dolore sint. Ullamco velit proident nostrud minim ullamco ullamco cupidatat aute nostrud.
-</p><br>
+<p>Planning and creating a new garden design can give your home a boost. Our garden planner makes it easy to plan your dream garden, it allows you to plan the layout and content of your garden easily. It also gives you the flexibility to create the best design for your  garden. with the planner you can easily add various  vegetables and move them around your allotted garden to get the perfect layout.
+
+</p><br><br><br><br>
 
 <!-- Feature Cards -->
 <section class="d-flex bg-light" id="feature-cards">
@@ -55,7 +56,7 @@ require('includes/database.php');
                                 <div class="row mt-4">
                                     <div class="col-12 text-center">
                                         <h3>Select</h3><hr>
-                                        <p class="text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus dicta error.</p>
+                                        <p class="text-secondary">Use the width and breadth grid provided to create the dimension that you want for your garden.</p>
                                     </div>
                                 </div>
                             </div>
@@ -72,7 +73,7 @@ require('includes/database.php');
                                 <div class="row mt-4">
                                     <div class="col-12 text-center">
                                         <h3>Design</h3><hr>
-                                        <p class="text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus dicta error.</p>
+                                        <p class="text-secondary">Pick from the various vegetables, drag and drop it to anywhere you want on your alloted garden.</p>
                                     </div>
                                 </div>
                             </div>
@@ -89,7 +90,7 @@ require('includes/database.php');
                                 <div class="row mt-4">
                                     <div class="col-12 text-center">
                                         <h3>Save</h3><hr>
-                                        <p class="text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus dicta error.</p>
+                                        <p class="text-secondary">fill up your garden with the vegetables and save on your profile or print it out if you are not login.</p>
                                     </div>
                                 </div>
                             </div>

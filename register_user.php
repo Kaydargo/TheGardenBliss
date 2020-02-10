@@ -75,8 +75,9 @@ else{
     $result = $stmt1->execute();
    
     if($result){
+                $_SESSION['userID'] = $user['userID'];
                 header('Location: userProfile.php');
-                echo 'Thank you for registering to Kays Games, Enjoy!';
+                echo 'Thank you for registering for Garden Bliss, Enjoy!';
     }
     }
 }

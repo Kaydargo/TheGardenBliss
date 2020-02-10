@@ -24,33 +24,46 @@ require_once('includes/database.php');
 
 //Display fruit images in slider
 
-$queryFruit = "SELECT * FROM plant WHERE type='fruit' LIMIT 4"; 
+$queryFruit = "SELECT * FROM plant WHERE type='fruit' LIMIT 3"; 
 $statement3 = $conn->prepare($queryFruit);
 $statement3->execute();
 $fruits = $statement3->fetchAll();
 $statement3->closeCursor();
 
- $queryFruits1 = "SELECT * FROM plant WHERE type='fruit' LIMIT 4,8"; 
+ $queryFruits1 = "SELECT * FROM plant WHERE type='fruit' LIMIT 3,3"; 
 $statement4 = $conn->prepare($queryFruits1);
 $statement4->execute();
 $fruits1 = $statement4->fetchAll();
 $statement4->closeCursor();
 
+$queryFruits2 = "SELECT * FROM plant WHERE type='fruit' LIMIT 6,3"; 
+$statement4 = $conn->prepare($queryFruits2);
+$statement4->execute();
+$fruits2 = $statement4->fetchAll();
+$statement4->closeCursor();
+
 
 //Display room flower in slider
 
-$queryFlower = "SELECT * FROM plant WHERE type='flower' LIMIT 4"; 
+$queryFlower = "SELECT * FROM plant WHERE type='flower' LIMIT 3"; 
 $statement5 = $conn->prepare($queryFlower);
 $statement5->execute();
 $flowers = $statement5->fetchAll();
 $statement5->closeCursor();
 
-$queryFlower1 = "SELECT * FROM plant WHERE type='flower' LIMIT 4,8"; 
+$queryFlower1 = "SELECT * FROM plant WHERE type='flower' LIMIT 6,3"; 
 $statement6 = $conn->prepare($queryFlower1);
 $statement6->execute();
 $flowers1 = $statement6->fetchAll();
 $statement6->closeCursor();
 
+
+
+$queryFlower2 = "SELECT * FROM plant WHERE type='flower' LIMIT 6,3"; 
+$statement6 = $conn->prepare($queryFlower2);
+$statement6->execute();
+$flowers2 = $statement6->fetchAll();
+$statement6->closeCursor();
 
 //Display vegetable for garden planner
 $queryVegGarden = "SELECT * FROM plant WHERE type='vegetable' LIMIT 4"; 
