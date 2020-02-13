@@ -16,7 +16,7 @@ function showPosition(position) {
 }
 
 //Getting coordinates and linking with openweathermap api service
-var openWeatherMap = 'http://api.openweathermap.org/data/2.5/forecast'
+var openWeatherMap = 'https://api.weatherbit.io/v2.0/forecast/daily?'
 
 if (window.navigator && window.navigator.geolocation) {
     window.navigator.geolocation.getCurrentPosition(function(position) {
@@ -24,85 +24,67 @@ if (window.navigator && window.navigator.geolocation) {
             lat: position.coords.latitude,
             lon: position.coords.longitude,
             units: 'metric',
-            APPID: '6f58e1671e79c93bc5bc7fc488b6f9df'
+            key: 'b1a4cb99758e4bbead1bb761cbb6680b',
+            days: '5'
         }).done(function(weather) {
             // getCurrentDayWeather(weather),
             get5dayWeather(weather)
         })
     })
 }
-// **************** GET WEATHER USING LONGITUDE AND LATITUDE - 1 DAY *******************
-// function weatherLongLat(lat, long){
-// // The Endpoint URL
-// const url = 'https://api.openweathermap.org/data/2.5/weather?';
-// const key = 'appid=6f58e1671e79c93bc5bc7fc488b6f9df';
-// const longitude = 'lat='+ lat; //coordinates[0];
-// const latitude = 'lon=' + long; //coordinates[1];
-// const units = 'metric';
-// const weather = url + '&' + latitude + '&' + longitude + '&' + units + '&' + key;
-
-// //Fetchs api service
-// fetch(weather)
-// // Parse the body as JSON
-// .then(response => response.json())
-// .then (data => {
-//     console.log( formatWeather(data));
-//   formatWeather(data);
-// })
-// .catch (error => console.error(error))
-// }
-
-// //Dundalk - lat=53.9979451&lon=-6.405957
-// weatherLongLat(lat,long);
 
 function get5dayWeather(weatherForecast){
-  const date = new Date();
-  const weekday = new Array(7);
-  weekday[0] = "Monday";
-  weekday[1] = "Tuesday";
-  weekday[2] = "Wednesday";
-  weekday[3] = "Thursday";
-  weekday[4] = "Friday";
-  weekday[5] = "Saturday";
-  weekday[6] = "Sunday";
-  
-  var getWeatherDay = document.querySelectorAll(".weatherTitle");
-  for (var i = 0; i < getWeatherDay.length; i++) {
-    getWeatherDay[i].innerHTML = weekday[i];
-  }
+
+    const weekday = new Array(7);
+    weekday[0] = "Sunday";
+    weekday[1] = "Monday";
+    weekday[2] = "Tuesday";
+    weekday[3] = "Wednesday";
+    weekday[4] = "Thursday";
+    weekday[5] = "Friday";
+    weekday[6] = "Saturday";
+
+    var getWeatherDay = document.querySelectorAll(".weatherTitle");
+console.log(weatherForecast.data[0].datetime);
+
+    for (var i = 0; i < getWeatherDay.length; i++) {
+        var dt = new Date (weatherForecast.data[i].datetime);
+        getWeatherDay[i].innerHTML = weekday[dt.getDay()];
+    }
 
 //  Object.keys(weatherForecast).forEach(function(key){
 //    console.log(key, weatherForecast[key])
 //  });
 
-document.getElementById('location').innerHTML = weatherForecast.city.name;
+document.getElementById('location').innerHTML = weatherForecast.city_name;
 
 var getTemp = document.querySelectorAll(".mainTemp");
 
 //Get Temperture
 for (var i = 0; i < getTemp.length; i++) {
-  getTemp[i].innerHTML = `${Math.round(weatherForecast.list[i].main.temp)} &deg;`;
+  getTemp[i].innerHTML = `${Math.round(weatherForecast.data[i].temp)} &deg;`;
 }
 
 //Get Icons
 var getIcon = document.querySelectorAll(".icon");
 for (var i = 0; i < getIcon.length; i++) {
-  var iconcode = weatherForecast.list[i].weather[0].icon;
-  var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+  var iconcode = weatherForecast.data[i].weather.icon;
+  var iconurl = "https://www.weatherbit.io/static/img/icons/" + iconcode + ".png";
+  console.log(iconurl);
   getIcon[i].innerHTML = "<img src=\"" + iconurl + "\">";
 }
 //Get weather Type
 var getWeatherType = document.querySelectorAll(".weather");
 
 for (var i = 0; i < getWeatherType.length; i++) {
-  getWeatherType[i].innerHTML = `${weatherForecast.list[i].weather[0].main}`;
+  getWeatherType[i].innerHTML = `${weatherForecast.data[i].weather.description}`;
 }
 
 //Get Min Max
 var getMinMax = document.querySelectorAll('.temp');
 
 for (var i = 0; i < getMinMax.length; i++) {
-  getMinMax[i].innerHTML = `<strong>Min:</strong> ${Math.round(weatherForecast.list[i].main.temp_min)} &deg; &nbsp; &nbsp; <strong>Max:</strong> ${Math.round(weatherForecast.list[i].main.temp_max)}&deg;`;
+  getMinMax[i].innerHTML = `<strong>Min:</strong> ${Math.round(weatherForecast.data[i].low_temp)} &deg; &nbsp; &nbsp; <strong>Max:</strong> ${Math.round(weatherForecast.data[i].max_temp)}&deg;`;
 }
 
 }

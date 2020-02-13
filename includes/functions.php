@@ -8,8 +8,6 @@ $statement1->execute();
 $vegetables = $statement1->fetchAll();
 $statement1->closeCursor();
 
-
-
 $queryVeg1 = "SELECT * FROM plant WHERE type='vegetable' LIMIT 3,3"; 
 $statement2 = $conn->prepare($queryVeg1);
 $statement2->execute();
@@ -21,7 +19,6 @@ $statement10 = $conn->prepare($queryVeg2);
 $statement10->execute();
 $vegetables2 = $statement10->fetchAll();
 $statement10->closeCursor();
-
 
 $queryVeg3 = "SELECT * FROM plant WHERE type='vegetable' LIMIT 9,3"; 
 $statement4 = $conn->prepare($queryVeg3);
@@ -58,13 +55,12 @@ $statement5->execute();
 $flowers = $statement5->fetchAll();
 $statement5->closeCursor();
 
+
 $queryFlower1 = "SELECT * FROM plant WHERE type='flower' LIMIT 3,3"; 
 $statement6 = $conn->prepare($queryFlower1);
 $statement6->execute();
 $flowers1 = $statement6->fetchAll();
 $statement6->closeCursor();
-
-
 
 $queryFlower2 = "SELECT * FROM plant WHERE type='flower' LIMIT 6,3"; 
 $statement6 = $conn->prepare($queryFlower2);
@@ -72,14 +68,12 @@ $statement6->execute();
 $flowers2 = $statement6->fetchAll();
 $statement6->closeCursor();
 
-
 //Display vegetable for garden planner
 $queryVegGarden = "SELECT * FROM plant WHERE type='vegetable' LIMIT 4"; 
 $statement7 = $conn->prepare($queryVegGarden);
 $statement7->execute();
 $vegGardens = $statement7->fetchAll();
 $statement7->closeCursor();
-
 
 
 $queryVegGarden1 = "SELECT * FROM plant WHERE type='vegetable' LIMIT 4,4"; 

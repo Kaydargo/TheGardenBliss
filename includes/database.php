@@ -1,6 +1,6 @@
 <?php
 $servername = "localhost";
-$db = "gardening";
+$db = "gardenbliss";
 $username = "root";
 $password = "";
 

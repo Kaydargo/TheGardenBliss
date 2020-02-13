@@ -33,7 +33,7 @@ include 'includes/header.php';
                      <input type="text" name="username" class="form-control" required pattern="{6,}"/>  
                      <br />
                      <label><strong>Email Address </strong><br></label>  
-                     <input type="text" name="email" class="form-control" required/>  
+                     <input type="email" name="email" class="form-control" required/>  
                      <br />   
                      <label><strong>Password </strong><br><em>(Minimum 8 characters and include one upper case and special character and one number)</em> </label>  
                      <input type="password" name="password" class="form-control" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"/>  
