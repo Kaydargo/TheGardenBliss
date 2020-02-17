@@ -142,7 +142,10 @@ $statement2->closeCursor();
   </ol>
       </div> 
       <div class="col-sm-6">
-        <?php echo "<img class='image1' src='images/".$plantInfo['infoImage']. "' />"; ?>
+        
+      <!-- <?php echo "<img class='image1' src='images/".$plantInfo['infoImage']. "' />"; ?> -->
+      <?php echo "<img class='image1' src='images/plant2.jpg' />"; ?>
+
       </div>
    </div> 
     </div> 
@@ -182,6 +185,6 @@ $statement2->closeCursor();
   <script src="js/table.js"></script>
     
   <?php
-    include('includes/footer2.php');
+    include('includes/footer.php');
         ?>
 </html>
