@@ -68,7 +68,7 @@ and open the template in the editor.
 <div class="row display-flex">
 <div class="col-sm">
 <div class="polaroid">
-<img class="icons img-fluid" src='icons/distance.png'>
+<img class="icons img-fluid" src='icons/drag_drop1.svg'>
   <div class="ctnbtm">
   <h4 class="func">Drag and Drop Garden Planner</h4>
   </div>
@@ -76,7 +76,7 @@ and open the template in the editor.
   </div>
   <div class="col-sm">
   <div class="polaroid">
-  <img class="icons img-fluid" src='icons/distance.png'>
+  <img class="icons img-fluid" src='icons/info.svg'>
   <div class="ctnbtm">
   <h4 class="func">Information Guides on Plant Keeping</h4>
   </div>
@@ -84,7 +84,7 @@ and open the template in the editor.
 </div>
   <div class="col-sm">
   <div class="polaroid">
-  <img class="icons img-fluid" src='icons/distance.png'>
+  <img class="icons img-fluid" src='icons/tutorial1.svg'>
   <div class="ctnbtm">
   <h4 class="func">Tutorials on How to Garden</h4>
   </div>
@@ -92,7 +92,7 @@ and open the template in the editor.
   </div>
   <div class="col-sm">
   <div class="polaroid">
-  <img class="icons img-fluid" src='icons/distance.png'>
+  <img class="icons img-fluid" src='icons/bee1.svg'>
   <div class="ctnbtm">
   <h4 class="func">Interactive Game on Bee Conservation</h4>
   </div>
@@ -117,10 +117,10 @@ and open the template in the editor.
    <div class="row row1"> 
    <div class="col-sm-6">
           <h3 class="howTo">About Us</h3>
-          <p class="para"><strong>We understand and belief that most homeowners want an attractive and beautiful garden, but realised that not everyone has the knowledge, time and inclination to achieve this. Our aim is to inspire beginner gardeners to grow a wide variety of popular, easy to grow plants and provide practical insight into garden planning process. We provide avenue for adults to explore a wide range of easy to grow flowers, fruits and vegetables easily in one place. Our website allows the users to create a custom plan for their garden using our drag and drop garden planner which they can save to their user profile for future reference.  </p>
+          <p class="para">We understand and belief that most homeowners want an attractive and beautiful garden, but realised that not everyone has the knowledge, time and inclination to achieve this. Our aim is to inspire beginner gardeners to grow a wide variety of popular, easy to grow plants and provide practical insight into garden planning process. We provide avenue for adults to explore a wide range of easy to grow flowers, fruits and vegetables easily in one place. Our website allows the users to create a custom plan for their garden using our drag and drop garden planner which they can save to their user profile for future reference.  </p>
       </div> 
       <div class="col-sm-6">
-      <img class='image1 img-fluid' src="" alt="">
+      <img class='image1 img-fluid' src="images/about3.jpg" alt="">
       </div>
    </div> 
     </div> 
