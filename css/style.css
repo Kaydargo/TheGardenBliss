@@ -19,9 +19,9 @@ body{
     background-color: white;
 }
 
-img {
+/* img {
     width: 50px;
-}
+} */
 
 .fill{
     background-image: url("../images/carrot.png");
