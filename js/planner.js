@@ -29,9 +29,8 @@ jQuery(document).ready(function() {
     /*
         Background slideshow
     */
-    $('.top-content').backstretch("images/howTo.jpg");
-    $('.call-to-action-container').backstretch("images/howTo.jpg");
-    $('.testimonials-container').backstretch("images/howTo.jpg");
+    $('.top-content').backstretch("images/gardenPlanner.jpg");
+   
     
     $('#top-navbar-1').on('shown.bs.collapse', function(){
     	$('.top-content').backstretch("resize");

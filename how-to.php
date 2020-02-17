@@ -7,24 +7,23 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title></title>
-</head>
-        <meta charset="UTF-8">
-        <title>how-to</title>
-    </head>
+
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
 		<link rel="stylesheet" href="css/graham.css">
     <link rel="stylesheet" href="css/animate.css">
      <link rel="stylesheet" href="css/media-queries.css">
     </head>
-
+	
     <body>
 
 		<?php
   include('includes/header.php');
   include('includes/database.php');  
   ?>
- 
+ <br>
+     <br>
+     <br>
 
 
         <!-- Top content -->
@@ -45,7 +44,8 @@
                 </div>
                 
             </div>            
-        </div>
+		</div>
+		<br><br>
         
         <!-- Services -->
         <div class="services-container section-container">
@@ -387,7 +387,7 @@
 	        	
 	            <div class="row">
 	                <div class="col blog section-description wow fadeIn">
-	                    <h2>Why not try these plants in your garden</h2>
+	                    <h2>Why not try these cropss in your garden</h2>
 	                    <div class="divider-1 wow fadeInUp"><span></span></div>
 	                </div>
 	            </div>
@@ -397,11 +397,11 @@
 	                	<div class="row">
 	                		<div class="col-md-3">
 	                			<div class="blog-box-image">
-	                			<img src="images/carrot.jpg" alt="" data-at2x="images/carrot.jpg">
+	                			<img src="images/carrot.jpg" alt="" data-at2x="images/tulips.jpg">
 	                			</div>
 	                		</div>
 	                		<div class="col-md-9">
-	                			<h3><a href="#">Planting Tomatoes</a> <i class="fas fa-angle-right"></i></h3>
+	                			<h3><a href="#">Planting Tulips</a> <i class="fas fa-angle-right"></i></h3>
 	                			
 		                    	<p>
 		                    		There are over 10,000 varieties of tomato in the world, these come in a variety of colours including pink, purple, black, yellow and white.
@@ -413,7 +413,7 @@
 	                	<div class="row">
 	                		<div class="col-md-3">
 	                			<div class="blog-box-image">
-	                				<img src="images/apple.jpg" alt="" data-at2x="images/apple.jpg">
+	                				<img src="images/apple.jpg" alt="" data-at2x="images/lettuce.jpg">
 	                			</div>
 	                		</div>
 	                		<div class="col-md-9">
@@ -432,14 +432,14 @@
 	                	<div class="row">
 	                		<div class="col-md-3">
 	                			<div class="blog-box-image">
-	                			<img src="images/garlic.jpg" alt="" data-at2x="images/garlic.jpg">
+	                			<img src="images/garlic.jpg" alt="" data-at2x="images/parsley.jpg">
 	                			</div>
 	                		</div>
 	                		<div class="col-md-9">
-	                			<h3><a href="#">How to care for Tulip</a> <i class="fas fa-angle-right"></i></h3>
+	                			<h3><a href="#">How to care for parsley</a> <i class="fas fa-angle-right"></i></h3>
 	                			
 		                    	<p>
-		                    		Tulips will only bloom naturally for 3-7 days in spring. If you trim the stems of your freshly cut tulips, they will continue to grow in your vase for at least another inch.
+		                    		Parsley will only bloom naturally for 3-7 days in spring. If you trim the stems of your freshly cut tulips, they will continue to grow in your vase for at least another inch.
 		                    	</p>
 	                		</div>
 	                	</div>
@@ -448,7 +448,7 @@
 	                	<div class="row">
 	                		<div class="col-md-3">
 	                			<div class="blog-box-image">
-                        <img src="images/daffodil.png" alt="" data-at2x="images/daffodil.png">
+                        <img src="images/daffodil.png" alt="" data-at2x="images/roses.jpg">
 	                			</div>
 	                		</div>
 	                		<div class="col-md-9">
@@ -467,7 +467,7 @@
 
 	        </div>
         </div>
-
+		
        
      
 
