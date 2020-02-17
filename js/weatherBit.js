@@ -73,11 +73,44 @@ for (var i = 0; i < getIcon.length; i++) {
   console.log(iconurl);
   getIcon[i].innerHTML = "<img src=\"" + iconurl + "\">";
 }
+//Get sunrise
+let weatherDivs = document.querySelectorAll('.weatherCard');
+
+for (var i = 0; i < weatherDivs.length; i++) {
+let sunriseUnix = weatherForecast.data[i].sunrise_ts;
+
+let today = new Date();
+let currentTime = today.getTime();
+
+//  if (sunriseUnix < currentTime)
+// {
+//   weatherDivs[i].style.backgroundColor = '#7F7F7F';
+// }
+// else{
+//   weatherDivs[i].style.backgroundColor = '#dcf0fa';
+// }
+}
 //Get weather Type
 var getWeatherType = document.querySelectorAll(".weather");
 
 for (var i = 0; i < getWeatherType.length; i++) {
-  getWeatherType[i].innerHTML = `${weatherForecast.data[i].weather.description}`;
+  let weatherDesc = (weatherForecast.data[i].weather.description).toLowerCase();
+  getWeatherType[i].innerHTML = `${weatherDesc}`;
+
+  if (weatherDesc.includes('clouds')){
+    weatherDivs[i].style.backgroundImage = "url('images/Clouds_background_3.svg')";
+  }
+  else if (weatherDesc.includes('rain'))
+  {
+    weatherDivs[i].style.backgroundImage = "url('images/rain_day.svg')";
+  }
+  else if (weatherDesc.includes('snow'))
+  {
+    weatherDivs[i].style.backgroundImage = "url('images/stormy_background.svg')";
+  }
+  else if (weatherDesc.includes('sun')){
+    weatherDivs[i].style.backgroundImage =  "url('images/sun_background_2.svg')";
+  }
 }
 
 //Get Min Max
@@ -87,7 +120,12 @@ for (var i = 0; i < getMinMax.length; i++) {
   getMinMax[i].innerHTML = `<strong>Min:</strong> ${Math.round(weatherForecast.data[i].low_temp)} &deg; &nbsp; &nbsp; <strong>Max:</strong> ${Math.round(weatherForecast.data[i].max_temp)}&deg;`;
 }
 
+
+
 }
+
+
+//Get sunset
 
   //   x += `Temp: ${weatherForecast.list.main[i].temp}`;
   //   x += `Weather: ${weatherForecast.list.weather[i].main}`;

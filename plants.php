@@ -43,10 +43,10 @@
             	
                 <div class="row">
                     <div class="col-md-8 offset-md-2 text">
-                        <h1 class="wow fadeInLeftBig"> Crops and planting Information</h1>
+                        <h1 class="wow fadeInLeftBig"> Our Range of Plants</h1>
                         <div class="description wow fadeInLeftBig">
-                        	<p>We walk you through factors that can affect how your garden will grow — sunlight, shade, soil —
-                                    and the balance between fruits, shrubs, flowers and vegetables
+                        	<p>Click on a plant and you will be taken to a page full of growing guides and useful information about how to grow the plant,
+                           how to care for the plant, when to harvest and problems and diseases that can affect the plant.
                          	
                         	</p>
                         </div>
@@ -57,17 +57,11 @@
             </div>            
         </div>
 
-        <br><br>
+        <br>
 
         <!-- Page Content -->
         <div class="container" style="text-align: center;">
-        <h1 class="galhead" >Our Range of Plants</h1>
-        <br><br>
-        
-        <p> Click on a plant and you will be taken to a page full of growing guides and useful information about how to grow the plant, how to care for the plant, when to harvest and problems and diseases that can affect the plant.</p>
-
 <br><br>
-<br><br><br> 
 
 <h3>Vegetables & Herbs</h3>
           
@@ -205,7 +199,7 @@ break;
 
 
 </div>
-<br><br><br><br>
+<br><br><br>
     <!--/.Third slide-->
     <ol class="carousel-indicators">
     <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
@@ -222,7 +216,6 @@ break;
 <!--/.Carousel Wrapper-->
 
 <br><br><br>
-<br> <br>
 
 <h3>Fruits</h3>
 <br><br>
@@ -339,7 +332,6 @@ break;
 <!--/.Carousel Wrapper-->
 
 <br><br><br>
-<br> <br>
 
 <h3>Flowers</h3>
 <br><br>
