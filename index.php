@@ -5,25 +5,55 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <html>
+ 
     <head>
-        <meta charset="UTF-8">
-        <title></title>
+
+<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title></title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
+<link rel="stylesheet" href="css/graham.css">
+<link rel="stylesheet" href="css/animate.css">
+ <link rel="stylesheet" href="css/media-queries.css">
+
+</head>
       
-    </head>
+ 
     <?php include('includes/header.php'); ?>  
-    <link href="css/hero.css" rel="stylesheet"> 
+    <br>
+     <br>
+     <br>
     <body>
+       <!-- Top content -->
+       <div class="top-content"> 
+            <div class="container">
+            	
+                <div class="row">
+                    <div class="col-md-8 offset-md-2 text">
+                        <h1 class="wow fadeInLeftBig">Welcome to GardenBliss</h1>
+                        <div class="description wow fadeInLeftBig">
+                        	<p> get all the information you need for your gardening journey-crops to plant in diferent seasons,
+                           watering measurement, plant placement and how to control diseases and pests that can affect your plants
+
+                        
+                        	</p>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>            
+        </div>
     
-    <div class="hero">
-    <div class="container-fluid">
-	<h1>GARDEN BLISS<span>- Back to the basics gardening -</span></h1>
-</div>
-</div>
 <br><br>
+
     <div class="container"> 
    <div class="row row1"> 
       <div class="col-sm-6">
-        <img class='image1 img-fluid' src="" alt="">
+        <img class='image1 img-fluid' src="images/home.jpg" alt="">
       </div>
       <div class="col-sm-6">
           <h3 class="plantName">OUR MISSION</h3>
@@ -71,6 +101,17 @@ and open the template in the editor.
 </div> 
 </div>
 <br><br><br>
+
+
+
+
+
+
+
+
+
+
+
 <div class="container-fluid ctnCol"> 
 <div class="container pad"> 
    <div class="row row1"> 
@@ -83,8 +124,21 @@ and open the template in the editor.
       </div>
    </div> 
     </div> 
-</div>
-       
+</div
+<!-- Javascript>
+  
+<script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/jquery-migrate-3.0.0.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="js/jquery.backstretch.min.js"></script>
+        <script src="js/wow.min.js"></script>
+        <script src="js/retina-1.1.0.min.js"></script>
+        <script src="js/waypoints.min.js"></script>
+        <script src="js/home.js"></script>
+
+
+
     </body>
     <?php
     include('includes/footer.php');

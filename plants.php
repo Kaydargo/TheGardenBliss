@@ -9,15 +9,20 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/drag.css">
+  <link rel="stylesheet" href="css/graham.css">
+  <link rel="stylesheet" href="css/animate.css">
+ <link rel="stylesheet" href="css/media-queries.css">
   <script src="bootstrap.bundle.min.js / bootstrap.bundle.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   
         
         
 </head>
+
+<br>
+     <br>
+     <br>
 
 <body>
 <?php
@@ -28,14 +33,31 @@
 <?php
 //Selects all images, their id and userid with the tag animated
         require('includes/functions.php');
-        ?>
-     <br>
-     <br>
-     <br>
-     <br>
-     <br>
-     <br>
-     <br>
+        ?>  
+
+
+ <!-- Top content -->
+ <div class="top-content">
+            <div class="container">
+            	
+                <div class="row">
+                    <div class="col-md-8 offset-md-2 text">
+                        <h1 class="wow fadeInLeftBig"> Crops and planting Information</h1>
+                        <div class="description wow fadeInLeftBig">
+                        	<p>We walk you through factors that can affect how your garden will grow — sunlight, shade, soil —
+                                    and the balance between fruits, shrubs, flowers and vegetables
+                         	
+                        	</p>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>            
+        </div>
+
+        <br><br>
+
         <!-- Page Content -->
         <div class="container" style="text-align: center;">
         <h1 class="galhead" >Our Range of Plants</h1>
@@ -432,9 +454,16 @@ include('includes/footer.php');
 
 <br><br><br>
 <br> <br>
-            <script src="js/jQuery.js" type="text/javascript"></script>
-                <script src="vendor/jquery/jquery.min.js"></script>
-                <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/jquery-migrate-3.0.0.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="js/jquery.backstretch.min.js"></script>
+        <script src="js/wow.min.js"></script>
+        <script src="js/retina-1.1.0.min.js"></script>
+        <script src="js/waypoints.min.js"></script>
+        <script src="js/plants.js"></script>
+          
 
                 </body>
                 </html>
