@@ -98,7 +98,7 @@ for (var i = 0; i < getWeatherType.length; i++) {
   getWeatherType[i].innerHTML = `${weatherDesc}`;
 
   if (weatherDesc.includes('clouds')){
-    weatherDivs[i].style.backgroundImage = "url('images/Clouds_background_2.svg')";
+    weatherDivs[i].style.backgroundImage = "url('images/Clouds_background_3.svg')";
   }
   else if (weatherDesc.includes('rain'))
   {

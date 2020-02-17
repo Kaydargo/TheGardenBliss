@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:600,300);
 
 font-face {
-    font-family: Raylway;
+    font-family: Raylway !important;
     src: url(Raylway.ttf);
 }
 
@@ -36,7 +36,7 @@ p{
 text-transform: uppercase;
 text-align: center;
 color: #748C1C;
-font-family: Overpass;
+font-family: Overpass !important;
 align-content: left !important;
 }
 .row1

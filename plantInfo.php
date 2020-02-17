@@ -69,44 +69,25 @@ $statement2->closeCursor();
     </tr>
   </thead>
   <tbody>
-  <?php
-$plantingSeason = $plant['season'];
-switch ($plantingSeason) {
-    case "January":
-        echo 
-        "Your favorite color is red!";
-        break;
-    case "Feburary":
-        echo "Your favorite color is blue!";
-        break;
-    case "March":
-        echo "Your favorite color is green!";
-        break;
-    case "April":
-        echo "Your favorite color is green!";
-        break;
-    default:
-        echo "Your favorite color is neither red, blue, nor green!";
-}
-?>
-     <tr>
-     <!-- Creates plant table - 12 tds -->
+  <tr>
       <th scope="row">Plant</th>
-      <?php for($i=0; $i < 12; $i++){
-        echo "<td id=".$i." class='plantSeason'></td>";
-        }?> 
+      <script id="season" data-name="<?php echo $plant['season'];?>" src="table.js"></script>
+      
+      <?php for($i=0; $i <=11; $i++){   
+    echo "<td id=".$i."></td>";  
+   } ?>
 
     </tr>
     <tr>
-    <!-- Creates harvest table - 12 tds -->
       <th scope="row">Harvest</th>
-      <?php for($j=0; $j < 12; $j++){
-        echo "<td id=".$j." class='harvestSeason'></td>";
+      <script id="harvest" data-name="<?php echo $plant['Harvesting'];?>" src="table.js"></script>
+      <?php for($j=12; $j <=23; $j++){
+        echo "<td id=".$j."></td>";
       } ?>
     </tr>
   </tbody>
 </table>
-</div>
+</div><br>
 <!-- Harvest table end -->
 <div class="row display-flex">
   <div class="col-sm"><h4 class="info">Soil</h4>
@@ -198,6 +179,7 @@ switch ($plantingSeason) {
 
   <!-- Custom scripts for this template -->
   <script src="js/freelancer.min.js"></script>
+  <script src="js/table.js"></script>
     
   <?php
     include('includes/footer2.php');
