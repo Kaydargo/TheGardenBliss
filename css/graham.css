@@ -700,9 +700,6 @@ padding-top: 40px;
   overflow: hidden;
 }
 
-
-/**footer***/
-
 /***** Footer *****/
 
 .footer-top { padding: 60px 0; text-align: left; color: #fff; color: rgba(255, 255, 255, 0.8); }
@@ -727,3 +724,6 @@ padding-top: 40px;
 .footer-copyright a { color: #fff; border: 0; }
 .footer-copyright a:hover, .footer-copyright a:focus { color:#fff; border: 0; }
 
+.weatherCard {
+  opacity: 0.9;
+}
