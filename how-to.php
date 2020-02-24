@@ -486,7 +486,7 @@
 
 
 		<?php
-    include('includes/footer.php');
+    include('includes/footer3.php');
         ?>
 
     </body>

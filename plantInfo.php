@@ -142,10 +142,7 @@ $statement2->closeCursor();
   </ol>
       </div> 
       <div class="col-sm-6">
-        
-      <!-- <?php echo "<img class='image1' src='images/".$plantInfo['infoImage']. "' />"; ?> -->
-      <?php echo "<img class='image1' src='images/plant2.jpg' />"; ?>
-
+        <?php echo "<img class='image1' src='images/plant2.jpg".$plantInfo['infoImage']. "' />"; ?>
       </div>
    </div> 
     </div> 
