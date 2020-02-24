@@ -29,23 +29,27 @@
     margin: 2em auto;
    /* background-image: url(../images/grid.png);*/
     z-index: 0;
+    border-radius: 2px;
 }
 .gardenGrid {
     height: 500px;
     width: 100%;
     z-index: 100;
+    background-image: url('images/dirt.png');
   }
   .gardenGridRow, .gardenGridColumn, .gardenGrid {
     border-style: solid;
     border-width: 1px;
-    background-color: white;
+    /* background-color: white; */
     margin: auto;
     margin-top: 20px;
+    background-image: url('images/dirt.png');
   }
 
   .gardenGridColumn {
     transition: .3s background-color;
+    background-image: url('images/dirt.png');
   }
-  .gardenGridColumn:hover {
+  /* .gardenGridColumn:hover {
     background-color: grey;
-  }
+  } */

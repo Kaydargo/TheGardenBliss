@@ -141,6 +141,6 @@ and open the template in the editor.
 
     </body>
     <?php
-    include('includes/footer.php');
+    include('includes/footer3.php');
         ?>
 </html>

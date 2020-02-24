@@ -49,5 +49,8 @@ include 'includes/header.php';
         <?php unset($_SESSION['errMsg']); ?>
 </div>
 </div>
+<?php
+    include('includes/footer3.php');
+        ?>
 </body>
 </html>

@@ -182,6 +182,6 @@ $statement2->closeCursor();
   <script src="js/table.js"></script>
     
   <?php
-    include('includes/footer.php');
+    include('includes/footer3.php');
         ?>
 </html>
