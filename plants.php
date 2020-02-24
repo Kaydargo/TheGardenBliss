@@ -55,7 +55,7 @@
                 </div>
                 
             </div>            
-        </div>
+  </div>
 
         <br>
 
@@ -459,12 +459,8 @@ break;
   
   
 <?php
-include('includes/footer.php');  
-
-
+include('includes/footer3.php');  
 ?>
-<br><br><br>
-<br> <br>
 <script src="js/jquery-3.2.1.min.js"></script>
         <script src="js/jquery-migrate-3.0.0.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -473,7 +469,7 @@ include('includes/footer.php');
         <script src="js/wow.min.js"></script>
         <script src="js/retina-1.1.0.min.js"></script>
         <script src="js/waypoints.min.js"></script>
-        <script src="js/plants.js"></script>
+        <script src="js/scripts.js"></script>
           
 
                 </body>

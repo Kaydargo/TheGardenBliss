@@ -13,10 +13,11 @@ function scroll_to(clicked_link, nav_height) {
 
 
 jQuery(document).ready(function() {
-	
+	console.log('test');	
 	/*
 	    Navigation
 	*/
+	$('footer').backstretch("images/footer.jpg");
 	$('a.scroll-link').on('click', function(e) {
 		e.preventDefault();
 		scroll_to($(this), $('nav').outerHeight());
@@ -29,18 +30,79 @@ jQuery(document).ready(function() {
     /*
         Background slideshow
     */
-    $('.top-content').backstretch("images/howTo.jpg");
-    $('.call-to-action-container').backstretch("images/howTo.jpg");
-	$('.testimonials-container').backstretch("images/howTo.jpg");
-	$('footer').backstretch("images/footer.jpg");
-    
+
+
+   if ( window.location.pathname.includes("index.php")) {
+	console.log('Home');
+    $('.top-content').backstretch("images/about.jpg");
+   
     $('#top-navbar-1').on('shown.bs.collapse', function(){
     	$('.top-content').backstretch("resize");
     });
     $('#top-navbar-1').on('hidden.bs.collapse', function(){
     	$('.top-content').backstretch("resize");
     });
+	}
+
+	else if (window.location.pathname.includes("how-to.php")){
+		console.log('how to');
+		$('.top-content').backstretch("images/howTo.jpg");
+		$('.call-to-action-container').backstretch("images/howTo.jpg");
+		$('.testimonials-container').backstretch("images/howTo.jpg");
+		
+		$('#top-navbar-1').on('shown.bs.collapse', function(){
+			$('.top-content').backstretch("resize");
+		});
+		$('#top-navbar-1').on('hidden.bs.collapse', function(){
+			$('.top-content').backstretch("resize");
+		});
+	}
+
+	else if (window.location.pathname.includes("plants.php")){
+		console.log('plants');
+		$('.top-content').backstretch("images/plant.jpg");
     
+		$('#top-navbar-1').on('shown.bs.collapse', function(){
+			$('.top-content').backstretch("resize");
+		});
+		$('#top-navbar-1').on('hidden.bs.collapse', function(){
+			$('.top-content').backstretch("resize");
+		});
+	}
+
+	else if (window.location.pathname.includes("plantInfo.php")){
+		console.log('plants info');
+		$('.top-content').backstretch("images/plant.jpg");
+    
+		$('#top-navbar-1').on('shown.bs.collapse', function(){
+			$('.top-content').backstretch("resize");
+		});
+		$('#top-navbar-1').on('hidden.bs.collapse', function(){
+			$('.top-content').backstretch("resize");
+		});
+	}
+
+	else if (window.location.pathname.includes('gardenPlanner.php')){
+		console.log('planner');
+		$('.top-content').backstretch("images/gardenPlanner.jpg");
+   
+    
+		$('#top-navbar-1').on('shown.bs.collapse', function(){
+			$('.top-content').backstretch("resize");
+		});
+		$('#top-navbar-1').on('hidden.bs.collapse', function(){
+			$('.top-content').backstretch("resize");
+		});
+	}
+
+	else if (window.location.pathname.includes('login.php')){
+
+	}
+   
+	
+	
+
+
     $('a[data-toggle="tab"]').on('shown.bs.tab', function(){
     	$('.testimonials-container').backstretch("resize");
     });

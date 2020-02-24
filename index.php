@@ -135,7 +135,7 @@ and open the template in the editor.
         <script src="js/wow.min.js"></script>
         <script src="js/retina-1.1.0.min.js"></script>
         <script src="js/waypoints.min.js"></script>
-        <script src="js/home.js"></script>
+        <script src="js/scripts.js"></script>
 
 
 

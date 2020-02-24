@@ -264,9 +264,6 @@ require('includes/database.php');
         <script src="js/garden-size.js"></script>
         <script src="js/weatherBit.js"></script>
         <script src="js/main.js"></script>
-
-
-
-
+        <script src="js/scripts.js"></script>
   </body>
 </html>
