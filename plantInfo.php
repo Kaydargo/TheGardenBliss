@@ -31,7 +31,27 @@ $statement2->closeCursor();
     include('includes/header.php');
         ?>
     <body>
-        <br><br><br><br><br>
+    <br><br><br>
+<div class="top-content">
+            <div class="container">
+            	
+                <div class="row">
+                    <div class="col-md-8 offset-md-2 text">
+                        <h1 class="wow fadeInLeftBig">How- To Start a Garden</h1>
+                        <div class="description wow fadeInLeftBig">
+                        	<p>We walk you through factors that can affect how your garden will grow — sunlight, shade, soil —
+                                    and the balance between fruits, shrubs, flowers and vegetables
+                         	
+                        	</p>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>            
+		</div>
+		<br><br>
+       
     <div class="container"> 
     <?php foreach ($plants as $plant) : ?>
    <div class="row row1"> 
@@ -44,7 +64,7 @@ $statement2->closeCursor();
       </div> 
    </div> 
 </div>
-<br><br>
+
 <div class="container"> 
 <h3 class="plantName">Planting Information</h3>
 <br>
@@ -164,6 +184,9 @@ $statement2->closeCursor();
 <br><br>
 <?php endforeach; ?>
 <?php endforeach; ?>
+<?php
+    include('includes/footer3.php');
+        ?>
     </body>
 
     <!-- Bootstrap core JavaScript -->
@@ -180,8 +203,12 @@ $statement2->closeCursor();
   <!-- Custom scripts for this template -->
   <script src="js/freelancer.min.js"></script>
   <script src="js/table.js"></script>
-    
-  <?php
-    include('includes/footer3.php');
-        ?>
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/jquery-migrate-3.0.0.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="js/jquery.backstretch.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/retina-1.1.0.min.js"></script>
+  <script src="js/waypoints.min.js"></script>
+  <script src="js/scripts.js"></script>
 </html>
