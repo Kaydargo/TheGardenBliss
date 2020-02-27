@@ -28,9 +28,56 @@ if (window.navigator && window.navigator.geolocation) {
             days: '5'
         }).done(function(weather) {
             // getCurrentDayWeather(weather),
-            get5dayWeather(weather)
+            get5dayWeather(weather),
+            changeTemp(weather)
         })
     })
+}
+else{
+ console.log('NO');
+}
+
+function changeTemp(weatherForecast){
+//   var tempf = 212;
+// var tempc = 100;
+
+// var fahr = document.createElement("a");
+// fahr.setAttribute("href", "#");
+// fahr.className = "tempUnit";
+// fahr.innerHTML = tempf + "&deg;F" + "<br/>";
+// $("#currentWeather").append(fahr);
+
+// var cels = document.createElement("a");
+// cels.setAttribute("href", "#");
+// cels.className = "tempUnit";
+// cels.innerHTML = tempc + "&deg;C" + "<br/>";
+
+// $("#currentWeather").on("click", ".tempUnit", function() {
+//   if (this.innerHTML.indexOf("F") != -1) {
+//     $(this).replaceWith(cels);
+//   } else {
+//     $(this).replaceWith(fahr);
+//   }
+// })
+
+  var getTemp = document.querySelectorAll(".mainTemp");
+  var getSwitchState = document.querySelector(".switch");
+
+  var checkbox = document.getElementById('checkbox').checked;
+
+    if (checkbox){
+      for (var i = 0; i < getTemp.length; i++) {
+        getTemp[i].innerHTML = 'hello';
+      }
+      alert('checkbox clicked');
+    }
+
+    else {
+      for (var i = 0; i < getTemp.length; i++) {
+        getTemp[i].innerHTML = 'goodbye';
+      }
+      alert('checkbox NOT clicked');
+    }
 }
 
 function get5dayWeather(weatherForecast){
@@ -58,12 +105,13 @@ console.log(weatherForecast.data[0].datetime);
 
 document.getElementById('location').innerHTML = weatherForecast.city_name;
 
-var getTemp = document.querySelectorAll(".mainTemp");
+  // if (document.querySelector('.switch').checked) {
+  //   for (var i = 0; i < getTemp.length; i++) {
+  //     getTemp[i].innerHTML = `${Math.round(weatherForecast.data[i].temp)} &deg;`;
+  //   }
+  // }
 
-//Get Temperture
-for (var i = 0; i < getTemp.length; i++) {
-  getTemp[i].innerHTML = `${Math.round(weatherForecast.data[i].temp)} &deg;`;
-}
+  
 
 //Get Icons
 var getIcon = document.querySelectorAll(".icon");
