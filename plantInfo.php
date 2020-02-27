@@ -15,12 +15,28 @@ $statement1->execute();
 $plants = $statement1->fetchAll();
 $statement1->closeCursor();
 
+$plant_id = $_GET['plantID'];
+$queryPlants = "SELECT * FROM plant WHERE plantID = $plant_id";
+$statement4 = $conn->prepare($queryPlants);
+$statement4->execute();
+$plant = $statement4->fetch();
+$statement4->closeCursor();
+
 $queryInfo = "SELECT * FROM plantinginfo WHERE plantID = $plant_id";
 $statement2 = $conn->prepare($queryInfo);
 $statement2->execute();
 $plantsInfo = $statement2->fetchAll();
 $statement2->closeCursor();
+
+$currentPlantType = $plant['type'];
+
+$queryPlantType ="SELECT plantImage, plantName FROM plant WHERE type='$currentPlantType'";
+$statement3 = $conn->prepare($queryPlantType);
+$statement3->execute();
+$plantsType = $statement3->fetchAll();
+$statement3->closeCursor();
 ?>
+
 <html>
     <head>
         <meta charset="UTF-8">
@@ -182,8 +198,23 @@ $statement2->closeCursor();
 </div> 
 </div>
 <br><br>
+<h3 class="plantName">Similar Plants to <?php echo $plant['plantName']?></h3>
 <?php endforeach; ?>
 <?php endforeach; ?>
+
+<div class="container">
+        <div class="row">
+    <?php
+foreach ($plantsType as $plantType) :
+    echo ' <div class="col-md-4 col-xs-6">
+                <img src="images/'.$plantType["plantImage"].'" class="img-responsive img-thumbnail">
+                <h4 style="text-align: center;"><a>'.$plantType["plantName"].' </a></h4>
+            </div>';
+     ?>
+       <?php endforeach; ?>
+     </div>
+    </div>
+<br>
 <?php
     include('includes/footer3.php');
         ?>
