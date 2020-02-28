@@ -6,6 +6,9 @@ and open the template in the editor.
 -->
 <?php
     include('includes/database.php');
+    include("loginServ.php");
+
+$user = $_SESSION['userID'];
 
 //Form Query
 $plant_id = $_GET['plantID'];
@@ -20,6 +23,16 @@ $statement2 = $conn->prepare($queryInfo);
 $statement2->execute();
 $plantsInfo = $statement2->fetchAll();
 $statement2->closeCursor();
+
+if(isset($_POST['addToFav'])){
+  $user_id = htmlspecialchars(!empty($_POST['user_id']) ? trim($_POST['user_id']) : null);
+  $plant_id = htmlspecialchars(!empty($_POST['plant_id']) ? trim($_POST['plant_id']) : null);
+  $addToFav = "INSERT INTO userfavourites (plantID, userID) VALUES (:plant_id, :user)";
+    $stmt1 = $conn->prepare($addToFav);
+    $stmt1->bindValue(':user', $user);
+    $stmt1->bindValue(':plant_id', $plant_id);
+    $result = $stmt1->execute();
+}
 ?>
 <html>
     <head>
@@ -61,6 +74,12 @@ $statement2->closeCursor();
       <div class="col-sm-6">
           <h3 class="plantName"><?php echo $plant['plantName']; ?></h3>
           <p><?php echo $plant['description']; ?></p>
+          <form method="post" class="table_content_form">
+      <button class="btn btn-default" type="submit" name="addToFav">Add to Favourites</button>
+      <input type="hidden" name="userID" value="<?php echo $user; ?>"/>
+      <input type="hidden" name="plantID" value="<?php echo $plant_id; ?>"/>
+      
+    </form>
       </div> 
    </div> 
 </div>
