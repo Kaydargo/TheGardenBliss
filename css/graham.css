@@ -37,7 +37,7 @@ p{
 {
 text-transform: uppercase;
 text-align: center;
-color: #748C1C;
+color: #55a635;
 font-family: Overpass !important;
 align-content: left !important;
 }
@@ -51,7 +51,7 @@ align-content: left !important;
 {
     text-transform: uppercase;
     text-align: center;
-    color: #748C1C;
+    color: #55a635;
     font-family: Overpass;
     align-content: center;   
 }
@@ -160,7 +160,7 @@ font-size: 25px !important;
   }
   .ctnCol
   {
-      background-color: #748c1c; 
+      background-color: #55a635; 
   }
 .howTo 
 {
@@ -244,7 +244,7 @@ align-content: center;
   position: relative;
 }
 .list > li:before {
-  background: #748c1c;
+  background: #55a635;
   color: white;
   content: counter(li);
   counter-increment:li;
@@ -704,7 +704,7 @@ padding-top: 40px;
 
 /***** Footer *****/
 
-.footer-top { padding: 60px 0; text-align: left; color: #fff; color: rgba(255, 255, 255, 0.8); }
+.footer-top { padding: 60px 0; text-align: left; color: #fff; background-color: rgba(75, 139, 49, 0.8); }
 .footer-top h3 { padding-bottom: 10px; color: #fff; }
 
 .footer-about img.logo-footer { max-width: 74px; margin-top: 0; margin-bottom: 18px; }
