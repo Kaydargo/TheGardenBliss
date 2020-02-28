@@ -1,5 +1,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.5/css/weather-icons.min.css">
 <!-- <div class="container" id="weather"> -->
+<!-- <label class="switch">
+  <input type="checkbox" checked>
+  <span class="slider round"></span>
+</label> -->
+
+<input type="checkbox" id="checkbox" name="changeTemp" onclick="get5dayWeather()" checked />
+
 <h4 style="text-align: center;" id="location"></h4><br>
 <div class="container">
   <div class="card-deck">
@@ -52,3 +59,4 @@
   </div><br>
 <!-- </div> -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../js/weatherBit.js"></script>
