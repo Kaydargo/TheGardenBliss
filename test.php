@@ -63,6 +63,14 @@
 
         <!-- Page Content -->
         <div class="container" style="text-align: center;">
+
+        <form method="post">
+        <div class="form-group" class="ui-helper-clearfix" id="plantsInput">
+                <label for="plant">Plant Search: </label>
+                <input id="plantInput" class="form-control" type="text" name="plantInput">
+                </div>
+</form>
+
 <br><br>
 
 <h3>Vegetables & Herbs</h3>
@@ -472,6 +480,9 @@ include('includes/footer3.php');
         <script src="js/retina-1.1.0.min.js"></script>
         <script src="js/waypoints.min.js"></script>
         <script src="js/scripts.js"></script>
+        <script src="js/autofill.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
           
 
                 </body>
