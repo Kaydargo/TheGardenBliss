@@ -31,29 +31,8 @@ if (window.navigator && window.navigator.geolocation) {
         })
     })
 }
-// **************** GET WEATHER USING LONGITUDE AND LATITUDE - 1 DAY *******************
-// function weatherLongLat(lat, long){
-// // The Endpoint URL
-// const url = 'https://api.openweathermap.org/data/2.5/weather?';
-// const key = 'appid=6f58e1671e79c93bc5bc7fc488b6f9df';
-// const longitude = 'lat='+ lat; //coordinates[0];
-// const latitude = 'lon=' + long; //coordinates[1];
-// const units = 'metric';
-// const weather = url + '&' + latitude + '&' + longitude + '&' + units + '&' + key;
+// #
 
-// //Fetchs api service
-// fetch(weather)
-// // Parse the body as JSON
-// .then(response => response.json())
-// .then (data => {
-//     console.log( formatWeather(data));
-//   formatWeather(data);
-// })
-// .catch (error => console.error(error))
-// }
-
-// //Dundalk - lat=53.9979451&lon=-6.405957
-// weatherLongLat(lat,long);
 
 function get5dayWeather(weatherForecast){
   const date = new Date();
