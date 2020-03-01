@@ -26,6 +26,7 @@ function grid(rows, columns) {
   for (i=0; i<rows; i++) {
     table += "<tr class='gardenGridRow'>";
     for (j=0; j<columns; j++) {
+      // table += "<td id="+ j + "class='gardenGridColumn'>"+"</td>";
       table += "<td class='gardenGridColumn'>"+"</td>";
     }
     table += "</tr>";

@@ -182,7 +182,7 @@ font-size: 25px !important;
 .gardenPlanner {
     width: 100%;
     height: auto;
-    margin: 2em auto;
+    /* margin: 2em auto; */
   
 }
 
@@ -206,17 +206,13 @@ font-size: 25px !important;
   .gardenGridColumn {
     transition: .3s background-color;
   }
-  .gardenGridColumn:hover {
+  /* .gardenGridColumn:hover {
     background-color: grey;
-  }
+  } */
+  
   .gDimBtn {
     height: 40px;
     width: 225px;
-  }
-
-  #plantSlider{
-      border: 1px solid grey;
-      position: relative;
   }
 
   .no-gutters > .col, .no-gutters > [class*="col-"] {
