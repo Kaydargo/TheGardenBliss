@@ -6,6 +6,8 @@
 </label>
 <br>
 
+<div id="getLocation"></div>
+
 <h4 style="text-align: center;" id="location"></h4><br>
 <div class="container">
   <div class="card-deck">

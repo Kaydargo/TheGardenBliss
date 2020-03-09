@@ -29,16 +29,33 @@ if (window.navigator && window.navigator.geolocation) {
             key: 'b1a4cb99758e4bbead1bb761cbb6680b',
             days: '5'
         }).done(function(weather) {
-            // getCurrentDayWeather(weather),
             get5dayWeather(weather),
             changeTemp(weather)
         })
     })
 }
 else{
- console.log('NO');
+ alert('NO');
 }
 }
+
+function showError(error) {
+  switch(error.code) {
+    case error.PERMISSION_DENIED:
+      alert("User denied the request for Geolocation.");
+      break;
+    case error.POSITION_UNAVAILABLE:
+      alert("Location information is unavailable.");
+      break;
+    case error.TIMEOUT:
+      alert("The request to get user location timed out.");
+      break;
+    case error.UNKNOWN_ERROR:
+      alert("An unknown error occurred.");
+      break;
+  }
+}
+
 
 function changeTemp(weatherForecast){
 
@@ -48,7 +65,6 @@ function changeTemp(weatherForecast){
 
     if (checkbox){
       for (var i = 0; i < getTemp.length; i++) {
-        // getTemp[i].innerHTML = `Celcius`;
         getTemp[i].innerHTML = `${Math.round(weatherForecast.data[i].temp)} &deg;`;
       }
     }
