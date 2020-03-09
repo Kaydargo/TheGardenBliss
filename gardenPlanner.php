@@ -37,6 +37,7 @@ require('includes/database.php');
             <div class="container">
             	
                 <div class="row">
+                <div class='bar'>
                     <div class="col-md-8 offset-md-2 text">
                         <h1 class="wow fadeInLeftBig">Plan your ideal garden</h1>
                         <div class="description wow fadeInLeftBig">
@@ -45,7 +46,7 @@ require('includes/database.php');
                          	
                         	</p>
                         </div>
-                        
+</div>
                     </div>
                 </div>
                 

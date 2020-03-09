@@ -30,18 +30,18 @@ and open the template in the editor.
        <!-- Top content -->
        <div class="top-content"> 
             <div class="container">
-            	
                 <div class="row">
+                    <div class='bar'>
                     <div class="col-md-8 offset-md-2 text">
                         <h1 class="wow fadeInLeftBig">Welcome to GardenBliss</h1>
                         <div class="description wow fadeInLeftBig">
-                        	<p> get all the information you need for your gardening journey-crops to plant in diferent seasons,
+                        	<p> Get all the information you need for your gardening journey-crops to plant in diferent seasons,
                            watering measurement, plant placement and how to control diseases and pests that can affect your plants
 
-                        
-                        	</p>
+                            </p>
+</div>
                         </div>
-                        
+</div>
                     </div>
                 </div>
                 

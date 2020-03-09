@@ -46,7 +46,7 @@ jQuery(document).ready(function() {
         Wow
     */
     new WOW().init();
-	
+	new bar().init();
 });
 
 

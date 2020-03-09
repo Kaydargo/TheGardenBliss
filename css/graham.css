@@ -700,3 +700,15 @@ padding-top: 40px;
   overflow: hidden;
 }
 
+.bar {
+  
+  background-color: rgba(0,0,0,.6);
+  padding: 20px;
+  border-top-left-radius: .5em;
+  border-bottom-left-radius: .5em;
+  border-top-right-radius: .5em;
+  border-bottom-right-radius: .5em;
+}
+
+
+
