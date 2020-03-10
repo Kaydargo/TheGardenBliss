@@ -674,10 +674,6 @@ color: #ccc;
 }
 .blog-box h3:hover i { padding-left: 15px; }
 
-
-
-
-
 .blog-container .section-bottom-button {
 padding-top: 40px;
 }
@@ -700,6 +696,16 @@ padding-top: 40px;
   padding-top: 35px;
   height: 0;
   overflow: hidden;
+}
+
+.bar {
+  
+  background-color: rgba(0,0,0,.6);
+  padding: 20px;
+  border-top-left-radius: .5em;
+  border-bottom-left-radius: .5em;
+  border-top-right-radius: .5em;
+  border-bottom-right-radius: .5em;
 }
 
 /***** Footer *****/
