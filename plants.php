@@ -16,7 +16,7 @@
   <script src="bootstrap.bundle.min.js / bootstrap.bundle.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  
+ 
         
         
 </head>
@@ -44,6 +44,7 @@
             <div class="container">
             	
                 <div class="row">
+                <div class='bar'>
                     <div class="col-md-8 offset-md-2 text">
                         <h1 class="wow fadeInLeftBig"> Our Range of Plants</h1>
                         <div class="description wow fadeInLeftBig">
@@ -52,7 +53,7 @@
                          	
                         	</p>
                         </div>
-                        
+</div>
                     </div>
                 </div>
                 
@@ -71,11 +72,11 @@
 <!--Carousel Wrapper-->
 <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel" data-interval='false'>
 
-  <!--Controls
+  <!--Controls-->
   <div class="controls-top">
     <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
     <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
-  </div>-->
+  </div>
   <!--/.Controls-->
 
   <!--Indicators-->
@@ -449,7 +450,7 @@ break;
   </ol>
   </div>
   <!--/.Slides-->
-
+  
 </div>
 
 <!--/.Carousel Wrapper-->
@@ -458,7 +459,7 @@ break;
 </div>
 </div>
 </div> -->
-  
+
   
 <?php
 include('includes/footer3.php');  
