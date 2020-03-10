@@ -124,3 +124,17 @@ jQuery(window).load(function() {
 	
 });
 
+function myFunction() {
+
+	var btn = document.getElementById("myButton");
+
+	if (btn.value == "Add to Favourites") {
+		btn.value = "Favourited";
+		btn.innerHTML = "Favourited";
+	}
+	else {
+		btn.value = "Add to Favourites";
+		btn.innerHTML = "Add to Favourites";
+	}
+
+}
