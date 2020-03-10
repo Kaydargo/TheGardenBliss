@@ -1,4 +1,5 @@
 //const fetch = require("node-fetch");
+window.onload = getWeather();
 
 //Getting coordinates using GeoLocation
 var visitorCoords = document.getElementById("getLocation");
@@ -15,6 +16,7 @@ function showPosition(position) {
   "<br>Longitude: " + position.coords.longitude;
 }
 
+function getWeather(position){
 //Getting coordinates and linking with openweathermap api service
 var openWeatherMap = 'https://api.weatherbit.io/v2.0/forecast/daily?'
 
@@ -27,56 +29,50 @@ if (window.navigator && window.navigator.geolocation) {
             key: 'b1a4cb99758e4bbead1bb761cbb6680b',
             days: '5'
         }).done(function(weather) {
-            // getCurrentDayWeather(weather),
             get5dayWeather(weather),
             changeTemp(weather)
         })
     })
 }
 else{
- console.log('NO');
+ alert('NO');
+}
 }
 
+function showError(error) {
+  switch(error.code) {
+    case error.PERMISSION_DENIED:
+      alert("User denied the request for Geolocation.");
+      break;
+    case error.POSITION_UNAVAILABLE:
+      alert("Location information is unavailable.");
+      break;
+    case error.TIMEOUT:
+      alert("The request to get user location timed out.");
+      break;
+    case error.UNKNOWN_ERROR:
+      alert("An unknown error occurred.");
+      break;
+  }
+}
+
+
 function changeTemp(weatherForecast){
-//   var tempf = 212;
-// var tempc = 100;
-
-// var fahr = document.createElement("a");
-// fahr.setAttribute("href", "#");
-// fahr.className = "tempUnit";
-// fahr.innerHTML = tempf + "&deg;F" + "<br/>";
-// $("#currentWeather").append(fahr);
-
-// var cels = document.createElement("a");
-// cels.setAttribute("href", "#");
-// cels.className = "tempUnit";
-// cels.innerHTML = tempc + "&deg;C" + "<br/>";
-
-// $("#currentWeather").on("click", ".tempUnit", function() {
-//   if (this.innerHTML.indexOf("F") != -1) {
-//     $(this).replaceWith(cels);
-//   } else {
-//     $(this).replaceWith(fahr);
-//   }
-// })
 
   var getTemp = document.querySelectorAll(".mainTemp");
-  var getSwitchState = document.querySelector(".switch");
 
   var checkbox = document.getElementById('checkbox').checked;
 
     if (checkbox){
       for (var i = 0; i < getTemp.length; i++) {
-        getTemp[i].innerHTML = 'hello';
+        getTemp[i].innerHTML = `${Math.round(weatherForecast.data[i].temp)} &deg;`;
       }
-      alert('checkbox clicked');
     }
 
     else {
       for (var i = 0; i < getTemp.length; i++) {
-        getTemp[i].innerHTML = 'goodbye';
+        getTemp[i].innerHTML = `${Math.round((weatherForecast.data[i].temp*1.8)+32)} &deg;`;
       }
-      alert('checkbox NOT clicked');
     }
 }
 
@@ -111,7 +107,6 @@ document.getElementById('location').innerHTML = weatherForecast.city_name;
   //   }
   // }
 
-  
 
 //Get Icons
 var getIcon = document.querySelectorAll(".icon");

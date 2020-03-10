@@ -104,4 +104,3 @@ jQuery(window).load(function() {
 	$(".testimonial-image img").attr("style", "width: auto !important; height: auto !important;");
 	
 });
-

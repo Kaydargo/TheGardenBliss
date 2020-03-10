@@ -48,8 +48,6 @@
 
 
   $( function() {
- 
-    // There's the vegetable and the bin
     var $veg = $( "#vegetables" ),
     $gardenGrid = $("#gardenPlanner"),
     $bin = $( "#bin" );
@@ -72,9 +70,9 @@
         classes: {
           "ui-droppable-active" : "ui-state-highlight"
         },
-        drop: function(ui ) {
-            // $(this).append(ui.draggable);
-            $('.plant').appendTo(".gardenGridColumn");
+        drop: function(ui) {
+            $(this).append(ui.draggable);
+            $(this).appendTo(".gardenGridColumn");
             // $(this).draggable();
         }
       });
@@ -87,6 +85,7 @@
       },
       drop: function( event, ui ) {
         deleteImage( ui.draggable );
+        // deleteImage( ui.helper );
       }
     });
 
@@ -98,32 +97,35 @@
         "ui-droppable-active": "custom-state-active"
       },
       drop: function( event, ui ) {
-        recycleImage( ui.draggable );
+        // recycleImage( ui.draggable );
+        recycleImage( ui.helper );
       }
     });
  
     // Image deletion function
-    var recycle_icon = "<a href='link/to/recycle/script/when/we/have/js/off' title='Recycle this image' class='ui-icon ui-icon-refresh'>Recycle image</a>";
+    var recycle_icon = "<a href='' title='Recycle this image' class='ui-icon ui-icon-refresh'>Recycle image</a>";
     function deleteImage( $item ) {
       $item.fadeOut(function() {
         var $list = $( "ul", $bin ).length ?
           $( "ul", $bin ) :
-          $( "<ul class='vegetables ui-helper-reset'/>" ).appendTo( $bin );
+        //   $( "<div class='vegetables ui-helper-reset ui-helper-clearfix'>").appendTo( $bin );
+          $( "<div class='vegetables ui-helper-reset'/>").appendTo( $bin );
  
-        $item.find( "a.ui-icon-bin" ).remove();
+        $item.find( "ui-icon-trash" ).remove();
         $item.append( recycle_icon ).appendTo( $list ).fadeIn(function() {
           $item
             .animate({ width: "80px" })
             .find( "img" )
-              .animate({ height: "50px" });
+              .animate({ height: "20px" });
         });
       });
     }
  
     // Image recycle function
-    var bin_icon = "<a href='link/to/bin/script/when/we/have/js/off' title='Delete this image' class='ui-icon ui-icon-bin'>Delete image</a>";
+    var bin_icon = "<a href='' title='Delete this image' class='ui-icon ui-icon-bin'>Delete image</a>";
     function recycleImage( $item ) {
       $item.fadeOut(function() {
+        $item.find( "ui-icon-trash" ).remove().end();
         $item
           .find( "a.ui-icon-refresh" )
             .remove()
@@ -160,11 +162,11 @@
     }
  
     // Resolve the icons behavior with event delegation
-    $( "div.gallery > div > div" ).on( "click", function( event ) {
+    $( "div.vegetables > div > div" ).on( "click", function( event ) {
       var $item = $( this ),
         $target = $( event.target );
  
-      if ( $target.is( "a.ui-icon-bin" ) ) {
+      if ( $target.is( "a.ui-icon-trash" ) ) {
         deleteImage( $item );
       } else if ( $target.is( "a.ui-icon-zoomin" ) ) {
         viewLargerImage( $target );

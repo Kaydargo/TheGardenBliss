@@ -55,15 +55,15 @@ include('includes/functions.php');
             <?php foreach ($vegGardens as $vegGarden): ?>
               <?php
               $counter1++; //increase counter number
-              if ($counter1 > 4) {
+              if ($counter1 > 7) {
               break;
               }
               ?>
                 <div class="col-3 float-left ui-widget-content ui-corner-tr plant"> 
                 <h5 class="ui-widget-header"><?php echo $vegGarden['plantName']?></h5> 
-                  <?= ($vegGarden['plantIcon'] <> " " ? "<img style='width:100px; margin-top:10px;' src='images/{$vegGarden['plantIcon']}'/>" : "") ?>
-                  <a href="<?php 'images/'.$vegGarden1['plantIcon']?>" title="View larger image" class="ui-icon ui-icon-zoomin">View larger</a>
-                 <a href="link/to/trash/script/when/we/have/js/off" title="Delete this image" class="ui-icon ui-icon-trash">Delete image</a>
+                  <?= ($vegGarden['plantIcon'] <> " " ? "<img id='{$vegGarden['plantID']}'  style='width:100px; margin-top:10px;' src='images/{$vegGarden['plantIcon']}'/>" : "") ?>
+                  <a href="<?php echo 'images/'.$vegGarden['plantIcon']?>" title="View larger image" class="ui-icon ui-icon-zoomin">View larger</a>
+                 <a href="" title="Delete this image" class="ui-icon ui-icon-trash">Delete image</a>
                 </div>
                
             <?php endforeach; ?>
@@ -74,7 +74,7 @@ include('includes/functions.php');
             <?php foreach ($vegGardens1 as $vegGarden1): ?>
               <?php
               $counter1++; //increase counter number
-              if ($counter1 > 4) {
+              if ($counter1 > 7) {
               break;
               }
               ?>
@@ -101,8 +101,6 @@ include('includes/functions.php');
   </div>
 </div>
 
-
-
  <!-- Draggable -->
 <!-- <ul id="vegetables" class="vegetables ui-helper-reset ui-helper-clearfix">
 
@@ -121,16 +119,14 @@ include('includes/functions.php');
 
  <!-- Droppable Trash -->
 <div id="bin" class="col-lg-2 ui-widget-content ui-state-default">
-  <h4 class="ui-widget-header"><span class="ui-icon ui-icon-trash">Bin</span> Bin</h4>
+  <h4 class="ui-widget-header"><span class="ui-icon ui-icon-trash">Compost</span> Compost</h4>
 </div>
  
 </div>
  
-
             </div>
 <!-- <script src="js/jquery-3.2.1.min.js"></script> -->
  <!-- <script src="js/jquery-migrate-3.0.0.min.js"></script> -->
-
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

@@ -69,14 +69,14 @@ $flowers2 = $statement6->fetchAll();
 $statement6->closeCursor();
 
 //Display vegetable for garden planner
-$queryVegGarden = "SELECT * FROM plant WHERE type='vegetable' LIMIT 4"; 
+$queryVegGarden = "SELECT * FROM plant WHERE type='vegetable' LIMIT 7"; 
 $statement7 = $conn->prepare($queryVegGarden);
 $statement7->execute();
 $vegGardens = $statement7->fetchAll();
 $statement7->closeCursor();
 
 
-$queryVegGarden1 = "SELECT * FROM plant WHERE type='vegetable' LIMIT 4,4"; 
+$queryVegGarden1 = "SELECT * FROM plant WHERE type='vegetable' LIMIT 7,0"; 
 $statement8 = $conn->prepare($queryVegGarden1);
 $statement8->execute();
 $vegGardens1 = $statement8->fetchAll();
