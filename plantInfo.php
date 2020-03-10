@@ -6,6 +6,9 @@ and open the template in the editor.
 -->
 <?php
     include('includes/database.php');
+    include("loginServ.php");
+
+$user = $_SESSION['userID'];
 
 //Form Query
 $plant_id = $_GET['plantID'];
@@ -15,11 +18,36 @@ $statement1->execute();
 $plants = $statement1->fetchAll();
 $statement1->closeCursor();
 
+$plant_id = $_GET['plantID'];
+$queryPlants = "SELECT * FROM plant WHERE plantID = $plant_id";
+$statement4 = $conn->prepare($queryPlants);
+$statement4->execute();
+$plant = $statement4->fetch();
+$statement4->closeCursor();
+
 $queryInfo = "SELECT * FROM plantinginfo WHERE plantID = $plant_id";
 $statement2 = $conn->prepare($queryInfo);
 $statement2->execute();
 $plantsInfo = $statement2->fetchAll();
 $statement2->closeCursor();
+
+if(isset($_POST['addToFav'])){
+  $user_id = htmlspecialchars(!empty($_POST['user_id']) ? trim($_POST['user_id']) : null);
+  $plant_id = htmlspecialchars(!empty($_POST['plant_id']) ? trim($_POST['plant_id']) : null);
+  $addToFav = "INSERT INTO userfavourites (plantID, userID) VALUES (:plant_id, :user)";
+    $stmt1 = $conn->prepare($addToFav);
+    $stmt1->bindValue(':user', $user);
+    $stmt1->bindValue(':plant_id', $plant_id);
+    $result = $stmt1->execute();
+}
+
+$currentPlantType = $plant['type'];
+
+$queryPlantType ="SELECT plantImage, plantName FROM plant WHERE type='$currentPlantType'";
+$statement3 = $conn->prepare($queryPlantType);
+$statement3->execute();
+$plantsType = $statement3->fetchAll();
+$statement3->closeCursor();
 ?>
 <html>
     <head>
@@ -31,7 +59,27 @@ $statement2->closeCursor();
     include('includes/header.php');
         ?>
     <body>
-        <br><br><br><br><br>
+    <br><br><br>
+<div class="top-content">
+            <div class="container">
+            	
+                <div class="row">
+                    <div class="col-md-8 offset-md-2 text">
+                        <h1 class="wow fadeInLeftBig">How- To Start a Garden</h1>
+                        <div class="description wow fadeInLeftBig">
+                        	<p>We walk you through factors that can affect how your garden will grow — sunlight, shade, soil —
+                                    and the balance between fruits, shrubs, flowers and vegetables
+                         	
+                        	</p>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>            
+		</div>
+		<br><br>
+       
     <div class="container"> 
     <?php foreach ($plants as $plant) : ?>
    <div class="row row1"> 
@@ -41,10 +89,16 @@ $statement2->closeCursor();
       <div class="col-sm-6">
           <h3 class="plantName"><?php echo $plant['plantName']; ?></h3>
           <p><?php echo $plant['description']; ?></p>
+          <form method="post" class="table_content_form">
+      <button class="btn btn-default" type="submit" name="addToFav">Add to Favourites</button>
+      <input type="hidden" name="userID" value="<?php echo $user; ?>"/>
+      <input type="hidden" name="plantID" value="<?php echo $plant_id; ?>"/>
+      
+    </form>
       </div> 
    </div> 
 </div>
-<br><br>
+
 <div class="container"> 
 <h3 class="plantName">Planting Information</h3>
 <br>
@@ -142,7 +196,7 @@ $statement2->closeCursor();
   </ol>
       </div> 
       <div class="col-sm-6">
-        <?php echo "<img class='image1' src='images/".$plantInfo['infoImage']. "' />"; ?>
+        <?php echo "<img class='image1' src='images/plant2.jpg".$plantInfo['infoImage']. "' />"; ?>
       </div>
    </div> 
     </div> 
@@ -162,8 +216,26 @@ $statement2->closeCursor();
 </div> 
 </div>
 <br><br>
+<h3 class="plantName">Similar Plants to <?php echo $plant['plantName']?></h3>
 <?php endforeach; ?>
 <?php endforeach; ?>
+
+<div class="container">
+        <div class="row">
+    <?php
+foreach ($plantsType as $plantType) :
+    echo ' <div class="col-md-4 col-xs-6">
+                <img src="images/'.$plantType["plantImage"].'" class="img-responsive img-thumbnail">
+                <h4 style="text-align: center;"><a>'.$plantType["plantName"].' </a></h4>
+            </div>';
+     ?>
+       <?php endforeach; ?>
+     </div>
+    </div>
+<br>
+<?php
+    include('includes/footer3.php');
+        ?>
     </body>
 
     <!-- Bootstrap core JavaScript -->
@@ -180,8 +252,12 @@ $statement2->closeCursor();
   <!-- Custom scripts for this template -->
   <script src="js/freelancer.min.js"></script>
   <script src="js/table.js"></script>
-    
-  <?php
-    include('includes/footer2.php');
-        ?>
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/jquery-migrate-3.0.0.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="js/jquery.backstretch.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/retina-1.1.0.min.js"></script>
+  <script src="js/waypoints.min.js"></script>
+  <script src="js/scripts.js"></script>
 </html>

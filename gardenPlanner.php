@@ -250,10 +250,10 @@ require('includes/database.php');
 <?php  include('includes/weather.php'); ?>
   </div>
 <br>
-  <?php  include('includes/footer.php'); ?>
+  <?php  include('includes/footer3.php'); ?>
 
-  <script src="js/jquery-3.2.1.min.js"></script>
-        <script src="js/jquery-migrate-3.0.0.min.js"></script>
+  <!-- <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/jquery-migrate-3.0.0.min.js"></script> -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script src="js/jquery.backstretch.min.js"></script>
@@ -265,9 +265,6 @@ require('includes/database.php');
         <script src="js/garden-size.js"></script>
         <script src="js/weatherBit.js"></script>
         <script src="js/main.js"></script>
-
-
-
-
+        <script src="js/scripts.js"></script>
   </body>
 </html>

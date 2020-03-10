@@ -52,7 +52,7 @@ else{
     $pass = trim($_POST["password"]);
 
     //Check if username is already in use
-    $checkUsername = "SELECT COUNT(username) AS numb FROM users WHERE username = :uname";
+    $checkUsername = "SELECT COUNT(username) AS numb FROM users WHERE username = :uname NOT IN (SELECT username from users WHERE userID = $currentUser)";
     $stmt = $conn->prepare($checkUsername);
     $stmt->bindValue(':uname', $username);
     $stmt->execute();

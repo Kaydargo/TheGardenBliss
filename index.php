@@ -124,8 +124,7 @@ and open the template in the editor.
       </div>
    </div> 
     </div> 
-</div
-<!-- Javascript>
+</div>
   
 <script src="js/jquery-3.2.1.min.js"></script>
         <script src="js/jquery-migrate-3.0.0.min.js"></script>
@@ -135,12 +134,12 @@ and open the template in the editor.
         <script src="js/wow.min.js"></script>
         <script src="js/retina-1.1.0.min.js"></script>
         <script src="js/waypoints.min.js"></script>
-        <script src="js/home.js"></script>
+        <script src="js/scripts.js"></script>
 
 
 
     </body>
     <?php
-    include('includes/footer.php');
+    include('includes/footer3.php');
         ?>
 </html>

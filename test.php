@@ -16,7 +16,7 @@
   <script src="bootstrap.bundle.min.js / bootstrap.bundle.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
- 
+  
         
         
 </head>
@@ -44,7 +44,6 @@
             <div class="container">
             	
                 <div class="row">
-                <div class='bar'>
                     <div class="col-md-8 offset-md-2 text">
                         <h1 class="wow fadeInLeftBig"> Our Range of Plants</h1>
                         <div class="description wow fadeInLeftBig">
@@ -53,7 +52,7 @@
                          	
                         	</p>
                         </div>
-</div>
+                        
                     </div>
                 </div>
                 
@@ -64,6 +63,14 @@
 
         <!-- Page Content -->
         <div class="container" style="text-align: center;">
+
+        <form method="post">
+        <div class="form-group" class="ui-helper-clearfix" id="plantsInput">
+                <label for="plant">Plant Search: </label>
+                <input id="plantInput" class="form-control" type="text" name="plantInput">
+                </div>
+</form>
+
 <br><br>
 
 <h3>Vegetables & Herbs</h3>
@@ -72,11 +79,11 @@
 <!--Carousel Wrapper-->
 <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel" data-interval='false'>
 
-  <!--Controls-->
+  <!--Controls
   <div class="controls-top">
     <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
     <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
-  </div>
+  </div>-->
   <!--/.Controls-->
 
   <!--Indicators-->
@@ -450,7 +457,7 @@ break;
   </ol>
   </div>
   <!--/.Slides-->
-  
+
 </div>
 
 <!--/.Carousel Wrapper-->
@@ -459,7 +466,7 @@ break;
 </div>
 </div>
 </div> -->
-
+  
   
 <?php
 include('includes/footer3.php');  
@@ -473,6 +480,9 @@ include('includes/footer3.php');
         <script src="js/retina-1.1.0.min.js"></script>
         <script src="js/waypoints.min.js"></script>
         <script src="js/scripts.js"></script>
+        <script src="js/autofill.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
           
 
                 </body>

@@ -465,7 +465,8 @@
 	           
 	            </div>
 
-	        </div>
+			</div>
+			
         </div>
 		
        
@@ -483,12 +484,10 @@
         <script src="js/waypoints.min.js"></script>
         <script src="js/scripts.js"></script>
 
-
-
 		<?php
-    include('includes/footer.php');
+    include('includes/footer3.php');
         ?>
 
     </body>
 
-</html>
+</html>ff
