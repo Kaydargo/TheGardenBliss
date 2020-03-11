@@ -31,29 +31,26 @@ $statement2->execute();
 $plantsInfo = $statement2->fetchAll();
 $statement2->closeCursor();
 
-$queryFav = "SELECT * FROM userfavourites WHERE plantID = $plant_id AND userID = $user";
-$statement5 = $conn->prepare($queryFav);
-$statement5->execute();
-$plantsFav = $statement5->fetchAll();
-$statement5->closeCursor(); 
-foreach ($plantsFav as $plantFav)
-if($plantFav['userID'] == $user && $plantFav['plantID'] == $plant_id){
+// $queryFav = "SELECT * FROM userfavourites WHERE plantID = $plant_id AND userID = $user";
+// $statement5 = $conn->prepare($queryFav);
+// $statement5->execute();
+// $plantsFav = $statement5->fetchAll();
+// $statement5->closeCursor(); 
+// foreach ($plantsFav as $plantFav)
+// if($plantFav['userID'] == $user && $plantFav['plantID'] == $plant_id){
   
-}
-else{
-  if(isset($_POST['addToFav'])){
-    $user_id = htmlspecialchars(!empty($_POST['user_id']) ? trim($_POST['user_id']) : null);
-    $plant_id = htmlspecialchars(!empty($_POST['plant_id']) ? trim($_POST['plant_id']) : null);
-    $addToFav = "INSERT INTO userfavourites (plantID, userID) VALUES (:plant_id, :user_id)";
-      $stmt1 = $conn->prepare($addToFav);
-      $stmt1->bindValue(':user_id', $user_id);
-      $stmt1->bindValue(':plant_id', $plant_id);
-      $result = $stmt1->execute();
-  }
-}
-
-
-
+// }
+// else{
+//   if(isset($_POST['addToFav'])){
+//     $user_id = htmlspecialchars(!empty($_POST['user_id']) ? trim($_POST['user_id']) : null);
+//     $plant_id = htmlspecialchars(!empty($_POST['plant_id']) ? trim($_POST['plant_id']) : null);
+//     $addToFav = "INSERT INTO userfavourites (plantID, userID) VALUES (:plant_id, :user_id)";
+//       $stmt1 = $conn->prepare($addToFav);
+//       $stmt1->bindValue(':user_id', $user_id);
+//       $stmt1->bindValue(':plant_id', $plant_id);
+//       $result = $stmt1->execute();
+//   }
+// }
 
 $currentPlantType = $plant['type'];
 
@@ -103,7 +100,7 @@ $statement3->closeCursor();
       <div class="col-sm-6">
           <h3 class="plantName"><?php echo $plant['plantName']; ?></h3>
           <p><?php echo $plant['description']; ?></p>
-          <form method="post" class="table_content_form">
+          <form method="post" class="table_content_form" action="addfavourites.php">
       <button onclick="myFunction()" id="myButton" value="Add to Favourites" class="btn btn-primary" type="submit" name="addToFav">Add to Favourites</button>
       <input type="hidden" name="user_id" value="<?php echo $user; ?>"/>
       <input type="hidden" name="plant_id" value="<?php echo $plant['plantID']; ?>"/>
