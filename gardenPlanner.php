@@ -250,7 +250,7 @@ require('includes/database.php');
 <?php  include('includes/weather.php'); ?>
   </div>
 <br>
-  <?php  include('includes/footer3.php'); ?>
+  <?php  include('includes/footer.php'); ?>
 
   <!-- <script src="js/jquery-3.2.1.min.js"></script>
         <script src="js/jquery-migrate-3.0.0.min.js"></script> -->

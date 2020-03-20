@@ -24,6 +24,6 @@ require('includes/database.php');
     <p><a href="editUser_form.php" style="color: green;">Edit profile</a></p>   
     </div>
 <?php endforeach;  ?>
-<?php include_once 'includes/footer3.php'?>
+<?php include_once 'includes/footer.php'?>
 </body>
 </html>
