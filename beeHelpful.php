@@ -1,14 +1,27 @@
 <!DOCTYPE html>
+<?php
+    include('includes/database.php');
+    include("loginServ.php");
+    ?>
 <head>
-<link href="css/graham.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
+<link href="css/graham.scss" rel="stylesheet">
+<link href="css/style.scss" rel="stylesheet">
 <link href="css/test.css" rel="stylesheet">
 <script src="js/main.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 </head>
+<?php
+
+if(!isset($_SESSION['userID'])){
+    include('includes/header.php');
+}
+else{
+    include('includes/header2.php');
+}
+?> 
 <body>
-<?php include 'includes/header.php' ?>
+
 <br><br><br><br><br><br>
 <div class="container">
   <div class="row">
@@ -21,7 +34,7 @@ Now, we cannot ignore the fact that Irish bees are under pressure. The main reas
     <p>No matter how small your garden is, ensure flowers and fruits that are rich in pollen and nectar essential element in your garden. Go to our how to plan page to learn how to plant some of these plants</p>
     </div>
     <div class="col-sm-6">
-    <img src="images/logo.png" class="beelogo">
+    <a href="#bee"><img src="images/logo.png" class="beelogo"></a>
     </div>
 </div>
 </div>
@@ -101,7 +114,7 @@ Now, we cannot ignore the fact that Irish bees are under pressure. The main reas
 <div class="container">
 <hr>
 <h2 class="plantName" style="text-align:center;">Play our Bee Helpful Game</h2><br>
-<iframe src="story.html" width="100%" height="500"></iframe>
+<iframe id="bee" src="story.html" width="100%" height="500"></iframe>
 </div>
 <script src="js/jquery-3.2.1.min.js"></script>
         <script src="js/jquery-migrate-3.0.0.min.js"></script>

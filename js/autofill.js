@@ -3,7 +3,7 @@ $(document).ready(function () {
 $("#plantInput").keyup(function () {
   $.ajax({
       type: "POST",
-      url: 'includes/plantsFill.php',
+      url: '../includes/plantsFill.php',
       async: false,
       data: {'plant': $(this).val()},
       success: function (data) {
