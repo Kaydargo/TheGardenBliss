@@ -1,9 +1,11 @@
 <?php
-session_start();
+    include('includes/database.php');
+    include("loginServ.php");
+    ?>
+<?php
 if(!isset($_SESSION['userID'])){
     header('Location: login.php');
 }
-require 'includes/database.php';
 $currentUser = $_SESSION['userID'];
 $getUserDetails = 'SELECT * FROM USERS WHERE userID = :userID';
 $statement = $conn->prepare($getUserDetails);
@@ -12,17 +14,24 @@ $statement->execute();
 $user = $statement->fetch();
 $statement->closeCursor();
 
-include 'includes/header.php';
 ?>
- 
+ <?php
+
+if(!isset($_SESSION['userID'])){
+    include('includes/header.php');
+}
+else{
+    include('includes/header2.php');
+}
+?> 
 <!doctype html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Login</title>
 <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
-<link href="css/style.css" rel="stylesheet" type="text/css"/>
-<link href="css/graham.css" rel="stylesheet" type="text/css"/>
+<link href="css/style.scss" rel="stylesheet" type="text/css"/>
+<link href="css/graham.scss" rel="stylesheet" type="text/css"/>
 <style>label {
      color: black;
 }

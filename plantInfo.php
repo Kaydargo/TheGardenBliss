@@ -54,10 +54,16 @@ $statement3->closeCursor();
         <meta charset="UTF-8">
         <title></title>
     </head>
-    <link href="css/graham.css" rel="stylesheet">
+    <link href="css/graham.scss" rel="stylesheet">
     <?php
+
+if(!isset($_SESSION['userID'])){
     include('includes/header.php');
-        ?>
+}
+else{
+    include('includes/header2.php');
+}
+?> 
     <body>
     <br><br><br>
 <div class="top-content">

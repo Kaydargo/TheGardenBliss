@@ -1,5 +1,8 @@
 <?php
-session_start();
+
+include('includes/database.php');
+include("loginServ.php");
+
 $currentUser = $_SESSION['userID'];
 if(!isset($_SESSION['userID'])){
     header('Location: login.php');
@@ -12,12 +15,20 @@ require('includes/database.php');
     $users = $statement2->fetchAll();
     $statement2->closeCursor();
      ?>
+     <?php
+
+if(!isset($_SESSION['userID'])){
+    include('includes/header.php');
+}
+else{
+    include('includes/header2.php');
+}
+?> 
 <!DOCTYPE html>
 <head>
       <title>User Profile</title>
 </head>
 <body> 
-<?php include_once 'includes/header.php'?>
 <div class="container"><br><br><br><br><br><br>
 <?php foreach ($users as $user) :?>
     <h1>Welcome, <?php echo $user['username']; ?></h1>

@@ -1,16 +1,20 @@
   
 <!DOCTYPE html>
 <html lang="en">
+<?php
+include('includes/database.php');  
 
+include("loginServ.php");
+?>
 <head>
 
 <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.scss">
   <link rel="stylesheet" href="css/drag.css">
-  <link rel="stylesheet" href="css/graham.css">
+  <link rel="stylesheet" href="css/graham.scss">
   <link rel="stylesheet" href="css/animate.css">
  <link rel="stylesheet" href="css/media-queries.css">
   <script src="bootstrap.bundle.min.js / bootstrap.bundle.js"></script>
@@ -20,18 +24,22 @@
         
         
 </head>
+<?php
 
+if(!isset($_SESSION['userID'])){
+    include('includes/header.php');
+}
+else{
+    include('includes/header2.php');
+}
+?>
 <br>
      <br>
      <br>
 
 <body>
-<?php
-  include('includes/header.php');
-  include('includes/database.php');  
-
-    include("loginServ.php");
-  ?>
+  
+  
  
 <?php
 //Selects all images, their id and userid with the tag animated
