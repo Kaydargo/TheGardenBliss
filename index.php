@@ -4,14 +4,13 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<html>
+<html lang="en">
 <?php
     include('includes/database.php');
     include("loginServ.php");
     ?>
  
     <head>
-
 <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -78,7 +77,7 @@ else{
 <div class="row display-flex">
 <div class="col-sm">
 <div class="polaroid">
-<img class="icons img-fluid" src='icons/drag_drop1.svg'>
+<img class="icons img-fluid" src='icons/drag_drop1.svg' alt=''>
   <div class="ctnbtm">
   <h4 class="func">Drag and Drop Garden Planner</h4>
   </div>
@@ -86,7 +85,7 @@ else{
   </div>
   <div class="col-sm">
   <div class="polaroid">
-  <img class="icons img-fluid" src='icons/info.svg'>
+  <img class="icons img-fluid" src='icons/info.svg' alt=''>
   <div class="ctnbtm">
   <h4 class="func">Information Guides on Plant Keeping</h4>
   </div>
@@ -94,7 +93,7 @@ else{
 </div>
   <div class="col-sm">
   <div class="polaroid">
-  <img class="icons img-fluid" src='icons/tutorial1.svg'>
+  <img class="icons img-fluid" src='icons/tutorial1.svg' alt=''>
   <div class="ctnbtm">
   <h4 class="func">Tutorials on How to Garden</h4>
   </div>
@@ -102,7 +101,7 @@ else{
   </div>
   <div class="col-sm">
   <div class="polaroid">
-  <img class="icons img-fluid" src='icons/bee1.svg'>
+  <img class="icons img-fluid" src='icons/bee1.svg' alt=''>
   <div class="ctnbtm">
   <h4 class="func">Interactive Game on Bee Conservation</h4>
   </div>

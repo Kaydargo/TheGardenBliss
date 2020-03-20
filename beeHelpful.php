@@ -34,7 +34,7 @@ Now, we cannot ignore the fact that Irish bees are under pressure. The main reas
     <p>No matter how small your garden is, ensure flowers and fruits that are rich in pollen and nectar essential element in your garden. Go to our how to plan page to learn how to plant some of these plants</p>
     </div>
     <div class="col-sm-6">
-    <a href="#bee"><img src="images/logo.png" class="beelogo"></a>
+    <a href="#bee"><img src="images/logo.png" class="beelogo" alt='Bee Helpful Game'></a>
     </div>
 </div>
 </div>
@@ -108,9 +108,6 @@ Now, we cannot ignore the fact that Irish bees are under pressure. The main reas
       </div> 
    </div> 
 </div>
-
-
-
 <div class="container">
 <hr>
 <h2 class="plantName" style="text-align:center;">Play our Bee Helpful Game</h2><br>

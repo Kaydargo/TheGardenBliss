@@ -462,7 +462,6 @@ else{
 	                		</div>
 	                		<div class="col-md-9">
 	                			<h3><a href="#">watering your rose plant</a> <i class="fas fa-angle-right"></i></h3>
-	                		
 		                    	<p>
 		                     Red roses are in such high demand on February 14th that it could be tough to get your hands on them. So why not have your own rose garden.
 		                    	</p>
@@ -470,17 +469,9 @@ else{
 	                	</div>
 	                </div>
 	            </div>
-	            
-	           
 	            </div>
-
-			</div>
-			
+			</div>		
         </div>
-		
-       
-     
-
 
         <!-- Javascript -->
         <script src="js/jquery-3.2.1.min.js"></script>
@@ -498,5 +489,4 @@ else{
         ?>
 
     </body>
-
-</html>ff
+</html>
