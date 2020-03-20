@@ -485,7 +485,7 @@
         <script src="js/scripts.js"></script>
 
 		<?php
-    include('includes/footer3.php');
+    include('includes/footer.php');
         ?>
 
     </body>

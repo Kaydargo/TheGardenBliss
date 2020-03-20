@@ -259,7 +259,7 @@ foreach ($plantsType as $plantType) :
     </div>
 <br>
 <?php
-    include('includes/footer3.php');
+    include('includes/footer.php');
         ?>
     </body>
 

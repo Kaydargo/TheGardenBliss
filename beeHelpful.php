@@ -112,6 +112,6 @@ Now, we cannot ignore the fact that Irish bees are under pressure. The main reas
         <script src="js/retina-1.1.0.min.js"></script>
         <script src="js/waypoints.min.js"></script>
         <script src="js/scripts.js"></script>
-<?php include 'includes/footer3.php' ?>
+<?php include 'includes/footer.php' ?>
 </body>
 </html>
