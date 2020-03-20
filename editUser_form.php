@@ -91,5 +91,5 @@ include 'includes/header.php';
         <?php unset($_SESSION['errMsg']); ?>
                 
 </body>
-<?php include 'includes/footer3.php'; ?>
+<?php include 'includes/footer.php'; ?>
 </html>

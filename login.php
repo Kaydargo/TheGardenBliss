@@ -74,5 +74,5 @@
         <script src="js/waypoints.min.js"></script>
         <script src="js/scripts.js"></script>
     </body>
-    <?php include 'includes/footer3.php'; ?>
+    <?php include 'includes/footer.php'; ?>
     </html>

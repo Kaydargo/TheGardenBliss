@@ -84,7 +84,7 @@ $statement3->closeCursor();
     <?php foreach ($plants as $plant) : ?>
    <div class="row row1"> 
       <div class="col-sm-6">
-        <?php echo "<img class='image1 img-fluid' src='images/".$plant['plantImage']. "' />"; ?>
+        <?php echo "<img class='image1 img-fluid' src='images/".$plant['plantImage'].  "' />"; ?>
       </div>
       <div class="col-sm-6">
           <h3 class="plantName"><?php echo $plant['plantName']; ?></h3>
@@ -259,7 +259,7 @@ foreach ($plantsType as $plantType) :
     </div>
 <br>
 <?php
-    include('includes/footer3.php');
+    include('includes/footer.php');
         ?>
     </body>
 
