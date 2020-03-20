@@ -178,7 +178,7 @@ require('includes/database.php');
             break;
             }?>
             <div class="col-3 float-left">  
-            <?= ($vegGarden['plantIcon'] <> " " ? "<img draggable='true' class='plants ui-widget-content draggable' style='width:100px; margin-top:10px;' src='images/{$vegGarden['plantIcon']}'/>" : "") ?>
+            <?= ($vegGarden['plantIcon'] <> " " ? "<img draggable='true' alt='' class='plants ui-widget-content draggable' style='width:100px; margin-top:10px;' src='images/{$vegGarden['plantIcon']}'/>" : "") ?>
             </div>
             <?php endforeach; ?>
             </div> 
@@ -193,7 +193,7 @@ require('includes/database.php');
             }
             ?>  
             <div class="col-3 float-left"> 
-            <?= ($vegGarden1['plantIcon'] <> " " ? "<img draggable='true' class='plants ui-widget-content draggable' style='width:100px; margin-top:10px;' src='images/{$vegGarden1['plantIcon']}'/>" : "") ?>                                                            
+            <?= ($vegGarden1['plantIcon'] <> " " ? "<img draggable='true' class='plants ui-widget-content draggable' alt='' style='width:100px; margin-top:10px;' src='images/{$vegGarden1['plantIcon']}'/>" : "") ?>                                                            
             </div>  
             <?php endforeach; ?> 
             </div>
@@ -225,7 +225,7 @@ require('includes/database.php');
                 <tr>  
                 <div style="width=200px">
                     <td><?php echo $plant['plantName']; ?></td>
-                  <td><?php echo "<img class='plants ui-widget-content'  draggable='true' src='images/".$plant['plantIcon']."' />"; ?>
+                  <td><?php echo "<img class='plants ui-widget-content'  draggable='true' alt='' src='images/".$plant['plantIcon']."' />"; ?>
                 </div>
                 <?php endforeach; ?>
             </table>

@@ -16,11 +16,7 @@
   <script src="bootstrap.bundle.min.js / bootstrap.bundle.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
- 
-        
-        
 </head>
-
 <br>
      <br>
      <br>
@@ -98,7 +94,7 @@
     if ($counter > 3){
     break;
     }?>
-            <?= ($veg['plantImage'] <> " " ? "<img class='card-img-top' src='images/{$veg['plantImage']}'/>" : "") ?>
+            <?= ($veg['plantImage'] <> " " ? "<img class='card-img-top' alt='' src='images/{$veg['plantImage']}'/>" : "") ?>
             <div class="card-body">
               <h4 class="card-title"><?php echo ($veg['plantName']); ?></h4>
               <p class="card-text"><?php echo ($veg['plantTagline']);?></p>
@@ -128,7 +124,7 @@
     if ($counter > 3){
     break;
     }?>
-            <?= ($veg1['plantImage'] <> " " ? "<img class='card-img-top' src='images/{$veg1['plantImage']}'/>" : "") ?>
+            <?= ($veg1['plantImage'] <> " " ? "<img class='card-img-top' alt='' src='images/{$veg1['plantImage']}'/>" : "") ?>
             <div class="card-body">
               <h4 class="card-title"> <?php echo ($veg1['plantName']); ?></h4>
               <p class="card-text"><?php echo ($veg1['plantTagline']);?></p>
@@ -157,7 +153,7 @@
 if ($counter > 3){
 break;
 }?>
-      <?= ($veg2['plantImage'] <> " " ? "<img class='card-img-top' src='images/{$veg2['plantImage']}'/>" : "") ?>
+      <?= ($veg2['plantImage'] <> " " ? "<img class='card-img-top' alt='' src='images/{$veg2['plantImage']}'/>" : "") ?>
       <div class="card-body">
         <h4 class="card-title"><?php echo ($veg2['plantName']); ?></h4>
         <p class="card-text"><?php echo ($veg2['plantTagline']);?></p>
@@ -186,7 +182,7 @@ break;
 if ($counter > 3){
 break;
 }?>
-      <?= ($veg3['plantImage'] <> " " ? "<img class='card-img-top' src='images/{$veg3['plantImage']}'/>" : "") ?>
+      <?= ($veg3['plantImage'] <> " " ? "<img class='card-img-top' alt='' src='images/{$veg3['plantImage']}'/>" : "") ?>
       <div class="card-body">
         <h4 class="card-title"><?php echo ($veg3['plantName']); ?></h4>
         <p class="card-text"><?php echo ($veg3['plantTagline']);?></p>
@@ -248,7 +244,7 @@ break;
     if ($counter > 3){
     break;
     }?>
-            <?= ($fruit['plantImage'] <> " " ? "<img class='card-img-top' src='images/{$fruit['plantImage']}'/>" : "") ?>
+            <?= ($fruit['plantImage'] <> " " ? "<img class='card-img-top' alt='' src='images/{$fruit['plantImage']}'/>" : "") ?>
             <div class="card-body">
               <h4 class="card-title"><?php echo ($fruit['plantName']); ?></h4>
               <p class="card-text"><?php echo ($fruit['plantTagline']);?></p>
@@ -277,7 +273,7 @@ break;
     if ($counter > 3){
     break;
     }?>
-            <?= ($fruit1['plantImage'] <> " " ? "<img class='card-img-top' src='images/{$fruit1['plantImage']}'/>" : "") ?>
+            <?= ($fruit1['plantImage'] <> " " ? "<img class='card-img-top' alt='' src='images/{$fruit1['plantImage']}'/>" : "") ?>
             <div class="card-body">
               <h4 class="card-title"><?php echo ($fruit1['plantName']); ?></h4>
               <p class="card-text"><?php echo ($fruit1['plantTagline']);?></p>
@@ -307,7 +303,7 @@ break;
 if ($counter > 3){
 break;
 }?>
-      <?= ($fruit2['plantImage'] <> " " ? "<img class='card-img-top' src='images/{$fruit2['plantImage']}'/>" : "") ?>
+      <?= ($fruit2['plantImage'] <> " " ? "<img class='card-img-top' alt='' src='images/{$fruit2['plantImage']}'/>" : "") ?>
       <div class="card-body">
         <h4 class="card-title"><?php echo ($fruit2['plantName']); ?></h4>
         <p class="card-text"><?php echo ($fruit2['plantTagline']);?></p>
@@ -346,6 +342,7 @@ break;
     <a class="btn-floating" href="#multi-item-flower" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
     <a class="btn-floating" href="#multi-item-flower" data-slide="next"><i class="fa fa-chevron-right"></i></a>
   </div>-->
+  
   <!--/.Controls-->
 
   <!--Indicators-->
@@ -366,7 +363,7 @@ break;
     if ($counter > 3){
     break;
     }?>
-            <?= ($flower['plantImage'] <> " " ? "<img class='card-img-top' src='images/{$flower['plantImage']}'/>" : "") ?>
+            <?= ($flower['plantImage'] <> " " ? "<img class='card-img-top' alt='' src='images/{$flower['plantImage']}'/>" : "") ?>
             <div class="card-body">
               <h4 class="card-title"><?php echo ($flower['plantName']); ?></h4>
               <p class="card-text"><?php echo ($flower['plantTagline']);?></p>
@@ -396,7 +393,7 @@ break;
     if ($counter > 3){
     break;
     }?>
-            <?= ($flower1['plantImage'] <> " " ? "<img class='card-img-top' src='images/{$flower1['plantImage']}'/>" : "") ?>
+            <?= ($flower1['plantImage'] <> " " ? "<img class='card-img-top' alt='' src='images/{$flower1['plantImage']}'/>" : "") ?>
             <div class="card-body">
               <h4 class="card-title"><?php echo ($flower1['plantName']); ?></h4>
               <p class="card-text"><?php echo ($flower1['plantTagline']);?></p>
@@ -426,7 +423,7 @@ break;
 if ($counter > 3){
 break;
 }?>
-      <?= ($flower2['plantImage'] <> " " ? "<img class='card-img-top' src='images/{$flower2['plantImage']}'/>" : "") ?>
+      <?= ($flower2['plantImage'] <> " " ? "<img class='card-img-top' alt=''' src='images/{$flower2['plantImage']}'/>" : "") ?>
       <div class="card-body">
         <h4 class="card-title"><?php echo ($flower2['plantName']); ?></a></h4>
         <p class="card-text"><?php echo ($flower2['plantTagline']);?></p>
