@@ -60,7 +60,7 @@ jQuery(document).ready(function() {
 
 	else if (window.location.pathname.includes("plants.php")){
 		console.log('plants');
-		$('.top-content').backstretch("images/plant.jpg");
+		$('.top-content').backstretch("images/plants_3.jpg");
     
 		$('#top-navbar-1').on('shown.bs.collapse', function(){
 			$('.top-content').backstretch("resize");
