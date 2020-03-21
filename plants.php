@@ -68,13 +68,22 @@ else{
           
 <br><br>
 <!--Carousel Wrapper-->
-<div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel" data-interval='false'>
+<div id="multi-item-veg" class="carousel slide carousel-multi-item" data-ride="carousel" data-interval='false'>
 
   <!--Controls-->
-  <div class="controls-top">
-    <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
-    <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
-  </div>
+  <!-- <div class="controls-top">
+    <a class="btn-floating" href="#multi-item-veg" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+    <a class="btn-floating" href="#multi-item-veg" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+  </div> -->
+  
+  <a class="carousel-control-prev" href="#multi-item-veg" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#multi-item-veg" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
   <!--/.Controls-->
 
   <!--Indicators-->
@@ -203,10 +212,10 @@ break;
 <br><br><br>
     <!--/.Third slide-->
     <ol class="carousel-indicators">
-    <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
-    <li data-target="#multi-item-example" data-slide-to="1"></li>
-    <li data-target="#multi-item-example" data-slide-to="2"></li>
-    <li data-target="#multi-item-example" data-slide-to="3"></li>
+    <li data-target="#multi-item-veg" data-slide-to="0" class="active"></li>
+    <li data-target="#multi-item-veg" data-slide-to="1"></li>
+    <li data-target="#multi-item-veg" data-slide-to="2"></li>
+    <li data-target="#multi-item-veg" data-slide-to="3"></li>
   </ol>
 
 
@@ -328,6 +337,16 @@ break;
     <li data-target="#multi-item-fruit" data-slide-to="2"></li>
   </ol>
   <!--/.Indicators-->
+
+  <a class="carousel-control-prev" href="#multi-item-fruit" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#multi-item-fruit" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+  
   </div>
   <!--/.Slides-->
 <!--/.Carousel Wrapper-->
@@ -447,8 +466,18 @@ break;
     <li data-target="#multi-item-flower" data-slide-to="1"></li>
     <li data-target="#multi-item-flower" data-slide-to="2"></li>
   </ol>
+
+  <a class="carousel-control-prev" href="#multi-item-flower" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#multi-item-flower" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
   </div>
   <!--/.Slides-->
+  
   
 </div>
 
