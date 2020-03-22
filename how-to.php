@@ -1,8 +1,10 @@
 <!doctype html>
 <html lang="en">
-
+<?php
+    include('includes/database.php');
+    include("loginServ.php");
+    ?>
     <head>
-
 		<!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,7 +12,7 @@
 
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
-		<link rel="stylesheet" href="css/graham.css">
+		<link rel="stylesheet" href="css/graham.scss">
         <link rel="stylesheet" href="css/animate.css">
         <link rel="stylesheet" href="css/media-queries.css">
     </head>
@@ -18,11 +20,17 @@
     <body>
 
 		<?php
-  include('includes/header.php');
+	if(!isset($_SESSION['userID'])){
+		include('includes/header.php');
+	}
+	else{
+		include('includes/header2.php');
+	}
+	
   include('includes/database.php');  
   ?>
  <br>
-     <br>W
+     <br>
         <!-- Top content -->
         <div class="top-content">
             <div class="container">
