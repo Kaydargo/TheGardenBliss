@@ -911,3 +911,26 @@ input:checked + .slider:before {
   margin-left: auto;
   margin-right: auto;
 }
+
+.carousel-control.left,
+.carousel-control.right {
+  background: none;
+  border: none;
+}
+
+.carousel-control.left {
+  margin-left: -25px;
+}
+
+.carousel-control.right {
+  margin-right: -25px;
+}
+
+.carousel-control {
+  width: 0%;
+}
+
+.glyphicon-chevron-left, .glyphicon-chevron-right {
+  color: blue;
+  font-size: 40px;
+}

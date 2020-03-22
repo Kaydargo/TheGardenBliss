@@ -1,5 +1,9 @@
 <!doctype html>
 <html lang="en">
+<?php
+    include('includes/database.php');
+    include("loginServ.php");
+    ?>
 
     <head>
 
@@ -10,17 +14,22 @@
 
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
-		<link rel="stylesheet" href="css/graham.css">
+		<link rel="stylesheet" href="css/graham.scss">
     <link rel="stylesheet" href="css/animate.css">
      <link rel="stylesheet" href="css/media-queries.css">
     </head>
 	
     <body>
 
-		<?php
-  include('includes/header.php');
-  include('includes/database.php');  
-  ?>
+	<?php
+
+if(!isset($_SESSION['userID'])){
+    include('includes/header.php');
+}
+else{
+    include('includes/header2.php');
+}
+?> 
  <br>
      <br>
      <br>
@@ -453,7 +462,6 @@
 	                		</div>
 	                		<div class="col-md-9">
 	                			<h3><a href="#">watering your rose plant</a> <i class="fas fa-angle-right"></i></h3>
-	                		
 		                    	<p>
 		                     Red roses are in such high demand on February 14th that it could be tough to get your hands on them. So why not have your own rose garden.
 		                    	</p>
@@ -461,17 +469,9 @@
 	                	</div>
 	                </div>
 	            </div>
-	            
-	           
 	            </div>
-
-			</div>
-			
+			</div>		
         </div>
-		
-       
-     
-
 
         <!-- Javascript -->
         <script src="js/jquery-3.2.1.min.js"></script>
@@ -489,5 +489,4 @@
         ?>
 
     </body>
-
-</html>ff
+</html>

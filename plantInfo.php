@@ -54,10 +54,16 @@ $statement3->closeCursor();
         <meta charset="UTF-8">
         <title></title>
     </head>
-    <link href="css/graham.css" rel="stylesheet">
+    <link href="css/graham.scss" rel="stylesheet">
     <?php
+
+if(!isset($_SESSION['userID'])){
     include('includes/header.php');
-        ?>
+}
+else{
+    include('includes/header2.php');
+}
+?> 
     <body>
     <br><br><br>
 <div class="top-content">
@@ -84,7 +90,7 @@ $statement3->closeCursor();
     <?php foreach ($plants as $plant) : ?>
    <div class="row row1"> 
       <div class="col-sm-6">
-        <?php echo "<img class='image1 img-fluid' src='images/".$plant['plantImage'].  "' />"; ?>
+        <?php echo "<img class='image1 img-fluid' alt='' src='images/".$plant['plantImage']. "' />"; ?>
       </div>
       <div class="col-sm-6">
           <h3 class="plantName"><?php echo $plant['plantName']; ?></h3>
@@ -152,11 +158,11 @@ $statement3->closeCursor();
 <?php
   if($plant['soil'] == "Sandy")
   {
-    echo "<img class='icons img-fluid' src='icons/soil_2.png'>";
+    echo "<img class='icons img-fluid' alt='' src='icons/soil_2.png'>";
   }
   else
   {
-    echo "<img class='icons img-fluid' src='icons/soil_2.png'>";
+    echo "<img class='icons img-fluid' alt='' src='icons/soil_2.png'>";
   }
   ?>
   <div class="ctnbtm">
@@ -169,11 +175,11 @@ $statement3->closeCursor();
 <?php
   if($plant['placement'] == "Shade")
   {
-    echo "<img class='icons img-fluid' src='icons/shade.png'>";
+    echo "<img class='icons img-fluid' alt='' src='icons/shade.png'>";
   }
   else
   {
-    echo "<img class='icons img-fluid' src='icons/sun_2.png'>";
+    echo "<img class='icons img-fluid' alt='' src='icons/sun_2.png'>";
   }
   ?>
   <div class="ctnbtm">
@@ -183,7 +189,7 @@ $statement3->closeCursor();
   </div>
   <div class="col-sm">
 <div class="polaroid">
-<img class="icons img-fluid" src='icons/depth.png'>
+<img class="icons img-fluid" alt='' src='icons/depth.png'>
   <div class="ctnbtm">
   <h4 class="func"><?php echo $plant['depth']; ?></h4>
   </div>
@@ -191,7 +197,7 @@ $statement3->closeCursor();
   </div>
   <div class="col-sm">
 <div class="polaroid">
-<img class="icons img-fluid" src='icons/distance.png'>
+<img class="icons img-fluid" alt='' src='icons/distance.png'>
   <div class="ctnbtm">
   <h4 class="func"><?php echo $plant['distance']; ?></h4>
   </div>
@@ -221,7 +227,7 @@ $statement3->closeCursor();
   </ol>
       </div> 
       <div class="col-sm-6">
-        <?php echo "<img class='image1' src='images/plant2.jpg".$plantInfo['infoImage']. "' />"; ?>
+        <?php echo "<img class='image1' alt='' src='images/plant2.jpg".$plantInfo['infoImage']. "' />"; ?>
       </div>
    </div> 
     </div> 
@@ -250,7 +256,7 @@ $statement3->closeCursor();
     <?php
 foreach ($plantsType as $plantType) :
     echo ' <div class="col-md-4 col-xs-6">
-                <img src="images/'.$plantType["plantImage"].'" class="img-responsive img-thumbnail">
+                <img alt="" src="images/'.$plantType["plantImage"].'" class="img-responsive img-thumbnail">
                 <h4 style="text-align: center;"><a>'.$plantType["plantName"].' </a></h4>
             </div>';
      ?>

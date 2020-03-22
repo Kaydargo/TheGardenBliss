@@ -1,5 +1,8 @@
 <?php
-require('includes/database.php');
+
+include('includes/database.php');
+include("loginServ.php");
+
 
     $queryPlant = "SELECT * FROM plant WHERE plantID = plantID LIMIT 3"; 
     $statement1 = $conn->prepare($queryPlant);
@@ -16,9 +19,9 @@ require('includes/database.php');
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.scss">
   <link rel="stylesheet" href="css/drag.css">
-  <link rel="stylesheet" href="css/graham.css">
+  <link rel="stylesheet" href="css/graham.scss">
 <link rel="stylesheet" href="css/animate.css">
  <link rel="stylesheet" href="css/media-queries.css">
 <br><br>
@@ -26,9 +29,17 @@ require('includes/database.php');
 </head>
   <title>Drag&Drop Garden</title>
   <?php
-    include('includes/header.php');
     include('includes/functions.php');
         ?>
+        <?php
+
+if(!isset($_SESSION['userID'])){
+    include('includes/header.php');
+}
+else{
+    include('includes/header2.php');
+}
+?> 
   
     <body>
 
@@ -178,7 +189,7 @@ require('includes/database.php');
             break;
             }?>
             <div class="col-3 float-left">  
-            <?= ($vegGarden['plantIcon'] <> " " ? "<img draggable='true' class='plants ui-widget-content draggable' style='width:100px; margin-top:10px;' src='images/{$vegGarden['plantIcon']}'/>" : "") ?>
+            <?= ($vegGarden['plantIcon'] <> " " ? "<img draggable='true' alt='' class='plants ui-widget-content draggable' style='width:100px; margin-top:10px;' src='images/{$vegGarden['plantIcon']}'/>" : "") ?>
             </div>
             <?php endforeach; ?>
             </div> 
@@ -193,7 +204,7 @@ require('includes/database.php');
             }
             ?>  
             <div class="col-3 float-left"> 
-            <?= ($vegGarden1['plantIcon'] <> " " ? "<img draggable='true' class='plants ui-widget-content draggable' style='width:100px; margin-top:10px;' src='images/{$vegGarden1['plantIcon']}'/>" : "") ?>                                                            
+            <?= ($vegGarden1['plantIcon'] <> " " ? "<img draggable='true' class='plants ui-widget-content draggable' alt='' style='width:100px; margin-top:10px;' src='images/{$vegGarden1['plantIcon']}'/>" : "") ?>                                                            
             </div>  
             <?php endforeach; ?> 
             </div>
@@ -225,7 +236,7 @@ require('includes/database.php');
                 <tr>  
                 <div style="width=200px">
                     <td><?php echo $plant['plantName']; ?></td>
-                  <td><?php echo "<img class='plants ui-widget-content'  draggable='true' src='images/".$plant['plantIcon']."' />"; ?>
+                  <td><?php echo "<img class='plants ui-widget-content'  draggable='true' alt='' src='images/".$plant['plantIcon']."' />"; ?>
                 </div>
                 <?php endforeach; ?>
             </table>
