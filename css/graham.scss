@@ -266,20 +266,17 @@ body {
 a {
 	text-decoration: none;
 	transition: all .3s;
-	color: #9b59b6;
 	text-decoration: none;
 	transition: all .3s;
 	&:hover {
 		text-decoration: none;
 		transition: all .3s;
-		color: #9b59b6;
 		text-decoration: none;
 		transition: all .3s;
 	}
 	&:focus {
 		text-decoration: none;
 		transition: all .3s;
-		color: #9b59b6;
 		text-decoration: none;
 		transition: all .3s;
 	}
@@ -663,7 +660,7 @@ h3 {
 	overflow: hidden;
 }
 .bar {
-	background-color: rgba(0,0,0,.6);
+	background-color: rgba(0,0,0,.8);
 	padding: 20px;
 	border-top-left-radius: .5em;
 	border-bottom-left-radius: .5em;
@@ -694,8 +691,10 @@ h3 {
 	i {
 		padding-right: 10px;
 		font-size: 18px;
-		color: #fff;
-		color: rgba(255, 255, 255, 0.5);
+		color: rgba(255, 255, 255, 0.8);
+		&:hover {
+			color:rgba(255, 255, 255, 1);
+		}
 	}
 }
 .footer-links {
@@ -704,10 +703,10 @@ h3 {
 		color: rgba(255, 255, 255, 0.8);
 		border: 0;
 		&:hover {
-			color: #fff;
+			color:rgba(255, 255, 255, 1);
 		}
 		&:focus {
-			color: #fff;
+			color: rgba(255, 255, 255, 1);
 		}
 	}
 }
@@ -736,6 +735,10 @@ h3 {
 	i {
 		font-size: 24px;
 		vertical-align: middle;
+		&:hover {
+			color: #79a05f;
+			border: 0;
+		}
 	}
 }
 .footer-copyright {

@@ -21,19 +21,16 @@
 	                    		</div>
 	                    	</div>
 	                    	<div class="row">
-	                    		<div class="col-md-12">
+	                    		<div class="col-md-6">
 								<p><a  href="index.php">Home</a></p>
-	                    			<p><a  href="plant.php">Our Plants</a></p>
-	                    			<p><a href="beeHelpful.php">BeeHelpful</a></p>
-									<p><a href="plantPlanner.php">plant planner</a></p>
-									<p><a  href="how-to.php">How-to</a></p>
-									<p><a  href="login.php">Login</a></p>
+									<p><a  href="plant.php">Our Plants</a></p>
+									<p><a href="planner.php">Garden planner</a></p>
+	                    			<p><a href="beeHelpful.php">Bee-Helpful</a></p>
 	                    		</div>
-	                    		<!-- <div class="col-md-6">
-	                    			<p><a class="scroll-link" href="../login.php">Login</a></p>
-	                    			<p><a href="#">Affiliates</a></p>
-	                    			<p><a href="#">Terms</a></p>
-	                    		</div> -->
+	                    		<div class="col-md-6">
+								<p><a  href="how-to.php">How-to</a></p>
+								<p><a  href="login.php">Login</a></p>
+	                    		</div>
 	                    	</div>
 	                    </div>
 		            </div>
@@ -43,7 +40,7 @@
 	        	<div class="container">
 	        		<div class="row">
 	           			<div class="col-md-6 footer-copyright">
-	                    	&copy; Garden Bliss @ 2020 <a href="https://thegardenbliss.com">Garden Bliss</a>
+						   <a href="https://thegardenbliss.com">&copy; Garden Bliss 2020 </a>
 	                    </div>
 	           			<div class="col-md-6 footer-social">
 						<a href="https://www.facebook.com/garden.bliss.984"><i class="fab fa-facebook"></i></a> 
