@@ -90,7 +90,7 @@ else{
     <?php foreach ($plants as $plant) : ?>
    <div class="row row1"> 
       <div class="col-sm-6">
-        <?php echo "<img class='image1 img-fluid' alt='' src='images/".$plant['plantImage']. "' />"; ?>
+        <?php echo "<img class='image1 img-fluid' alt='$plant[plantName]' src='images/".$plant['plantImage']. "' />"; ?>
       </div>
       <div class="col-sm-6">
           <h3 class="plantName"><?php echo $plant['plantName']; ?></h3>
