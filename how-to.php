@@ -26,8 +26,6 @@
 	else{
 		include('includes/header2.php');
 	}
-	
-  include('includes/database.php');  
   ?>
  <br>
      <br>
