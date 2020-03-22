@@ -22,10 +22,7 @@
   include('includes/database.php');  
   ?>
  <br>
-     <br>
-    
-
-
+     <br>W
         <!-- Top content -->
         <div class="top-content">
             <div class="container">
@@ -112,7 +109,7 @@
 	                    <div class="about-us-box-text">
 						<h3 class="plantName">CARING FOR YOUR GARDEN</h3>
 	                    	<p>
-	                    	keeping your garden healthy requires regular maintenance throughout the growing season. Most plants need, water, sun, and nutrient to survived and produce healthy crops. It is important to follow general upkeep combined with pest and disease control which usually does not require much time or money. Ensure you do the garden weekly if there is a need because a neglected garden will need more effort and time to return to perfect health.
+	                    	Keeping your garden healthy requires regular maintenance throughout the growing season. Most plants need, water, sun, and nutrient to survived and produce healthy crops. It is important to follow general upkeep combined with pest and disease control which usually does not require much time or money. Ensure you do the garden weekly if there is a need because a neglected garden will need more effort and time to return to perfect health.
 You can use mulch on your garden bed after planting since mulch prevents weeds and help to keep moisture lock in the soil.
 <p>Add the amount of water necessary for your specific plant variety. Ensure that you water your garden regularly. Most crops like vegetables or flowers will need 1 inch of water weekly. Check the topsoil of your garden weekly and add water to most plants when the top inch of the soil began to dry off. You want the top of the soil to remain moist but not water clogged. For more information on how to start and care for your garden watch our how to videos</p>
 	

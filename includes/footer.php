@@ -21,17 +21,19 @@
 	                    		</div>
 	                    	</div>
 	                    	<div class="row">
-	                    		<div class="col-md-6">
-	                    			<p><a class="scroll-link" href="#top-content">Back to the Top</a></p>
-	                    			<p><a class="scroll-link" href="../plants.php">Plants</a></p>
-	                    			<p><a class="scroll-link" href="../gardenPlanner.php">Garden Planner</a></p>
-	                    			<p><a class="scroll-link" href="how-to.php">How To</a></p>
+	                    		<div class="col-md-12">
+								<p><a  href="index.php">Home</a></p>
+	                    			<p><a  href="plant.php">Our Plants</a></p>
+	                    			<p><a href="beeHelpful.php">BeeHelpful</a></p>
+									<p><a href="plantPlanner.php">plant planner</a></p>
+									<p><a  href="how-to.php">How-to</a></p>
+									<p><a  href="login.php">Login</a></p>
 	                    		</div>
-	                    		<div class="col-md-6">
+	                    		<!-- <div class="col-md-6">
 	                    			<p><a class="scroll-link" href="../login.php">Login</a></p>
 	                    			<p><a href="#">Affiliates</a></p>
 	                    			<p><a href="#">Terms</a></p>
-	                    		</div>
+	                    		</div> -->
 	                    	</div>
 	                    </div>
 		            </div>
@@ -44,8 +46,9 @@
 	                    	&copy; Garden Bliss @ 2020 <a href="https://thegardenbliss.com">Garden Bliss</a>
 	                    </div>
 	           			<div class="col-md-6 footer-social">
-	                    	<a href="#"><i class="fab fa-facebook"></i></a> 
-							<a href="#"><i class="fab fa-instagram"></i></a> 
+						<a href="https://www.facebook.com/garden.bliss.984"><i class="fab fa-facebook"></i></a> 
+						 <a href="https://www.instagram.com/gardenbliss2020/"><i class="fab fa-instagram"></i></a> 
+						 <a href="https://www.youtube.com/channel/UC6PF22TsUFfc7gieLa-CBpQ/"><i class="fab fa-youtube"></i></a>
 	                    </div>
 	           		</div>
 	        	</div>
