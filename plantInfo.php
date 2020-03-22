@@ -158,11 +158,11 @@ else{
 <?php
   if($plant['soil'] == "Sandy")
   {
-    echo "<img class='icons img-fluid' alt='' src='icons/soil_2.png'>";
+    echo "<img class='icons img-fluid' alt='Sandy soil' src='icons/soil_2.png'>";
   }
   else
   {
-    echo "<img class='icons img-fluid' alt='' src='icons/soil_2.png'>";
+    echo "<img class='icons img-fluid' alt='Clay soil' src='icons/soil_2.png'>";
   }
   ?>
   <div class="ctnbtm">
@@ -175,11 +175,11 @@ else{
 <?php
   if($plant['placement'] == "Shade")
   {
-    echo "<img class='icons img-fluid' alt='' src='icons/shade.png'>";
+    echo "<img class='icons img-fluid' alt='Place in shade' src='icons/shade.png'>";
   }
   else
   {
-    echo "<img class='icons img-fluid' alt='' src='icons/sun_2.png'>";
+    echo "<img class='icons img-fluid' alt='Place in sun' src='icons/sun_2.png'>";
   }
   ?>
   <div class="ctnbtm">
@@ -189,7 +189,7 @@ else{
   </div>
   <div class="col-sm">
 <div class="polaroid">
-<img class="icons img-fluid" alt='' src='icons/depth.png'>
+<img class="icons img-fluid" alt='planting depth' src='icons/depth.png'>
   <div class="ctnbtm">
   <h4 class="func"><?php echo $plant['depth']; ?></h4>
   </div>
@@ -197,20 +197,15 @@ else{
   </div>
   <div class="col-sm">
 <div class="polaroid">
-<img class="icons img-fluid" alt='' src='icons/distance.png'>
+<img class="icons img-fluid" alt='planting distance' src='icons/distance.png'>
   <div class="ctnbtm">
   <h4 class="func"><?php echo $plant['distance']; ?></h4>
   </div>
 </div>
   </div>
 
-
     </div>
     </div>
-
-
-  
-
 
 <br><br><br>
 <div class="container-fluid"> 
@@ -256,7 +251,7 @@ else{
     <?php
 foreach ($plantsType as $plantType) :
     echo ' <div class="col-md-4 col-xs-6">
-                <img alt="" src="images/'.$plantType["plantImage"].'" class="img-responsive img-thumbnail">
+                <img alt="'.$plantType["plantName"].'"  src="images/'.$plantType["plantImage"].'" class="img-responsive img-thumbnail">
                 <h4 style="text-align: center;"><a>'.$plantType["plantName"].' </a></h4>
             </div>';
      ?>
