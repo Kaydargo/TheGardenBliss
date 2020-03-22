@@ -1,3 +1,10 @@
+$(function() { 
+    //autocomplete
+    $(".auto").autocomplete({
+        source: "plantsFill.php",
+        minLength: 1
+    });                
+
 $(document).ready(function () {
     var suggestions = [];
 $("#plantInput").keyup(function () {

@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/animate.css">
  <link rel="stylesheet" href="css/media-queries.css">
   <script src="bootstrap.bundle.min.js / bootstrap.bundle.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   
@@ -29,7 +30,7 @@
 <?php
   include('includes/header.php');
   include('includes/database.php');  
-
+  require('includes/plantsFill.php'); 
     include("loginServ.php");
   ?>
  
@@ -64,12 +65,8 @@
         <!-- Page Content -->
         <div class="container" style="text-align: center;">
 
-        <form method="post">
-        <div class="form-group" class="ui-helper-clearfix" id="plantsInput">
-                <label for="plant">Plant Search: </label>
-                <input id="plantInput" class="form-control" type="text" name="plantInput">
-                </div>
-</form>
+       
+                
 
 <br><br>
 

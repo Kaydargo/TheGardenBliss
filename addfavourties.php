@@ -11,7 +11,8 @@ $plantsFav = $statement5->fetchAll();
 $statement5->closeCursor(); 
 foreach ($plantsFav as $plantFav)
 if($plantFav['userID'] == $user && $plantFav['plantID'] == $plant_id){
-  
+        header("Location: tester.php?plantID=.$plant_id");
+        exit; 
 }
 else{
   if(isset($_POST['addToFav'])){
@@ -22,5 +23,12 @@ else{
       $stmt1->bindValue(':user_id', $user_id);
       $stmt1->bindValue(':plant_id', $plant_id);
       $result = $stmt1->execute();
+      if($result){
+        $_SESSION['userID'] = $user['userID'];
+        header("Location: tester.php?plantID=.$plant_id");
+        exit; 
+}
   }
 }?>
+
+<script src="js/scripts.js"></script>

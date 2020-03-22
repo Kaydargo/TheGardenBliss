@@ -124,11 +124,12 @@ jQuery(window).load(function() {
 	
 });
 
+var fav = document.getElementById("favourited").getAttribute("data-name");
+
 function myFunction() {
 
 	var btn = document.getElementById("myButton");
-
-	if (btn.value == "Add to Favourites") {
+	if(fav == 'true'){	
 		btn.value = "Favourited";
 		btn.innerHTML = "Favourited";
 	}
@@ -138,3 +139,4 @@ function myFunction() {
 	}
 
 }
+
