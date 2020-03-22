@@ -92,13 +92,13 @@
    
     // Let the vegetables be droppable as well, accepting items from the bin
     $veg.droppable({
-      accept: "#bin li",
+      accept: "#bin > div > div",
       classes: {
         "ui-droppable-active": "custom-state-active"
       },
       drop: function( event, ui ) {
-        // recycleImage( ui.draggable );
-        recycleImage( ui.helper );
+        recycleImage( ui.draggable );
+        // recycleImage( ui.helper );
       }
     });
  
@@ -106,8 +106,8 @@
     var recycle_icon = "<a href='' title='Recycle this image' class='ui-icon ui-icon-refresh'>Recycle image</a>";
     function deleteImage( $item ) {
       $item.fadeOut(function() {
-        var $list = $( "ul", $bin ).length ?
-          $( "ul", $bin ) :
+        var $list = $( "div", $bin ).length ?
+          $( "div", $bin ) :
         //   $( "<div class='vegetables ui-helper-reset ui-helper-clearfix'>").appendTo( $bin );
           $( "<div class='vegetables ui-helper-reset'/>").appendTo( $bin );
  

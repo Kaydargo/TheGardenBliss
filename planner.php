@@ -1,5 +1,6 @@
 <?php
 require('includes/database.php');
+include("loginServ.php");
 include('includes/functions.php');
     $queryPlant = "SELECT * FROM plant WHERE plantID = plantID"; 
     $statement1 = $conn->prepare($queryPlant);
@@ -41,8 +42,134 @@ include('includes/functions.php');
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="js/drag-drop.js"></script>
 </head>
+<title>Drag&Drop Garden</title>
+  <?php
+    include('includes/functions.php');
+        ?>
+        <?php
+
+if(!isset($_SESSION['userID'])){
+    include('includes/header.php');
+}
+else{
+    include('includes/header2.php');
+}
+?> 
+  
 <body>
- <br><br><br><br>
+<div class="top-content">
+            <div class="container">
+            	
+                <div class="row">
+                <div class='bar'>
+                    <div class="col-md-8 offset-md-2 text">
+                        <h1 class="wow fadeInLeftBig">Plan your ideal garden</h1>
+                        <div class="description wow fadeInLeftBig">
+                        	<p>We walk you through factors that can affect how your garden will grow — sunlight, shade, soil —
+                                    and the balance between fruits, shrubs, flowers and vegetables
+                         	
+                        	</p>
+                        </div>
+</div>
+                    </div>
+                </div>
+                
+            </div>            
+        </div>
+<br><br>
+<div class="container">
+  <h2>Garden Planner</h2>
+  <div class="row">
+<p>Planning and creating a new garden design can give your home a boost. Our garden planner makes it easy to plan your dream garden, it allows you to plan the layout and content of your garden easily. It also gives you the flexibility to create the best design for your  garden. with the planner you can easily add various  vegetables and move them around your allotted garden to get the perfect layout.
+
+</p><br><br><br><br>
+
+<!-- Feature Cards -->
+<section class="d-flex bg-light" id="feature-cards">
+    <div class="container d-flex justify-content-center">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-12 align-self-center">
+                <div class="row">
+                    <div class="col-12 col-lg-4">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col mx-auto text-center">
+                                    <i class="far fa-hand-pointer fa-4x"></i>
+                                    </div>
+                                </div>
+                                <div class="row mt-4">
+                                    <div class="col-12 text-center">
+                                        <h3>Select</h3><hr>
+                                        <p class="text-secondary">Use the width and breadth grid provided to create the dimension that you want for your garden.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col mx-auto text-center">
+                                    <i class="far fa-object-ungroup fa-4x"></i>
+                                    </div>
+                                </div>
+                                <div class="row mt-4">
+                                    <div class="col-12 text-center">
+                                        <h3>Design</h3><hr>
+                                        <p class="text-secondary">Pick from the various vegetables, drag and drop it to anywhere you want on your alloted garden.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col mx-auto text-center">
+                                    <i class="far fa-save fa-4x"></i>
+                                    </div>
+                                </div>
+                                <div class="row mt-4">
+                                    <div class="col-12 text-center">
+                                        <h3>Save</h3><hr>
+                                        <p class="text-secondary">fill up your garden with the vegetables and save on your profile or print it out if you are not login.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container">
+ <form role="form">
+    <div class="form-group">
+    <select class="form-control" id="gardenWidthDrop">
+    <?php for($i=1; $i<=12; $i++){
+      echo '<option class="dropdown-item" value='.$i.'>'.$i." FT".'</option> ';
+    }?>
+    </select>
+    <label>Width of Garden </label>
+    </div>
+
+    <div class="form-group">
+    <select class="form-control" id="gardenHeighDrop">
+    <?Php for ($j=1; $j<=5; $j++){
+      echo '<option class="dropdown-item" value='.$j.'>'.$j." FT".'</option> ';
+    } ?>
+    </select>
+    <label>Height of Garden</label>
+    </div>
+  <br>
+  <button type="button" class="btn btn-primary gDimBtn" >Create Grid</button><!-- onClick="gridDimensions()" -->
+</form>
+</div><br><br>
+</div>
  <div class="container">
 <div class="ui-widget ui-helper-clearfix garden">
  
@@ -80,7 +207,7 @@ include('includes/functions.php');
               ?>
                 <div class="col-3 float-left ui-widget-content ui-corner-tr plant"> 
                 <h5 class="ui-widget-header"><?php echo $vegGarden1['plantName']?></h5> 
-                  <?= ($vegGarden1['plantIcon'] <> " " ? "<img style='width:100px; margin-top:10px;' src='images/{$vegGarden1['plantIcon']}'/>" : "") ?>
+                  <?= ($vegGarden1['plantIcon'] <> " " ? "<img style='width:100px; margin-top:10px;' alt='vegetable icon' src='images/{$vegGarden1['plantIcon']}'/>" : "") ?>
                   <a href="<?php 'images/'.$vegGarden1['plantIcon']?>" title="View larger image" class="ui-icon ui-icon-zoomin">View larger</a>
                 <a href="link/to/trash/script/when/we/have/js/off" title="Delete this image" class="ui-icon ui-icon-trash">Delete image</a>
                 </div>
@@ -100,19 +227,6 @@ include('includes/functions.php');
   </div> 
   </div>
 </div>
-
- <!-- Draggable -->
-<!-- <ul id="vegetables" class="vegetables ui-helper-reset ui-helper-clearfix">
-
-  <li class="ui-widget-content ui-corner-tr">
-    <h5 class="ui-widget-header">High Tatras</h5>
-    <img src="images/high_tatras_min.jpg" alt="The peaks of High Tatras" width="96" height="72">
-    <a href="images/high_tatras.jpg" title="View larger image" class="ui-icon ui-icon-zoomin">View larger</a>
-    <a href="link/to/trash/script/when/we/have/js/off" title="Delete this image" class="ui-icon ui-icon-trash">Delete image</a>
-  </li>
-
-</ul> -->
-
  <!-- Droppable grid -->
 <div id="gardenPlanner" class="col-lg-10 ui-widget-content ui-state-default gardenPlanner">
 </div>
@@ -125,6 +239,14 @@ include('includes/functions.php');
 </div>
  
             </div>
+            <i class="fa fa-print"></i><button type="button" class="btn" onClick="printPageAppear()"> Print Page</button>
+  <!-- Weather -->
+   
+<?php  include('includes/weather.php'); ?>
+  </div>
+                </div>
+<br>
+  <?php  include('includes/footer.php'); ?>
 <!-- <script src="js/jquery-3.2.1.min.js"></script> -->
  <!-- <script src="js/jquery-migrate-3.0.0.min.js"></script> -->
 
