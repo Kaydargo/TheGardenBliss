@@ -313,7 +313,7 @@ img { max-width: 100%;
 }
 strong { font-weight: 600; }
 
-a, a:hover, a:focus { color: #9b59b6; text-decoration: none; transition: all .3s; }
+a, a:hover, a:focus { text-decoration: none; transition: all .3s; }
 
 h1, h2 {
   
@@ -333,14 +333,6 @@ h3 {
     color: #555;
     line-height: 30px;
 }
-
-
-
-.colored-text { color: #9b59b6; }
-
-::-moz-selection { background: #9b59b6; color: #fff; text-shadow: none; }
-::selection { background: #9b59b6; color: #fff; text-shadow: none; }
-
 
 /***** General style, all sections *****/
 
@@ -716,7 +708,7 @@ padding-top: 40px;
 .footer-about img.logo-footer { max-width: 74px; margin-top: 0; margin-bottom: 18px; }
 
 .footer-contact p { word-wrap: break-word; }
-.footer-contact i { padding-right: 10px; font-size: 18px; color: #fff; color: rgba(255, 255, 255, 0.5); }
+.footer-contact i { padding-right: 10px; font-size: 18px; color: #fff; color: rgba(255, 255, 255, 0.8); }
 
 .footer-links a { color: #fff; color: rgba(255, 255, 255, 0.8); border: 0; }
 .footer-links a:hover, .footer-links a:focus { color: #fff; }
@@ -726,7 +718,7 @@ padding-top: 40px;
 .footer-social { padding-top: 3px; text-align: right; }
 .footer-social a { margin-left: 20px; color: #41602d; border: 0; }
 .footer-social a:hover, .footer-social a:focus { color: #79a05f; border: 0; }
-.footer-social i { font-size: 24px; vertical-align: middle; color: rgba(255, 255, 255, 0.5); }
+.footer-social i { font-size: 24px; vertical-align: middle; color: rgba(255, 255, 255, 0.8); }
 
 .footer-copyright { padding-top: 5px; }
 .footer-copyright a { color: #fff; border: 0; }

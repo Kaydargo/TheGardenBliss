@@ -4,8 +4,7 @@
 		        	<div class="row">
 		        		<div class="col-md-4 col-lg-3 footer-about wow fadeInUp">
 		        			<img class="logo-footer" src="images/logo-white.png" alt="logo-footer" data-at2x="images/logo-white.png">
-		        			<p>
-		        				We are a young company always looking for new and creative ideas to help you with our products in your everyday work.
+		        			<p>We plan to make gardening a hobby that everyone love, irrespective of their age, gardening experience or garden space.
 		        			</p>
 	                    </div>
 		        		<div class="col-md-4 col-lg-4 offset-lg-1 footer-contact wow fadeInDown">
@@ -22,15 +21,14 @@
 	                    	</div>
 	                    	<div class="row">
 	                    		<div class="col-md-6">
-	                    			<p><a class="scroll-link" href="#top-content">Back to the Top</a></p>
-	                    			<p><a class="scroll-link" href="../plants.php">Plants</a></p>
-	                    			<p><a class="scroll-link" href="../gardenPlanner.php">Garden Planner</a></p>
-	                    			<p><a class="scroll-link" href="how-to.php">How To</a></p>
+								<p><a  href="index.php">Home</a></p>
+									<p><a  href="plant.php">Our Plants</a></p>
+									<p><a href="planner.php">Garden planner</a></p>
+	                    			<p><a href="beeHelpful.php">Bee-Helpful</a></p>
 	                    		</div>
 	                    		<div class="col-md-6">
-	                    			<p><a class="scroll-link" href="../login.php">Login</a></p>
-	                    			<p><a href="#">Affiliates</a></p>
-	                    			<p><a href="#">Terms</a></p>
+								<p><a  href="how-to.php">How-to</a></p>
+								<p><a  href="login.php">Login</a></p>
 	                    		</div>
 	                    	</div>
 	                    </div>
@@ -41,11 +39,12 @@
 	        	<div class="container">
 	        		<div class="row">
 	           			<div class="col-md-6 footer-copyright">
-	                    	&copy; Garden Bliss @ 2020 <a href="https://thegardenbliss.com">Garden Bliss</a>
+						   <a href="https://thegardenbliss.com">&copy; Garden Bliss 2020 </a>
 	                    </div>
 	           			<div class="col-md-6 footer-social">
-	                    	<a href="#"><i class="fab fa-facebook"></i></a> 
-							<a href="#"><i class="fab fa-instagram"></i></a> 
+						<a href="https://www.facebook.com/garden.bliss.984"><i class="fab fa-facebook"></i></a> 
+						 <a href="https://www.instagram.com/gardenbliss2020/"><i class="fab fa-instagram"></i></a> 
+						 <a href="https://www.youtube.com/channel/UC6PF22TsUFfc7gieLa-CBpQ/"><i class="fab fa-youtube"></i></a>
 	                    </div>
 	           		</div>
 	        	</div>

@@ -19,8 +19,8 @@
 /* Rounded sliders */
 /* bee helpful */
 font-face {
-	font-family: Raylway !important;
-	src: url(Raylway.ttf);
+	font-family: Raleway !important;
+	src: url(Raleway.ttf);
 }
 p {
 	font-family: Raleway;
@@ -30,6 +30,7 @@ p {
 	font-weight: 400;
 	line-height: 20px;
 }
+
 .navbar-nav {
 	.nav-link {
 		padding-right: 0.5rem;
@@ -265,20 +266,17 @@ body {
 a {
 	text-decoration: none;
 	transition: all .3s;
-	color: #9b59b6;
 	text-decoration: none;
 	transition: all .3s;
 	&:hover {
 		text-decoration: none;
 		transition: all .3s;
-		color: #9b59b6;
 		text-decoration: none;
 		transition: all .3s;
 	}
 	&:focus {
 		text-decoration: none;
 		transition: all .3s;
-		color: #9b59b6;
 		text-decoration: none;
 		transition: all .3s;
 	}
@@ -438,7 +436,8 @@ h3 {
 		margin-bottom: 20px;
 	}
 	a {
-		border-bottom: 1px dashed #9b59b6;
+		border-bottom: 1px dashed #fff
+		;
 		&:hover {
 			border: 0;
 		}
@@ -464,14 +463,6 @@ h3 {
 		line-height: 60px;
 		text-align: center;
 		border-radius: 22px;
-		background: #9b59b6;
-		background: -moz-linear-gradient(top, #ffb24b 0%, #9b59b6 100%);
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffb24b), color-stop(100%,#9b59b6));
-		background: -webkit-linear-gradient(top, #ffb24b 0%,#9b59b6 100%);
-		background: -o-linear-gradient(top, #ffb24b 0%,#9b59b6 100%);
-		background: -ms-linear-gradient(top, #fff 0%,#fff 100%);
-		background: linear-gradient(to bottom, #fff 0%,#fff 100%);
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#fff',GradientType=0 );
 	}
 	h3 {
 		margin-top: 0;
@@ -486,10 +477,10 @@ h3 {
 		a {
 			color: #555;
 			&:hover {
-				color: #9b59b6;
+				color: #fff;
 			}
 			&:focus {
-				color: #9b59b6;
+				color: #fff;
 			}
 		}
 		i {
@@ -601,28 +592,6 @@ h3 {
 					border-color: rgba(255, 255, 255, 0.8);
 				}
 			}
-			a.active {
-				background: #9b59b6;
-				background: -moz-linear-gradient(top, #ffb24b 0%, #9b59b6 100%);
-				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffb24b), color-stop(100%,#9b59b6));
-				background: -webkit-linear-gradient(top, #ffb24b 0%,#9b59b6 100%);
-				background: -o-linear-gradient(top, #ffb24b 0%,#9b59b6 100%);
-				background: -ms-linear-gradient(top, #ffb24b 0%,#9b59b6 100%);
-				background: linear-gradient(to bottom, #ffb24b 0%,#9b59b6 100%);
-				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb24b', endColorstr='#9b59b6',GradientType=0 );
-				border: 0;
-				&:focus {
-					background: #9b59b6;
-					background: -moz-linear-gradient(top, #ffb24b 0%, #9b59b6 100%);
-					background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffb24b), color-stop(100%,#9b59b6));
-					background: -webkit-linear-gradient(top, #ffb24b 0%,#9b59b6 100%);
-					background: -o-linear-gradient(top, #ffb24b 0%,#9b59b6 100%);
-					background: -ms-linear-gradient(top, #ffb24b 0%,#9b59b6 100%);
-					background: linear-gradient(to bottom, #ffb24b 0%,#9b59b6 100%);
-					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb24b', endColorstr='#9b59b6',GradientType=0 );
-					border: 0;
-				}
-			}
 		}
 	}
 }
@@ -633,12 +602,6 @@ h3 {
 		margin-top: 0;
 		a {
 			color: #555;
-			&:hover {
-				color: #9b59b6;
-			}
-			&:focus {
-				color: #9b59b6;
-			}
 		}
 		i {
 			padding-left: 10px;
@@ -697,7 +660,7 @@ h3 {
 	overflow: hidden;
 }
 .bar {
-	background-color: rgba(0,0,0,.6);
+	background-color: rgba(0,0,0,.8);
 	padding: 20px;
 	border-top-left-radius: .5em;
 	border-bottom-left-radius: .5em;
@@ -728,8 +691,10 @@ h3 {
 	i {
 		padding-right: 10px;
 		font-size: 18px;
-		color: #fff;
-		color: rgba(255, 255, 255, 0.5);
+		color: rgba(255, 255, 255, 0.8);
+		&:hover {
+			color:rgba(255, 255, 255, 1);
+		}
 	}
 }
 .footer-links {
@@ -738,10 +703,10 @@ h3 {
 		color: rgba(255, 255, 255, 0.8);
 		border: 0;
 		&:hover {
-			color: #fff;
+			color:rgba(255, 255, 255, 1);
 		}
 		&:focus {
-			color: #fff;
+			color: rgba(255, 255, 255, 1);
 		}
 	}
 }
@@ -770,6 +735,10 @@ h3 {
 	i {
 		font-size: 24px;
 		vertical-align: middle;
+		&:hover {
+			color: #79a05f;
+			border: 0;
+		}
 	}
 }
 .footer-copyright {
