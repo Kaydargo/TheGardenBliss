@@ -19,15 +19,15 @@ $plant_id = $_GET['plantID'];
 $queryPlant = "SELECT * FROM plant WHERE plantID = $plant_id";
 $statement1 = $conn->prepare($queryPlant);
 $statement1->execute();
-$plants = $statement1->fetchAll();
+$plant = $statement1->fetch(PDO::FETCH_ASSOC);
 $statement1->closeCursor();
 
-$plant_id = $_GET['plantID'];
-$queryPlants = "SELECT * FROM plant WHERE plantID = $plant_id";
-$statement4 = $conn->prepare($queryPlants);
-$statement4->execute();
-$plant = $statement4->fetch();
-$statement4->closeCursor();
+// $plant_id = $_GET['plantID'];
+// $queryPlants = "SELECT * FROM plant WHERE plantID = $plant_id";
+// $statement4 = $conn->prepare($queryPlants);
+// $statement4->execute();
+// $plant = $statement4->fetch();
+// $statement4->closeCursor();
 
 $queryInfo = "SELECT * FROM plantinginfo WHERE plantID = $plant_id";
 $statement2 = $conn->prepare($queryInfo);
@@ -35,20 +35,22 @@ $statement2->execute();
 $plantsInfo = $statement2->fetchAll();
 $statement2->closeCursor();
 
-$queryExist = "SELECT COUNT(*) AS num FROM userfavourites WHERE plantID = $plant_id AND userID = $user";
+$queryExist = "SELECT COUNT(*) FROM userfavourites WHERE plantID = $plant_id AND userID = $user";
 $statement6 = $conn->prepare($queryExist);
 $statement6->bindValue(':plantID', $plant_id);
 $statement6->bindValue(':userID', $user);
 $statement6->execute();
-$row = $statement6->fetch(PDO::FETCH_ASSOC);
+$num = $statement6->fetchColumn(); 
+// $statement6->closeCursor(); 
 
 
  $queryFav = "SELECT * FROM userfavourites WHERE plantID = $plant_id AND userID = $user";
  $statement5 = $conn->prepare($queryFav);
  $statement5->execute();
- $plantsFav = $statement5->fetchAll();
+ $plantsFav = $statement5->fetch(PDO::FETCH_ASSOC);
  $statement5->closeCursor(); 
- foreach ($plantsFav as $plantFav)
+
+ 
  if(!isset($_SESSION['userID'])){
   echo 'You must be logged in to favourite';
 }
@@ -60,6 +62,7 @@ $row = $statement6->fetch(PDO::FETCH_ASSOC);
        $stmt1->bindValue(':user_id', $user_id);
        $stmt1->bindValue(':plant_id', $plant_id);
        $result = $stmt1->execute();
+       echo "<meta http-equiv='refresh' content='0'>";
    }
 
    if(isset($_POST['removeFav'])){
@@ -70,6 +73,7 @@ $row = $statement6->fetch(PDO::FETCH_ASSOC);
       $stmt2->bindValue(':user_id', $user_id);
       $stmt2->bindValue(':plant_id', $plant_id);
       $result = $stmt2->execute();
+      echo "<meta http-equiv='refresh' content='0'>";
   }
  
 
@@ -95,6 +99,7 @@ if(!isset($_SESSION['userID'])){
 else{
     include('includes/header2.php');
 }
+
 ?>
     <body>
     <br><br><br>
@@ -119,7 +124,6 @@ else{
 		<br><br>
        
     <div class="container"> 
-    <?php foreach ($plants as $plant) : ?>
    <div class="row row1"> 
       <div class="col-sm-6">
         <?php echo "<img class='image1 img-fluid' src='images/".$plant['plantImage']. "' />"; ?>
@@ -127,24 +131,16 @@ else{
       <div class="col-sm-6">
           <h3 class="plantName"><?php echo $plant['plantName']; ?></h3>
           <p><?php echo $plant['description']; ?></p>
-         <?php foreach ($plantsFav as $plantFav) : ?>
-          <form method="post" >
-          <?php if ($row['num'] == 0) : ?>
-          <button id="add" value="Add to Favourites" class="btn btn-primary" type="submit" name="addToFav">Add to Favourites</button>
+          <form method="post"  >      
+        <input type="hidden" name="user_id" value="<?php echo $user; ?>"/>
+        <input type="hidden" name="plant_id" value="<?php echo $plant['plantID']; ?>"/>
+          <?php
+          if (empty($num)) : ?>
+          <button id="add" value="Add to Favourites" <?php if (empty($user)){ ?> disabled <?php  } ?>  class="btn btn-primary" type="submit" name="addToFav">Add to Favourites</button>
+          <?php else : ?>
+           <button id="myButton" value="Favourited" <?php if (empty($user)){ ?> disabled <?php  } ?> class="btn btn-primary myButton" type="submit" name="removeFav"><span>Favourited</span></button>
           <?php endif ?>
-      <input type="hidden" name="user_id" value="<?php echo $user; ?>"/>
-      <input type="hidden" name="plant_id" value="<?php echo $plant['plantID']; ?>"/>
-      
     </form>
-    <form method="post" >
-          <?php if ($plantFav['userID'] == $user && $plantFav['plantID'] == $plant_id) : ?>
-          <button id="myButton" value="Favourited" class="btn btn-primary myButton" type="submit" name="removeFav"><span>Favourited</span></button>
-          <?php endif ?>
-          <input type="hidden" name="user_id" value="<?php echo $user; ?>"/>
-      <input type="hidden" name="plant_id" value="<?php echo $plant['plantID']; ?>"/>
-    </form>
-          <?php endforeach; ?>
-    
       </div> 
    </div> 
 </div>
@@ -293,7 +289,6 @@ else{
 <br><br>
 <h3 class="plantName">Similar Plants to <?php echo $plant['plantName']?></h3>
 <?php endforeach; ?>
-<?php endforeach; ?>
 
 <div class="container">
         <div class="row">
@@ -308,11 +303,15 @@ foreach ($plantsType as $plantType) :
      </div>
     </div>
 <br>
+<script>
+document.getElementById("favourites").onsubmit = function(){
+    location.reload(true);
+}
+</script>
 <?php
     include('includes/footer3.php');
         ?>
     </body>
-
     <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -336,4 +335,5 @@ foreach ($plantsType as $plantType) :
   <script src="js/waypoints.min.js"></script>
   <script src="js/scripts.js"></script>
   <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  
 </html>

@@ -118,18 +118,19 @@ jQuery(window).load(function() {
 	
 });
 
-var fav = document.getElementById("favourited").getAttribute("data-name");
+// var fav = document.getElementById("favourited").getAttribute("data-name");
+// console.log(fav);
 
-function myFunction() {
+// function myFunction() {
 
-	var btn = document.getElementById("myButton");
-	if(fav == 'true'){	
-		btn.value = "Favourited";
-		btn.innerHTML = "Favourited";
-	}
-	else {
-		btn.value = "Add to Favourites";
-		btn.innerHTML = "Add to Favourites";
-	}
+// 	var btn = document.getElementById("myButton");
+// 	if(fav == 'true'){	
+// 		btn.value = "Favourited";
+// 		btn.innerHTML = "Favourited";
+// 	}
+// 	else {
+// 		btn.value = "Add to Favourites";
+// 		btn.innerHTML = "Add to Favourites";
+// 	}
 
-}
+// }
