@@ -140,6 +140,9 @@ else{
           <?php else : ?>
            <button id="myButton" value="Favourited" <?php if (empty($user)){ ?> disabled <?php  } ?> class="btn btn-primary myButton" type="submit" name="removeFav"><span>Favourited</span></button>
           <?php endif ?>
+          <?php if(empty($user)) : ?>
+          <span>You must be logged in to favourite</span>
+          <?php endif ?>
     </form>
       </div> 
    </div> 
