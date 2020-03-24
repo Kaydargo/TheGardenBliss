@@ -4,8 +4,7 @@
 		        	<div class="row">
 		        		<div class="col-md-4 col-lg-3 footer-about wow fadeInUp">
 		        			<img class="logo-footer" src="images/logo-white.png" alt="logo-footer" data-at2x="images/logo-white.png">
-		        			<p>
-		        				We are a young company always looking for new and creative ideas to help you with our products in your everyday work.
+		        			<p>We plan to make gardening a hobby that everyone love, irrespective of their age, gardening experience or garden space.
 		        			</p>
 	                    </div>
 		        		<div class="col-md-4 col-lg-4 offset-lg-1 footer-contact wow fadeInDown">

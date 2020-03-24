@@ -8,7 +8,11 @@ and open the template in the editor.
     include('includes/database.php');
     include("loginServ.php");
 
+    if(!isset($_SESSION['userID'])){
+      $user = 0;
+    }else{
 $user = $_SESSION['userID'];
+    }
 
 //Form Query
 $plant_id = $_GET['plantID'];
@@ -31,26 +35,43 @@ $statement2->execute();
 $plantsInfo = $statement2->fetchAll();
 $statement2->closeCursor();
 
-// $queryFav = "SELECT * FROM userfavourites WHERE plantID = $plant_id AND userID = $user";
-// $statement5 = $conn->prepare($queryFav);
-// $statement5->execute();
-// $plantsFav = $statement5->fetchAll();
-// $statement5->closeCursor(); 
-// foreach ($plantsFav as $plantFav)
-// if($plantFav['userID'] == $user && $plantFav['plantID'] == $plant_id){
-  
-// }
-// else{
-//   if(isset($_POST['addToFav'])){
-//     $user_id = htmlspecialchars(!empty($_POST['user_id']) ? trim($_POST['user_id']) : null);
-//     $plant_id = htmlspecialchars(!empty($_POST['plant_id']) ? trim($_POST['plant_id']) : null);
-//     $addToFav = "INSERT INTO userfavourites (plantID, userID) VALUES (:plant_id, :user_id)";
-//       $stmt1 = $conn->prepare($addToFav);
-//       $stmt1->bindValue(':user_id', $user_id);
-//       $stmt1->bindValue(':plant_id', $plant_id);
-//       $result = $stmt1->execute();
-//   }
-// }
+$queryExist = "SELECT COUNT(*) AS num FROM userfavourites WHERE plantID = $plant_id AND userID = $user";
+$statement6 = $conn->prepare($queryExist);
+$statement6->bindValue(':plantID', $plant_id);
+$statement6->bindValue(':userID', $user);
+$statement6->execute();
+$row = $statement6->fetch(PDO::FETCH_ASSOC);
+
+
+ $queryFav = "SELECT * FROM userfavourites WHERE plantID = $plant_id AND userID = $user";
+ $statement5 = $conn->prepare($queryFav);
+ $statement5->execute();
+ $plantsFav = $statement5->fetchAll();
+ $statement5->closeCursor(); 
+ foreach ($plantsFav as $plantFav)
+ if(!isset($_SESSION['userID'])){
+  echo 'You must be logged in to favourite';
+}
+    elseif(isset($_POST['addToFav'])){
+     $user_id = htmlspecialchars(!empty($_POST['user_id']) ? trim($_POST['user_id']) : null);
+     $plant_id = htmlspecialchars(!empty($_POST['plant_id']) ? trim($_POST['plant_id']) : null);
+     $addToFav = "INSERT INTO userfavourites (plantID, userID) VALUES (:plant_id, :user_id)";
+       $stmt1 = $conn->prepare($addToFav);
+       $stmt1->bindValue(':user_id', $user_id);
+       $stmt1->bindValue(':plant_id', $plant_id);
+       $result = $stmt1->execute();
+   }
+
+   if(isset($_POST['removeFav'])){
+    $user_id = htmlspecialchars(!empty($_POST['user_id']) ? trim($_POST['user_id']) : null);
+    $plant_id = htmlspecialchars(!empty($_POST['plant_id']) ? trim($_POST['plant_id']) : null);
+    $removeFav = "DELETE FROM userfavourites WHERE plantID = $plant_id AND userID = $user";
+      $stmt2 = $conn->prepare($removeFav);
+      $stmt2->bindValue(':user_id', $user_id);
+      $stmt2->bindValue(':plant_id', $plant_id);
+      $result = $stmt2->execute();
+  }
+ 
 
 $currentPlantType = $plant['type'];
 
@@ -60,15 +81,21 @@ $statement3->execute();
 $plantsType = $statement3->fetchAll();
 $statement3->closeCursor();
 ?>
+
 <html>
     <head>
         <meta charset="UTF-8">
         <title></title>
     </head>
-    <link href="css/graham.css" rel="stylesheet">
+    <link href="css/graham.scss" rel="stylesheet">
     <?php
+if(!isset($_SESSION['userID'])){
     include('includes/header.php');
-        ?>
+}
+else{
+    include('includes/header2.php');
+}
+?>
     <body>
     <br><br><br>
 <div class="top-content">
@@ -100,12 +127,24 @@ $statement3->closeCursor();
       <div class="col-sm-6">
           <h3 class="plantName"><?php echo $plant['plantName']; ?></h3>
           <p><?php echo $plant['description']; ?></p>
-          <form method="post" class="table_content_form" action="addfavourites.php">
-      <button onclick="myFunction()" id="myButton" value="Add to Favourites" class="btn btn-primary" type="submit" name="addToFav">Add to Favourites</button>
+         <?php foreach ($plantsFav as $plantFav) : ?>
+          <form method="post" >
+          <?php if ($row['num'] == 0) : ?>
+          <button id="add" value="Add to Favourites" class="btn btn-primary" type="submit" name="addToFav">Add to Favourites</button>
+          <?php endif ?>
       <input type="hidden" name="user_id" value="<?php echo $user; ?>"/>
       <input type="hidden" name="plant_id" value="<?php echo $plant['plantID']; ?>"/>
       
     </form>
+    <form method="post" >
+          <?php if ($plantFav['userID'] == $user && $plantFav['plantID'] == $plant_id) : ?>
+          <button id="myButton" value="Favourited" class="btn btn-primary myButton" type="submit" name="removeFav"><span>Favourited</span></button>
+          <?php endif ?>
+          <input type="hidden" name="user_id" value="<?php echo $user; ?>"/>
+      <input type="hidden" name="plant_id" value="<?php echo $plant['plantID']; ?>"/>
+    </form>
+          <?php endforeach; ?>
+    
       </div> 
    </div> 
 </div>
@@ -296,4 +335,5 @@ foreach ($plantsType as $plantType) :
   <script src="js/retina-1.1.0.min.js"></script>
   <script src="js/waypoints.min.js"></script>
   <script src="js/scripts.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
 </html>
