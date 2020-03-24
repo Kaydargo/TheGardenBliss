@@ -281,9 +281,9 @@ You can use mulch on your garden bed after planting since mulch prevents weeds a
     </iframe>
 </div>     
 <br>
-<h3 class="plantName">Harvesting your crop</a> </h3>
+<h3 class="plantName">sow your seeds</a> </h3>
                 		
-                		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+                		<p>This video will show you step by step way to sow your seeds in your garden</p>
                     </div>
 	            </div>
 	           
