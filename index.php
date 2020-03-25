@@ -75,36 +75,28 @@ else{
 <h3 class="plantName">Key Functionalities</h3>
 <br>
 <div class="row display-flex">
-<div class="col-sm">
-<div class="polaroid">
+<div class="col polaroid">
 <img class="icons img-fluid" src='icons/drag_drop1.svg' alt=''>
   <div class="ctnbtm">
   <h4 class="func">Drag and Drop Garden Planner</h4>
-  </div>
 </div>
   </div>
-  <div class="col-sm">
-  <div class="polaroid">
+  <div class="col polaroid">
   <img class="icons img-fluid" src='icons/info.svg' alt=''>
   <div class="ctnbtm">
   <h4 class="func">Information Guides on Plant Keeping</h4>
   </div>
-  </div>
 </div>
-  <div class="col-sm">
-  <div class="polaroid">
+  <div class="col polaroid">
   <img class="icons img-fluid" src='icons/tutorial1.svg' alt=''>
   <div class="ctnbtm">
   <h4 class="func">Tutorials on How to Garden</h4>
   </div>
   </div>
-  </div>
-  <div class="col-sm">
-  <div class="polaroid">
+  <div class="col polaroid">
   <img class="icons img-fluid" src='icons/bee1.svg' alt=''>
   <div class="ctnbtm">
   <h4 class="func">Interactive Game on Bee Conservation</h4>
-  </div>
   </div>
   </div>
 </div> 

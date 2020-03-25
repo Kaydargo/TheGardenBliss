@@ -8,22 +8,26 @@ and open the template in the editor.
     include('includes/database.php');
     include("loginServ.php");
 
+    if(!isset($_SESSION['userID'])){
+      $user = 0;
+    }else{
 $user = $_SESSION['userID'];
+    }
 
 //Form Query
 $plant_id = $_GET['plantID'];
 $queryPlant = "SELECT * FROM plant WHERE plantID = $plant_id";
 $statement1 = $conn->prepare($queryPlant);
 $statement1->execute();
-$plants = $statement1->fetchAll();
+$plant = $statement1->fetch(PDO::FETCH_ASSOC);
 $statement1->closeCursor();
 
-$plant_id = $_GET['plantID'];
-$queryPlants = "SELECT * FROM plant WHERE plantID = $plant_id";
-$statement4 = $conn->prepare($queryPlants);
-$statement4->execute();
-$plant = $statement4->fetch();
-$statement4->closeCursor();
+// $plant_id = $_GET['plantID'];
+// $queryPlants = "SELECT * FROM plant WHERE plantID = $plant_id";
+// $statement4 = $conn->prepare($queryPlants);
+// $statement4->execute();
+// $plant = $statement4->fetch();
+// $statement4->closeCursor();
 
 $queryInfo = "SELECT * FROM plantinginfo WHERE plantID = $plant_id";
 $statement2 = $conn->prepare($queryInfo);
@@ -31,15 +35,47 @@ $statement2->execute();
 $plantsInfo = $statement2->fetchAll();
 $statement2->closeCursor();
 
-if(isset($_POST['addToFav'])){
-  $user_id = htmlspecialchars(!empty($_POST['user_id']) ? trim($_POST['user_id']) : null);
-  $plant_id = htmlspecialchars(!empty($_POST['plant_id']) ? trim($_POST['plant_id']) : null);
-  $addToFav = "INSERT INTO userfavourites (plantID, userID) VALUES (:plant_id, :user_id)";
-    $stmt1 = $conn->prepare($addToFav);
-    $stmt1->bindValue(':user_id', $user_id);
-    $stmt1->bindValue(':plant_id', $plant_id);
-    $result = $stmt1->execute();
+$queryExist = "SELECT COUNT(*) FROM userfavourites WHERE plantID = $plant_id AND userID = $user";
+$statement6 = $conn->prepare($queryExist);
+$statement6->bindValue(':plantID', $plant_id);
+$statement6->bindValue(':userID', $user);
+$statement6->execute();
+$num = $statement6->fetchColumn(); 
+// $statement6->closeCursor(); 
+
+
+ $queryFav = "SELECT * FROM userfavourites WHERE plantID = $plant_id AND userID = $user";
+ $statement5 = $conn->prepare($queryFav);
+ $statement5->execute();
+ $plantsFav = $statement5->fetch(PDO::FETCH_ASSOC);
+ $statement5->closeCursor(); 
+
+ 
+ if(!isset($_SESSION['userID'])){
+  echo 'You must be logged in to favourite';
 }
+    elseif(isset($_POST['addToFav'])){
+     $user_id = htmlspecialchars(!empty($_POST['user_id']) ? trim($_POST['user_id']) : null);
+     $plant_id = htmlspecialchars(!empty($_POST['plant_id']) ? trim($_POST['plant_id']) : null);
+     $addToFav = "INSERT INTO userfavourites (plantID, userID) VALUES (:plant_id, :user_id)";
+       $stmt1 = $conn->prepare($addToFav);
+       $stmt1->bindValue(':user_id', $user_id);
+       $stmt1->bindValue(':plant_id', $plant_id);
+       $result = $stmt1->execute();
+       echo "<meta http-equiv='refresh' content='0'>";
+   }
+
+   if(isset($_POST['removeFav'])){
+    $user_id = htmlspecialchars(!empty($_POST['user_id']) ? trim($_POST['user_id']) : null);
+    $plant_id = htmlspecialchars(!empty($_POST['plant_id']) ? trim($_POST['plant_id']) : null);
+    $removeFav = "DELETE FROM userfavourites WHERE plantID = $plant_id AND userID = $user";
+      $stmt2 = $conn->prepare($removeFav);
+      $stmt2->bindValue(':user_id', $user_id);
+      $stmt2->bindValue(':plant_id', $plant_id);
+      $result = $stmt2->execute();
+      echo "<meta http-equiv='refresh' content='0'>";
+  }
+ 
 
 $currentPlantType = $plant['type'];
 
@@ -49,6 +85,7 @@ $statement3->execute();
 $plantsType = $statement3->fetchAll();
 $statement3->closeCursor();
 ?>
+
 <html>
     <head>
         <meta charset="UTF-8">
@@ -56,14 +93,14 @@ $statement3->closeCursor();
     </head>
     <link href="css/graham.scss" rel="stylesheet">
     <?php
-
 if(!isset($_SESSION['userID'])){
     include('includes/header.php');
 }
 else{
     include('includes/header2.php');
 }
-?> 
+
+?>
     <body>
     <br><br><br>
 <div class="top-content">
@@ -87,19 +124,25 @@ else{
 		<br><br>
        
     <div class="container"> 
-    <?php foreach ($plants as $plant) : ?>
    <div class="row row1"> 
       <div class="col-sm-6">
-        <?php echo "<img class='image1 img-fluid' alt='$plant[plantName]' src='images/".$plant['plantImage']. "' />"; ?>
+        <?php echo "<img class='image1 img-fluid' src='images/".$plant['plantImage']. "' />"; ?>
       </div>
       <div class="col-sm-6">
           <h3 class="plantName"><?php echo $plant['plantName']; ?></h3>
           <p><?php echo $plant['description']; ?></p>
-          <form method="post" class="table_content_form">
-      <button class="btn btn-primary" type="submit" name="addToFav">Add to Favourites</button>
-      <input type="hidden" name="user_id" value="<?php echo $user; ?>"/>
-      <input type="hidden" name="plant_id" value="<?php echo $plant['plantID']; ?>"/>
-      
+          <form method="post"  >      
+        <input type="hidden" name="user_id" value="<?php echo $user; ?>"/>
+        <input type="hidden" name="plant_id" value="<?php echo $plant['plantID']; ?>"/>
+          <?php
+          if (empty($num)) : ?>
+          <button id="add" value="Add to Favourites" <?php if (empty($user)){ ?> disabled <?php  } ?>  class="btn btn-primary" type="submit" name="addToFav">Add to Favourites</button>
+          <?php else : ?>
+           <button id="myButton" value="Favourited" <?php if (empty($user)){ ?> disabled <?php  } ?> class="btn btn-primary myButton" type="submit" name="removeFav"><span>Favourited</span></button>
+          <?php endif ?>
+          <?php if(empty($user)) : ?>
+          <span>You must be logged in to favourite</span>
+          <?php endif ?>
     </form>
       </div> 
    </div> 
@@ -153,59 +196,64 @@ else{
 <div class="container"> 
 <br>
 <div class="row display-flex">
-<div class="col-sm">
-<div class="polaroid">
+<div class="col polaroid">
+
 <?php
   if($plant['soil'] == "Sandy")
   {
-    echo "<img class='icons img-fluid' alt='Sandy soil' src='icons/soil_2.png'>";
+    echo "<img class='icons img-fluid' src='icons/sandy_soil.svg'>";
   }
   else
   {
-    echo "<img class='icons img-fluid' alt='Clay soil' src='icons/soil_2.png'>";
+    echo "<img class='icons img-fluid' src='icons/loomy_soil.svg'>";
   }
   ?>
   <div class="ctnbtm">
   <h4 class="func"><?php echo $plant['soil']; ?></h4>
   </div>
-</div>
+
   </div>
-  <div class="col-sm">
-<div class="polaroid">
+  <div class="col polaroid">
+
 <?php
   if($plant['placement'] == "Shade")
   {
-    echo "<img class='icons img-fluid' alt='Place in shade' src='icons/shade.png'>";
+    echo "<img class='icons img-fluid' src='icons/shade.svg'>";
   }
   else
   {
-    echo "<img class='icons img-fluid' alt='Place in sun' src='icons/sun_2.png'>";
+    echo "<img class='icons img-fluid' src='icons/sun.svg'>";
   }
   ?>
   <div class="ctnbtm">
   <h4 class="func"><?php echo $plant['placement']; ?></h4>
   </div>
-</div>
+
   </div>
-  <div class="col-sm">
-<div class="polaroid">
-<img class="icons img-fluid" alt='planting depth' src='icons/depth.png'>
+  <div class="col polaroid">
+
+<img class="icons img-fluid" src='icons/depth.svg'>
   <div class="ctnbtm">
   <h4 class="func"><?php echo $plant['depth']; ?></h4>
   </div>
 </div>
-  </div>
-  <div class="col-sm">
-<div class="polaroid">
-<img class="icons img-fluid" alt='planting distance' src='icons/distance.png'>
+  
+  <div class="col polaroid">
+
+<img class="icons img-fluid" src='icons/distance.svg'>
   <div class="ctnbtm">
   <h4 class="func"><?php echo $plant['distance']; ?></h4>
   </div>
-</div>
+
   </div>
+
 
     </div>
     </div>
+
+
+  
+
 
 <br><br><br>
 <div class="container-fluid"> 
@@ -222,7 +270,7 @@ else{
   </ol>
       </div> 
       <div class="col-sm-6">
-        <?php echo "<img class='image1' alt='' src='images/plant2.jpg".$plantInfo['infoImage']. "' />"; ?>
+        <?php echo "<img class='image1' src='images/plant2.jpg".$plantInfo['infoImage']. "' />"; ?>
       </div>
    </div> 
     </div> 
@@ -244,14 +292,13 @@ else{
 <br><br>
 <h3 class="plantName">Similar Plants to <?php echo $plant['plantName']?></h3>
 <?php endforeach; ?>
-<?php endforeach; ?>
 
 <div class="container">
         <div class="row">
     <?php
 foreach ($plantsType as $plantType) :
     echo ' <div class="col-md-4 col-xs-6">
-                <img alt="'.$plantType["plantName"].'"  src="images/'.$plantType["plantImage"].'" class="img-responsive img-thumbnail">
+                <img src="images/'.$plantType["plantImage"].'" class="img-responsive img-thumbnail">
                 <h4 style="text-align: center;"><a>'.$plantType["plantName"].' </a></h4>
             </div>';
      ?>
@@ -259,11 +306,15 @@ foreach ($plantsType as $plantType) :
      </div>
     </div>
 <br>
+<script>
+document.getElementById("favourites").onsubmit = function(){
+    location.reload(true);
+}
+</script>
 <?php
     include('includes/footer.php');
         ?>
     </body>
-
     <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -286,4 +337,6 @@ foreach ($plantsType as $plantType) :
   <script src="js/retina-1.1.0.min.js"></script>
   <script src="js/waypoints.min.js"></script>
   <script src="js/scripts.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  
 </html>

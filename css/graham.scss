@@ -98,6 +98,7 @@ body {
 	color: #55a635;
 	font-family: Overpass !important;
 	align-content: left !important;
+	margin-top: 10px;
 }
 .row1 {
 	display: flex;
@@ -233,10 +234,12 @@ p.gal-name {
 	background: green;
 }
 .polaroid {
-	width: 250px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	text-align: center;
-	margin-top: 15px, 15px, 15px, 15px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 .ctnbtm {
 	padding: 10px;
