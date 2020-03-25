@@ -110,17 +110,6 @@ else{
 </div> 
 </div>
 <br><br><br>
-
-
-
-
-
-
-
-
-
-
-
 <div class="container-fluid ctnCol"> 
 <div class="container pad"> 
    <div class="row row1"> 
@@ -144,9 +133,6 @@ else{
         <script src="js/retina-1.1.0.min.js"></script>
         <script src="js/waypoints.min.js"></script>
         <script src="js/scripts.js"></script>
-
-
-
     </body>
     <?php
     include('includes/footer.php');

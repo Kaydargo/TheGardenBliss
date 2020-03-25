@@ -22,15 +22,60 @@ font-face {
 	font-family: Raleway !important;
 	src: url(Raleway.ttf);
 }
+h1 {
+	margin-top: 10px;
+	font-size: 38px;
+	font-weight: 300;
+	color: #555;
+	line-height: 50px;
+	font: normal 52px/1 'Overpass';
+}
+h2 {
+	margin-top: 10px;
+	font-size: 38px;
+	font-weight: 300;
+	color: #333;
+	line-height: 50px;
+	font: normal 52px/1 'Overpass';
+}
+h3 {
+	font: normal 42px/1 'Overpass';
+	font-size: 22px;
+	font-weight: 300;
+	color: #333;
+	line-height: 30px;
+}
 p {
 	font-family: Raleway;
-	font-size: 14px;
+	font-size: 18px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 1.5;
+}
+
+body {
+	font-family: Raleway;
+	font-size: 16px;
+	font-weight: 300;
+	color: #444;
+	line-height: 30px;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	background: #f2f2f2 !important;
+}
+
+.para {
+	color: white;
+	font-family: Raleway;
+	font-size: 18px;
 	font-style: normal;
 	font-variant: normal;
 	font-weight: 400;
 	line-height: 20px;
 }
-
 .navbar-nav {
 	.nav-link {
 		padding-right: 0.5rem;
@@ -145,15 +190,7 @@ p.gal-name {
 		flex-grow: 1;
 	}
 }
-.para {
-	color: white;
-	font-family: Raleway;
-	font-size: 14px;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: 400;
-	line-height: 20px;
-}
+
 .ctnCol {
 	background-color: #55a635;
 }
@@ -251,18 +288,7 @@ p.gal-name {
 section.parallax-bg-1 {
 	background-size: cover;
 }
-body {
-	font-family: Raleway;
-	font-size: 16px;
-	font-weight: 300;
-	color: #888;
-	line-height: 30px;
-	text-align: center;
-	margin: 0;
-	padding: 0;
-	height: 100%;
-	background: #f2f2f2 !important;
-}
+
 a {
 	text-decoration: none;
 	transition: all .3s;
@@ -291,29 +317,7 @@ img {
 strong {
 	font-weight: 600;
 }
-h1 {
-	margin-top: 10px;
-	font-size: 38px;
-	font-weight: 300;
-	color: #555;
-	line-height: 50px;
-	font: normal 52px/1 'Overpass';
-}
-h2 {
-	margin-top: 10px;
-	font-size: 38px;
-	font-weight: 300;
-	color: #555;
-	line-height: 50px;
-	font: normal 52px/1 'Overpass';
-}
-h3 {
-	font: normal 42px/1 'Overpass';
-	font-size: 22px;
-	font-weight: 300;
-	color: #555;
-	line-height: 30px;
-}
+
 .colored-text {
 	color: #9b59b6;
 }
@@ -384,7 +388,7 @@ h3 {
 	.description {
 		margin: 30px 0 10px 0;
 		p {
-			opacity: 0.8;
+			opacity: 0.9;
 		}
 	}
 	.top-big-link {
@@ -660,7 +664,7 @@ h3 {
 	overflow: hidden;
 }
 .bar {
-	background-color: rgba(0,0,0,.8);
+	background-color: rgba(0,0,0,.7);
 	padding: 20px;
 	border-top-left-radius: .5em;
 	border-bottom-left-radius: .5em;

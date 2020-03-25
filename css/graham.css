@@ -7,16 +7,52 @@ font-face {
     font-family: Raylway !important;
     src: url(Raylway.ttf);
 }
+h1, h2 {
+  
+	margin-top: 10px;
+
+	font-size: 38px;
+    font-weight: 300;
+    color: #333;
+    line-height: 50px;
+    font : normal 52px/1 'Overpass';
+}
+
+h3 {
+  font : normal 42px/1 'Overpass';
+	font-size: 22px;
+    font-weight: 300;
+    color: #333;
+    line-height: 30px;
+}
 
 p{
   font-family: Raleway; 
-  font-size: 14px; 
+  font-size: 18px; 
   font-style: normal;
   font-variant: normal; 
   font-weight: 400; 
-  line-height: 20px;
+  line-height: 1.5;
 }
 
+body {
+  font-family: Raleway;
+  font-size: 16px;
+  font-weight: 300;
+  color: #888;
+  line-height: 30px;
+  text-align: center;
+}
+.para
+{
+    color: white;
+    font-family: Raleway; 
+    font-size: 18px; 
+    font-style: normal;
+    font-variant: normal; 
+    font-weight: 400; 
+    line-height: 1.5;
+}
 .navbar-nav .nav-link {
     padding-right: 0.5rem;
     padding-left: 0.5rem;
@@ -148,16 +184,7 @@ font-size: 25px !important;
   .row.display-flex > [class*='col-'] {
     flex-grow: 1;
   }
-  .para
-  {
-      color: white;
-      font-family: Raleway; 
-      font-size: 14px; 
-      font-style: normal;
-      font-variant: normal; 
-      font-weight: 400; 
-      line-height: 20px;
-  }
+
   .ctnCol
   {
       background-color: #55a635; 
@@ -273,38 +300,12 @@ section.parallax-bg-1{
 background-size: cover;
 }
 
-
-
-
-
-
-
-
-
-
-
 /* graham this is fatima css, handle with care   */
-
-
-
-body {
-    font-family: Raleway;
-    font-size: 16px;
-    font-weight: 300;
-    color: #888;
-    line-height: 30px;
-    text-align: center;
-}
-
-
 
 a, a:hover, a:focus {  text-decoration: none; transition: all .3s; }
 
-
-
-img { max-width: 100%; 
-     
-
+img { 
+  max-width: 100%; 
 }
 
 .medium-paragraph {
@@ -315,24 +316,6 @@ strong { font-weight: 600; }
 
 a, a:hover, a:focus { text-decoration: none; transition: all .3s; }
 
-h1, h2 {
-  
-	margin-top: 10px;
-
-	font-size: 38px;
-    font-weight: 300;
-    color: #555;
-    line-height: 50px;
-    font : normal 52px/1 'Overpass';
-}
-
-h3 {
-  font : normal 42px/1 'Overpass';
-	font-size: 22px;
-    font-weight: 300;
-    color: #555;
-    line-height: 30px;
-}
 
 /***** General style, all sections *****/
 
@@ -408,7 +391,7 @@ font : normal 52px/1 'Overpass';
 margin: 30px 0 10px 0;
 }
 
-.top-content .description p { opacity: 0.8; }
+.top-content .description p { opacity: 0.9; }
 
 .top-content .top-big-link {
 margin-top: 45px;
@@ -692,7 +675,7 @@ padding-top: 40px;
 
 .bar {
   
-  background-color: rgba(0,0,0,.6);
+  background-color: rgba(0,0,0,.7);
   padding: 20px;
   border-top-left-radius: .5em;
   border-bottom-left-radius: .5em;

@@ -49,7 +49,6 @@ $num = $statement6->fetchColumn();
  $statement5->execute();
  $plantsFav = $statement5->fetch(PDO::FETCH_ASSOC);
  $statement5->closeCursor(); 
-
  
  if(!isset($_SESSION['userID'])){
   echo 'You must be logged in to favourite';

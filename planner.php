@@ -36,7 +36,7 @@ include('includes/functions.php');
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/drag.css">
-  <link rel="stylesheet" href="css/graham.css">
+  <link rel="stylesheet" href="css/graham.scss">
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -58,31 +58,28 @@ else{
   
 <body>
 <div class="top-content">
-            <div class="container">
-            	
-                <div class="row">
-                <div class='bar'>
-                    <div class="col-md-8 offset-md-2 text">
-                        <h1 class="wow fadeInLeftBig">Plan your ideal garden</h1>
-                        <div class="description wow fadeInLeftBig">
-                        	<p>We walk you through factors that can affect how your garden will grow — sunlight, shade, soil —
-                                    and the balance between fruits, shrubs, flowers and vegetables
-                         	
-                        	</p>
-                        </div>
+  <div class="container">
+    <div class="row">
+      <div class='bar'>
+        <div class="col-md-8 offset-md-2 text">
+          <h1 class="wow fadeInLeftBig">Plan your ideal garden</h1>
+        <div class="description wow fadeInLeftBig">
+        <p>We walk you through factors that can affect how your garden will grow — sunlight, shade, soil - and the balance between fruits, shrubs, flowers and vegetables
+        </p>
+      </div>
+    </div>
+  </div>
 </div>
-                    </div>
-                </div>
                 
             </div>            
         </div>
 <br><br>
 <div class="container">
-  <h2>Garden Planner</h2>
+<h3 class="plantName">Garden Planner </h3><br>
   <div class="row">
 <p>Planning and creating a new garden design can give your home a boost. Our garden planner makes it easy to plan your dream garden, it allows you to plan the layout and content of your garden easily. It also gives you the flexibility to create the best design for your  garden. with the planner you can easily add various  vegetables and move them around your allotted garden to get the perfect layout.
+</p>
 
-</p><br><br><br><br>
 
 <!-- Feature Cards -->
 <section class="d-flex bg-light" id="feature-cards">
