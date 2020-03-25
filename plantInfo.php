@@ -50,11 +50,7 @@ $num = $statement6->fetchColumn();
  $plantsFav = $statement5->fetch(PDO::FETCH_ASSOC);
  $statement5->closeCursor(); 
 
- 
- if(!isset($_SESSION['userID'])){
-  echo 'You must be logged in to favourite';
-}
-    elseif(isset($_POST['addToFav'])){
+    if(isset($_POST['addToFav'])){
      $user_id = htmlspecialchars(!empty($_POST['user_id']) ? trim($_POST['user_id']) : null);
      $plant_id = htmlspecialchars(!empty($_POST['plant_id']) ? trim($_POST['plant_id']) : null);
      $addToFav = "INSERT INTO userfavourites (plantID, userID) VALUES (:plant_id, :user_id)";
@@ -104,23 +100,21 @@ else{
     <body>
     <br><br><br>
 <div class="top-content">
-            <div class="container">
-            	
-                <div class="row">
-                    <div class="col-md-8 offset-md-2 text">
-                        <h1 class="wow fadeInLeftBig">How- To Start a Garden</h1>
-                        <div class="description wow fadeInLeftBig">
-                        	<p>We walk you through factors that can affect how your garden will grow — sunlight, shade, soil —
-                                    and the balance between fruits, shrubs, flowers and vegetables
-                         	
-                        	</p>
-                        </div>
-                        
-                    </div>
-                </div>
-                
-            </div>            
-		</div>
+  <div class="container">
+    <div class="row">
+      <div class='bar'>
+        <div class="col-md-8 offset-md-2 text">
+          <h1 class="wow fadeInLeftBig">How- To Start a Garden</h1>
+            <div class="description wow fadeInLeftBig">
+              <p>We walk you through factors that can affect how your garden will grow — sunlight, shade, soil —
+                 and the balance between fruits, shrubs, flowers and vegetables
+              </p>
+            </div>
+        </div>
+      </div>
+    </div>            
+	</div>
+</div>
 		<br><br>
        
     <div class="container"> 
