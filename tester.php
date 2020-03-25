@@ -43,7 +43,6 @@ $statement6->execute();
 $num = $statement6->fetchColumn(); 
 // $statement6->closeCursor(); 
 
-
  $queryFav = "SELECT * FROM userfavourites WHERE plantID = $plant_id AND userID = $user";
  $statement5 = $conn->prepare($queryFav);
  $statement5->execute();
