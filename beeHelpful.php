@@ -21,13 +21,29 @@ else{
 }
 ?> 
 <body>
-
+<div class="top-content">
+  <div class="container">
+    <div class="row">
+      <div class='bar'>
+        <div class="col-md-8 offset-md-2 text">
+          <h1 class="wow fadeInLeftBig">Save our Bees</h1>
+        <div class="description wow fadeInLeftBig">
+        <p>
+        Learn about the important role bees play in our lives by playing our Bee-Helpful game. View tips on how to help bees all year round.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+                
+            </div>            
+        </div>
 <br><br><br><br><br><br>
 <div class="container">
   <div class="row">
     <div class="col-sm-6">
     <h3 class="plantName">HOW TO GET & PROTECT BEES</h3>
-    <p>We have learnt from our games the different types of bees, the work and responsibilities of each bee and why we need to save the bees from extinction.
+    <p>
 Now, we cannot ignore the fact that Irish bees are under pressure. The main reasons for this are many and varied, ranging from attacks by parasites such as mites to the lasting effects most pesticides have on these insects. The main thing that can rescue these bees are gardens planted and managed with pollinators in mind. These kinds of gardens are important habitats for bees.
 </p>
 <h3 class="plantName">HOW TO INCREASE BEE POPULATION</h3>
@@ -42,12 +58,12 @@ Now, we cannot ignore the fact that Irish bees are under pressure. The main reas
 <div class="container"> 
    <div class="row row1"> 
       <div class="col-sm-6">
-        <!-- image -->
+      <img src="images/spring.jpg" alt=''>
       </div>
       <div class="col-sm-6">
       <h3 class="plantName">DURING SPRING</h3>
           <p>During spring, different types of bees are emerging to gather nectar and pollen to take back to their hives to feed their young ones. So, if they are in your garden and there is nothing for them to feed on. They will die of hunger and their little ones will die as well.</p>
-    <ul>
+    <ul class="infoList">
       <li>You can leave holes and sections of loose mortar in garden walls to provide nesting sites for and safe space for the bees.</li>
       <li>You can retain old fruit trees such as apples and pears to provide bark gaps for bees. Remember, fruit trees produce plenty of nectar and pollen</li>
       <li>Ensure you keep an area of grass mown short so that different bees can nest easily during spring.</li>
@@ -62,13 +78,13 @@ Now, we cannot ignore the fact that Irish bees are under pressure. The main reas
       <div class="col-sm-6">
       <h3 class="plantName">DURING SUMMER</h3>
     <p>During this time all bee’s species are building up their strength with nectar and pollen. They need flowers with pollen and nectar to survive. Bumblebees males and queens started to appear, it is possible at this time for queen bees to produce swarms of bees and search for new colonies.</p>
-    <ul>
+    <ul class="infoList">>
       <li>You can leave areas of uncultivated soil and small piles of woody pruning in border and hedge bases in your garden where bees can make colonies.</li>
       <li>You can grow roses, wildflowers, dandelions, daisies and other flowers to provide nectar and pollen for bees to use for nesting throughout the summer.</li>
 </ul>
       </div>
       <div class="col-sm-6">
-      <!-- image -->
+      <img src="images/summer.jpg" alt=''>
       </div> 
    </div> 
 </div>
@@ -77,12 +93,12 @@ Now, we cannot ignore the fact that Irish bees are under pressure. The main reas
 <hr>
    <div class="row row1"> 
       <div class="col-sm-6">
-      <!-- image -->
+      <img src="images/autumn.JPG" alt=''>
       </div>
       <div class="col-sm-6">
       <h3 class="plantName">DURING AUTUMN</h3>
     <p>During this time old bumblebees in the colony dies and newly mated queens find a place to lie for their egg to grow. They may choose a hole in the ground, or under a pile of autumn leaves left in your garden.</p>
-    <ul>
+    <ul class="infoList">
       <li>You can build a pile of log for worker bees to take cover or shelter during the rain or as a nesting site for different solitary bees and bumblebees, you can loosely fill spaces with twigs and leaves for them during this period</li>
       <li>You can grow different types of late flowering nectar plants such as dahlia and sedum so that bees will have flowers to nectar when they come out of hibernating.</li>
       <li>If you leave a patch of grass to grow long and prevent mice in the garden as the bees like using old mouse holes or thickest of grass to nest in.</li>
@@ -97,14 +113,14 @@ Now, we cannot ignore the fact that Irish bees are under pressure. The main reas
       <div class="col-sm-6">
       <h3 class="plantName">DURING WINTER</h3>
     <p>This period honeybees usually remain in their hives, but sometimes come out on a sunny day. You may sometimes see the queen bees if the weather permits. All bees need nectar during this period if they are to survive or they die from hunger.</p>
-    <ul>
+    <ul class="infoList">>
       <li>You can create and build a twig or pile of leaves for the bees to shelter underneath and let leaves that have fallen stay where they drop and avoid disturbing them from autumn through to spring.</li>
       <li>Leave compost heap untouched and avoid digging your soil until spring. This is to prevent hurting bees that might be taking shelter under the compost heap.</li>
       <li>You can grow ivy on walls and fences to give shelter from heavy rain that might hurt the bees, and this could also provide a late nectar source for the bees that are still on the wing, also, plant winter flowers like snowdrops.</li>
 </ul>
       </div>
       <div class="col-sm-6">
-      <!-- image -->
+      <img src="images/winter.jpg" alt=''>
       </div> 
    </div> 
 </div>

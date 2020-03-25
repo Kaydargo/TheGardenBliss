@@ -10,7 +10,19 @@ function scroll_to(clicked_link, nav_height) {
 		$('html, body').stop().animate({scrollTop: scroll_to}, 1000);
 	}
 }
-
+jQuery(document).ready(function() {
+if ( window.location.pathname.includes("plantInfo.php")){
+	console.log("WHYYYYYYYYYYYYYYYYY");
+	$('.top-content').backstretch("images/AboutUsHero.jpg");
+   
+    $('#top-navbar-1').on('shown.bs.collapse', function(){
+    	$('.top-content').backstretch("resize");
+    });
+    $('#top-navbar-1').on('hidden.bs.collapse', function(){
+    	$('.top-content').backstretch("resize");
+    });
+}
+});
 
 jQuery(document).ready(function() {
 	/*
@@ -25,11 +37,6 @@ jQuery(document).ready(function() {
 	$('.top-content .text').waypoint(function() {
 		$('nav').toggleClass('navbar-no-bg');
 	});
-	
-    /*
-        Background slideshow
-    */
-
 
    if ( window.location.pathname.includes("index.php")) {
     $('.top-content').backstretch("images/AboutUsHero.jpg");
@@ -66,16 +73,6 @@ jQuery(document).ready(function() {
 		});
 	}
 
-	else if (window.location.pathname.includes("plantInfo.php")){
-		$('.top-content').backstretch("images/PlantInfoHero.jpg");
-    
-		$('#top-navbar-1').on('shown.bs.collapse', function(){
-			$('.top-content').backstretch("resize");
-		});
-		$('#top-navbar-1').on('hidden.bs.collapse', function(){
-			$('.top-content').backstretch("resize");
-		});
-	}
 
 	else if (window.location.pathname.includes('planner.php')){
 		$('.top-content').backstretch("images/GardenPlannerHero.jpg");
@@ -87,7 +84,16 @@ jQuery(document).ready(function() {
 			$('.top-content').backstretch("resize");
 		});
 	}
-
+	else if (window.location.pathname.includes('beeHelpful.php')){
+		$('.top-content').backstretch("images/BeeHero.jpg");
+    
+		$('#top-navbar-1').on('shown.bs.collapse', function(){
+			$('.top-content').backstretch("resize");
+		});
+		$('#top-navbar-1').on('hidden.bs.collapse', function(){
+			$('.top-content').backstretch("resize");
+		});
+	}
 	else if (window.location.pathname.includes('login.php')){
 
 	}
@@ -116,20 +122,3 @@ jQuery(window).load(function() {
 	$(".testimonial-image img").attr("style", "width: auto !important; height: auto !important;");
 	
 });
-
-// var fav = document.getElementById("favourited").getAttribute("data-name");
-// console.log(fav);
-
-// function myFunction() {
-
-// 	var btn = document.getElementById("myButton");
-// 	if(fav == 'true'){	
-// 		btn.value = "Favourited";
-// 		btn.innerHTML = "Favourited";
-// 	}
-// 	else {
-// 		btn.value = "Add to Favourites";
-// 		btn.innerHTML = "Add to Favourites";
-// 	}
-
-// }
