@@ -57,14 +57,11 @@ else{
                 
             </div>            
   </div>
-
         <br>
-
         <!-- Page Content -->
         <div class="container" style="text-align: center;">
 <br><br>
-
-<h3>Vegetables & Herbs</h3>
+<h3 class="plantName">Vegetables & Herbs</h3>
           
 <br><br>
 <!--Carousel Wrapper-->
@@ -226,23 +223,12 @@ break;
 <!--/.Carousel Wrapper-->
 
 <br><br><br>
-
-<h3>Fruits</h3>
+<h3 class="plantName">Fruits</h3>
 <br><br>
 <!--Carousel Wrapper-->
 <div id="multi-item-fruit" class="carousel slide carousel-multi-item" data-ride="carousel"data-interval='false'>
-
-  <!--Controls
-  <div class="controls-top">
-    <a class="btn-floating" href="#multi-item-fruit" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
-    <a class="btn-floating" href="#multi-item-fruit" data-slide="next"><i class="fa fa-chevron-right"></i></a>
-  </div>
-  -->
-  <!--/.Controls-->
-
   <!--Slides-->
   <div class="carousel-inner" role="listbox">
-
     <!--First slide-->
     <div class="carousel-item active">
       <div class="row">
@@ -350,24 +336,11 @@ break;
   </div>
   <!--/.Slides-->
 <!--/.Carousel Wrapper-->
-
 <br><br><br>
-
-<h3>Flowers</h3>
+<h3 class="plantName">Flowers</h3>
 <br><br>
 <!--Carousel Wrapper-->
 <div id="multi-item-flower" class="carousel slide carousel-multi-item" data-ride="carousel" data-interval='false'>
-
-  <!--Controls
-  <div class="controls-top">
-    <a class="btn-floating" href="#multi-item-flower" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
-    <a class="btn-floating" href="#multi-item-flower" data-slide="next"><i class="fa fa-chevron-right"></i></a>
-  </div>-->
-  
-  <!--/.Controls-->
-
-  <!--Indicators-->
-  <!--/.Indicators-->
 
   <!--Slides-->
   <div class="carousel-inner" role="listbox">
@@ -398,8 +371,6 @@ break;
 
     </div>
     <!--/.First slide-->
-
-
     <!--Second slide-->
    <div class="carousel-item">
 
@@ -426,10 +397,7 @@ break;
         <?php endforeach; ?> 
         </div>
       </div>
-
-  
     <!--/.Second slide-->
-
     <!--Third slide-->
     <div class="carousel-item">
 
@@ -477,31 +445,18 @@ break;
         </a>
   </div>
   <!--/.Slides-->
-  
-  
 </div>
-
-<!--/.Carousel Wrapper-->
-<!-- </div>
-
-</div>
-</div>
-</div> -->
-
-  
 <?php
 include('includes/footer.php');  
 ?>
-<script src="js/jquery-3.2.1.min.js"></script>
-        <script src="js/jquery-migrate-3.0.0.min.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery-migrate-3.0.0.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        <script src="js/jquery.backstretch.min.js"></script>
-        <script src="js/wow.min.js"></script>
-        <script src="js/retina-1.1.0.min.js"></script>
-        <script src="js/waypoints.min.js"></script>
-        <script src="js/scripts.js"></script>
-          
-
-                </body>
-                </html>
+    <script src="js/jquery.backstretch.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/retina-1.1.0.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+ </html>
