@@ -321,19 +321,9 @@ strong {
 	font-weight: 600;
 }
 
-.colored-text {
-	color: #9b59b6;
-}
-&::-moz-selection {
-	background: #9b59b6;
-	color: #fff;
-	text-shadow: none;
-}
-&::selection {
-	background: #9b59b6;
-	color: #fff;
-	text-shadow: none;
-}
+
+
+
 .section-container {
 	margin: 0 auto;
 	padding-bottom: 80px;
@@ -403,32 +393,36 @@ strong {
 		}
 	}
 }
-.services-box {
-	padding-top: 30px;
+.more-services-box1{
+	margin-top: 25px;
 	text-align: left;
-	.services-box-icon {
-		width: 80px;
-		height: 80px;
+	.more-services-box-icon1 {
+		width: 60px;
+		height: 60px;
 		margin: 0 auto;
-		font-size: 30px;
-		color: #fff;
-		line-height: 80px;
+		color: #f2f2f2;
+		line-height: 0px;
 		text-align: center;
 		border-radius: 28px;
-		background: #9b59b6;
-		background: -moz-linear-gradient(top, #ffb24b 0%, #9b59b6 100%);
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffb24b), color-stop(100%,#9b59b6));
-		background: -webkit-linear-gradient(top, #ffb24b 0%,#9b59b6 100%);
-		background: -o-linear-gradient(top, #ffb24b 0%,#9b59b6 100%);
-		background: -ms-linear-gradient(top, #fff 0%,#fff 100%);
-		background: linear-gradient(to bottom, #fff 0%,#fff 100%);
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#fff',GradientType=0 );
 	}
-	h3 {
-		margin-top: 0;
-		padding: 0 0 10px 0;
-	}
+
 }
+.more-services-box {
+	margin-top: 30px;
+	text-align: left;
+	.more-services-box-icon {
+		width: 60px;
+		height: 60px;
+		margin: 0 auto;
+		font-size: 28px;
+	
+		line-height: 60px;
+		text-align: center;
+		border-radius: 22px;
+	}
+	
+}
+
 .about-us-box {
 	margin-top: 100px;
 }
@@ -458,24 +452,8 @@ strong {
 		border-radius: 4px;
 	}
 }
-.more-services-box {
-	margin-top: 30px;
-	text-align: left;
-	.more-services-box-icon {
-		width: 60px;
-		height: 60px;
-		margin: 0 auto;
-		font-size: 28px;
-		color: #fff;
-		line-height: 60px;
-		text-align: center;
-		border-radius: 22px;
-	}
-	h3 {
-		margin-top: 0;
-		padding: 0 0 10px 0;
-	}
-}
+
+	
 .portfolio-box {
 	padding-top: 30px;
 	text-align: left;

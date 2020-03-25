@@ -32,7 +32,6 @@
         <!-- Top content -->
         <div class="top-content">
             <div class="container">
-            	
                 <div class="row">
 				<div class='bar'>
                     <div class="col-md-8 offset-md-2 text">
@@ -47,7 +46,7 @@
              </div>            
 		</div>
 		</div>
-		<br><br>
+		<br><br><br><br>
         
         <!-- Services -->
         <div class="services-container section-container">
@@ -62,9 +61,10 @@
                 	<div class="col-md-4 services-box wow fadeInUp">
                 		<div class="row">
                 			<div class="col-md-4">
-			                	<div class="services-box-icon">
+			                <div class="more-services-box-icon">
 
-                        <img src="icons/shovel.png" alt=""/> 
+						<img src="icons/Shovel.png" alt=""/> 
+						
 
 			                	</div>
 		                	</div>
@@ -77,9 +77,10 @@
                     <div class="col-md-4 services-box wow fadeInDown">
 	                	<div class="row">
                 			<div class="col-md-4">
-			                	<div class="services-box-icon">
+							<div class="more-services-box-icon1">
 
-                        <img src="icons/rake.png" alt=""/> 
+
+                        <img src="icons/Rake.png" alt=""/> 
 			                	</div>
 
 		                	</div>
@@ -92,7 +93,7 @@
                     <div class="col-md-4 services-box wow fadeInUp">
 	                	<div class="row">
                 			<div class="col-md-4">
-			                	<div class="services-box-icon">
+							<div class="more-services-box-icon1">
                         <img src="icons/clearGround.png" alt=""/> 
 			                	</div>
 		                	</div>
