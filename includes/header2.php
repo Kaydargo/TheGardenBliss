@@ -7,9 +7,6 @@
   <link href="css/graham.css" rel="stylesheet">
   <link href="css/freelancer.css" rel="stylesheet">
 
-
-  
-
  <!-- Navigation -->
  <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
     <div class="container">

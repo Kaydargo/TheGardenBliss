@@ -9658,10 +9658,6 @@ a.text-dark:hover, a.text-dark:focus {
   color: #fff;
 }
 
-#mainNav .navbar-nav li.nav-item a.nav-link:hover {
-  color: #969594;
-}
-
 #mainNav .navbar-nav li.nav-item a.nav-link:active, #mainNav .navbar-nav li.nav-item a.nav-link:focus {
   color: #fff;
 }
