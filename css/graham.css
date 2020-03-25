@@ -7,21 +7,87 @@ font-face {
     font-family: Raylway !important;
     src: url(Raylway.ttf);
 }
+h1, h2 {
+  
+	margin-top: 10px;
+
+	font-size: 38px;
+    font-weight: 300;
+    color: #333;
+    line-height: 50px;
+    font : normal 52px/1 'Overpass';
+}
+
+h3 {
+  font : normal 42px/1 'Overpass';
+	font-size: 22px;
+    font-weight: 300;
+    color: #333;
+    line-height: 30px;
+}
 
 p{
   font-family: Raleway; 
-  font-size: 14px; 
+  font-size: 18px; 
   font-style: normal;
   font-variant: normal; 
   font-weight: 400; 
-  line-height: 20px;
+  line-height: 1.5;
+}
+
+body {
+  font-family: Raleway;
+  font-size: 16px;
+  font-weight: 300;
+  color: #888;
+  line-height: 30px;
+  text-align: center;
+}
+.para
+{
+    color: white;
+    font-family: Raleway; 
+    font-size: 18px; 
+    font-style: normal;
+    font-variant: normal; 
+    font-weight: 400; 
+    line-height: 1.5;
 }
 
 .navbar-nav .nav-link {
     padding-right: 0.5rem;
     padding-left: 0.5rem;
     font-size: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  display: inline-block;
+  padding: 5px 10px;
+  position: relative;
+  color: (255,255,255, 0.9);
 }
+
+.navbar-nav .nav-link:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2.5px;
+  left: 50%;
+  position: absolute;
+  background: #55a635;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.navbar-nav .nav-link:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
+
+#mainNav .navbar-nav li.nav-item a.nav-link:hover {
+  color:(255,255,255, 1);
+}
+
 #logo
 {
     width:60px;
@@ -148,16 +214,7 @@ font-size: 25px !important;
   .row.display-flex > [class*='col-'] {
     flex-grow: 1;
   }
-  .para
-  {
-      color: white;
-      font-family: Raleway; 
-      font-size: 14px; 
-      font-style: normal;
-      font-variant: normal; 
-      font-weight: 400; 
-      line-height: 20px;
-  }
+
   .ctnCol
   {
       background-color: #55a635; 
@@ -273,38 +330,12 @@ section.parallax-bg-1{
 background-size: cover;
 }
 
-
-
-
-
-
-
-
-
-
-
 /* graham this is fatima css, handle with care   */
-
-
-
-body {
-    font-family: Raleway;
-    font-size: 16px;
-    font-weight: 300;
-    color: #888;
-    line-height: 30px;
-    text-align: center;
-}
-
-
 
 a, a:hover, a:focus {  text-decoration: none; transition: all .3s; }
 
-
-
-img { max-width: 100%; 
-     
-
+img { 
+  max-width: 100%; 
 }
 
 .medium-paragraph {
@@ -315,24 +346,6 @@ strong { font-weight: 600; }
 
 a, a:hover, a:focus { text-decoration: none; transition: all .3s; }
 
-h1, h2 {
-  
-	margin-top: 10px;
-
-	font-size: 38px;
-    font-weight: 300;
-    color: #555;
-    line-height: 50px;
-    font : normal 52px/1 'Overpass';
-}
-
-h3 {
-  font : normal 42px/1 'Overpass';
-	font-size: 22px;
-    font-weight: 300;
-    color: #555;
-    line-height: 30px;
-}
 
 /***** General style, all sections *****/
 
@@ -408,7 +421,7 @@ font : normal 52px/1 'Overpass';
 margin: 30px 0 10px 0;
 }
 
-.top-content .description p { opacity: 0.8; }
+.top-content .description p { opacity: 0.9; }
 
 .top-content .top-big-link {
 margin-top: 45px;
@@ -467,7 +480,6 @@ margin-top: 20px;
 margin-bottom: 20px;
 }
 
-.about-us-box-text a { border-bottom: 1px dashed #9b59b6; }
 .about-us-box-text a:hover, .about-us-box-text a:focus { border: 0; }
 
 .about-us-box-img img {
@@ -491,24 +503,12 @@ margin: 0 auto;
   line-height: 60px;
   text-align: center;
   border-radius: 22px;
-  
-  background: #9b59b6; /* Old browsers */
-background: -moz-linear-gradient(top,  #ffb24b 0%, #9b59b6 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffb24b), color-stop(100%,#9b59b6)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #ffb24b 0%,#9b59b6 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #ffb24b 0%,#9b59b6 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #fff 0%,#fff 100%); /* IE10+ */
-background: linear-gradient(to bottom,  #fff 0%,#fff 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#fff',GradientType=0 ); /* IE6-9 */
 }
 
 .more-services-box h3 {
 margin-top: 0;
 padding: 0 0 10px 0;
 }
-
-
-
 
 /***** Portfolio *****/
 
@@ -534,7 +534,6 @@ border-radius: 4px;
 margin-top: 30px;
 }
 .portfolio-box h3 a { color: #555; }
-.portfolio-box h3 a:hover, .portfolio-box h3 a:focus { color: #9b59b6; }
 
 .portfolio-box h3 i {
 padding-left: 10px;
@@ -617,21 +616,6 @@ background: rgba(255, 255, 255, 0.8);
   border-color: rgba(255, 255, 255, 0.8);
 }
 
-.testimonial-list .nav-tabs li a.active,
-.testimonial-list .nav-tabs li a.active:focus {
-background: #9b59b6; /* Old browsers */
-background: -moz-linear-gradient(top,  #ffb24b 0%, #9b59b6 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffb24b), color-stop(100%,#9b59b6)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #ffb24b 0%,#9b59b6 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #ffb24b 0%,#9b59b6 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #ffb24b 0%,#9b59b6 100%); /* IE10+ */
-background: linear-gradient(to bottom,  #ffb24b 0%,#9b59b6 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb24b', endColorstr='#9b59b6',GradientType=0 ); /* IE6-9 */
-
-border: 0;
-}
-
-
 /***** Blog *****/
 
 .blog-box {
@@ -692,7 +676,7 @@ padding-top: 40px;
 
 .bar {
   
-  background-color: rgba(0,0,0,.6);
+  background-color: rgba(0,0,0,.7);
   padding: 20px;
   border-top-left-radius: .5em;
   border-bottom-left-radius: .5em;

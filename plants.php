@@ -26,6 +26,7 @@
     include('includes/header.php');
   } else {
     include('includes/header2.php');
+
   }
   ?>
   <br>
@@ -64,8 +65,46 @@
     <div class="container" style="text-align: center;">
       <br><br>
 
-      <h3>Vegetables & Herbs</h3>
-
+     <h3 class="plantName">Vegetables & Herbs</h3>
+}
+?>
+<br>
+     <br>
+     <br>
+<body>
+<?php
+//Selects all images, their id and userid with the tag animated
+        require('includes/functions.php');
+        ?>  
+ <!-- Top content -->
+ <div class="top-content">
+            <div class="container">
+            	
+                <div class="row">
+                <div class='bar'>
+                    <div class="col-md-8 offset-md-2 text">
+                        <h1 class="wow fadeInLeftBig"> Our Range of Plants</h1>
+                        <div class="description wow fadeInLeftBig">
+                        	<p>Click on a plant and you will be taken to a page full of growing guides and useful information about how to grow the plant,
+                           how to care for the plant, when to harvest and problems and diseases that can affect the plant.
+                         	
+                        	</p>
+                        </div>
+</div>
+                    </div>
+                </div>
+                
+            </div>            
+  </div>
+        <br>
+        <!-- Page Content -->
+        <div class="container" style="text-align: center;">
+<br><br>
+<h3 class="plantName">Vegetables & Herbs</h3>
+          
+<br><br>
+<!--Carousel Wrapper-->
+<div id="multi-item-veg" class="carousel slide carousel-multi-item" data-ride="carousel" data-interval='false'>
       <br><br>
       <!--Carousel Wrapper-->
       <div id="multi-item-veg" class="carousel slide carousel-multi-item" data-ride="carousel" data-interval='false'>
@@ -218,16 +257,13 @@
           <li data-target="#multi-item-veg" data-slide-to="3"></li>
         </ol>
 
-
-
-
       </div>
       <!--/.Slides-->
       <!--/.Carousel Wrapper-->
 
       <br><br><br>
 
-      <h3>Fruits</h3>
+     <h3 class="plantName">Fruits</h3>
       <br><br>
       <!--Carousel Wrapper-->
       <div id="multi-item-fruit" class="carousel slide carousel-multi-item" data-ride="carousel" data-interval='false'>
@@ -260,8 +296,7 @@
                       <h4 class="card-title"><?php echo ($fruit['plantName']); ?></h4>
                       <p class="card-text"><?php echo ($fruit['plantTagline']); ?></p>
                       <a href="plantInfo.php?plantID=<?php echo ($fruit['plantID']); ?>" class="btn btn-primary">See More</a>
-
-                    </div>
+                   </div>
 
                   </div>
                 </div>
@@ -346,14 +381,13 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>
-
       </div>
       <!--/.Slides-->
       <!--/.Carousel Wrapper-->
 
       <br><br><br>
 
-      <h3>Flowers</h3>
+           <h3 class="plantName">Flowers</h3>
       <br><br>
       <!--Carousel Wrapper-->
       <div id="multi-item-flower" class="carousel slide carousel-multi-item" data-ride="carousel" data-interval='false'>
@@ -394,40 +428,60 @@
                   </div>
                 </div>
               <?php endforeach; ?>
-            </div>
+    </div>
+    <!--/.First slide-->
+    <!--Second slide-->
+   <div class="carousel-item">
 
-          </div>
-          <!--/.First slide-->
-
-
-          <!--Second slide-->
-          <div class="carousel-item">
-
-            <div class="row">
-              <?php foreach ($flowers1 as $flower1) : ?>
-                <div class="col-md-4 clearfix d-md-block">
-                  <div class="card mb-2">
-                    <?php $counter = 0; ?>
-
-                    <?php
-                    $counter++;
-                    if ($counter > 3) {
-                      break;
-                    } ?>
-                    <?= ($flower1['plantImage'] <> " " ? "<img class='card-img-top' alt='' src='images/{$flower1['plantImage']}'/>" : "") ?>
-                    <div class="card-body">
-                      <h4 class="card-title"><?php echo ($flower1['plantName']); ?></h4>
-                      <p class="card-text"><?php echo ($flower1['plantTagline']); ?></p>
-                      <a href="plantInfo.php?plantID=<?php echo ($flower1['plantID']); ?> " class="btn btn-primary">See More</a>
-                    </div>
-
-                  </div>
-                </div>
-              <?php endforeach; ?>
+      <div class="row">
+      <?php foreach ($flowers1 as $flower1): ?>
+      <div class="col-md-4 clearfix d-md-block">
+    <div class="card mb-2">
+      <?php $counter = 0; ?>
+      
+        <?php 
+          $counter++;
+    if ($counter > 3){
+    break;
+    }?>
+            <?= ($flower1['plantImage'] <> " " ? "<img class='card-img-top' alt='' src='images/{$flower1['plantImage']}'/>" : "") ?>
+            <div class="card-body">
+              <h4 class="card-title"><?php echo ($flower1['plantName']); ?></h4>
+              <p class="card-text"><?php echo ($flower1['plantTagline']);?></p>
+              <a href="plantInfo.php?plantID=<?php echo ($flower1['plantID']); ?> "class="btn btn-primary">See More</a>
             </div>
           </div>
+        </div>
+        <?php endforeach; ?> 
+        </div>
+      </div>
+    <!--/.Second slide-->
+    <!--Third slide-->
+    <div class="carousel-item">
 
+<div class="row">
+<?php foreach ($flowers2 as $flower2): ?>
+<div class="col-md-4 clearfix d-md-block">
+<div class="card mb-2">
+<?php $counter = 0; ?>
 
+  <?php 
+    $counter++;
+if ($counter > 3){
+break;
+}?>
+      <?= ($flower2['plantImage'] <> " " ? "<img class='card-img-top' alt=''' src='images/{$flower2['plantImage']}'/>" : "") ?>
+      <div class="card-body">
+        <h4 class="card-title"><?php echo ($flower2['plantName']); ?></a></h4>
+        <p class="card-text"><?php echo ($flower2['plantTagline']);?></p>
+        <a href="plantInfo.php?plantID=<?php echo ($flower2['plantID']); ?>" class="btn btn-primary">See More</a>
+      </div>
+     
+    </div>
+  </div>
+  <?php endforeach; ?> 
+  </div>
+</div>
           <!--/.Second slide-->
 
           <!--Third slide-->
@@ -501,8 +555,5 @@
     <script src="js/retina-1.1.0.min.js"></script>
     <script src="js/waypoints.min.js"></script>
     <script src="js/scripts.js"></script>
-
-
   </body>
-
-  </html>
+ </html>

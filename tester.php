@@ -43,14 +43,16 @@ $statement6->execute();
 $num = $statement6->fetchColumn(); 
 // $statement6->closeCursor(); 
 
-
  $queryFav = "SELECT * FROM userfavourites WHERE plantID = $plant_id AND userID = $user";
  $statement5 = $conn->prepare($queryFav);
  $statement5->execute();
  $plantsFav = $statement5->fetch(PDO::FETCH_ASSOC);
  $statement5->closeCursor(); 
-
-    if(isset($_POST['addToFav'])){
+ 
+ if(!isset($_SESSION['userID'])){
+  echo 'You must be logged in to favourite';
+}
+    elseif(isset($_POST['addToFav'])){
      $user_id = htmlspecialchars(!empty($_POST['user_id']) ? trim($_POST['user_id']) : null);
      $plant_id = htmlspecialchars(!empty($_POST['plant_id']) ? trim($_POST['plant_id']) : null);
      $addToFav = "INSERT INTO userfavourites (plantID, userID) VALUES (:plant_id, :user_id)";
@@ -100,21 +102,23 @@ else{
     <body>
     <br><br><br>
 <div class="top-content">
-  <div class="container">
-    <div class="row">
-      <div class='bar'>
-        <div class="col-md-8 offset-md-2 text">
-          <h1 class="wow fadeInLeftBig">How- To Start a Garden</h1>
-            <div class="description wow fadeInLeftBig">
-              <p>We walk you through factors that can affect how your garden will grow — sunlight, shade, soil —
-                 and the balance between fruits, shrubs, flowers and vegetables
-              </p>
-            </div>
-        </div>
-      </div>
-    </div>            
-	</div>
-</div>
+            <div class="container">
+            	
+                <div class="row">
+                    <div class="col-md-8 offset-md-2 text">
+                        <h1 class="wow fadeInLeftBig">How- To Start a Garden</h1>
+                        <div class="description wow fadeInLeftBig">
+                        	<p>We walk you through factors that can affect how your garden will grow — sunlight, shade, soil —
+                                    and the balance between fruits, shrubs, flowers and vegetables
+                         	
+                        	</p>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>            
+		</div>
 		<br><br>
        
     <div class="container"> 
@@ -190,55 +194,55 @@ else{
 <div class="container"> 
 <br>
 <div class="row display-flex">
-<div class="col polaroid">
-
+<div class="col-sm">
+<div class="polaroid">
 <?php
   if($plant['soil'] == "Sandy")
   {
-    echo "<img class='icons img-fluid' src='icons/sandy_soil.svg'>";
+    echo "<img class='icons img-fluid' src='icons/soil_2.png'>";
   }
   else
   {
-    echo "<img class='icons img-fluid' src='icons/loomy_soil.svg'>";
+    echo "<img class='icons img-fluid' src='icons/soil_2.png'>";
   }
   ?>
   <div class="ctnbtm">
   <h4 class="func"><?php echo $plant['soil']; ?></h4>
   </div>
-
+</div>
   </div>
-  <div class="col polaroid">
-
+  <div class="col-sm">
+<div class="polaroid">
 <?php
   if($plant['placement'] == "Shade")
   {
-    echo "<img class='icons img-fluid' src='icons/shade.svg'>";
+    echo "<img class='icons img-fluid' src='icons/shade.png'>";
   }
   else
   {
-    echo "<img class='icons img-fluid' src='icons/sun.svg'>";
+    echo "<img class='icons img-fluid' src='icons/sun_2.png'>";
   }
   ?>
   <div class="ctnbtm">
   <h4 class="func"><?php echo $plant['placement']; ?></h4>
   </div>
-
+</div>
   </div>
-  <div class="col polaroid">
-
-<img class="icons img-fluid" src='icons/depth.svg'>
+  <div class="col-sm">
+<div class="polaroid">
+<img class="icons img-fluid" src='icons/depth.png'>
   <div class="ctnbtm">
   <h4 class="func"><?php echo $plant['depth']; ?></h4>
   </div>
 </div>
-  
-  <div class="col polaroid">
-
-<img class="icons img-fluid" src='icons/distance.svg'>
+  </div>
+  <div class="col-sm">
+<div class="polaroid">
+<img class="icons img-fluid" src='icons/distance.png'>
   <div class="ctnbtm">
   <h4 class="func"><?php echo $plant['distance']; ?></h4>
   </div>
-
+</div>
   </div>
 
 
@@ -306,7 +310,7 @@ document.getElementById("favourites").onsubmit = function(){
 }
 </script>
 <?php
-    include('includes/footer.php');
+    include('includes/footer3.php');
         ?>
     </body>
     <!-- Bootstrap core JavaScript -->

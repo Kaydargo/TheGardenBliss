@@ -34,6 +34,7 @@ include("loginServ.php");
 		<div class="container">
 
 			<div class="row">
+        <div class='bar'>
 				<div class="col-md-8 offset-md-2 text">
 					<h1 class="wow fadeInLeftBig">How- To Start a Garden</h1>
 					<div class="description wow fadeInLeftBig">
@@ -48,12 +49,14 @@ include("loginServ.php");
 
 		</div>
 	</div>
+  </div>
 	<br><br>
 
 	<!-- Services -->
 	<div class="services-container section-container">
 		<div class="container">
 			<div class="row">
+        
 				<div class="col services section-description wow fadeIn">
 					<h2></h2>
 					<hr>
@@ -118,9 +121,6 @@ include("loginServ.php");
 							Keeping your garden healthy requires regular maintenance throughout the growing season. Most plants need, water, sun, and nutrient to survived and produce healthy crops. It is important to follow general upkeep combined with pest and disease control which usually does not require much time or money. Ensure you do the garden weekly if there is a need because a neglected garden will need more effort and time to return to perfect health.
 							You can use mulch on your garden bed after planting since mulch prevents weeds and help to keep moisture lock in the soil.
 							<p>Add the amount of water necessary for your specific plant variety. Ensure that you water your garden regularly. Most crops like vegetables or flowers will need 1 inch of water weekly. Check the topsoil of your garden weekly and add water to most plants when the top inch of the soil began to dry off. You want the top of the soil to remain moist but not water clogged. For more information on how to start and care for your garden watch our how to videos</p>
-
-
-
 						</p>
 					</div>
 				</div>
@@ -161,7 +161,48 @@ include("loginServ.php");
 						</div>
 						<div class="col-md-9">
 							<h3 class="plantName">GARDEN LOCATION</h3>
-							<p>
+	                    	<p>
+	                    	Keeping your garden healthy requires regular maintenance throughout the growing season. Most plants need, water, sun, and nutrient to survived and produce healthy crops. It is important to follow general upkeep combined with pest and disease control which usually does not require much time or money. Ensure you do the garden weekly if there is a need because a neglected garden will need more effort and time to return to perfect health.
+You can use mulch on your garden bed after planting since mulch prevents weeds and help to keep moisture lock in the soil.
+<p>Add the amount of water necessary for your specific plant variety. Ensure that you water your garden regularly. Most crops like vegetables or flowers will need 1 inch of water weekly. Check the topsoil of your garden weekly and add water to most plants when the top inch of the soil began to dry off. You want the top of the soil to remain moist but not water clogged. For more information on how to start and care for your garden watch our how to videos</p>
+	                    	</p>
+	                    </div>
+	                </div>
+	                <div class="col-12 col-lg-5 about-us-box wow fadeInUp">                                
+                               <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/Pi1x-kyC49o?start=64" height="315" width="560" allowfullscreen="" frameborder="0">
+    </iframe>
+</div>     
+                                    
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+        </div>
+
+		<!-- More services -->
+        <div class="more-services-container section-container">
+	        <div class="container">
+	        	
+	            <div class="row">
+	                <div class="col more-services section-description wow fadeIn">
+					<h3 class="plantName">Important Facts</h3>
+	                </div>
+	            </div>
+	            
+	            <div class="row">
+	                <div class="col-md-6 more-services-box wow fadeInLeft">
+	                	<div class="row">
+	                		<div class="col-md-3">
+	                			<div class="more-services-box-icon">
+
+                        <img src="icons/gardenSpot.png" alt=""/>                   
+	                			</div>
+
+	                		</div>
+	                		<div class="col-md-9">
+	                		<h3 class="plantName">GARDEN LOCATION</h3>
+		                    	<p>
 								Many plants need plenty of sun to grow. Most vegetable you will plant will need 8 or more hours of sun per day other can survive on 4-6 hours. It is important to choose an area in your garden that receive the longest sunshine in a day.
 							</p>
 						</div>
@@ -200,6 +241,7 @@ include("loginServ.php");
 							<h3 class="plantName">PREPARE YOUR SOIL</h3>
 							<p>
 								It is natural to prepare your soil well before planting especially if you notice your soil lack nutrients. Adding organic matter like compost, manure or using mulch is the perfect way to ensure your soil is ready for planting. Remember adding organic matter will supply all nutrients that your plants need.
+
 							</p>
 						</div>
 					</div>
@@ -406,17 +448,10 @@ include("loginServ.php");
 					</div>
 				</div>
 			</div>
-
-
 		</div>
 
 	</div>
 	</div>
-
-
-
-
-
 	<!-- Javascript -->
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/jquery-migrate-3.0.0.min.js"></script>
@@ -427,13 +462,8 @@ include("loginServ.php");
 	<script src="js/retina-1.1.0.min.js"></script>
 	<script src="js/waypoints.min.js"></script>
 	<script src="js/scripts.js"></script>
-
-
-
 	<?php
 	include('includes/footer.php');
 	?>
-
 </body>
-
 </html>

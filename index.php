@@ -53,7 +53,6 @@ if (!isset($_SESSION['userID'])) {
                 </div>
             </div>
         </div>
-
     </div>
     </div>
 
@@ -102,17 +101,6 @@ if (!isset($_SESSION['userID'])) {
         </div>
     </div>
     <br><br><br>
-
-
-
-
-
-
-
-
-
-
-
     <div class="container-fluid ctnCol">
         <div class="container pad">
             <div class="row row1">
