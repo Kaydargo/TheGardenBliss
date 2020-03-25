@@ -1,10 +1,10 @@
 <?php
-    include('includes/database.php');
-    include("loginServ.php");
-    ?>
+include('includes/database.php');
+include("loginServ.php");
+?>
 <?php
-if(!isset($_SESSION['userID'])){
-    header('Location: login.php');
+if (!isset($_SESSION['userID'])) {
+	header('Location: login.php');
 }
 $currentUser = $_SESSION['userID'];
 $getUserDetails = 'SELECT * FROM USERS WHERE userID = :userID';
@@ -15,31 +15,33 @@ $user = $statement->fetch();
 $statement->closeCursor();
 
 ?>
- <?php
+<?php
 
-if(!isset($_SESSION['userID'])){
-    include('includes/header.php');
+if (!isset($_SESSION['userID'])) {
+	include('includes/header.php');
+} else {
+	include('includes/header2.php');
 }
-else{
-    include('includes/header2.php');
-}
-?> 
+?>
 <!doctype html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>Login</title>
-<link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
-<link href="css/style.scss" rel="stylesheet" type="text/css"/>
-<link href="css/graham.scss" rel="stylesheet" type="text/css"/>
-<style>label {
-     color: black;
-}
-</style>
+	<meta charset="UTF-8">
+	<title>Login</title>
+	<link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
+	<link href="css/style.scss" rel="stylesheet" type="text/css" />
+	<link href="css/graham.scss" rel="stylesheet" type="text/css" />
+	<style>
+		label {
+			color: black;
+		}
+	</style>
 </head>
+
 <body>
-    <br><br><br><br><br>
-<div class="container h-100">
+	<br><br><br><br><br>
+	<div class="container h-100">
 		<div class="d-flex justify-content-center h-100">
 			<div class="user_card2">
 				<div class="d-flex justify-content-center">
@@ -49,31 +51,31 @@ else{
 				</div>
 				<div class="d-flex justify-content-center form_container">
 					<form method="post" action="editUser.php">
-                    <div class="input-group mb-3">
+						<div class="input-group mb-3">
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="far fa-user-circle"></i></span>
 							</div>
-                <input type="file" name="userPic" class="form-control" value="<?php echo $user['userPic']; ?>"/>
-                </div>
-                    <div class="input-group mb-3">
+							<input type="file" name="userPic" class="form-control" value="<?php echo $user['userPic']; ?>" />
+						</div>
+						<div class="input-group mb-3">
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-angle-double-right"></i></span>
 							</div>
-							<input type="text" name="firstName" class="form-control"  value="<?php echo $user['firstName']; ?>" required pattern="[A-Za-z]+">
-                        </div>
-                        <div class="input-group mb-3">
+							<input type="text" name="firstName" class="form-control" value="<?php echo $user['firstName']; ?>" required pattern="[A-Za-z]+">
+						</div>
+						<div class="input-group mb-3">
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-angle-double-right"></i></span>
 							</div>
-							<input type="text" name="lastName" class="form-control"  value="<?php echo $user['lastName']; ?>" required pattern="[A-Za-z]+">
+							<input type="text" name="lastName" class="form-control" value="<?php echo $user['lastName']; ?>" required pattern="[A-Za-z]+">
 						</div>
 						<div class="input-group mb-3">
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-user"></i></span>
 							</div>
 							<input type="text" name="username" class="form-control input_user" value="<?php echo $user['username']; ?>" required pattern="{6,}">
-                        </div>
-                        <div class="input-group mb-3">
+						</div>
+						<div class="input-group mb-3">
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="	far fa-address-book"></i></span>
 							</div>
@@ -85,20 +87,23 @@ else{
 							</div>
 							<input type="password" name="password" class="form-control input_pass" value="<?php echo $user['userpass']; ?>" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
 						</div>
-						
-							<div class="d-flex justify-content-center mt-3 login_container">
-				 	<input type="submit" name="updateUser" value="Update Profile" class="btn login_btn"></input>
-				   </div>
+
+						<div class="d-flex justify-content-center mt-3 login_container">
+							<input type="submit" name="updateUser" value="Update Profile" class="btn login_btn"></input>
+						</div>
 					</form>
-                </div>
-</div>
-</div>
-</div>
-<div id="errMsg" style="text-align:center;">
-            <?php if(!empty($_SESSION['errMsg'])) { echo $_SESSION['errMsg']; } ?>
-        </div>
-        <?php unset($_SESSION['errMsg']); ?>
-                
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="errMsg" style="text-align:center;">
+		<?php if (!empty($_SESSION['errMsg'])) {
+			echo $_SESSION['errMsg'];
+		} ?>
+	</div>
+	<?php unset($_SESSION['errMsg']); ?>
+
 </body>
 <?php include 'includes/footer.php'; ?>
+
 </html>

@@ -185,7 +185,7 @@ p.gal-name {
 	background-repeat: no-repeat;
 }
 .footCol {
-	background-color: #41602d !important;
+	background-color: #2A551B !important;
 }
 .ccolor {
 	color: white;
@@ -208,7 +208,7 @@ p.gal-name {
 	padding: 10px;
 }
 .footGreen {
-	background-color: #41602d;
+	background-color: #2A551B;
 }
 .footTitles {
 	color: white;
@@ -715,16 +715,16 @@ h3 {
 }
 .footer-bottom {
 	padding: 15px 0 17px 0;
-	background: #41602d;
+	background: #2A551B;
 	text-align: left;
-	color: #41602d;
+	color: #2A551B;
 }
 .footer-social {
 	padding-top: 3px;
 	text-align: right;
 	a {
 		margin-left: 20px;
-		color: #41602d;
+		color: #2A551B;
 		border: 0;
 		&:hover {
 			color: #79a05f;
@@ -806,7 +806,7 @@ html {
 	width: 170px;
 	top: -75px;
 	border-radius: 50%;
-	background: #41602d;
+	background: #2A551B;
 	padding: 10px;
 	text-align: center;
 }
@@ -954,4 +954,33 @@ input {
 	}
 }
 
+.frmSearch {
+	border: 1px solid #a8d4b1;
+	background-color: #c6f7d0;
+	margin: 2px 0px;
+	padding: 40px;
+	border-radius: 4px;
+}
+#plant-list {
+	float: left;
+	list-style: none;
+	margin-top: -3px;
+	padding: 0;
+	width: 190px;
+	position: absolute;
+	li {
+		padding: 10px;
+		background: #f0f0f0;
+		border-bottom: #bbb9b9 1px solid;
+		&:hover {
+			background: #ece3d2;
+			cursor: pointer;
+		}
+	}
+}
+#search-box {
+	padding: 10px;
+	border: #a8d4b1 1px solid;
+	border-radius: 4px;
+}
 
