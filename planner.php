@@ -79,8 +79,6 @@ else{
   <div class="row">
 <p>Planning and creating a new garden design can give your home a boost. Our garden planner makes it easy to plan your dream garden, it allows you to plan the layout and content of your garden easily. It also gives you the flexibility to create the best design for your  garden. with the planner you can easily add various  vegetables and move them around your allotted garden to get the perfect layout.
 </p>
-
-
 <!-- Feature Cards -->
 <section class="d-flex bg-light" id="feature-cards">
     <div class="container d-flex justify-content-center">
