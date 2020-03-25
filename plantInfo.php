@@ -34,40 +34,36 @@ $statement6->bindValue(':plantID', $plant_id);
 $statement6->bindValue(':userID', $user);
 $statement6->execute();
 $num = $statement6->fetchColumn(); 
-// $statement6->closeCursor(); 
 
+$queryFav = "SELECT * FROM userfavourites WHERE plantID = $plant_id AND userID = $user";
+$statement5 = $conn->prepare($queryFav);
+$statement5->execute();
+$plantsFav = $statement5->fetch(PDO::FETCH_ASSOC);
+$statement5->closeCursor(); 
 
- $queryFav = "SELECT * FROM userfavourites WHERE plantID = $plant_id AND userID = $user";
- $statement5 = $conn->prepare($queryFav);
- $statement5->execute();
- $plantsFav = $statement5->fetch(PDO::FETCH_ASSOC);
- $statement5->closeCursor(); 
+if(isset($_POST['addToFav'])){
+  $user_id = htmlspecialchars(!empty($_POST['user_id']) ? trim($_POST['user_id']) : null);
+  $plant_id = htmlspecialchars(!empty($_POST['plant_id']) ? trim($_POST['plant_id']) : null);
+  $addToFav = "INSERT INTO userfavourites (plantID, userID) VALUES (:plant_id, :user_id)";
+  $stmt1 = $conn->prepare($addToFav);
+  $stmt1->bindValue(':user_id', $user_id);
+  $stmt1->bindValue(':plant_id', $plant_id);
+  $result = $stmt1->execute();
+  echo "<meta http-equiv='refresh' content='0'>";
+}
 
-    if(isset($_POST['addToFav'])){
-     $user_id = htmlspecialchars(!empty($_POST['user_id']) ? trim($_POST['user_id']) : null);
-     $plant_id = htmlspecialchars(!empty($_POST['plant_id']) ? trim($_POST['plant_id']) : null);
-     $addToFav = "INSERT INTO userfavourites (plantID, userID) VALUES (:plant_id, :user_id)";
-       $stmt1 = $conn->prepare($addToFav);
-       $stmt1->bindValue(':user_id', $user_id);
-       $stmt1->bindValue(':plant_id', $plant_id);
-       $result = $stmt1->execute();
-       echo "<meta http-equiv='refresh' content='0'>";
-   }
-
-   if(isset($_POST['removeFav'])){
-    $user_id = htmlspecialchars(!empty($_POST['user_id']) ? trim($_POST['user_id']) : null);
-    $plant_id = htmlspecialchars(!empty($_POST['plant_id']) ? trim($_POST['plant_id']) : null);
-    $removeFav = "DELETE FROM userfavourites WHERE plantID = $plant_id AND userID = $user";
-      $stmt2 = $conn->prepare($removeFav);
-      $stmt2->bindValue(':user_id', $user_id);
-      $stmt2->bindValue(':plant_id', $plant_id);
-      $result = $stmt2->execute();
-      echo "<meta http-equiv='refresh' content='0'>";
-  }
+if(isset($_POST['removeFav'])){
+  $user_id = htmlspecialchars(!empty($_POST['user_id']) ? trim($_POST['user_id']) : null);
+  $plant_id = htmlspecialchars(!empty($_POST['plant_id']) ? trim($_POST['plant_id']) : null);
+  $removeFav = "DELETE FROM userfavourites WHERE plantID = $plant_id AND userID = $user";
+  $stmt2 = $conn->prepare($removeFav);
+  $stmt2->bindValue(':user_id', $user_id);
+  $stmt2->bindValue(':plant_id', $plant_id);
+  $result = $stmt2->execute();
+  echo "<meta http-equiv='refresh' content='0'>";
+}
  
-
 $currentPlantType = $plant['type'];
-
 $queryPlantType ="SELECT plantImage, plantName, plantID FROM plant WHERE type='$currentPlantType'";
 $statement3 = $conn->prepare($queryPlantType);
 $statement3->execute();
@@ -97,7 +93,7 @@ else{
     <div class="row">
       <div class='bar'>
         <div class="col-md-8 offset-md-2 text">
-          <h1 class="wow fadeInLeftBig">How- To Start a Garden</h1>
+          <h1 class="wow fadeInLeftBig">How to Start a Garden</h1>
             <div class="description wow fadeInLeftBig">
               <p>We walk you through factors that can affect how your garden will grow — sunlight, shade, soil —
                  and the balance between fruits, shrubs, flowers and vegetables
@@ -289,11 +285,6 @@ foreach ($plantsType as $plantType) :
      </div>
     </div>
 <br>
-<script>
-document.getElementById("favourites").onsubmit = function(){
-    location.reload(true);
-}
-</script>
 <?php
     include('includes/footer.php');
         ?>
@@ -319,7 +310,7 @@ document.getElementById("favourites").onsubmit = function(){
   <script src="js/wow.min.js"></script>
   <script src="js/retina-1.1.0.min.js"></script>
   <script src="js/waypoints.min.js"></script>
-  <script src="js/scripts.js"></script>
+
   <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
-  
+  <script src="js/scripts.js"></script>
 </html>
