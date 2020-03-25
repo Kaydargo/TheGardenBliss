@@ -66,8 +66,6 @@
       <br><br>
 
      <h3 class="plantName">Vegetables & Herbs</h3>
-}
-?>
 <br>
      <br>
      <br>
@@ -76,44 +74,11 @@
 //Selects all images, their id and userid with the tag animated
         require('includes/functions.php');
         ?>  
- <!-- Top content -->
- <div class="top-content">
-            <div class="container">
-            	
-                <div class="row">
-                <div class='bar'>
-                    <div class="col-md-8 offset-md-2 text">
-                        <h1 class="wow fadeInLeftBig"> Our Range of Plants</h1>
-                        <div class="description wow fadeInLeftBig">
-                        	<p>Click on a plant and you will be taken to a page full of growing guides and useful information about how to grow the plant,
-                           how to care for the plant, when to harvest and problems and diseases that can affect the plant.
-                         	
-                        	</p>
-                        </div>
-</div>
-                    </div>
-                </div>
-                
-            </div>            
-  </div>
         <br>
         <!-- Page Content -->
         <div class="container" style="text-align: center;">
-<br><br>
-<h3 class="plantName">Vegetables & Herbs</h3>
-          
-<br><br>
 <!--Carousel Wrapper-->
 <div id="multi-item-veg" class="carousel slide carousel-multi-item" data-ride="carousel" data-interval='false'>
-      <br><br>
-      <!--Carousel Wrapper-->
-      <div id="multi-item-veg" class="carousel slide carousel-multi-item" data-ride="carousel" data-interval='false'>
-
-        <!--Controls-->
-        <!-- <div class="controls-top">
-    <a class="btn-floating" href="#multi-item-veg" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
-    <a class="btn-floating" href="#multi-item-veg" data-slide="next"><i class="fa fa-chevron-right"></i></a>
-  </div> -->
 
         <a class="carousel-control-prev" href="#multi-item-veg" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -158,8 +123,6 @@
 
           </div>
           <!--/.First slide-->
-
-
           <!--Second slide-->
           <div class="carousel-item">
 
@@ -268,14 +231,6 @@
       <!--Carousel Wrapper-->
       <div id="multi-item-fruit" class="carousel slide carousel-multi-item" data-ride="carousel" data-interval='false'>
 
-        <!--Controls
-  <div class="controls-top">
-    <a class="btn-floating" href="#multi-item-fruit" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
-    <a class="btn-floating" href="#multi-item-fruit" data-slide="next"><i class="fa fa-chevron-right"></i></a>
-  </div>
-  -->
-        <!--/.Controls-->
-
         <!--Slides-->
         <div class="carousel-inner" role="listbox">
 
@@ -332,7 +287,6 @@
             </div>
           </div>
 
-
           <!--/.Second slide-->
 
           <!--Third slide-->
@@ -387,77 +341,68 @@
 
       <br><br><br>
 
-           <h3 class="plantName">Flowers</h3>
+      <h3 class="plantName">Flowers</h3>
       <br><br>
-      <!--Carousel Wrapper-->
       <div id="multi-item-flower" class="carousel slide carousel-multi-item" data-ride="carousel" data-interval='false'>
 
-        <!--Controls
-  <div class="controls-top">
-    <a class="btn-floating" href="#multi-item-flower" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
-    <a class="btn-floating" href="#multi-item-flower" data-slide="next"><i class="fa fa-chevron-right"></i></a>
-  </div>-->
+<!--Slides-->
+<div class="carousel-inner" role="listbox">
 
-        <!--/.Controls-->
-
-        <!--Indicators-->
-        <!--/.Indicators-->
-
-        <!--Slides-->
-        <div class="carousel-inner" role="listbox">
-
-          <!--First slide-->
-          <div class="carousel-item active">
-            <div class="row">
-              <?php foreach ($flowers as $flower) : ?>
-                <div class="col-md-4 clearfix d-md-block d-none">
-                  <div class="card mb-2">
-                    <?php $counter = 0; ?>
-                    <?php
-                    $counter++;
-                    if ($counter > 3) {
-                      break;
-                    } ?>
-                    <?= ($flower['plantImage'] <> " " ? "<img class='card-img-top' alt='' src='images/{$flower['plantImage']}'/>" : "") ?>
-                    <div class="card-body">
-                      <h4 class="card-title"><?php echo ($flower['plantName']); ?></h4>
-                      <p class="card-text"><?php echo ($flower['plantTagline']); ?></p>
-                      <a href="plantInfo.php?plantID=<?php echo ($flower['plantID']); ?>" class="btn btn-primary">See More</a>
-                    </div>
-
-                  </div>
-                </div>
-              <?php endforeach; ?>
-    </div>
-    <!--/.First slide-->
-    <!--Second slide-->
-   <div class="carousel-item">
-
-      <div class="row">
-      <?php foreach ($flowers1 as $flower1): ?>
-      <div class="col-md-4 clearfix d-md-block">
-    <div class="card mb-2">
-      <?php $counter = 0; ?>
-      
-        <?php 
-          $counter++;
-    if ($counter > 3){
-    break;
-    }?>
-            <?= ($flower1['plantImage'] <> " " ? "<img class='card-img-top' alt='' src='images/{$flower1['plantImage']}'/>" : "") ?>
-            <div class="card-body">
-              <h4 class="card-title"><?php echo ($flower1['plantName']); ?></h4>
-              <p class="card-text"><?php echo ($flower1['plantTagline']);?></p>
-              <a href="plantInfo.php?plantID=<?php echo ($flower1['plantID']); ?> "class="btn btn-primary">See More</a>
-            </div>
+  <!--First slide-->
+  <div class="carousel-item active">
+    <div class="row">
+    <?php foreach ($flowers as $flower): ?>
+    <div class="col-md-4 clearfix d-md-block d-none">
+  <div class="card mb-2">
+    <?php $counter = 0; ?>
+      <?php 
+        $counter++;
+  if ($counter > 3){
+  break;
+  }?>
+          <?= ($flower['plantImage'] <> " " ? "<img class='card-img-top' alt='' src='images/{$flower['plantImage']}'/>" : "") ?>
+          <div class="card-body">
+            <h4 class="card-title"><?php echo ($flower['plantName']); ?></h4>
+            <p class="card-text"><?php echo ($flower['plantTagline']);?></p>
+            <a href="plantInfo.php?plantID=<?php echo ($flower['plantID']); ?>"class="btn btn-primary">See More</a>
           </div>
-        </div>
-        <?php endforeach; ?> 
+         
         </div>
       </div>
-    <!--/.Second slide-->
-    <!--Third slide-->
-    <div class="carousel-item">
+      <?php endforeach; ?> 
+    </div>
+
+  </div>
+  <!--/.First slide-->
+  <!--Second slide-->
+ <div class="carousel-item">
+
+    <div class="row">
+    <?php foreach ($flowers1 as $flower1): ?>
+    <div class="col-md-4 clearfix d-md-block">
+  <div class="card mb-2">
+    <?php $counter = 0; ?>
+    
+      <?php 
+        $counter++;
+  if ($counter > 3){
+  break;
+  }?>
+          <?= ($flower1['plantImage'] <> " " ? "<img class='card-img-top' alt='' src='images/{$flower1['plantImage']}'/>" : "") ?>
+          <div class="card-body">
+            <h4 class="card-title"><?php echo ($flower1['plantName']); ?></h4>
+            <p class="card-text"><?php echo ($flower1['plantTagline']);?></p>
+            <a href="plantInfo.php?plantID=<?php echo ($flower1['plantID']); ?> "class="btn btn-primary">See More</a>
+          </div>
+         
+        </div>
+      </div>
+      <?php endforeach; ?> 
+      </div>
+    </div>
+  <!--/.Second slide-->
+  <!--Third slide-->
+  <div class="carousel-item">
 
 <div class="row">
 <?php foreach ($flowers2 as $flower2): ?>
@@ -465,95 +410,57 @@
 <div class="card mb-2">
 <?php $counter = 0; ?>
 
-  <?php 
-    $counter++;
+<?php 
+  $counter++;
 if ($counter > 3){
 break;
 }?>
-      <?= ($flower2['plantImage'] <> " " ? "<img class='card-img-top' alt=''' src='images/{$flower2['plantImage']}'/>" : "") ?>
-      <div class="card-body">
-        <h4 class="card-title"><?php echo ($flower2['plantName']); ?></a></h4>
-        <p class="card-text"><?php echo ($flower2['plantTagline']);?></p>
-        <a href="plantInfo.php?plantID=<?php echo ($flower2['plantID']); ?>" class="btn btn-primary">See More</a>
-      </div>
-     
+    <?= ($flower2['plantImage'] <> " " ? "<img class='card-img-top' alt=''' src='images/{$flower2['plantImage']}'/>" : "") ?>
+    <div class="card-body">
+      <h4 class="card-title"><?php echo ($flower2['plantName']); ?></a></h4>
+      <p class="card-text"><?php echo ($flower2['plantTagline']);?></p>
+      <a href="plantInfo.php?plantID=<?php echo ($flower2['plantID']); ?>" class="btn btn-primary">See More</a>
     </div>
-  </div>
-  <?php endforeach; ?> 
+   
   </div>
 </div>
-          <!--/.Second slide-->
+<?php endforeach; ?> 
+</div>
+</div>
 
-          <!--Third slide-->
-          <div class="carousel-item">
+</div>
+  <!--/.Third slide-->
+  <br><br><br>
+<!--Indicators-->
+<ol class="carousel-indicators">
+  <li data-target="#multi-item-flower" data-slide-to="0" class="active"></li>
+  <li data-target="#multi-item-flower" data-slide-to="1"></li>
+  <li data-target="#multi-item-flower" data-slide-to="2"></li>
+</ol>
 
-            <div class="row">
-              <?php foreach ($flowers2 as $flower2) : ?>
-                <div class="col-md-4 clearfix d-md-block">
-                  <div class="card mb-2">
-                    <?php $counter = 0; ?>
-
-                    <?php
-                    $counter++;
-                    if ($counter > 3) {
-                      break;
-                    } ?>
-                    <?= ($flower2['plantImage'] <> " " ? "<img class='card-img-top' alt=''' src='images/{$flower2['plantImage']}'/>" : "") ?>
-                    <div class="card-body">
-                      <h4 class="card-title"><?php echo ($flower2['plantName']); ?></a></h4>
-                      <p class="card-text"><?php echo ($flower2['plantTagline']); ?></p>
-                      <a href="plantInfo.php?plantID=<?php echo ($flower2['plantID']); ?>" class="btn btn-primary">See More</a>
-                    </div>
-
-                  </div>
-                </div>
-              <?php endforeach; ?>
-            </div>
-          </div>
-
-        </div>
-        <!--/.Third slide-->
-        <br><br><br>
-        <!--Indicators-->
-        <ol class="carousel-indicators">
-          <li data-target="#multi-item-flower" data-slide-to="0" class="active"></li>
-          <li data-target="#multi-item-flower" data-slide-to="1"></li>
-          <li data-target="#multi-item-flower" data-slide-to="2"></li>
-        </ol>
-
-        <a class="carousel-control-prev" href="#multi-item-flower" role="button" data-slide="prev">
+<a class="carousel-control-prev" href="#multi-item-flower" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#multi-item-flower" role="button" data-slide="next">
+      </a>
+      <a class="carousel-control-next" href="#multi-item-flower" role="button" data-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
-        </a>
-      </div>
-      <!--/.Slides-->
-
-
-    </div>
-
-    <!--/.Carousel Wrapper-->
-    <!-- </div>
-
+      </a>
+</div>
+<!--/.Slides-->
 </div>
 </div>
-</div> -->
-
-
-    <?php
-    include('includes/footer.php');
-    ?>
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/jquery-migrate-3.0.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="js/jquery.backstretch.min.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/retina-1.1.0.min.js"></script>
-    <script src="js/waypoints.min.js"></script>
-    <script src="js/scripts.js"></script>
-  </body>
- </html>
+<?php
+include('includes/footer.php');  
+?>
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/jquery-migrate-3.0.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="js/jquery.backstretch.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/retina-1.1.0.min.js"></script>
+  <script src="js/waypoints.min.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+</html>

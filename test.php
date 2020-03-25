@@ -1,8 +1,6 @@
   <!DOCTYPE html>
   <html lang="en">
-
   <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -17,11 +15,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
-
-
-
   </head>
-  
   <br>
   <br>
   <br>
@@ -44,18 +38,16 @@ if (!isset($_SESSION['userID'])) {
     require('includes/functions.php');
     ?>
     <?php
-
 if(isset($_POST['search'])){
   $searchTerm = htmlspecialchars(!empty($_POST['searchTerm']) ? trim($_POST['searchTerm']) : null);
-  $search = "SELECT plantID FROM plant WHERE plantName == $searchTerm";
+  $search = "SELECT plantID FROM plant WHERE plantName = '$searchTerm'";
    $stmt1 = $conn->prepare($search);
    $stmt1->execute();
-   $result = $stmt1->fetchColumn(); 
-   echo "<script>location.href = 'plantInfo.php?plantID='"."'<?php '"echo $result['plantID']."'; ?>';</script>";
+   $result = $stmt1->fetch(); 
+   header("Location: plantInfo.php?plantID=".$result['plantID']."");
+  exit();
 }
 ?>
-
-
     <!-- Top content -->
     <div class="top-content">
       <div class="container">

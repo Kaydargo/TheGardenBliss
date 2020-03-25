@@ -22,13 +22,6 @@ $statement1->execute();
 $plant = $statement1->fetch(PDO::FETCH_ASSOC);
 $statement1->closeCursor();
 
-// $plant_id = $_GET['plantID'];
-// $queryPlants = "SELECT * FROM plant WHERE plantID = $plant_id";
-// $statement4 = $conn->prepare($queryPlants);
-// $statement4->execute();
-// $plant = $statement4->fetch();
-// $statement4->closeCursor();
-
 $queryInfo = "SELECT * FROM plantinginfo WHERE plantID = $plant_id";
 $statement2 = $conn->prepare($queryInfo);
 $statement2->execute();
@@ -75,7 +68,7 @@ $num = $statement6->fetchColumn();
 
 $currentPlantType = $plant['type'];
 
-$queryPlantType ="SELECT plantImage, plantName FROM plant WHERE type='$currentPlantType'";
+$queryPlantType ="SELECT plantImage, plantName, plantID FROM plant WHERE type='$currentPlantType'";
 $statement3 = $conn->prepare($queryPlantType);
 $statement3->execute();
 $plantsType = $statement3->fetchAll();
@@ -245,10 +238,6 @@ else{
     </div>
     </div>
 
-
-  
-
-
 <br><br><br>
 <div class="container-fluid"> 
 <div class="container pad"> 
@@ -293,7 +282,7 @@ else{
 foreach ($plantsType as $plantType) :
     echo ' <div class="col-md-4 col-xs-6">
                 <img src="images/'.$plantType["plantImage"].'" class="img-responsive img-thumbnail">
-                <h4 style="text-align: center;"><a>'.$plantType["plantName"].' </a></h4>
+                <h4 style="text-align: center; color:#333; "> <a style="text-align: center; color:#333;" href="plantInfo.php?plantID='.$plantType['plantID'].'"> '.$plantType["plantName"].' </a></h4>
             </div>';
      ?>
        <?php endforeach; ?>
