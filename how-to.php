@@ -83,7 +83,7 @@ include("loginServ.php");
 						<div class="col-md-4">
 							<div class="services-box-icon">
 
-								<img src="icons/rake.png" alt="" />
+								<img src="icons/Rake.png" alt=""/> 
 							</div>
 
 						</div>
@@ -97,7 +97,7 @@ include("loginServ.php");
 					<div class="row">
 						<div class="col-md-4">
 							<div class="services-box-icon">
-								<img src="icons/clearGround.png" alt="" />
+								<img src="icons/clearGround.png" alt=""/>
 							</div>
 						</div>
 						<div class="col-md-8">
