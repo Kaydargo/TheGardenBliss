@@ -138,47 +138,6 @@ include("loginServ.php");
 	</div>
 	</div>
 
-	<!-- More services -->
-	<div class="more-services-container section-container">
-		<div class="container">
-
-			<div class="row">
-				<div class="col more-services section-description wow fadeIn">
-					<h3 class="plantName">Important Facts</h3>
-					<div class="divider-1 wow fadeInUp"><span></span></div>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-md-6 more-services-box wow fadeInLeft">
-					<div class="row">
-						<div class="col-md-3">
-							<div class="more-services-box-icon">
-
-								<img src="icons/gardenSpot.png" alt="" />
-							</div>
-
-						</div>
-						<div class="col-md-9">
-							<h3 class="plantName">GARDEN LOCATION</h3>
-	                    	<p>
-	                    	Keeping your garden healthy requires regular maintenance throughout the growing season. Most plants need, water, sun, and nutrient to survived and produce healthy crops. It is important to follow general upkeep combined with pest and disease control which usually does not require much time or money. Ensure you do the garden weekly if there is a need because a neglected garden will need more effort and time to return to perfect health.
-You can use mulch on your garden bed after planting since mulch prevents weeds and help to keep moisture lock in the soil.
-<p>Add the amount of water necessary for your specific plant variety. Ensure that you water your garden regularly. Most crops like vegetables or flowers will need 1 inch of water weekly. Check the topsoil of your garden weekly and add water to most plants when the top inch of the soil began to dry off. You want the top of the soil to remain moist but not water clogged. For more information on how to start and care for your garden watch our how to videos</p>
-	                    	</p>
-	                    </div>
-	                </div>
-	                <div class="col-12 col-lg-5 about-us-box wow fadeInUp">                                
-                               <div class="video-container">
-    <iframe src="https://www.youtube.com/embed/Pi1x-kyC49o?start=64" height="315" width="560" allowfullscreen="" frameborder="0">
-    </iframe>
-</div>     
-                                    
-	                    </div>
-	                </div>
-	            </div>
-	        </div>
-        </div>
 
 		<!-- More services -->
         <div class="more-services-container section-container">
