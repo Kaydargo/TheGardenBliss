@@ -15,21 +15,11 @@ $statement2->execute();
 $users = $statement2->fetchAll();
 $statement2->closeCursor();
 
-$query = "SELECT * FROM userfavourites WHERE userID = $currentUser";
+$query = "SELECT * FROM plant LEFT JOIN userfavourites ON plant.plantID = userfavourites.plantID WHERE userID = $currentUser";
 $statement5 = $conn->prepare($query);
 $statement5->execute();
 $queries = $statement5->fetchAll();
 $statement5->closeCursor();
-
-foreach($queries as $query) :
-$plant = $query['plantID'];
-$query2 = "SELECT plantImage, plantName FROM plant WHERE plantID = $plant";
-$statement4 = $conn->prepare($query2);
-$statement4->execute();
-$queries2 = $statement4->fetchAll();
-$statement4->closeCursor();
-endforeach;
-
 ?>
 <?php
 
@@ -61,17 +51,17 @@ if (!isset($_SESSION['userID'])) {
 <br>
   <div class="row">
     <?php
-    foreach ($queries2 as $query2) :
+    foreach ($queries as $query2) :
       echo ' <div class="col-md-4 col-xs-6">
                 <img src="images/' . $query2["plantImage"] . '" class="img-responsive img-thumbnail">
                 <h4 style="text-align: center;"><a>' . $query2["plantName"] . ' </a></h4>
             </div>';
     ?>
-    <!-- // <?php endforeach; ?> -->
+    <?php endforeach; ?>
   </div>
 </div>
 <br>
-
+</div>
 <?php include_once 'includes/footer.php' ?>
 </body>
 
