@@ -145,7 +145,7 @@ else{
  <form role="form">
     <div class="form-group">
     <select class="form-control" id="gardenWidthDrop">
-    <?php for($i=1; $i<=12; $i++){
+    <?php for($i=4; $i<=12; $i++){
       echo '<option class="dropdown-item" value='.$i.'>'.$i." FT".'</option> ';
     }?>
     </select>
@@ -154,7 +154,7 @@ else{
 
     <div class="form-group">
     <select class="form-control" id="gardenHeighDrop">
-    <?Php for ($j=1; $j<=5; $j++){
+    <?Php for ($j=4; $j<=10; $j++){
       echo '<option class="dropdown-item" value='.$j.'>'.$j." FT".'</option> ';
     } ?>
     </select>
