@@ -23,7 +23,7 @@
   
   /* Garden Planner */
 .gardenPlanner {
-    width: 1000;
+    max-width: 1000px;
     height: auto;
     /* position: relative; */
     /* margin: 2em auto; */
@@ -35,7 +35,8 @@
     height: 500px;
     width: 100%;
     z-index: 100;
-    background-image: url('../images/dirt.png');
+    max-height: 1000px;
+    /* background-image: url('../images/dirt.png'); */
   }
   .gardenGridRow, .gardenGridColumn, .gardenGrid {
     border-style: solid;
@@ -44,12 +45,12 @@
     /* background-color: white; */
     margin: auto;
     margin-top: 20px;
-    background-image: url('../images/dirt.png');
+    /* background-image: url('../images/dirt.png'); */
   }
 
   .gardenGridColumn {
     transition: .3s ;
-    background-image: url('../images/dirt.png');
+    /* background-image: url('../images/dirt.png'); */
   }
   /* .gardenGridColumn:hover {
     background-color: grey;

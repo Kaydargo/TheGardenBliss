@@ -21,7 +21,7 @@ function grid(rows, columns) {
   //Get current styling for table
  // var tableStyle= document.querySelector('.gardenGrid');
   //var compTableStyle = window.getComputedStyle(tableStyle);
-  var size = (1 / rows * 1000) + "PX";
+  var size = (1 / rows * 5000) + "PX";
   
   for (i=0; i<rows; i++) {
     table += "<tr class='gardenGridRow'>";
