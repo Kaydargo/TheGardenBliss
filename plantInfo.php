@@ -22,13 +22,6 @@ $statement1->execute();
 $plant = $statement1->fetch(PDO::FETCH_ASSOC);
 $statement1->closeCursor();
 
-// $plant_id = $_GET['plantID'];
-// $queryPlants = "SELECT * FROM plant WHERE plantID = $plant_id";
-// $statement4 = $conn->prepare($queryPlants);
-// $statement4->execute();
-// $plant = $statement4->fetch();
-// $statement4->closeCursor();
-
 $queryInfo = "SELECT * FROM plantinginfo WHERE plantID = $plant_id";
 $statement2 = $conn->prepare($queryInfo);
 $statement2->execute();
@@ -41,41 +34,37 @@ $statement6->bindValue(':plantID', $plant_id);
 $statement6->bindValue(':userID', $user);
 $statement6->execute();
 $num = $statement6->fetchColumn(); 
-// $statement6->closeCursor(); 
 
+$queryFav = "SELECT * FROM userfavourites WHERE plantID = $plant_id AND userID = $user";
+$statement5 = $conn->prepare($queryFav);
+$statement5->execute();
+$plantsFav = $statement5->fetch(PDO::FETCH_ASSOC);
+$statement5->closeCursor(); 
 
- $queryFav = "SELECT * FROM userfavourites WHERE plantID = $plant_id AND userID = $user";
- $statement5 = $conn->prepare($queryFav);
- $statement5->execute();
- $plantsFav = $statement5->fetch(PDO::FETCH_ASSOC);
- $statement5->closeCursor(); 
+if(isset($_POST['addToFav'])){
+  $user_id = htmlspecialchars(!empty($_POST['user_id']) ? trim($_POST['user_id']) : null);
+  $plant_id = htmlspecialchars(!empty($_POST['plant_id']) ? trim($_POST['plant_id']) : null);
+  $addToFav = "INSERT INTO userfavourites (plantID, userID) VALUES (:plant_id, :user_id)";
+  $stmt1 = $conn->prepare($addToFav);
+  $stmt1->bindValue(':user_id', $user_id);
+  $stmt1->bindValue(':plant_id', $plant_id);
+  $result = $stmt1->execute();
+  echo "<meta http-equiv='refresh' content='0'>";
+}
 
-    if(isset($_POST['addToFav'])){
-     $user_id = htmlspecialchars(!empty($_POST['user_id']) ? trim($_POST['user_id']) : null);
-     $plant_id = htmlspecialchars(!empty($_POST['plant_id']) ? trim($_POST['plant_id']) : null);
-     $addToFav = "INSERT INTO userfavourites (plantID, userID) VALUES (:plant_id, :user_id)";
-       $stmt1 = $conn->prepare($addToFav);
-       $stmt1->bindValue(':user_id', $user_id);
-       $stmt1->bindValue(':plant_id', $plant_id);
-       $result = $stmt1->execute();
-       echo "<meta http-equiv='refresh' content='0'>";
-   }
-
-   if(isset($_POST['removeFav'])){
-    $user_id = htmlspecialchars(!empty($_POST['user_id']) ? trim($_POST['user_id']) : null);
-    $plant_id = htmlspecialchars(!empty($_POST['plant_id']) ? trim($_POST['plant_id']) : null);
-    $removeFav = "DELETE FROM userfavourites WHERE plantID = $plant_id AND userID = $user";
-      $stmt2 = $conn->prepare($removeFav);
-      $stmt2->bindValue(':user_id', $user_id);
-      $stmt2->bindValue(':plant_id', $plant_id);
-      $result = $stmt2->execute();
-      echo "<meta http-equiv='refresh' content='0'>";
-  }
+if(isset($_POST['removeFav'])){
+  $user_id = htmlspecialchars(!empty($_POST['user_id']) ? trim($_POST['user_id']) : null);
+  $plant_id = htmlspecialchars(!empty($_POST['plant_id']) ? trim($_POST['plant_id']) : null);
+  $removeFav = "DELETE FROM userfavourites WHERE plantID = $plant_id AND userID = $user";
+  $stmt2 = $conn->prepare($removeFav);
+  $stmt2->bindValue(':user_id', $user_id);
+  $stmt2->bindValue(':plant_id', $plant_id);
+  $result = $stmt2->execute();
+  echo "<meta http-equiv='refresh' content='0'>";
+}
  
-
 $currentPlantType = $plant['type'];
-
-$queryPlantType ="SELECT plantImage, plantName FROM plant WHERE type='$currentPlantType'";
+$queryPlantType ="SELECT plantImage, plantName, plantID FROM plant WHERE type='$currentPlantType'";
 $statement3 = $conn->prepare($queryPlantType);
 $statement3->execute();
 $plantsType = $statement3->fetchAll();
@@ -104,7 +93,7 @@ else{
     <div class="row">
       <div class='bar'>
         <div class="col-md-8 offset-md-2 text">
-          <h1 class="wow fadeInLeftBig">How- To Start a Garden</h1>
+          <h1 class="wow fadeInLeftBig">How to Start a Garden</h1>
             <div class="description wow fadeInLeftBig">
               <p>We walk you through factors that can affect how your garden will grow — sunlight, shade, soil —
                  and the balance between fruits, shrubs, flowers and vegetables
@@ -245,10 +234,6 @@ else{
     </div>
     </div>
 
-
-  
-
-
 <br><br><br>
 <div class="container-fluid"> 
 <div class="container pad"> 
@@ -293,18 +278,13 @@ else{
 foreach ($plantsType as $plantType) :
     echo ' <div class="col-md-4 col-xs-6">
                 <img src="images/'.$plantType["plantImage"].'" class="img-responsive img-thumbnail">
-                <h4 style="text-align: center;"><a>'.$plantType["plantName"].' </a></h4>
+                <h4 style="text-align: center; color:#333; "> <a style="text-align: center; color:#333;" href="plantInfo.php?plantID='.$plantType['plantID'].'"> '.$plantType["plantName"].' </a></h4>
             </div>';
      ?>
        <?php endforeach; ?>
      </div>
     </div>
 <br>
-<script>
-document.getElementById("favourites").onsubmit = function(){
-    location.reload(true);
-}
-</script>
 <?php
     include('includes/footer.php');
         ?>
@@ -330,7 +310,7 @@ document.getElementById("favourites").onsubmit = function(){
   <script src="js/wow.min.js"></script>
   <script src="js/retina-1.1.0.min.js"></script>
   <script src="js/waypoints.min.js"></script>
-  <script src="js/scripts.js"></script>
+
   <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
-  
+  <script src="js/scripts.js"></script>
 </html>
