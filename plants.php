@@ -49,27 +49,23 @@ if(isset($_POST['search'])){
 }
 ?>
     <!-- Top content -->
-    <div class="top-content">
-      <div class="container">
-
-        <div class="row">
+  <div class="top-content">
+    <div class="container">
+      <div class="row">
+        <div class='bar'>
           <div class="col-md-8 offset-md-2 text">
             <h1 class="wow fadeInLeftBig"> Our Range of Plants</h1>
             <div class="description wow fadeInLeftBig">
               <p>Click on a plant and you will be taken to a page full of growing guides and useful information about how to grow the plant,
                 how to care for the plant, when to harvest and problems and diseases that can affect the plant.
-
               </p>
             </div>
-
           </div>
         </div>
-
       </div>
     </div>
-
+  </div>
     <br>
-
     <!-- Page Content -->
     <div class="container" style="text-align: center;">
     
@@ -495,8 +491,5 @@ if(isset($_POST['search'])){
     <script src="js/autofill.js"></script>
     <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
     <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
-
-
   </body>
-
   </html>
