@@ -11,17 +11,7 @@ function scroll_to(clicked_link, nav_height) {
 	}
 }
 jQuery(document).ready(function() {
-if ( window.location.pathname.includes("plantInfo.php")){
-	console.log("WHYYYYYYYYYYYYYYYYY");
-	$('.top-content').backstretch("images/AboutUsHero.jpg");
-   
-    $('#top-navbar-1').on('shown.bs.collapse', function(){
-    	$('.top-content').backstretch("resize");
-    });
-    $('#top-navbar-1').on('hidden.bs.collapse', function(){
-    	$('.top-content').backstretch("resize");
-    });
-}
+
 });
 
 jQuery(document).ready(function() {
@@ -48,7 +38,16 @@ jQuery(document).ready(function() {
     	$('.top-content').backstretch("resize");
     });
 	}
-
+	else if ( window.location.pathname.includes("plantInfo.php")){
+		$('.top-content').backstretch("images/PlantInfoHero.jpg");
+	   
+		$('#top-navbar-1').on('shown.bs.collapse', function(){
+			$('.top-content').backstretch("resize");
+		});
+		$('#top-navbar-1').on('hidden.bs.collapse', function(){
+			$('.top-content').backstretch("resize");
+		});
+	}
 	else if (window.location.pathname.includes("how-to.php")){
 		$('.top-content').backstretch("images/HowToHero.jpg");
 		$('.call-to-action-container').backstretch("images/howTo.jpg");

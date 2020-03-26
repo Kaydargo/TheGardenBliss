@@ -103,8 +103,8 @@ if (!isset($_SESSION['userID'])) {
   <br><br><br>
   <div class="top-content">
     <div class="container">
-
       <div class="row">
+      <div class='bar'>
         <div class="col-md-8 offset-md-2 text">
           <h1 class="wow fadeInLeftBig">How- To Start a Garden</h1>
           <div class="description wow fadeInLeftBig">
@@ -113,10 +113,9 @@ if (!isset($_SESSION['userID'])) {
 
             </p>
           </div>
-
         </div>
       </div>
-
+      </div>
     </div>
   </div>
   <br><br>
@@ -332,6 +331,6 @@ include('includes/footer.php');
 <script src="js/retina-1.1.0.min.js"></script>
 <script src="js/waypoints.min.js"></script>
 <script src="js/scripts.js"></script>
-<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script> -->
 
 </html>
