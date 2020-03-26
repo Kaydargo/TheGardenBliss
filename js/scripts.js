@@ -122,3 +122,16 @@ jQuery(window).load(function() {
 	$(".testimonial-image img").attr("style", "width: auto !important; height: auto !important;");
 	
 });
+
+var btn = document.querySelector(".button");
+
+btn.addEventListener("mouseover", function() {
+  this.textContent = "Unfavourite";
+  document.getElementById('myButton').style.backgroundColor="#ff1c14";
+  document.getElementById('myButton').style.borderColor="#ff1c14";
+})
+btn.addEventListener("mouseout", function() {
+  this.textContent = "Favourited";
+  document.getElementById('myButton').style.backgroundColor="#55a635";
+  document.getElementById('myButton').style.borderColor="#55a635";
+})

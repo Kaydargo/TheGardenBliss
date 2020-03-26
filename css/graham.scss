@@ -924,31 +924,11 @@ input {
 }
 
 
-.myButton {
-	&:hover {
-		span {
-			display: none;
-		}
-		&:before {
-			content: "Unfavourite";
-		}
-		background-color: red;
-	}
-}
-
-.frmSearch {
-	border: 1px solid #a8d4b1;
-	background-color: #c6f7d0;
-	margin: 2px 0px;
-	padding: 40px;
-	border-radius: 4px;
-}
 #plant-list {
 	float: left;
 	list-style: none;
 	margin-top: -3px;
 	padding: 0;
-	width: 190px;
 	position: absolute;
 	li {
 		padding: 10px;
@@ -965,4 +945,19 @@ input {
 	border: #a8d4b1 1px solid;
 	border-radius: 4px;
 }
-
+.flex {
+	display: flex;
+	flex-direction: row;
+ }
+#suggestion-box {
+	display: block;
+}
+.image2 {
+	border-radius: 50%;
+	max-width: 200px;
+	margin-bottom: 20px;
+}
+.name {
+	color: #55a635;
+	padding-top: 5px;
+}
