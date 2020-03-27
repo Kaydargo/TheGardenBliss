@@ -341,7 +341,7 @@ strong {
 	}
 	.divider-1 {
 		span {
-			border-color: #fff;
+			border-color: #f2f2f2;
 		}
 	}
 	.section-description {
@@ -393,10 +393,10 @@ strong {
 		}
 	}
 }
-.more-services-box1{
+.services-box{
 	margin-top: 25px;
 	text-align: left;
-	.more-services-box-icon1 {
+	.services-box-icon {
 		width: 60px;
 		height: 60px;
 		margin: 0 auto;
@@ -407,21 +407,8 @@ strong {
 	}
 
 }
-.more-services-box {
-	margin-top: 30px;
-	text-align: left;
-	.more-services-box-icon {
-		width: 60px;
-		height: 60px;
-		margin: 0 auto;
-		font-size: 28px;
-	
-		line-height: 60px;
-		text-align: center;
-		border-radius: 22px;
-	}
-	
-}
+
+
 
 .about-us-box {
 	margin-top: 100px;

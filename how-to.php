@@ -58,7 +58,7 @@ include("loginServ.php");
 			<div class="row">
         
 				<div class="col services section-description wow fadeIn">
-					<h2></h2>
+					
 					<hr>
 				</div>
 			</div>
@@ -144,16 +144,16 @@ include("loginServ.php");
 	        <div class="container">
 	        	
 	            <div class="row">
-	                <div class="col more-services section-description wow fadeIn">
+	                <div class="col services section-description wow fadeIn">
 					<h3 class="plantName">Important Facts</h3>
 	                </div>
 	            </div>
 	            
 	            <div class="row">
-	                <div class="col-md-6 more-services-box wow fadeInLeft">
+	                <div class="col-md-6 services-box wow fadeInLeft">
 	                	<div class="row">
 	                		<div class="col-md-3">
-	                			<div class="more-services-box-icon">
+	                			<div class="services-box-icon">
 
                         <img src="icons/gardenSpot.png" alt=""/>                   
 	                			</div>
@@ -169,10 +169,10 @@ include("loginServ.php");
 
 					</div>
 				</div>
-				<div class="col-md-6 more-services-box wow fadeInLeft">
+				<div class="col-md-6 services-box wow fadeInLeft">
 					<div class="row">
 						<div class="col-md-3">
-							<div class="more-services-box-icon">
+							<div class="services-box-icon">
 
 								<img src="icons/toPlant.png" alt="" />
 							</div>
@@ -189,10 +189,10 @@ include("loginServ.php");
 			</div>
 
 			<div class="row">
-				<div class="col-md-6 more-services-box wow fadeInLeft">
+				<div class="col-md-6 services-box wow fadeInLeft">
 					<div class="row">
 						<div class="col-md-3">
-							<div class="more-services-box-icon">
+							<div class="services-box-icon">
 								<img src="icons/prepareSoil.png" alt="" />
 							</div>
 						</div>
@@ -205,10 +205,10 @@ include("loginServ.php");
 						</div>
 					</div>
 				</div>
-				<div class="col-md-6 more-services-box wow fadeInLeft">
+				<div class="col-md-6 services-box wow fadeInLeft">
 					<div class="row">
 						<div class="col-md-3">
-							<div class="more-services-box-icon">
+							<div class="services-box-icon">
 								<img src="icons/sowSeeds.png" alt="" />
 							</div>
 						</div>
@@ -383,6 +383,7 @@ include("loginServ.php");
 						</div>
 						<div class="col-md-9">
 							<h3 class="plantName"> Care for parsley</a> </h3>
+						
 
 							<p>
 								Parsley will only bloom naturally for 3-7 days in spring. If you trim the stems of your freshly cut tulips, they will continue to grow in your vase for at least another inch.
