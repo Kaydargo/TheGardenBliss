@@ -238,7 +238,7 @@
           <div class="carousel-item active">
             <div class="row">
               <?php foreach ($fruits as $fruit) : ?>
-                <div class="col-md-4 clearfix d-md-block d-none">
+                <div class="col-md-4 clearfix d-md-block">
                   <div class="card mb-2">
                     <?php $counter = 0; ?>
                     <?php
@@ -352,7 +352,7 @@
   <div class="carousel-item active">
     <div class="row">
     <?php foreach ($flowers as $flower): ?>
-    <div class="col-md-4 clearfix d-md-block d-none">
+    <div class="col-md-4 clearfix d-md-block">
   <div class="card mb-2">
     <?php $counter = 0; ?>
       <?php 

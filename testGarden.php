@@ -29,13 +29,31 @@ include('includes/functions.php');
   #trash h4 { line-height: 16px; margin: 0 0 0.4em; }
   #trash h4 .ui-icon { float: left; }
   #trash .gallery h5 { display: none; }
+  .bg-change {
+  background-color: grey;
+}
+
+  #garden { float: left; width: 32%; min-height: 18em; padding: 1%; }
+  #garden h4 { line-height: 16px; margin: 0 0 0.4em; }
+  #garden h4 .ui-icon { float: left; }
+  #garden .gallery h5 { display: none; }
 
   #garden {
   position: fixed;
+  z-index: -1;
   bottom: 0;
   width: 100%;
   height: 300px;
   }
+
+table {
+  width: 100%;
+  height: 100%;
+}
+  table td {
+    border : solid black 1px;
+  }
+
   </style>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -45,7 +63,7 @@ include('includes/functions.php');
     // There's the gallery and the trash
     var $gallery = $( "#gallery" ),
       $trash = $( "#trash" ),
-      $garden = $("#garden");
+      $garden = $("#garden table tr td");
  
     // Let the gallery items be draggable
     $( "li", $gallery ).draggable({
@@ -73,7 +91,7 @@ include('includes/functions.php');
         "ui-droppable-active": "ui-state-highlight"
       },
       drop: function( event, ui ) {
-        deleteImage( ui.draggable );
+        buildGarden( ui.draggable );
       }
     });
  
@@ -96,6 +114,26 @@ include('includes/functions.php');
           $( "ul", $trash ) :
           $( "<ul class='gallery ui-helper-reset'/>" ).appendTo( $trash );
  
+        $item.find( "a.ui-icon-trash" ).remove();
+        $item.append( recycle_icon ).appendTo( $list ).fadeIn(function() {
+          $item
+            .animate({ width: "48px" })
+            .find( "img" )
+              .animate({ height: "36px" });
+        });
+      });
+    }
+
+    var recycle_icon = "<a href='link/to/recycle/script/when/we/have/js/off' title='Recycle this image' class='ui-icon ui-icon-refresh'>Recycle image</a>";
+    function buildGarden( $item ) {
+      $item.fadeOut(function() {
+        var $list = $( "ul", $garden ).length ?
+          $( "ul", $garden ) :
+          $( "<ul class='gallery ui-helper-reset'/>" ).appendTo( $garden );
+          $('td').droppable({
+	        hoverClass: "bg-change",
+          tolerance: "intersect",
+        });
         $item.find( "a.ui-icon-trash" ).remove();
         $item.append( recycle_icon ).appendTo( $list ).fadeIn(function() {
           $item
