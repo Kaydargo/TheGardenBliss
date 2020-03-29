@@ -142,7 +142,7 @@ else{
 }
 ?> 
 <body>
-<div class="top-content">
+<div class="top-content" style="width= 100%;">
   <div class="container">
     <div class="row">
       <div class='bar'>
@@ -226,6 +226,7 @@ else{
         </div>
     </div>
 </section>
+</div>
 <div class="container">
 
 <form>
@@ -249,8 +250,7 @@ else{
   </div>
   <button type="button" class="btn btn-primary gDimBtn" >Create Grid</button><!-- onClick="gridDimensions()" -->
 </form>
-</div><br><br>
-</div>
+
 <br>
     <div class="vegetableGarden ui-helper-reset ">
 
@@ -261,11 +261,13 @@ else{
     </li>
 <?php endforeach; ?>
     </div>
+    </div><br><br>
+</div>
 
     <div class="container">
     <div class="row">
 
-    <div class="table-responsive col-md-10">
+    <div class="table-responsive col-sm-10">
     <div class="garden ui-helper-reset ">
         <table cellpadding="0" cellspacing="0" border="1">
         <tr>
@@ -301,14 +303,11 @@ else{
         </table>
         </div>
         </div>
-    <div id="trash" class="ui-widget-content ui-state-default col-md-2">
+    <div id="trash" class="ui-widget-content ui-state-default col-sm-2">
         <h4 class="ui-widget-header"><span class="ui-icon ui-icon-trash">Compost</span>Compost</h4>
-    </div>
-
-    
-    
-    </div>
-
+    </div>    
+  
+  </div>
 </div>
 
 

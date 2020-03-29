@@ -11,10 +11,6 @@ function scroll_to(clicked_link, nav_height) {
 	}
 }
 jQuery(document).ready(function() {
-
-});
-
-jQuery(document).ready(function() {
 	/*
 	    Navigation
 	*/
