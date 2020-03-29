@@ -16,6 +16,7 @@ include("loginServ.php");
 	<link rel="stylesheet" href="css/graham.scss">
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/media-queries.css">
+	<link rel="icon" type="image/x-icon" href="images/logo-w-text.png" />
 </head>
 
 <body>
@@ -128,8 +129,7 @@ include("loginServ.php");
 
 
 					<div class="video-container">
-						<iframe src="https://www.youtube.com/embed/Pi1x-kyC49o?start=64" height="315" width="560" allowfullscreen="" frameborder="0">
-						</iframe>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/a_g-GQplabo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					</div>
 
 				</div>
@@ -248,43 +248,43 @@ include("loginServ.php");
 				<div class="col portfolio section-description wow fadeIn">
 
 					<div class="divider-1 wow fadeInUp"><span></span></div>
-					<h3 class="plantName">HOW TO- VIDEOS</h3>
+					<h3 class="plantName">HOW-TO VIDEOS</h3>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-4 portfolio-box wow fadeInUp">
 
 					<div class="video-container">
-						<iframe src="https://www.youtube.com/embed/Pi1x-kyC49o?start=64" height="315" width="560" allowfullscreen="" frameborder="0">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/BNE8D3AEiOM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 						</iframe>
 					</div> <br>
 
 
-					<h3 class="plantName">Prepare your soil </h3>
+					<h3 class="plantName">Design your Space</h3>
 
-					<p>It is impoetant to prepare your garden well before planting. Watch this video to see how you can</p>
+					<p>Before you begin planting, you should plan where you are going to plant to optimise your space!</p>
 				</div>
 				<div class="col-md-4 portfolio-box wow fadeInDown">
 
 					<div class="video-container">
-						<iframe src="https://www.youtube.com/embed/Pi1x-kyC49o?start=64" height="315" width="560" allowfullscreen="" frameborder="0">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/a_g-GQplabo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 						</iframe>
 					</div>
 					<br>
-					<h3 class="plantName">Transfer your plant </h3>
+					<h3 class="plantName">Starting your garden</h3>
 
-					<p>This video will show you step by steps how to transplant your container plants directly on to your garden.</p>
+					<p> Learn how to start your garden from scratch regardless of your garden size or gardening experience.</p>
 				</div>
 				<div class="col-md-4 portfolio-box wow fadeInUp">
 
 					<div class="video-container">
-						<iframe src="https://www.youtube.com/embed/Pi1x-kyC49o?start=64" height="315" width="560" allowfullscreen="" frameborder="0">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/mnKuvrfivIE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 						</iframe>
 					</div>
 					<br>
-					<h3 class="plantName">sow your seeds</a> </h3>
+					<h3 class="plantName">Making your own Compost</h3>
 
-					<p>This video will show you step by step way to sow your seeds in your garden</p>
+					<p>Learn how to make your own compost from waste in the kitchen. It’s free and easy to do!</p>
 				</div>
 			</div>
 

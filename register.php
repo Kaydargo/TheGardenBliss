@@ -6,7 +6,8 @@ include("loginServ.php");
 
 <head>
 	<meta charset="UTF-8">
-	<title></title>
+	<title>Registration</title>
+	<link rel="icon" type="image/x-icon" href="images/logo-w-text.png" />
 </head>
 <link href="css/graham.scss" rel="stylesheet">
 <?php

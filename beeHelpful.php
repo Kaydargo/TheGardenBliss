@@ -4,12 +4,14 @@ include('includes/database.php');
 include("loginServ.php");
 ?>
 <head>
+<title>Bee-Helpful</title>
    <link href="css/graham.scss" rel="stylesheet">
    <link href="css/style.scss" rel="stylesheet">
    <link href="css/test.css" rel="stylesheet">
    <script src="js/main.js"></script>
    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+   <link rel="icon" type="image/x-icon" href="images/logo-w-text.png" />
 </head>
 <?php
 if (!isset($_SESSION['userID'])) {

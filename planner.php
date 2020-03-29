@@ -2,45 +2,131 @@
 require('includes/database.php');
 include("loginServ.php");
 include('includes/functions.php');
-    $queryPlant = "SELECT * FROM plant WHERE plantID = plantID"; 
+    $queryPlant = "SELECT * FROM plant WHERE type = 'vegetable' LIMIT 10"; 
     $statement1 = $conn->prepare($queryPlant);
     $statement1->execute();
     $plants = $statement1->fetchAll();
     $statement1->closeCursor();
      ?>
-
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <style>
-  #vegetables { float: left; width: 65%; min-height: 12em; }
-  .vegetables.custom-state-active { background: #eee; }
-  .vegetables div div { float: left; width: 96px; padding: 0.4em; margin: 0 0.4em 0.4em 0; text-adiv divgn: center; }
-  .vegetables div div h5 { margin: 0 0 0.4em; cursor: move; }
-  .vegetables div div a { float: right; }
-  .vegetables div div a.ui-icon-zoomin { float: left; }
-  .vegetables div div img { width: 100%; cursor: move; }
- 
-  #bin { float: right; width: 32%; min-height: 18em; padding: 1%; }
-  #bin h4 { line-height: 16px; margin: 0 0 0.4em; }
-  #bin h4 .ui-icon { float: left; }
-  #bin .vegetables h5 { display: none; }
-  </style>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<title>Garden Planner</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/drag.css">
   <link rel="stylesheet" href="css/graham.scss">
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="js/drag-drop.js"></script>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script src="js/drag-drop.js"></script>
+  <link rel="icon" type="image/x-icon" href="images/logo-w-text.png" />
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $(".gDimBtn").click(function() {
+  var widthDropdown = document.getElementById("gardenWidthDrop");
+  var getWidth = widthDropdown.options[widthDropdown.selectedIndex].value;
+
+  var heightDropdown = document.getElementById("gardenHeighDrop");
+  var getHeight = heightDropdown.options[heightDropdown.selectedIndex].value;
+
+  /*var width =  document.getElementById("gWidth").value;
+  var height =  document.getElementById("gHeight").value;*/
+
+ grid(getHeight, getWidth);
+});
+
+function grid(rows, columns) {
+  var table = "<table class='gardenGrid'>";
+  //Get current styling for table
+ // var tableStyle= document.querySelector('.gardenGrid');
+  //var compTableStyle = window.getComputedStyle(tableStyle);
+  var size = (1 / rows * 1000) + "PX";
+  
+  for (i=0; i<rows; i++) {
+    table += "<tr class='gardenGridRow'>";
+    for (j=0; j<columns; j++) {
+      // table += "<td id="+ j + "class='gardenGridColumn'>"+"</td>";
+      table += "<td class='gardenGridColumn'>" + "<div id="+ j + " class='drop ui-droppable'></div>" + "</td>";
+    }
+    table += "</tr>";
+  }
+
+  table += "</table>";
+  
+  $(".gardenPlanner").empty().append(table);
+  $(".gardenGrid").css("height", size);
+  $(".gardenGridColumn").css("width", size);
+}
+
+
+
+        $trash = $( "#trash" );
+    //     $trash.droppable({
+    //     accept: ".veg",
+    //     helper: "clone",
+    //     classes: {
+    //         "ui-droppable-active": "ui-state-highlight"
+    //     },
+    //     drop: function( event, ui, ev) {
+    //         deleteImage( ui.draggable ); 
+    //     }
+        
+    //   });
+
+    function deleteImage( $item ) {
+      $item.fadeOut(function() {
+        var $list = $( "div", $trash ).length ?
+          $( "div", $trash ) :
+          $( $item).appendTo( $trash );
+        $item.find( "a.ui-icon-trash" ).remove();
+        $(this).find("h5").remove();
+
+        $item.appendTo( $list ).fadeIn(function() {
+          $item
+            .animate({ width: "45px" })
+            .find( "img" )
+              .animate({ height: "35px" });
+        });
+      });
+    }
+
+      $(".veg").draggable({
+        helper: 'clone',
+        revert: "invalid", // when not dropped, the item will revert back to its initial position
+        containment: "document",
+        cursor: "move"
+        });
+
+      $(".drop").droppable({
+        activeClass: 'droppable-active',
+        hoverClass: 'droppable-hover',
+        drop: function(ev, ui) {
+        if ($(this).html() == ""){
+            $(this).append($(ui.draggable).clone());
+            $(this).children("li").append("<span><a href='' title='Delete this image' class='ui-icon ui-icon-trash'></a></span>");
+            $(this).find("h5").remove();
+        }
+        else{
+           $(this).empty().append($(ui.draggable).clone());
+           $(this).children("li").append("<span><a href='' title='Delete this image' class='ui-icon ui-icon-trash'></a></span>");
+            $(this).find("h5").remove();
+        }
+        }
+      });
+
+      $( "div.garden > table > tbody > tr > td > div" ).on( "click", function( event ) {
+      var $item = $( this ).children("li"),
+        $target = $( event.target );
+      if ( $target.is( "a.ui-icon-trash" ) ) {
+        deleteImage( $item );
+      }
+      return false;
+    });    
+
+    });
+    </script>
 </head>
 <title>Drag&Drop Garden</title>
   <?php
@@ -55,7 +141,6 @@ else{
     include('includes/header2.php');
 }
 ?> 
-  
 <body>
 <div class="top-content">
   <div class="container">
@@ -76,13 +161,13 @@ else{
 <br><br>
 <div class="container">
 <h3 class="plantName">Garden Planner </h3><br>
-  <div class="row">
+  <div class="row" >
 <p>Planning and creating a new garden design can give your home a boost. Our garden planner makes it easy to plan your dream garden, it allows you to plan the layout and content of your garden easily. It also gives you the flexibility to create the best design for your  garden. with the planner you can easily add various  vegetables and move them around your allotted garden to get the perfect layout.
 </p>
 <!-- Feature Cards -->
 <section class="d-flex bg-light" id="feature-cards">
     <div class="container d-flex justify-content-center">
-        <div class="row align-items-center justify-content-center">
+        <div class="row align-items-center justify-content-center" style="background-color: #f2f2f2;">
             <div class="col-12 align-self-center">
                 <div class="row">
                     <div class="col-12 col-lg-4">
@@ -90,7 +175,7 @@ else{
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col mx-auto text-center">
-                                    <i class="far fa-hand-pointer fa-4x"></i>
+                                    <img src="icons/select.png" class="plannerIcons" alt="">
                                     </div>
                                 </div>
                                 <div class="row mt-4">
@@ -107,7 +192,7 @@ else{
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col mx-auto text-center">
-                                    <i class="far fa-object-ungroup fa-4x"></i>
+                                    <img src="icons/design.png" class="plannerIcons" alt="">
                                     </div>
                                 </div>
                                 <div class="row mt-4">
@@ -124,7 +209,7 @@ else{
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col mx-auto text-center">
-                                    <i class="far fa-save fa-4x"></i>
+                                    <img src="icons/save.png" class="plannerIcons" alt="">
                                     </div>
                                 </div>
                                 <div class="row mt-4">
@@ -142,99 +227,94 @@ else{
     </div>
 </section>
 <div class="container">
- <form role="form">
-    <div class="form-group">
+
+<form>
+  <div class="row">
+    <div class="col">
     <select class="form-control" id="gardenWidthDrop">
     <?php for($i=4; $i<=12; $i++){
       echo '<option class="dropdown-item" value='.$i.'>'.$i." FT".'</option> ';
     }?>
     </select>
-    <label>Width of Garden </label>
+      <label>Width of Garden </label>
     </div>
-
-    <div class="form-group">
+    <div class="col">
     <select class="form-control" id="gardenHeighDrop">
     <?Php for ($j=4; $j<=10; $j++){
       echo '<option class="dropdown-item" value='.$j.'>'.$j." FT".'</option> ';
     } ?>
     </select>
-    <label>Height of Garden</label>
+      <label>Height of Garden </label>
     </div>
-  <br>
+  </div>
   <button type="button" class="btn btn-primary gDimBtn" >Create Grid</button><!-- onClick="gridDimensions()" -->
 </form>
 </div><br><br>
 </div>
- <div class="container">
-<div class="ui-widget ui-helper-clearfix garden">
- 
-<div class=" text-center my-3 planner">
-  <div id="plantSlider" class="carousel slide w-100" data-ride="carousel" data-interval="false">
-    <div class="carousel-inner w-100" role="listbox">
-      <div id="vegetables" class="vegetables ui-helper-reset ui-helper-clearfix ">  
-      <div class="carousel-item row no-gutters active">    
-          <?php $counter1 = 0; ?>
-            <?php foreach ($vegGardens as $vegGarden): ?>
-              <?php
-              $counter1++; //increase counter number
-              if ($counter1 > 7) {
-              break;
-              }
-              ?>
-                <div class="col-3 float-left ui-widget-content ui-corner-tr plant"> 
-                <h5 class="ui-widget-header"><?php echo $vegGarden['plantName']?></h5> 
-                  <?= ($vegGarden['plantIcon'] <> " " ? "<img id='{$vegGarden['plantID']}'  style='width:100px; margin-top:10px;' src='images/{$vegGarden['plantIcon']}'/>" : "") ?>
-                  <a href="<?php echo 'images/'.$vegGarden['plantIcon']?>" title="View larger image" class="ui-icon ui-icon-zoomin">View larger</a>
-                 <a href="" title="Delete this image" class="ui-icon ui-icon-trash">Delete image</a>
-                </div>
-               
-            <?php endforeach; ?>
-              </div>
+<br>
+    <div class="vegetableGarden ui-helper-reset ">
 
-              <div class="carousel-item row no-gutters">
-            <?php $counter1 = 0; ?>
-            <?php foreach ($vegGardens1 as $vegGarden1): ?>
-              <?php
-              $counter1++; //increase counter number
-              if ($counter1 > 7) {
-              break;
-              }
-              ?>
-                <div class="col-3 float-left ui-widget-content ui-corner-tr plant"> 
-                <h5 class="ui-widget-header"><?php echo $vegGarden1['plantName']?></h5> 
-                  <?= ($vegGarden1['plantIcon'] <> " " ? "<img style='width:100px; margin-top:10px;' alt='vegetable icon' src='images/{$vegGarden1['plantIcon']}'/>" : "") ?>
-                  <a href="<?php 'images/'.$vegGarden1['plantIcon']?>" title="View larger image" class="ui-icon ui-icon-zoomin">View larger</a>
-                <a href="link/to/trash/script/when/we/have/js/off" title="Delete this image" class="ui-icon ui-icon-trash">Delete image</a>
-                </div>
-            <?php endforeach; ?>
-            </div>
-      </div>
+    <?php foreach ($plants as $plant): ?>
+    <li class='veg' >
+    <h5><?php echo $plant['plantName']; ?></h5>
+    <?= ($plant['plantIcon'] <> " " ? "<img id='{$plant['plantID']}' style='width: 80px; height:80px;' src='images/{$plant['plantIcon']}'/>" : "") ?>
+    </li>
+<?php endforeach; ?>
     </div>
- 
-    <a class="carousel-control-prev" href="#plantSlider" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#plantSlider" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div> 
-  </div>
-</div>
- <!-- Droppable grid -->
-<div id="gardenPlanner" class="col-lg-10 ui-widget-content ui-state-default gardenPlanner">
+
+    <div class="container">
+    <div class="row">
+
+    <div class="table-responsive col-md-10">
+    <div class="garden ui-helper-reset ">
+        <table cellpadding="0" cellspacing="0" border="1">
+        <tr>
+                        <td><div id="photo1" class="drop"></div></td>
+                        <td><div id="photo2" class="drop"></div></td>
+                        <td><div id="photo3" class="drop"></div></td>
+                        <td><div id="photo4" class="drop"></div></td>
+                        <td><div id="photo5" class="drop"></div></td>
+                        <td><div id="photo6" class="drop"></div></td>
+                        <td><div id="photo7" class="drop"></div></td>
+                        <td><div id="photo24" class="drop"></div></td>
+                </tr>
+                <tr>
+                        <td><div id="photo8" class="drop"></div></td>
+                        <td><div id="photo9" class="drop"></div></td>
+                        <td><div id="photo10" class="drop"></div></td>
+                        <td><div id="photo11" class="drop"></div></td>
+                        <td><div id="photo12" class="drop"></div></td>
+                        <td><div id="photo13" class="drop"></div></td>
+                        <td><div id="photo14" class="drop"></div></td>
+                        <td><div id="photo23" class="drop"></div></td>
+                </tr>
+                <tr>
+                        <td><div id="photo15" class="drop"></div></td>
+                        <td><div id="photo16" class="drop"></div></td>
+                        <td><div id="photo17" class="drop"></div></td>
+                        <td><div id="photo18" class="drop"></div></td>
+                        <td><div id="photo19" class="drop"></div></td>
+                        <td><div id="photo20" class="drop"></div></td>
+                        <td><div id="photo21" class="drop"></div></td>
+                        <td><div id="photo22" class="drop"></div></td>
+                </tr>
+        </table>
+        </div>
+        </div>
+    <div id="trash" class="ui-widget-content ui-state-default col-md-2">
+        <h4 class="ui-widget-header"><span class="ui-icon ui-icon-trash">Compost</span>Compost</h4>
+    </div>
+
+    
+    
+    </div>
+
 </div>
 
- <!-- Droppable Trash -->
-<div id="bin" class="col-lg-2 ui-widget-content ui-state-default">
-  <h4 class="ui-widget-header"><span class="ui-icon ui-icon-trash">Compost</span> Compost</h4>
+
+    <!-- <div id="gardenPlanner" class="garden ui-helper-reset gardenPlanner"> -->
 </div>
- 
-</div>
- 
-            </div>
-            <i class="fa fa-print"></i><button type="button" class="btn" onClick="printPageAppear()"> Print Page</button>
+<i class="fa fa-print"></i><button type="button" class="btn" onClick="printPageAppear()"> Print Page</button>
   <!-- Weather -->
    
 <?php  include('includes/weather.php'); ?>
@@ -258,20 +338,6 @@ else{
 </body>
 </html>
 
-
-<!-- 
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/test.css">
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/garden-size.js"></script>
+</body>
+</html>
