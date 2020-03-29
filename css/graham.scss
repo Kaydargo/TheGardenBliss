@@ -321,19 +321,9 @@ strong {
 	font-weight: 600;
 }
 
-.colored-text {
-	color: #9b59b6;
-}
-&::-moz-selection {
-	background: #9b59b6;
-	color: #fff;
-	text-shadow: none;
-}
-&::selection {
-	background: #9b59b6;
-	color: #fff;
-	text-shadow: none;
-}
+
+
+
 .section-container {
 	margin: 0 auto;
 	padding-bottom: 80px;
@@ -351,7 +341,7 @@ strong {
 	}
 	.divider-1 {
 		span {
-			border-color: #fff;
+			border-color: #f2f2f2;
 		}
 	}
 	.section-description {
@@ -403,32 +393,23 @@ strong {
 		}
 	}
 }
-.services-box {
-	padding-top: 30px;
+.services-box{
+	margin-top: 25px;
 	text-align: left;
 	.services-box-icon {
-		width: 80px;
-		height: 80px;
+		width: 60px;
+		height: 60px;
 		margin: 0 auto;
-		font-size: 30px;
-		color: #fff;
-		line-height: 80px;
+		color: #f2f2f2;
+		line-height: 0px;
 		text-align: center;
 		border-radius: 28px;
-		background: #9b59b6;
-		background: -moz-linear-gradient(top, #ffb24b 0%, #9b59b6 100%);
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffb24b), color-stop(100%,#9b59b6));
-		background: -webkit-linear-gradient(top, #ffb24b 0%,#9b59b6 100%);
-		background: -o-linear-gradient(top, #ffb24b 0%,#9b59b6 100%);
-		background: -ms-linear-gradient(top, #fff 0%,#fff 100%);
-		background: linear-gradient(to bottom, #fff 0%,#fff 100%);
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#fff',GradientType=0 );
 	}
-	h3 {
-		margin-top: 0;
-		padding: 0 0 10px 0;
-	}
+
 }
+
+
+
 .about-us-box {
 	margin-top: 100px;
 }
@@ -458,24 +439,8 @@ strong {
 		border-radius: 4px;
 	}
 }
-.more-services-box {
-	margin-top: 30px;
-	text-align: left;
-	.more-services-box-icon {
-		width: 60px;
-		height: 60px;
-		margin: 0 auto;
-		font-size: 28px;
-		color: #fff;
-		line-height: 60px;
-		text-align: center;
-		border-radius: 22px;
-	}
-	h3 {
-		margin-top: 0;
-		padding: 0 0 10px 0;
-	}
-}
+
+	
 .portfolio-box {
 	padding-top: 30px;
 	text-align: left;
@@ -946,31 +911,11 @@ input {
 }
 
 
-.myButton {
-	&:hover {
-		span {
-			display: none;
-		}
-		&:before {
-			content: "Unfavourite";
-		}
-		background-color: red;
-	}
-}
-
-.frmSearch {
-	border: 1px solid #a8d4b1;
-	background-color: #c6f7d0;
-	margin: 2px 0px;
-	padding: 40px;
-	border-radius: 4px;
-}
 #plant-list {
 	float: left;
 	list-style: none;
 	margin-top: -3px;
 	padding: 0;
-	width: 190px;
 	position: absolute;
 	li {
 		padding: 10px;
@@ -987,4 +932,19 @@ input {
 	border: #a8d4b1 1px solid;
 	border-radius: 4px;
 }
-
+.flex {
+	display: flex;
+	flex-direction: row;
+ }
+#suggestion-box {
+	display: block;
+}
+.image2 {
+	border-radius: 50%;
+	max-width: 200px;
+	margin-bottom: 20px;
+}
+.name {
+	color: #55a635;
+	padding-top: 5px;
+}

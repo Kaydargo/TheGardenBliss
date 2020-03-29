@@ -11,17 +11,7 @@ function scroll_to(clicked_link, nav_height) {
 	}
 }
 jQuery(document).ready(function() {
-if ( window.location.pathname.includes("plantInfo.php")){
-	console.log("WHYYYYYYYYYYYYYYYYY");
-	$('.top-content').backstretch("images/AboutUsHero.jpg");
-   
-    $('#top-navbar-1').on('shown.bs.collapse', function(){
-    	$('.top-content').backstretch("resize");
-    });
-    $('#top-navbar-1').on('hidden.bs.collapse', function(){
-    	$('.top-content').backstretch("resize");
-    });
-}
+
 });
 
 jQuery(document).ready(function() {
@@ -48,7 +38,16 @@ jQuery(document).ready(function() {
     	$('.top-content').backstretch("resize");
     });
 	}
-
+	else if ( window.location.pathname.includes("plantInfo.php")){
+		$('.top-content').backstretch("images/PlantInfoHero.jpg");
+	   
+		$('#top-navbar-1').on('shown.bs.collapse', function(){
+			$('.top-content').backstretch("resize");
+		});
+		$('#top-navbar-1').on('hidden.bs.collapse', function(){
+			$('.top-content').backstretch("resize");
+		});
+	}
 	else if (window.location.pathname.includes("how-to.php")){
 		$('.top-content').backstretch("images/HowToHero.jpg");
 		$('.call-to-action-container').backstretch("images/howTo.jpg");
@@ -122,3 +121,16 @@ jQuery(window).load(function() {
 	$(".testimonial-image img").attr("style", "width: auto !important; height: auto !important;");
 	
 });
+
+var btn = document.querySelector(".button");
+
+btn.addEventListener("mouseover", function() {
+  this.textContent = "Unfavourite";
+  document.getElementById('myButton').style.backgroundColor="#ff1c14";
+  document.getElementById('myButton').style.borderColor="#ff1c14";
+})
+btn.addEventListener("mouseout", function() {
+  this.textContent = "Favourited";
+  document.getElementById('myButton').style.backgroundColor="#55a635";
+  document.getElementById('myButton').style.borderColor="#55a635";
+})
