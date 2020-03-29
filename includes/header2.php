@@ -1,3 +1,12 @@
+  <?php
+  $currentUser = $_SESSION['userID'];
+ 
+  $queryUser = "SELECT * FROM users WHERE userID = $currentUser";
+  $statement2 = $conn->prepare($queryUser);
+  $statement2->execute();
+  $users = $statement2->fetchAll();
+  $statement2->closeCursor();
+  ?>
   <!-- Custom fonts for this theme -->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -32,10 +41,18 @@
           <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="beeHelpful.php">Bee-Helpful</a>
           </li>
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="logout.php">Logout</a>
+          <?php foreach ($users as $user) : ?>
+          <li class="nav-item mx-0 mx-lg-1 dropdown">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger dropdown" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <?php echo $user['username']; ?> 
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="userProfile.php">User Profile</a>
+              <a class="dropdown-item" href="editUser_form.php">Edit Profile</a>
+              <a class="dropdown-item" href="logout.php">Logout</a>
+            </div>
           </li>
-          
+          <?php endforeach;  ?>
         </ul>
       </div>
     </div>
