@@ -33,8 +33,9 @@ if (!isset($_SESSION['userID'])) {
 
 <head>
     <title>User Profile</title>
+    <link href="css/graham.scss" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/logo-w-text.png" />
 </head>
-<link href="css/graham.scss" rel="stylesheet">
 <body>
     <div class="container"><br><br><br><br><br><br>
         <?php foreach ($users as $user) : ?>

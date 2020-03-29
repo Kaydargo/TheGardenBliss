@@ -87,16 +87,16 @@ $statement3->closeCursor();
 
 <head>
   <meta charset="UTF-8">
-  <title></title>
+  <title>Plants Information</title>
+  <link href="css/graham.scss" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="images/logo-w-text.png" />
 </head>
-<link href="css/graham.scss" rel="stylesheet">
 <?php
 if (!isset($_SESSION['userID'])) {
   include('includes/header.php');
 } else {
   include('includes/header2.php');
 }
-
 ?>
 
 <body>
@@ -194,7 +194,7 @@ if (!isset($_SESSION['userID'])) {
     <br>
     <div class="row display-flex">
       <div class="col polaroid">
-
+      <h3>Soil Type</h3>
         <?php
         if ($plant['soil'] == "Sandy") {
           echo "<img class='icons img-fluid' src='icons/sandy_soil.svg'>";
@@ -208,7 +208,7 @@ if (!isset($_SESSION['userID'])) {
 
       </div>
       <div class="col polaroid">
-
+      <h3>Placement</h3>
         <?php
         if ($plant['placement'] == "Shade") {
           echo "<img class='icons img-fluid' src='icons/shade.svg'>";
@@ -222,7 +222,7 @@ if (!isset($_SESSION['userID'])) {
 
       </div>
       <div class="col polaroid">
-
+        <h3>Depth</h3>
         <img class="icons img-fluid" src='icons/depth.svg'>
         <div class="ctnbtm">
           <h4 class="func"><?php echo $plant['depth']; ?></h4>
@@ -230,7 +230,7 @@ if (!isset($_SESSION['userID'])) {
       </div>
 
       <div class="col polaroid">
-
+      <h3>Distance</h3>
         <img class="icons img-fluid" src='icons/distance.svg'>
         <div class="ctnbtm">
           <h4 class="func"><?php echo $plant['distance']; ?></h4>
