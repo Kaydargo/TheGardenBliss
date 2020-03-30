@@ -142,17 +142,21 @@ for (var i = 0; i < getWeatherType.length; i++) {
 
   if (weatherDesc.includes('clouds')){
     weatherDivs[i].style.backgroundImage = "url('images/Clouds_background_3.svg')";
+    weatherDivs[i].style.backgroundSize = "cover";
   }
   else if (weatherDesc.includes('rain'))
   {
     weatherDivs[i].style.backgroundImage = "url('images/rain_day.svg')";
+    weatherDivs[i].style.backgroundSize = "cover";
   }
   else if (weatherDesc.includes('snow'))
   {
     weatherDivs[i].style.backgroundImage = "url('images/stormy_background.svg')";
+    weatherDivs[i].style.backgroundSize = "cover";
   }
   else if (weatherDesc.includes('sun')){
     weatherDivs[i].style.backgroundImage =  "url('images/sun_background_2.svg')";
+    weatherDivs[i].style.backgroundSize = "cover";
   }
 }
 

@@ -137,3 +137,7 @@
   .ui-icon{
     display: inline-block;
   }
+
+  #compost{
+    min-height: 200px;
+  }
