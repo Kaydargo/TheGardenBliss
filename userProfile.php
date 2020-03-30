@@ -39,7 +39,12 @@ if (!isset($_SESSION['userID'])) {
 <body>
     <div class="container"><br><br><br><br><br><br>
         <?php foreach ($users as $user) : ?>
-            <?php echo "<img class='image2 img-fluid' src='images/" . $user['userPic'] . "' />"; ?>
+        <?php if(empty($user['userPic'])) {
+         echo "<img class='image2 img-fluid' src='images/userProfile.png'/>";
+            }
+        else {
+            echo "<img class='image2 img-fluid' src='images/" . $user['userPic'] . "' />";
+        }?>
             <h3 class="name"><?php echo $user['username']; ?></h3>
             <p><?php echo $user['firstName']; ?> <?php echo $user['lastName']; ?></p>
             <p><?php echo $user['email']; ?></p>
