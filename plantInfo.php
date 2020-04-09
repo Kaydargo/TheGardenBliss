@@ -242,10 +242,6 @@ if (!isset($_SESSION['userID'])) {
     </div>
   </div>
 
-
-
-
-
   <br><br><br>
   <div class="container-fluid">
     <div class="container pad">
@@ -305,6 +301,7 @@ if (!isset($_SESSION['userID'])) {
     location.reload(true);
   }
 </script>
+</div>
 <?php
 include('includes/footer.php');
 ?>

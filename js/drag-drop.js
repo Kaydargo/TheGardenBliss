@@ -73,4 +73,8 @@ $(document).ready(function(){
     return false;
   });    
 
+  // $( "div.garden > table > tbody > tr > td > div" ).on( "click", function() {
+  //   $(this).prop("disabled", true);
+  // });    
+
   });
