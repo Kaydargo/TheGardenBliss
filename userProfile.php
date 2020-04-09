@@ -34,6 +34,8 @@ if (!isset($_SESSION['userID'])) {
 <head>
     <title>User Profile</title>
     <link href="css/graham.scss" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/media-queries.css">
     <link rel="icon" type="image/x-icon" href="images/logo-w-text.png" />
 </head>
 <body>
@@ -68,7 +70,20 @@ if (!isset($_SESSION['userID'])) {
 </div>
 <br>
 </div>
-<?php include_once 'includes/footer.php' ?>
+<script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery-migrate-3.0.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/jquery.backstretch.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/retina-1.1.0.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/scripts.js"></script>
+    
+<?php include('includes/footer.php') ?>
+
+
+
 </body>
 
 </html>

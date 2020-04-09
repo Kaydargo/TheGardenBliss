@@ -12,7 +12,7 @@ if(!empty($result)) {
 <?php
 foreach($result as $plant) {
 ?>
-<li onClick="selectPlant('<?php echo $plant["plantName"]; ?>');"><?php echo $plant["plantName"]; ?></li>
+<li id="plantT" onClick="selectPlant('<?php echo $plant["plantName"]; ?>');"><?php echo $plant["plantName"]; ?></li>
 <?php } ?>
 </ul>
 <?php } } ?>

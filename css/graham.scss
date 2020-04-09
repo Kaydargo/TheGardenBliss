@@ -911,33 +911,38 @@ input {
 }
 
 
-#plant-list {
-	float: left;
-	list-style: none;
-	margin-top: -3px;
-	padding: 0;
-	position: absolute;
-	li {
-		padding: 10px;
-		background: #f0f0f0;
-		border-bottom: #bbb9b9 1px solid;
-		&:hover {
-			background: #ece3d2;
-			cursor: pointer;
-		}
-	}
-}
+// #plant-list:before,
+// #plant-list:after {
+// 	content: "";
+// 	display: table;
+// 	border-collapse: collapse;
+// }
+// #plant-list {
+// 	&:after {
+// 		clear: both;
+// 	}
+// }
 #search-box {
 	padding: 10px;
 	border: #a8d4b1 1px solid;
 	border-radius: 4px;
+	margin-right: 10px;
+	display: block;
 }
 .flex {
 	display: flex;
 	flex-direction: row;
  }
+ .flex1 {
+	display: flex;
+	flex-direction: row;
+ }
 #suggestion-box {
-	display: block;
+	display: inline-block;
+	position: absolute;
+	overflow: visible;
+	width: 100%;
+	padding-left: 0;
 }
 .image2 {
 	border-radius: 50%;
@@ -947,4 +952,22 @@ input {
 .name {
 	color: #55a635;
 	padding-top: 5px;
+}
+#plant-list {
+	-webkit-flex-direction: column; 
+	flex-direction: column; 
+	float: left;
+	list-style: none;
+	text-align: left;
+	font-family: Raleway Regular;
+	font-size: 16px;
+	padding-left: 0;
+}
+#plantT {
+	padding: 10px;
+	border: #a8d4b1 1px solid;
+	border-radius: 4px;
+	background-color: #fff;
+	display: block;
+	width: 204px;
 }

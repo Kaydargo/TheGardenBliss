@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
     <link rel="stylesheet" href="css/drag.css">
     <link rel="stylesheet" href="css/graham.scss">
     <link rel="stylesheet" href="css/animate.css">
@@ -24,6 +25,7 @@
 
   <body>
     <?php
+    ob_start();
     include('includes/database.php');
     include("loginServ.php");
     ?>
@@ -69,13 +71,15 @@ if(isset($_POST['search'])){
   </div>
     <br>
     <!-- Page Content -->
-    <div class="container" style="text-align: center;">
+    <div class="container mid" style="text-align: center;">
     
 <form method="post">
-    <div class="flex">
-	<input name="searchTerm" type="text" id="search-box" placeholder="Plant Name" />
-  <div id="suggesstion-box"></div>
+    <div class="flex1">
+  <input name="searchTerm" type="text" id="search-box" placeholder="Plant Name" autocomplete="off" /> 
   <button class="btn btn-primary" type="submit" name="search">Search</button>
+</div>
+<div class="flex">
+<div id="suggesstion-box"></div>
 </div>
 </form>
       <br><br>
@@ -474,6 +478,7 @@ if(isset($_POST['search'])){
 
     <?php
     include('includes/footer.php');
+    ob_end_flush();
     ?>
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/jquery-migrate-3.0.0.min.js"></script>

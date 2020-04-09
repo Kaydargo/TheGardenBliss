@@ -30,6 +30,8 @@ if (!isset($_SESSION['userID'])) {
 	<meta charset="UTF-8">
 	<title>Login</title>
 	<link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/media-queries.css">
 	<link href="css/style.scss" rel="stylesheet" type="text/css" />
 	<link href="css/graham.scss" rel="stylesheet" type="text/css" />
 	<style>
@@ -104,6 +106,19 @@ if (!isset($_SESSION['userID'])) {
 	<?php unset($_SESSION['errMsg']); ?>
 
 </body>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery-migrate-3.0.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/jquery.backstretch.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/retina-1.1.0.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/scripts.js"></script>
+
 <?php include 'includes/footer.php'; ?>
+
+
 
 </html>
