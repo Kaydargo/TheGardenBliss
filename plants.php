@@ -4,10 +4,9 @@
   <title>Plants</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/jquery-ui.css">
     <link rel="stylesheet" href="css/drag.css">
     <link rel="stylesheet" href="css/graham.scss">
     <link rel="stylesheet" href="css/animate.css">
@@ -48,7 +47,13 @@ if(isset($_POST['search'])){
    $stmt1 = $conn->prepare($search);
    $stmt1->execute();
    $result = $stmt1->fetch(); 
+   if(!isset($result['plantID']))
+   {
+    header("Refresh:0");
+   }
+   else {
    header("Location: plantInfo.php?plantID=".$result['plantID']."");
+   }
   exit();
 }
 ?>

@@ -4111,7 +4111,7 @@ input[type="button"].btn-block {
   }
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 1200px) {
   .navbar-expand-lg > .container,
   .navbar-expand-lg > .container-fluid {
     padding-right: 0;
@@ -4119,7 +4119,7 @@ input[type="button"].btn-block {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .navbar-expand-lg {
     flex-flow: row nowrap;
     justify-content: flex-start;
@@ -9673,7 +9673,7 @@ a.text-dark:hover, a.text-dark:focus {
   padding: 0.8rem;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   #mainNav {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;

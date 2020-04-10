@@ -1,3 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Edit Profile</title>
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/media-queries.css">
+	<link href="css/style.scss" rel="stylesheet" type="text/css" />
+	<link href="css/graham.scss" rel="stylesheet" type="text/css" />
+	<link rel="icon" type="image/x-icon" href="images/logo-w-text.png" />
+	<style>
+		label {
+			color: black;
+		}
+	</style>
+</head>
+<body>
 <?php
 include('includes/database.php');
 include("loginServ.php");
@@ -23,25 +43,7 @@ if (!isset($_SESSION['userID'])) {
 	include('includes/header2.php');
 }
 ?>
-<!doctype html>
-<html>
 
-<head>
-	<meta charset="UTF-8">
-	<title>Login</title>
-	<link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
-	<link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/media-queries.css">
-	<link href="css/style.scss" rel="stylesheet" type="text/css" />
-	<link href="css/graham.scss" rel="stylesheet" type="text/css" />
-	<style>
-		label {
-			color: black;
-		}
-	</style>
-</head>
-
-<body>
 	<br><br><br><br><br>
 	<div class="container h-100">
 		<div class="d-flex justify-content-center h-100">
