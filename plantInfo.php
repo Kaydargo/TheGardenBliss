@@ -89,6 +89,7 @@ $statement3->closeCursor();
   <meta charset="UTF-8">
   <title>Plants Information</title>
   <link href="css/graham.scss" rel="stylesheet">
+  <link href="css/bootstrap.css" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="images/logo-w-text.png" />
 </head>
 <?php

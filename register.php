@@ -10,6 +10,7 @@ include("loginServ.php");
 	<link rel="icon" type="image/x-icon" href="images/logo-w-text.png" />
 </head>
 <link href="css/graham.scss" rel="stylesheet">
+<link href="css/bootstrap.css" rel="stylesheet">
 <?php
 
 if (!isset($_SESSION['userID'])) {

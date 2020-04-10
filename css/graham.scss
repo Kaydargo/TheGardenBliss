@@ -60,7 +60,6 @@ body {
 	font-weight: 300;
 	color: #444;
 	line-height: 30px;
-	text-align: center;
 	margin: 0;
 	padding: 0;
 	height: 100%;
@@ -946,7 +945,7 @@ input {
 }
 .image2 {
 	border-radius: 50%;
-	max-width: 200px;
+	width: 200px;
 	margin-bottom: 20px;
 }
 .name {
@@ -970,4 +969,25 @@ input {
 	background-color: #fff;
 	display: block;
 	width: 204px;
+}
+.colUser {
+	text-align: center;
+}
+
+//navbar collapse
+@media (min-width: 1200px) {
+	#navbarResponsive {
+		display: -webkit-box !important;
+		display: -ms-flexbox !important;
+		display: flex !important;
+		-ms-flex-preferred-size: auto !important;
+		flex-basis: auto !important;
+	}
+	#mainNav {
+		display: -webkit-box !important;
+		display: -ms-flexbox !important;
+		display: flex !important;
+		-ms-flex-preferred-size: auto !important;
+		flex-basis: auto !important;
+	}
 }

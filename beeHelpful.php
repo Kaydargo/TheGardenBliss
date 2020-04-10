@@ -7,6 +7,7 @@ include("loginServ.php");
 <title>Bee-Helpful</title>
    <link href="css/graham.scss" rel="stylesheet">
    <link href="css/style.scss" rel="stylesheet">
+   <link href="css/bootstrap.css" rel="stylesheet">
    <link href="css/test.css" rel="stylesheet">
    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/media-queries.css">

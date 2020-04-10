@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+
+<head>
+    <title>User Profile</title>
+    <link href="css/graham.scss" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/media-queries.css">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/logo-w-text.png" />
+</head>
+<body>
 <?php
 
 include('includes/database.php');
@@ -7,7 +18,6 @@ $currentUser = $_SESSION['userID'];
 if (!isset($_SESSION['userID'])) {
     header('Location: login.php');
 }
-require('includes/database.php');
 
 $queryUser = "SELECT * FROM users WHERE userID = $currentUser";
 $statement2 = $conn->prepare($queryUser);
@@ -29,17 +39,9 @@ if (!isset($_SESSION['userID'])) {
     include('includes/header2.php');
 }
 ?>
-<!DOCTYPE html>
 
-<head>
-    <title>User Profile</title>
-    <link href="css/graham.scss" rel="stylesheet">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/media-queries.css">
-    <link rel="icon" type="image/x-icon" href="images/logo-w-text.png" />
-</head>
-<body>
     <div class="container"><br><br><br><br><br><br>
+    <div class="colUser">
         <?php foreach ($users as $user) : ?>
         <?php if(empty($user['userPic'])) {
          echo "<img class='image2 img-fluid' src='images/userProfile.png'/>";
@@ -51,6 +53,7 @@ if (!isset($_SESSION['userID'])) {
             <p><?php echo $user['firstName']; ?> <?php echo $user['lastName']; ?></p>
             <p><?php echo $user['email']; ?></p>
             <button class="btn btn-primary"><a class="edit" href="editUser_form.php">Edit profile</a></button>            
+    </div>
     </div>
 <?php endforeach;  ?>
 <br><br>

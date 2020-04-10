@@ -11,7 +11,7 @@ include("loginServ.php");
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title></title>
 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link href="css/bootstrap.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
 	<link rel="stylesheet" href="css/graham.scss">
 	<link rel="stylesheet" href="css/animate.css">
@@ -282,7 +282,7 @@ include("loginServ.php");
 						</iframe>
 					</div>
 					<br>
-					<h3 class="plantName">Making your own Compost</h3>
+					<h3 class="plantName">Make Compost at home</h3>
 
 					<p>Learn how to make your own compost from waste in the kitchen. It’s free and easy to do!</p>
 				</div>
