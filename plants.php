@@ -1,3 +1,6 @@
+<?php
+    ob_start();
+?>
 <!DOCTYPE html>
   <html lang="en">
   <head>
@@ -24,7 +27,6 @@
 
   <body>
     <?php
-    ob_start();
     include('includes/database.php');
     include("loginServ.php");
     ?>
@@ -483,7 +485,6 @@ if(isset($_POST['search'])){
 
     <?php
     include('includes/footer.php');
-    ob_end_flush();
     ?>
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/jquery-migrate-3.0.0.min.js"></script>
@@ -499,3 +500,6 @@ if(isset($_POST['search'])){
     <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
   </body>
   </html>
+  <?php 
+  ob_end_flush();
+  ?>

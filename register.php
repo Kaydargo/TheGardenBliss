@@ -1,11 +1,15 @@
 <?php
+    ob_start();
+?>
+<?php
 include('includes/database.php');
 include("loginServ.php");
 ?>
 <html>
 
 <head>
-	<meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Registration</title>
 	<link rel="icon" type="image/x-icon" href="images/logo-w-text.png" />
 </head>
@@ -60,7 +64,7 @@ if (!isset($_SESSION['userID'])) {
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-key"></i></span>
 							</div>
-							<input type="password" name="password" class="form-control input_pass" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Password">
+							<input type="password" name="password" class="form-control input_pass more_info" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Password" title="Password must contain atleast 8 characters with atleast one uppercase, one lowercase, a numeric and special character.">
 						</div>
 
 						<div class="d-flex justify-content-center mt-3 login_container">
@@ -84,7 +88,19 @@ if (!isset($_SESSION['userID'])) {
 		</div>
 
 	</div>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/jquery-migrate-3.0.0.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="js/jquery.backstretch.min.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src="js/retina-1.1.0.min.js"></script>
+	<script src="js/waypoints.min.js"></script>
+	<script src="js/scripts.js"></script>
 </body>
 <?php include 'includes/footer.php'; ?>
 
 </html>
+<?php 
+  ob_end_flush();
+  ?>

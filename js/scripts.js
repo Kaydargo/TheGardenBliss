@@ -132,6 +132,14 @@ btn.addEventListener("mouseout", function() {
 })
 
 
-
+//form 
+$(".more_info").click(function () {
+    var $title = $(this).find(".title");
+    if (!$title.length) {
+        $(this).append('<input class="title">' + $(this).attr("title") + '</span>');
+    } else {
+        $title.remove();
+    }
+});
 
 

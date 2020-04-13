@@ -22,7 +22,7 @@
 	                    	<div class="row">
 	                    		<div class="col-md-6">
 								<p><a  href="index.php">Home</a></p>
-									<p><a  href="plant.php">Our Plants</a></p>
+									<p><a href="plants.php">Our Plants</a></p>
 									<p><a href="planner.php">Garden planner</a></p>
 	                    			<p><a href="beeHelpful.php">Bee-Helpful</a></p>
 	                    		</div>
