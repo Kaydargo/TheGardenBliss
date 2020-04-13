@@ -991,3 +991,12 @@ input {
 		flex-basis: auto !important;
 	}
 }
+
+.more_info .title {
+    position: absolute;
+    top: 20px;
+    background: silver;
+    padding: 4px;
+    left: 0;
+    white-space: nowrap;
+}

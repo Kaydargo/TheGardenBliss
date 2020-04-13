@@ -1,11 +1,15 @@
 <?php
+    ob_start();
+?>
+<?php
 include('includes/database.php');
 include("loginServ.php");
 ?>
 <html>
 
 <head>
-	<meta charset="UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Login</title>
 	<link rel="icon" type="image/x-icon" href="images/logo-w-text.png" />
 </head>
@@ -87,3 +91,6 @@ if (!isset($_SESSION['userID'])) {
 <?php include 'includes/footer.php'; ?>
 
 </html>
+<?php 
+  ob_end_flush();
+  ?>

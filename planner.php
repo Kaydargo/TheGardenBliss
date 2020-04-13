@@ -8,6 +8,9 @@ include('includes/functions.php');
     $plants = $statement1->fetchAll();
     $statement1->closeCursor();
      ?>
+     <head>
+     <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Garden Planner</title>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
