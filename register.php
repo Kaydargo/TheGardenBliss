@@ -64,7 +64,7 @@ if (!isset($_SESSION['userID'])) {
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-key"></i></span>
 							</div>
-							<input type="password" name="password" class="form-control input_pass more_info" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Password" title="Password must contain atleast 8 characters with atleast one uppercase, one lowercase, a numeric and special character.">
+							<input type="password" name="password" class="form-control input_pass" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Password" title="Password must contain atleast 8 characters with atleast one uppercase, one lowercase, a numeric and special character.">
 						</div>
 
 						<div class="d-flex justify-content-center mt-3 login_container">
