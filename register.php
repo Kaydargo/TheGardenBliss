@@ -29,7 +29,7 @@ if (!isset($_SESSION['userID'])) {
 	<div class="container h-100">
 		<div class="d-flex justify-content-center h-100">
 			<div class="user_card2">
-				<div class="d-flex justify-content-center">
+				<div class="d-flex justify-content-center logoArea">
 					<div class="brand_logo_container">
 						<img src="images/logo-white.png" class="brand_logo" alt="Logo">
 					</div>
@@ -64,7 +64,21 @@ if (!isset($_SESSION['userID'])) {
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-key"></i></span>
 							</div>
-							<input type="password" name="password" class="form-control input_pass" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Password" title="Password must contain atleast 8 characters with atleast one uppercase, one lowercase, a numeric and special character.">
+							<input type="password" id="password" name="password" class="form-control input_pass" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Password" title="Password must contain atleast 8 characters with atleast one uppercase, one lowercase, a numeric and special character." onKeyUp="checkPasswordStrength()">
+							
+						</div>
+						<div class="sub mb-2">
+							<div class="password-status">
+								<div id="password-strength-status"></div>
+							</div>
+						</div>
+
+                        <div class="input-group mb-2">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-key"></i></span>
+							</div>
+							<input type="password" name="passwordC" class="form-control input_pass" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Confirm password">
+							
 						</div>
 
 						<div class="d-flex justify-content-center mt-3 login_container">
@@ -72,11 +86,10 @@ if (!isset($_SESSION['userID'])) {
 						</div>
 					</form>
 				</div>
-				<div class="mt-4">
+				<div class="mt-4 haveAcc">
 					<div class="d-flex justify-content-center links">
 						Have an account? &nbsp; <a class="linksG" href="login.php" class="ml-2">Login</a>
 					</div>
-
 				</div>
 				<div id="errMsg" style="text-align:center;">
 					<?php if (!empty($_SESSION['errMsg'])) {

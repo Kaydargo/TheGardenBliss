@@ -1,3 +1,6 @@
+<?php
+    ob_start();
+?>
 <!DOCTYPE html>
 <html>
 
@@ -125,3 +128,6 @@ if (!isset($_SESSION['userID'])) {
 
 
 </html>
+<?php 
+  ob_end_flush();
+  ?>
