@@ -753,8 +753,8 @@ html {
 	border-radius: 5px;
 }
 .user_card2 {
-	height: 550px;
-	width: 350px;
+	height: 800px;
+	max-width: 350px;
 	margin-top: auto;
 	margin-bottom: auto;
 	background: #fff;
@@ -990,4 +990,30 @@ input {
 		-ms-flex-preferred-size: auto !important;
 		flex-basis: auto !important;
 	}
+}
+
+.logoArea {
+	padding-bottom: 20px;
+}
+
+.sub {
+	display : table;
+	table-layout : fixed;
+	overflow : hidden;
+	width : 100%;
+	.password-status {
+		display : table-cell;
+  		vertical-align : middle;
+		text-overflow : ellipsis;
+		align-content: center;
+		#password-strength-status {
+			text-overflow : ellipsis;
+  			overflow : hidden;
+			white-space : nowrap;
+		}
+	}
+}
+
+.haveAcc {
+	margin-bottom: 20px;
 }

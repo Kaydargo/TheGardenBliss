@@ -132,5 +132,23 @@ btn.addEventListener("mouseout", function() {
 })
 
 
-
+// password validation
+function checkPasswordStrength() {
+	var number = /([0-9])/;
+	var alphabets = /([a-zA-Z])/;
+	var special_characters = /([~,!,@,#,$,%,^,&,*,-,_,+,=,?,>,<])/;
+	if($('#password').val().length<8) {
+	$('#password-strength-status').removeClass();
+	$('#password-strength-status').addClass('weak-password');
+	$('#password-strength-status').html("Weak: Should be atleast 8 characters");
+	} else {  	
+	if($('#password').val().match(number) && $('#password').val().match(alphabets) && $('#password').val().match(special_characters)) {            
+	$('#password-strength-status').removeClass();
+	$('#password-strength-status').addClass('strong-password');
+	$('#password-strength-status').html("Strong");
+	} else {
+	$('#password-strength-status').removeClass();
+	$('#password-strength-status').addClass('medium-password');
+	$('#password-strength-status').html("Medium: Uppercase, Lowercase, Numbers & Special characters required");
+	}}}
 
