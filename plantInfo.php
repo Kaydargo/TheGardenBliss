@@ -1,3 +1,6 @@
+<?php
+    ob_start();
+?>
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -333,3 +336,6 @@ include('includes/footer.php');
 <!-- <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script> -->
 
 </html>
+<?php 
+  ob_end_flush();
+  ?>
