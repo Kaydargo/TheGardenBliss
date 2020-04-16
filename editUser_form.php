@@ -89,12 +89,12 @@ if (!isset($_SESSION['userID'])) {
 							</div>
 							<input type="email" name="email" class="form-control" value="<?php echo $user['email']; ?>" required>
 						</div>
-						<div class="input-group mb-2">
+						<!-- <div class="input-group mb-2">
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-key"></i></span>
 							</div>
-							<input type="password" name="password" class="form-control input_pass" value="<?php echo $user['userpass']; ?>" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
-						</div>
+							<input type="text" name="password" class="form-control input_pass" value="<?php echo $user['userpass']; ?>" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+						</div> -->
 
 						<div class="d-flex justify-content-center mt-3 login_container">
 							<input type="submit" name="updateUser" value="Update Profile" class="btn login_btn"></input>
