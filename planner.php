@@ -158,7 +158,7 @@ else{
     <?php foreach ($plants as $plant): ?>
     <li class='veg' >
     <h5><?php echo $plant['plantName']; ?></h5>
-    <?= ($plant['plantIcon'] <> " " ? "<img id='{$plant['plantID']}' style='width: 80px; height:80px;' src='images/{$plant['plantIcon']}'/>" : "") ?>
+    <?= ($plant['plantIcon'] <> " " ? "<img id='{$plant['plantID']}' style='width: 80px; height:80px;' src='icons/{$plant['plantIcon']}'/>" : "") ?>
     </li>
 <?php endforeach; ?>
     </div>
