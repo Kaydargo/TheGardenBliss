@@ -15,7 +15,7 @@ if(isset($_POST['login'])){
 
     if($user === false){
         $_SESSION['errMsg'] = "Invalid Username or Password";
-        header('location:login.php');
+        header('Location: https://thegardenbliss.com/login.php');
         exit;
     }
      else{
@@ -23,12 +23,12 @@ if(isset($_POST['login'])){
         
         if($validPassword){
             $_SESSION['userID'] = $user['userID'];
-            header('Location: userProfile.php');
+            header('Location: https://thegardenbliss.com/userProfile.php');
             exit;      
         }
         else{
             $_SESSION['errMsg'] ='Invalid username or password';
-            header('location:login.php');
+            header('Location: https://thegardenbliss.com/login.php');
         exit;
         }
     }

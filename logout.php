@@ -6,7 +6,7 @@
     $_SESSION = array();
     session_unset();
     session_destroy();
-    header("location: login.php");
+    header("Location: https://thegardenbliss.com/login.php");
     exit();
 ?>
 <?php 

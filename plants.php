@@ -54,7 +54,7 @@ if(isset($_POST['search'])){
     header("Refresh:0");
    }
    else {
-   header("Location: plantInfo.php?plantID=".$result['plantID']."");
+   header("Location: https://thegardenbliss.com/plantInfo.php?plantID=".$result['plantID']."");
    }
   exit();
 }

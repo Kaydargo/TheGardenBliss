@@ -21,7 +21,7 @@ include("loginServ.php");
 
 $currentUser = $_SESSION['userID'];
 if (!isset($_SESSION['userID'])) {
-    header('Location: login.php');
+    header('Location: https://thegardenbliss.com/login.php');
 }
 
 $queryUser = "SELECT * FROM users WHERE userID = $currentUser";

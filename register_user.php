@@ -20,38 +20,38 @@ $specialChars = preg_match('@[^\w]@', $pass);
 
 if(empty(trim($_POST["username"]))){
     $_SESSION['errMsg'] ='You must enter a username.';
-    header('location:register.php');
+    header('Location: https://thegardenbliss.com/register.php');
         exit;
 }
 
 elseif(strlen($username) < 6) {
     $_SESSION['errMsg'] ='Your username must be 6 characters long.';
-    header('location:register.php');
+    header('Location: https://thegardenbliss.com/register.php');
         exit;
 }
 
 else{
 if(empty(trim($_POST["password"]))){
     $_SESSION['errMsg'] ='You must enter a password.';
-    header('location:register.php');
+    header('Location: https://thegardenbliss.com/register.php');
         exit;
 }
 
 elseif( !$upperCase || !$lowerCase || !$number || !$specialChars || strlen($pass) < 8) {   
     $_SESSION['errMsg'] ='Password should be at least 8 characters in length and should include at least one upper case letter, one number, and one special character.';
-    header('location:register.php');
+    header('Location: https://thegardenbliss.com/register.php');
     exit;
 }
 
 elseif (stripos($pass, $username) !== false) {
     $_SESSION['errMsg'] ='Password cannot contain username!';
-    header('location:register.php');
+    header('Location: https://thegardenbliss.com/register.php');
         exit;
 }
 
 elseif($pass !== $passConfirm) {
     $_SESSION['errMsg'] ='Password doesn&#39;t match';
-    header('location:register.php');
+    header('Location: https://thegardenbliss.com/register.php');
         exit;
 }
 
@@ -67,7 +67,7 @@ else{
     
     if($row['numb'] > 0){
         $_SESSION['errMsg'] ='That username is invalid';
-        header('location:register.php');
+        header('Location: https://thegardenbliss.com/register.php');
         exit;
     }
 
@@ -86,7 +86,7 @@ else{
    
     if($result){
                 $_SESSION['userID'] = $user['userID'];
-                header('Location: userProfile.php');
+                header('Location: https://thegardenbliss.com/userProfile.php');
                 echo 'Thank you for registering for Garden Bliss, Enjoy!';
     }
     }

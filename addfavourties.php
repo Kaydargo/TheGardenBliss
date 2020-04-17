@@ -11,7 +11,7 @@ $plantsFav = $statement5->fetchAll();
 $statement5->closeCursor();
 foreach ($plantsFav as $plantFav)
   if ($plantFav['userID'] == $user && $plantFav['plantID'] == $plant_id) {
-    header("Location: plantInfo.php?plantID=.$plant_id");
+    header("Location: https://thegardenbliss.com/plantInfo.php?plantID=.$plant_id");
     exit;
   } else {
     if (isset($_POST['addToFav'])) {
@@ -24,7 +24,7 @@ foreach ($plantsFav as $plantFav)
       $result = $stmt1->execute();
       if ($result) {
         $_SESSION['userID'] = $user['userID'];
-        header("Location: plantInfo.php?plantID=.$plant_id");
+        header("Location: https://thegardenbliss.com/plantInfo.php?plantID=.$plant_id");
         exit;
       }
     }

@@ -2,7 +2,7 @@
 session_start();
 require 'includes/database.php';
 if (!isset($_SESSION['userID'])) {
-    header('Location: login.php');
+    header('Location: https://thegardenbliss.com/login.php');
 }
 $currentUser = $_SESSION['userID'];
 if (isset($_POST['updateUser'])) {
@@ -19,24 +19,24 @@ if (isset($_POST['updateUser'])) {
 
     if (empty(trim($_POST["username"]))) {
         $_SESSION['errMsg'] = 'You must enter a username.';
-        header('location:editUser_form.php');
+        header('Location: https://thegardenbliss.com/editUser_form.php');
         exit;
     } elseif (strlen($username) < 6) {
         $_SESSION['errMsg'] = 'Your username must be 6 characters long.';
-        header('location:editUser_form.php');
+        header('Location: https://thegardenbliss.com/editUser_form.php');
         exit;
     } else {
         if (empty(trim($_POST["password"]))) {
             $_SESSION['errMsg'] = 'You must enter a password.';
-            header('location:editUser_form.php');
+            header('Location: https://thegardenbliss.com/editUser_form.php');
             exit;
         } elseif (!$upperCase || !$lowerCase || !$number || !$specialChars || strlen($pass) < 8) {
             $_SESSION['errMsg'] = 'Password should be at least 8 characters in length and should include at least one upper case letter, one number, and one special character.';
-            header('location:editUser_form.php');
+            header('Location: https://thegardenbliss.com/editUser_form.php');
             exit;
         } elseif (stripos($pass, $username) !== false) {
             $_SESSION['errMsg'] = 'Password cannot contain username!';
-            header('location:editUser_form.php');
+            header('Location: https://thegardenbliss.com/editUser_form.php');
             exit;
         } else {
             $pass = trim($_POST["password"]);
@@ -50,7 +50,7 @@ if (isset($_POST['updateUser'])) {
 
             if ($row['numb'] > 0) {
                 $_SESSION['errMsg'] = 'That username is invalid';
-                header('location:editUser_form.php');
+                header('Location: https://thegardenbliss.com/editUser_form.php');
                 exit;
             }
 
@@ -77,7 +77,7 @@ if (isset($_POST['updateUser'])) {
 
                 if ($result) {
                     $_SESSION['userID'] = $user['userID'];
-                    header('Location: userProfile.php');
+                    header('Location: https://thegardenbliss.com/userProfile.php');
                     echo 'User profile updated!';
                 }
             }

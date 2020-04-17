@@ -62,7 +62,8 @@ if (!isset($_SESSION['userID'])) {
   $stmt1->bindValue(':user_id', $user_id);
   $stmt1->bindValue(':plant_id', $plant_id);
   $result = $stmt1->execute();
-  echo "<meta http-equiv='refresh' content='0'>";
+  header("refresh: 0; url = https://www.thegardenbliss.com/plantInfo.php?plantID=".$plant_id.""); 
+  exit; 
 }
 
 if (isset($_POST['removeFav'])) {
@@ -73,7 +74,8 @@ if (isset($_POST['removeFav'])) {
   $stmt2->bindValue(':user_id', $user_id);
   $stmt2->bindValue(':plant_id', $plant_id);
   $result = $stmt2->execute();
-  echo "<meta http-equiv='refresh' content='0'>";
+  header("refresh: 0; url = https://www.thegardenbliss.com/plantInfo.php?plantID=".$plant_id.""); 
+  exit; 
 }
 
 
