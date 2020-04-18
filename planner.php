@@ -42,13 +42,22 @@ else{
     include('includes/header2.php');
 }
 ?> 
+<style>
+.ui-icon, .ui-widget-content .ui-icon{
+  background-image: url(icons/ui-icons_FFFFFF_256x240.png) !important;
+}
+.ui-icon {
+    width: 20px !important;
+    height: 20px !important;
+}
+</style>
 <body>
 <div class="top-content" style="width= 100%;">
   <div class="container">
     <div class="row">
       <div class='bar'>
         <div class="col-md-8 offset-md-2 text">
-          <h1 class="wow fadeInLeftBig">Plan your ideal garden</h1>
+          <h1 class="wow fadeInLeftBig">Plan your ideal vegetable garden</h1>
         <div class="description wow fadeInLeftBig">
         <p>We walk you through factors that can affect how your garden will grow — sunlight, shade, soil - and the balance between fruits, shrubs, flowers and vegetables
         </p>
@@ -61,9 +70,9 @@ else{
         </div>
 <br><br>
 <div class="container">
-<h3 class="plantName">Garden Planner </h3><br>
+<h3 class="plantName">Vegetable Planner </h3><br>
   <div class="row" >
-<p>Planning and creating a new garden design can give your home a boost. Our garden planner makes it easy to plan your dream garden, it allows you to plan the layout and content of your garden easily. It also gives you the flexibility to create the best design for your  garden. with the planner you can easily add various  vegetables and move them around your allotted garden to get the perfect layout.
+<p>Planning and creating a new garden design can give your home a boost. Our vegetable planner makes it easy to plan your dream vegetable planter, it allows you to plan the layout and content of easily. With the planner you can easily add various vegetables and move them around your allotted plot to get the perfect layout and organise your crops.
 </p>
 <!-- Feature Cards -->
 <section class="d-flex bg-light" id="feature-cards">
@@ -82,7 +91,7 @@ else{
                                 <div class="row mt-4">
                                     <div class="col-12 text-center">
                                         <h3>Select</h3><hr>
-                                        <p class="text-secondary">Use the width and breadth grid provided to create the dimension that you want for your garden.</p>
+                                        <p class="text-secondary">Use the width and breadth grid provided to create the dimension for your vegetable plot.</p>
                                     </div>
                                 </div>
                             </div>
@@ -116,7 +125,7 @@ else{
                                 <div class="row mt-4">
                                     <div class="col-12 text-center">
                                         <h3>Save</h3><hr>
-                                        <p class="text-secondary">fill up your garden with the vegetables and save on your profile or print it out if you are not login.</p>
+                                        <p class="text-secondary">Fill up your garden with vegetables and save on your profile or print it out if you are not login.</p>
                                     </div>
                                 </div>
                             </div>
@@ -200,6 +209,16 @@ else{
                         <td><div id="plot20" class="drop"></div></td>
                         <td><div id="plot21" class="drop"></div></td>
                         <td><div id="plot22" class="drop"></div></td>
+                </tr>
+                <tr>
+                        <td><div id="plot23" class="drop"></div></td>
+                        <td><div id="plot24" class="drop"></div></td>
+                        <td><div id="plot25" class="drop"></div></td>
+                        <td><div id="plot26" class="drop"></div></td>
+                        <td><div id="plot27" class="drop"></div></td>
+                        <td><div id="plot28" class="drop"></div></td>
+                        <td><div id="plot29" class="drop"></div></td>
+                        <td><div id="plot30" class="drop"></div></td>
                 </tr>
         </table>
         </div>

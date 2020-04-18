@@ -25,13 +25,6 @@ $statement1->execute();
 $plant = $statement1->fetch(PDO::FETCH_ASSOC);
 $statement1->closeCursor();
 
-// $plant_id = $_GET['plantID'];
-// $queryPlants = "SELECT * FROM plant WHERE plantID = $plant_id";
-// $statement4 = $conn->prepare($queryPlants);
-// $statement4->execute();
-// $plant = $statement4->fetch();
-// $statement4->closeCursor();
-
 $queryInfo = "SELECT * FROM plantinginfo WHERE plantID = $plant_id";
 $statement2 = $conn->prepare($queryInfo);
 $statement2->execute();
@@ -52,21 +45,20 @@ $statement5->execute();
 $plantsFav = $statement5->fetch(PDO::FETCH_ASSOC);
 $statement5->closeCursor();
 
-if (!isset($_SESSION['userID'])) {
-  echo 'You must be logged in to favourite';
-} elseif (isset($_POST['addToFav'])) {
-  $user_id = htmlspecialchars(!empty($_POST['user_id']) ? trim($_POST['user_id']) : null);
+if (isset($_POST['addToFav'])) {
+  $user_id = $_SESSION['userID'];
   $plant_id = htmlspecialchars(!empty($_POST['plant_id']) ? trim($_POST['plant_id']) : null);
-  $addToFav = "INSERT INTO userfavourites (plantID, userID) VALUES (:plant_id, :user_id)";
+  
+  $addToFav = "INSERT INTO userfavourites (plantID, userID) VALUES (:plantid, :userid)";
   $stmt1 = $conn->prepare($addToFav);
-  $stmt1->bindValue(':user_id', $user_id);
-  $stmt1->bindValue(':plant_id', $plant_id);
+  $stmt1->bindValue(':plantid', $plant_id);
+  $stmt1->bindValue(':userid', $user_id);
   $result = $stmt1->execute();
   echo "<meta http-equiv='refresh' content='0'>";
 }
 
 if (isset($_POST['removeFav'])) {
-  $user_id = htmlspecialchars(!empty($_POST['user_id']) ? trim($_POST['user_id']) : null);
+  $user_id = $_SESSION['userID'];
   $plant_id = htmlspecialchars(!empty($_POST['plant_id']) ? trim($_POST['plant_id']) : null);
   $removeFav = "DELETE FROM userfavourites WHERE plantID = $plant_id AND userID = $user";
   $stmt2 = $conn->prepare($removeFav);

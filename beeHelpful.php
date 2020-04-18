@@ -84,7 +84,7 @@ Now, we cannot ignore the fact that Irish bees are under pressure. The main reas
       <div class="col-sm-6">
       <h3 class="plantName">DURING SUMMER</h3>
     <p>During this time all bee’s species are building up their strength with nectar and pollen. They need flowers with pollen and nectar to survive. Bumblebees males and queens started to appear, it is possible at this time for queen bees to produce swarms of bees and search for new colonies.</p>
-    <ul class="infoList">>
+    <ul class="infoList">
       <li>You can leave areas of uncultivated soil and small piles of woody pruning in border and hedge bases in your garden where bees can make colonies.</li>
       <li>You can grow roses, wildflowers, dandelions, daisies and other flowers to provide nectar and pollen for bees to use for nesting throughout the summer.</li>
 </ul>
@@ -119,7 +119,7 @@ Now, we cannot ignore the fact that Irish bees are under pressure. The main reas
       <div class="col-sm-6">
       <h3 class="plantName">DURING WINTER</h3>
     <p>This period honeybees usually remain in their hives, but sometimes come out on a sunny day. You may sometimes see the queen bees if the weather permits. All bees need nectar during this period if they are to survive or they die from hunger.</p>
-    <ul class="infoList">>
+    <ul class="infoList">
       <li>You can create and build a twig or pile of leaves for the bees to shelter underneath and let leaves that have fallen stay where they drop and avoid disturbing them from autumn through to spring.</li>
       <li>Leave compost heap untouched and avoid digging your soil until spring. This is to prevent hurting bees that might be taking shelter under the compost heap.</li>
       <li>You can grow ivy on walls and fences to give shelter from heavy rain that might hurt the bees, and this could also provide a late nectar source for the bees that are still on the wing, also, plant winter flowers like snowdrops.</li>

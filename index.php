@@ -78,7 +78,7 @@ if (!isset($_SESSION['userID'])) {
             <div class="col polaroid">
                 <img class="icons img-fluid" src='icons/drag_drop1.svg' alt=''>
                 <div class="ctnbtm">
-                    <h4 class="func">Drag and Drop Garden Planner</h4>
+                    <h4 class="func">Drag and Drop Vegetable Planner</h4>
                 </div>
             </div>
             <div class="col polaroid">
