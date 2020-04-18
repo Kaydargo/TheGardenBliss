@@ -34,7 +34,7 @@ jQuery(document).ready(function() {
 
    if ( window.location.pathname.includes("index.php")) {
 	console.log('Home');
-    $('.top-content').backstretch("images/about.jpg");
+    $('.top-content').backstretch("images/about-min.jpg");
    
     $('#top-navbar-1').on('shown.bs.collapse', function(){
     	$('.top-content').backstretch("resize");
@@ -47,8 +47,8 @@ jQuery(document).ready(function() {
 	else if (window.location.pathname.includes("how-to.php")){
 		console.log('how to');
 		$('.top-content').backstretch("images/howTo.jpg");
-		$('.call-to-action-container').backstretch("images/howTo.jpg");
-		$('.testimonials-container').backstretch("images/howTo.jpg");
+		$('.call-to-action-container').backstretch("images/HowToHero-min.jpg");
+		$('.testimonials-container').backstretch("images/HowToHero-min.jpg");
 		
 		$('#top-navbar-1').on('shown.bs.collapse', function(){
 			$('.top-content').backstretch("resize");
@@ -60,7 +60,7 @@ jQuery(document).ready(function() {
 
 	else if (window.location.pathname.includes("plants.php")){
 		console.log('plants');
-		$('.top-content').backstretch("images/plants_3.jpg");
+		$('.top-content').backstretch("images/plants_3-min.jpg");
     
 		$('#top-navbar-1').on('shown.bs.collapse', function(){
 			$('.top-content').backstretch("resize");
@@ -72,7 +72,7 @@ jQuery(document).ready(function() {
 
 	else if (window.location.pathname.includes("plantInfo.php")){
 		console.log('plants info');
-		$('.top-content').backstretch("images/plant.jpg");
+		$('.top-content').backstretch("images/PlantInfoHero-min.jpg");
     
 		$('#top-navbar-1').on('shown.bs.collapse', function(){
 			$('.top-content').backstretch("resize");
@@ -84,7 +84,7 @@ jQuery(document).ready(function() {
 
 	else if (window.location.pathname.includes('gardenPlanner.php')){
 		console.log('planner');
-		$('.top-content').backstretch("images/gardenPlanner.jpg");
+		$('.top-content').backstretch("images/gardenPlanner-min.jpg");
    
     
 		$('#top-navbar-1').on('shown.bs.collapse', function(){

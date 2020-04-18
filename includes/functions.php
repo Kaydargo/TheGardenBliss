@@ -47,6 +47,8 @@ $fruits2 = $statement4->fetchAll();
 $statement4->closeCursor();
 
 
+
+
 //Display room flower in slider
 
 $queryFlower = "SELECT * FROM plant WHERE type='flower' LIMIT 3"; 
