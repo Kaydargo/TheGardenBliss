@@ -52,22 +52,23 @@ else{
 }
 </style>
 <body>
-<div class="top-content" style="width= 100%;">
-  <div class="container">
-    <div class="row">
-      <div class='bar'>
-        <div class="col-md-8 offset-md-2 text">
-          <h1 class="wow fadeInLeftBig">Plan your ideal vegetable garden</h1>
-        <div class="description wow fadeInLeftBig">
-        <p>We walk you through factors that can affect how your garden will grow — sunlight, shade, soil - and the balance between fruits, shrubs, flowers and vegetables
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-                
-            </div>            
+
+<div class="top-content">
+        <div class="container">
+            <div class="row">
+                <div class='bar'>
+                    <div class="col-md-8 offset-md-2 text">
+                        <h1 class="wow fadeInLeftBig">Plan your ideal vegetable garden</h1>
+                        <div class="description wow fadeInLeftBig">
+                            <p> We walk you through factors that can affect how your garden will grow — sunlight, shade, soil - and the balance between fruits, shrubs, flowers and vegetables
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
 <br><br>
 <div class="container">
 <h3 class="plantName">Vegetable Planner </h3><br>
