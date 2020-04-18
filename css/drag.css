@@ -115,9 +115,9 @@
 
   .garden tr td {
     /* background-color: rgb(130,107,54); */
-    background-image: url('../icons/soil-texture.jpg');
+    background-image: url('../icons/soil-texture-2.jpg');
     /* opacity: 0.8; */
-    border: 2px solid rgb(102,82,55);
+    border: 3px solid rgb(93, 47, 19)
   }
   .veg{
     z-index: 10;
@@ -141,3 +141,12 @@
   #compost{
     min-height: 200px;
   }
+
+  .ui-state-default .ui-icon .ui-icon-trash {
+    background-image: url(icons/ui-icons_FFFFFF_256x240.png) !important;
+ }
+
+ .ui-icon {
+  width: 26px;
+  height: 26px;
+}
