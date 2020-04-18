@@ -1,8 +1,14 @@
 <?php
 $servername = "localhost";
-$db = "garden";
+$db = "gardencurrent";
 $username = "root";
 $password = "";
+
+// Server database
+// $servername = "localhost";
+// $db = "glitrash_gardenbliss";
+// $username = "glitrash_Kay";
+// $password = "GardenBliss20";
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$db", $username, $password);

@@ -1,4 +1,7 @@
 <?php
+    ob_start();
+?>
+<?php
 session_start();
 require 'includes/database.php';
 
@@ -8,6 +11,7 @@ $firstName = htmlspecialchars(!empty($_POST['firstName']) ? trim($_POST['firstNa
 $lastName = htmlspecialchars(!empty($_POST['lastName']) ? trim($_POST['lastName']) : null);
 $email = htmlspecialchars(!empty($_POST['email']) ? trim($_POST['email']) : null);
 $pass = htmlspecialchars(!empty($_POST['password']) ? trim($_POST['password']) : null);
+$passConfirm = htmlspecialchars(!empty($_POST['passwordC']) ? trim($_POST['passwordC']) : null);
 
 $upperCase = preg_match('@[A-Z]@', $pass);
 $lowerCase = preg_match('@[a-z]@', $pass);
@@ -41,6 +45,12 @@ elseif( !$upperCase || !$lowerCase || !$number || !$specialChars || strlen($pass
 
 elseif (stripos($pass, $username) !== false) {
     $_SESSION['errMsg'] ='Password cannot contain username!';
+    header('location:register.php');
+        exit;
+}
+
+elseif($pass !== $passConfirm) {
+    $_SESSION['errMsg'] ='Password doesn&#39;t match';
     header('location:register.php');
         exit;
 }
@@ -84,3 +94,6 @@ else{
 }
 }
 ?>
+<?php 
+  ob_end_flush();
+  ?>

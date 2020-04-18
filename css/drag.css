@@ -1,41 +1,18 @@
-  .plant {
-    position: relative;
-    height: 50px;
-    width: 50px;
-    top: 5px;
-    left: 5px;
-    cursor: pointer;
-  }
-  
-  .hold {
-    border: solid 5px #ccc;
-  }
-  
-  .gardenPlanner {
-    display: inline-block;
-    background: white;
-  }
-  
-  .hovered {
-    background: #f4f4f4;
-    border-style: dashed;
-  }
-  
+
   /* Garden Planner */
 .gardenPlanner {
-    width: 1000;
+    max-width: 1000px;
     height: auto;
     /* position: relative; */
     /* margin: 2em auto; */
    /* background-image: url(../images/grid.png);*/
-    z-index: 0;
     border-radius: 2px;
 }
 .gardenGrid {
     height: 500px;
     width: 100%;
-    z-index: 100;
-    background-image: url('../images/dirt.png');
+    max-height: 1000px;
+    /* background-image: url('../images/dirt.png'); */
   }
   .gardenGridRow, .gardenGridColumn, .gardenGrid {
     border-style: solid;
@@ -43,17 +20,14 @@
     border-color: burlywood;
     /* background-color: white; */
     margin: auto;
-    margin-top: 20px;
-    background-image: url('../images/dirt.png');
+    /* margin-top: 20px; */
+    /* background-image: url('../images/dirt.png'); */
   }
 
   .gardenGridColumn {
     transition: .3s ;
-    background-image: url('../images/dirt.png');
+    /* background-image: url('../images/dirt.png'); */
   }
-  /* .gardenGridColumn:hover {
-    background-color: grey;
-  } */
 
   .carousel-control-next, .carousel-control-prev {
     position: absolute;
@@ -71,4 +45,108 @@
     text-align: center;
     opacity: .5;
     transition: opacity .15s ease;
+}
+
+.drop{
+  width:100px;
+  min-height:109px;
+  float:left;
+  }
+.vegetableGarden{
+  width:100%;
+  border:1px solid #eee;
+  min-height:140px;
+  }
+.veg{
+  float:left;
+  width:100px;
+  }
+.droppable-hover{
+  background:grey;
+  }
+.clear{
+  clear:both;
+  }
+#trash { 
+  float: right; 
+  width: 32%; 
+  min-height: 18em; 
+  padding: 1%; 
+  }
+#trash h4 { 
+  line-height: 16px; 
+  margin: 0 0 0.4em; 
+  }
+#trash h4 .ui-icon { 
+  float: left; 
+  }
+#trash .gallery h5 {
+   display: none; 
+   }
+
+   .vegetableGarden li { 
+     float: left; 
+     width: 96px; 
+     padding: 0.4em; 
+     margin: 0 0.4em 0.4em 0; 
+     text-align: center; 
+    }
+  .vegetableGarden li h5 { 
+    margin: 0 0 0.4em; 
+    cursor: move; 
+  }
+  .vegetableGarden li a { 
+    float: right; 
+  }
+  .vegetableGarden li a.ui-icon-zoomin {
+     float: left; 
+    }
+  .vegetableGarden li img { 
+    width: 100%; 
+    cursor: move; 
+  }
+
+  #trash{
+    overflow-y : auto;
+     list-style-type: none;
+  }
+
+  
+
+  .garden tr td {
+    /* background-color: rgb(130,107,54); */
+    background-image: url('../icons/soil-texture-2.jpg');
+    /* opacity: 0.8; */
+    border: 3px solid rgb(93, 47, 19)
+  }
+  .veg{
+    z-index: 10;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    opacity: 1;
+  }
+  .table-responsive{
+    border-color: rgb(34, 29, 18);
+  }
+
+  .ui-icon-trash{
+    color: white;
+  }
+
+  .ui-icon{
+    display: inline-block;
+  }
+
+  #compost{
+    min-height: 200px;
+  }
+
+  .ui-state-default .ui-icon .ui-icon-trash {
+    background-image: url(icons/ui-icons_FFFFFF_256x240.png) !important;
+ }
+
+ .ui-icon {
+  width: 26px;
+  height: 26px;
 }

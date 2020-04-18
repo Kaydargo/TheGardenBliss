@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
   // Default size (row, col) 10w 10h
   grid(3,6);
@@ -27,7 +28,7 @@ function grid(rows, columns) {
     table += "<tr class='gardenGridRow'>";
     for (j=0; j<columns; j++) {
       // table += "<td id="+ j + "class='gardenGridColumn'>"+"</td>";
-      table += "<td class='gardenGridColumn'>"+"</td>";
+      table += "<td class='gardenGridColumn'>" + "<div id="+ j + " class='drop'></div>" + "</td>";
     }
     table += "</tr>";
   }

@@ -10,10 +10,7 @@ function scroll_to(clicked_link, nav_height) {
 		$('html, body').stop().animate({scrollTop: scroll_to}, 1000);
 	}
 }
-
-
 jQuery(document).ready(function() {
-	console.log('test');	
 	/*
 	    Navigation
 	*/
@@ -26,16 +23,10 @@ jQuery(document).ready(function() {
 	$('.top-content .text').waypoint(function() {
 		$('nav').toggleClass('navbar-no-bg');
 	});
-	
-    /*
-        Background slideshow
-    */
-
 
    if ( window.location.pathname.includes("index.php")) {
 	console.log('Home');
-    $('.top-content').backstretch("images/about-min.jpg");
-   
+    $('.top-content').backstretch("images/about-min.jpg");   
     $('#top-navbar-1').on('shown.bs.collapse', function(){
     	$('.top-content').backstretch("resize");
     });
@@ -43,9 +34,17 @@ jQuery(document).ready(function() {
     	$('.top-content').backstretch("resize");
     });
 	}
-
+	else if ( window.location.pathname.includes("plantInfo.php")){
+		$('.top-content').backstretch("images/PlantInfoHero.jpg");
+	   
+		$('#top-navbar-1').on('shown.bs.collapse', function(){
+			$('.top-content').backstretch("resize");
+		});
+		$('#top-navbar-1').on('hidden.bs.collapse', function(){
+			$('.top-content').backstretch("resize");
+		});
+	}
 	else if (window.location.pathname.includes("how-to.php")){
-		console.log('how to');
 		$('.top-content').backstretch("images/howTo.jpg");
 		$('.call-to-action-container').backstretch("images/HowToHero-min.jpg");
 		$('.testimonials-container').backstretch("images/HowToHero-min.jpg");
@@ -59,7 +58,6 @@ jQuery(document).ready(function() {
 	}
 
 	else if (window.location.pathname.includes("plants.php")){
-		console.log('plants');
 		$('.top-content').backstretch("images/plants_3-min.jpg");
     
 		$('#top-navbar-1').on('shown.bs.collapse', function(){
@@ -69,9 +67,7 @@ jQuery(document).ready(function() {
 			$('.top-content').backstretch("resize");
 		});
 	}
-
 	else if (window.location.pathname.includes("plantInfo.php")){
-		console.log('plants info');
 		$('.top-content').backstretch("images/PlantInfoHero-min.jpg");
     
 		$('#top-navbar-1').on('shown.bs.collapse', function(){
@@ -81,11 +77,8 @@ jQuery(document).ready(function() {
 			$('.top-content').backstretch("resize");
 		});
 	}
-
 	else if (window.location.pathname.includes('gardenPlanner.php')){
-		console.log('planner');
 		$('.top-content').backstretch("images/gardenPlanner-min.jpg");
-   
     
 		$('#top-navbar-1').on('shown.bs.collapse', function(){
 			$('.top-content').backstretch("resize");
@@ -94,14 +87,9 @@ jQuery(document).ready(function() {
 			$('.top-content').backstretch("resize");
 		});
 	}
-
 	else if (window.location.pathname.includes('login.php')){
 
 	}
-   
-	
-	
-
 
     $('a[data-toggle="tab"]').on('shown.bs.tab', function(){
     	$('.testimonials-container').backstretch("resize");
@@ -124,17 +112,37 @@ jQuery(window).load(function() {
 	
 });
 
-function myFunction() {
+var btn = document.querySelector(".button");
 
-	var btn = document.getElementById("myButton");
+btn.addEventListener("mouseover", function() {
+  this.textContent = "Unfavourite";
+  document.getElementById('myButton').style.backgroundColor="#ff1c14";
+  document.getElementById('myButton').style.borderColor="#ff1c14";
+})
+btn.addEventListener("mouseout", function() {
+  this.textContent = "Favourited";
+  document.getElementById('myButton').style.backgroundColor="#55a635";
+  document.getElementById('myButton').style.borderColor="#55a635";
+})
 
-	if (btn.value == "Add to Favourites") {
-		btn.value = "Favourited";
-		btn.innerHTML = "Favourited";
-	}
-	else {
-		btn.value = "Add to Favourites";
-		btn.innerHTML = "Add to Favourites";
-	}
 
-}
+// password validation
+function checkPasswordStrength() {
+	var number = /([0-9])/;
+	var alphabets = /([a-zA-Z])/;
+	var special_characters = /([~,!,@,#,$,%,^,&,*,-,_,+,=,?,>,<])/;
+	if($('#password').val().length<8) {
+	$('#password-strength-status').removeClass();
+	$('#password-strength-status').addClass('weak-password');
+	$('#password-strength-status').html("Weak: Should be atleast 8 characters");
+	} else {  	
+	if($('#password').val().match(number) && $('#password').val().match(alphabets) && $('#password').val().match(special_characters)) {            
+	$('#password-strength-status').removeClass();
+	$('#password-strength-status').addClass('strong-password');
+	$('#password-strength-status').html("Strong");
+	} else {
+	$('#password-strength-status').removeClass();
+	$('#password-strength-status').addClass('medium-password');
+	$('#password-strength-status').html("Medium: Uppercase, Lowercase, Numbers & Special characters required");
+	}}}
+

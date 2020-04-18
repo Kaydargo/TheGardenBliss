@@ -10,4 +10,3 @@ if(isset($_SESSION['timeout']) ) {
 		}
 }
 $_SESSION['timeout'] = time();
-?>

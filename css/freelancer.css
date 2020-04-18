@@ -24,7 +24,7 @@
   --white: #fff;
   --gray: #6c757d;
   --gray-dark: #343a40;
-  --primary: #41602d;
+  --primary: #2A551B;
   --secondary: #748C1C;
   --success: #28a745;
   --info: #17a2b8;
@@ -367,6 +367,7 @@ template {
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-top: 0.5em;
   margin-bottom: 0.5rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
@@ -4110,7 +4111,7 @@ input[type="button"].btn-block {
   }
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 1200px) {
   .navbar-expand-lg > .container,
   .navbar-expand-lg > .container-fluid {
     padding-right: 0;
@@ -4118,7 +4119,7 @@ input[type="button"].btn-block {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .navbar-expand-lg {
     flex-flow: row nowrap;
     justify-content: flex-start;
@@ -6220,7 +6221,7 @@ button.bg-primary:focus {
 }
 
 .bg-secondary {
-  background-color: #41602D !important;
+  background-color: #2A551B !important;
 }
 
 a.bg-secondary:hover, a.bg-secondary:focus,
@@ -7547,6 +7548,7 @@ button.bg-dark:focus {
 .mb-4,
 .my-4 {
   margin-bottom: 1.5rem !important;
+  margin-top: 1.5rem !important;
 }
 
 .ml-4,
@@ -9658,10 +9660,6 @@ a.text-dark:hover, a.text-dark:focus {
   color: #fff;
 }
 
-#mainNav .navbar-nav li.nav-item a.nav-link:hover {
-  color: #969594;
-}
-
 #mainNav .navbar-nav li.nav-item a.nav-link:active, #mainNav .navbar-nav li.nav-item a.nav-link:focus {
   color: #fff;
 }
@@ -9675,7 +9673,7 @@ a.text-dark:hover, a.text-dark:focus {
   padding: 0.8rem;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   #mainNav {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
