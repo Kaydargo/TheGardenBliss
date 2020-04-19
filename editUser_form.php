@@ -1,6 +1,23 @@
 <?php
     ob_start();
 ?>
+<?php
+include('includes/database.php');
+include("loginServ.php");
+?>
+<?php
+if (!isset($_SESSION['userID'])) {
+	header('Location: login.php');
+}
+$currentUser = $_SESSION['userID'];
+$getUserDetails = 'SELECT * FROM USERS WHERE userID = :userID';
+$statement = $conn->prepare($getUserDetails);
+$statement->bindValue(':userID', $currentUser);
+$statement->execute();
+$user = $statement->fetch();
+$statement->closeCursor();
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -22,23 +39,7 @@
 	</style>
 </head>
 <body>
-<?php
-include('includes/database.php');
-include("loginServ.php");
-?>
-<?php
-if (!isset($_SESSION['userID'])) {
-	header('Location: login.php');
-}
-$currentUser = $_SESSION['userID'];
-$getUserDetails = 'SELECT * FROM USERS WHERE userID = :userID';
-$statement = $conn->prepare($getUserDetails);
-$statement->bindValue(':userID', $currentUser);
-$statement->execute();
-$user = $statement->fetch();
-$statement->closeCursor();
 
-?>
 <?php
 
 if (!isset($_SESSION['userID'])) {
