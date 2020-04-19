@@ -1,19 +1,6 @@
 <?php
     ob_start();
 ?>
-<!DOCTYPE html>
-
-<head>
-<meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>User Profile</title>
-    <link href="css/graham.scss" rel="stylesheet">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/media-queries.css">
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="images/logo-w-text.png" />
-</head>
-<body>
 <?php
 
 include('includes/database.php');
@@ -36,6 +23,20 @@ $statement5->execute();
 $queries = $statement5->fetchAll();
 $statement5->closeCursor();
 ?>
+<!DOCTYPE html>
+
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>User Profile</title>
+    <link href="css/graham.scss" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/media-queries.css">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/logo-w-text.png" />
+</head>
+<body>
+
 <?php
 
 if (!isset($_SESSION['userID'])) {
