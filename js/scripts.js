@@ -131,6 +131,34 @@ btn.addEventListener("mouseout", function() {
   document.getElementById('myButton').style.borderColor="#55a635";
 })
 
+//username val
+	function checkUsernameStrength() {
+		if($('#username').val().length<6) {
+		$('#username-status').removeClass();
+		$('#username-status').addClass('weak-username');
+		$('#username-status').html("Atleast 6 characters required");
+		} else {
+		$('#username-status').removeClass();
+		$('#username-status').addClass('valid-username');
+		$('#username-status').html("Valid Username");
+		}
+	}
 
-
-
+	function checkPasswordStrength() {
+		var number = /([0-9])/;
+		var alphabets = /([a-zA-Z])/;
+		var special_characters = /([~,!,@,#,$,%,^,&,*,-,_,+,=,?,>,<])/;
+		if($('#password').val().length<8) {
+		$('#password-strength-status').removeClass();
+		$('#password-strength-status').addClass('weak-password');
+		$('#password-strength-status').html("Weak: Should be atleast 8 characters");
+		} else {  	
+		if($('#password').val().match(number) && $('#password').val().match(alphabets) && $('#password').val().match(special_characters)) {            
+		$('#password-strength-status').removeClass();
+		$('#password-strength-status').addClass('strong-password');
+		$('#password-strength-status').html("Strong");
+		} else {
+		$('#password-strength-status').removeClass();
+		$('#password-strength-status').addClass('medium-password');
+		$('#password-strength-status').html("Medium: Uppercase, Lowercase, Numbers & Special characters required");
+		}}}

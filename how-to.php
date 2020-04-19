@@ -334,7 +334,7 @@ include("loginServ.php");
 			<div class="row">
 				<div class="col blog section-description wow fadeIn">
 					<h3 class="plantName">Why not try these crops in your garden</h3>
-					<div class="divider-1 wow fadeInUp"><span></span></div>
+					<div class=" wow fadeInUp"><span></span></div>
 				</div>
 			</div>
 
@@ -343,7 +343,7 @@ include("loginServ.php");
 					<div class="row">
 						<div class="col-md-3">
 							<div class="blog-box-image">
-								<img src="images/carrot.jpg" alt="" data-at2x="images/tulips.jpg">
+								<img src="images/tulips.jpg" alt="" data-at2x="images/tulips.jpg">
 							</div>
 						</div>
 						<div class="col-md-9">
@@ -359,7 +359,7 @@ include("loginServ.php");
 					<div class="row">
 						<div class="col-md-3">
 							<div class="blog-box-image">
-								<img src="images/apple.jpg" alt="" data-at2x="images/lettuce.jpg">
+								<img src="images/lettuce.jpg" alt="" data-at2x="images/lettuce.jpg">
 							</div>
 						</div>
 						<div class="col-md-9">
@@ -378,7 +378,7 @@ include("loginServ.php");
 					<div class="row">
 						<div class="col-md-3">
 							<div class="blog-box-image">
-								<img src="images/garlic.jpg" alt="" data-at2x="images/parsley.jpg">
+								<img src="images/parsley.jpg" alt="" data-at2x="images/parsley.jpg">
 							</div>
 						</div>
 						<div class="col-md-9">
@@ -395,7 +395,7 @@ include("loginServ.php");
 					<div class="row">
 						<div class="col-md-3">
 							<div class="blog-box-image">
-								<img src="images/daffodil.png" alt="" data-at2x="images/roses.jpg">
+								<img src="images/roses.jpg" alt="" data-at2x="images/roses.jpg">
 							</div>
 						</div>
 						<div class="col-md-9">
