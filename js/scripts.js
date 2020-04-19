@@ -145,3 +145,15 @@ function checkPasswordStrength() {
 	$('#password-strength-status').html("Medium: Uppercase, Lowercase, Numbers & Special characters required");
 	}}}
 
+
+	//username val
+	function checkUsernameStrength() {
+		if($('#username').val().length<6) {
+		$('#username-status').removeClass();
+		$('#username-status').addClass('weak-username');
+		$('#username-status').html("Atleast 6 characters required");
+		} else {
+		$('#username-status').removeClass();
+		$('#username-status').addClass('valid-username');
+		$('#username-status').html("valid-username");
+		}}

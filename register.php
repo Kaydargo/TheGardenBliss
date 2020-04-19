@@ -52,7 +52,12 @@ if (!isset($_SESSION['userID'])) {
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-user"></i></span>
 							</div>
-							<input type="text" name="username" class="form-control input_user" placeholder="Username">
+							<input type="text" id="username" name="username" class="form-control input_user" placeholder="Username" onKeyUp="checkUsernameStrength()">
+						</div>
+						<div class="sub mb-2">
+							<div class="username-status">
+								<div id="username-status"></div>
+							</div>
 						</div>
 						<div class="input-group mb-3">
 							<div class="input-group-append">
