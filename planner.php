@@ -20,8 +20,10 @@ include('includes/functions.php');
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="css/drag.css">
   <link rel="stylesheet" href="css/graham.scss">
+  <link rel="stylesheet" href="css/jquery-ui.css">
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-
+  <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/media-queries.css">
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
@@ -253,7 +255,7 @@ else{
         <script src="js/garden-size.js"></script>
         <script src="js/weatherBit.js"></script>
         <script src="js/main.js"></script>
-        <script src="js/scripts.js"></script> 
+        <script src="js/scripts.js"></script>
 </body>
 </html>
 

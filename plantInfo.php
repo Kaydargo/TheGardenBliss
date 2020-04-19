@@ -75,10 +75,7 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-
-
 <html>
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -94,7 +91,6 @@ if (!isset($_SESSION['userID'])) {
   include('includes/header2.php');
 }
 ?>
-
 <body>
   <br><br><br>
   <div class="top-content">
@@ -139,12 +135,16 @@ if (!isset($_SESSION['userID'])) {
         </form>
         
       </div>
-      <div class="col-sm-2">
-      <?php foreach ($plantsInfo as $plantInfo) : ?>
-        <h3  class="plantName"><?php echo $plant['plantName'];?> QR</h3>
-        <?= ($plantInfo['infoImage'] <> " " ? "<img class='card-img-top' alt='' style='width:100%; height:auto;' src='qr/{$plantInfo['infoImage']}'/>" : "") ?>
+
+        <?php if(empty($plantInfo['infoImage'])) : ?>
+          <?php foreach ($plantsInfo as $plantInfo) : ?>
+          <div class="col-sm-2">    
+        <h3  class="plantName"><?php echo $plant["plantName"];?> QR</h3>
+        <?= ($plantInfo["infoImage"] <> " " ? "<img class='card-img-top' alt='' style='width:100%; height:auto;' src='qr/{$plantInfo['infoImage']}'/>" : "") ?>
         <?php endforeach ?>
         </div>
+        <?php endif; ?>
+
     </div>
   </div>
   <br><br>
