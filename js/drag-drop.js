@@ -53,12 +53,12 @@ $(document).ready(function(){
       drop: function(ev, ui) {
       if ($(this).html() == ""){
           $(this).append($(ui.draggable).clone());
-          $(this).children("li").append("<span><a href='' title='Delete this image' class='ui-icon ui-icon-trash'></a></span>");
+          $(this).children("li").append("<span><a href='' title='Move to Compost' class='ui-icon ui-icon-trash'></a></span>");
           $(this).find("h5").remove();
       }
       else{
          $(this).empty().append($(ui.draggable).clone());
-         $(this).children("li").append("<span><a href='' title='Delete this image' class='ui-icon ui-icon-trash'></a></span>");
+         $(this).children("li").append("<span><a href='' title='Move to Compost' class='ui-icon ui-icon-trash'></a></span>");
           $(this).find("h5").remove();
       }
       }

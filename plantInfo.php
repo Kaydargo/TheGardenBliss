@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+<?php
+    ob_start();
+?>
 <?php
 include('includes/database.php');
 include("loginServ.php");
@@ -64,8 +61,6 @@ if (isset($_POST['removeFav'])) {
   $result = $stmt2->execute();
   echo "<meta http-equiv='refresh' content='0'>";
 }
-
-
 $currentPlantType = $plant['type'];
 
 $queryPlantType = "SELECT plantImage, plantName FROM plant WHERE type='$currentPlantType'";
@@ -74,9 +69,13 @@ $statement3->execute();
 $plantsType = $statement3->fetchAll();
 $statement3->closeCursor();
 ?>
-
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
 <html>
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -92,7 +91,6 @@ if (!isset($_SESSION['userID'])) {
   include('includes/header2.php');
 }
 ?>
-
 <body>
   <br><br><br>
   <div class="top-content">
@@ -116,10 +114,10 @@ if (!isset($_SESSION['userID'])) {
 
   <div class="container">
     <div class="row row1">
-      <div class="col-sm-6">
+      <div class="col-sm-5">
         <?php echo "<img class='image1 img-fluid' src='images/" . $plant['plantImage'] . "' />"; ?>
       </div>
-      <div class="col-sm-6">
+      <div class="col-sm-5">
         <h3 class="plantName"><?php echo $plant['plantName']; ?></h3>
         <p><?php echo $plant['description']; ?></p>
         <form method="post">
@@ -135,7 +133,18 @@ if (!isset($_SESSION['userID'])) {
             <span>You must be logged in to favourite</span>
           <?php endif ?>
         </form>
+        
       </div>
+
+        <?php if(empty($plantInfo['infoImage'])) : ?>
+          <?php foreach ($plantsInfo as $plantInfo) : ?>
+          <div class="col-sm-2">    
+        <h3  class="plantName"><?php echo $plant["plantName"];?> QR</h3>
+        <?= ($plantInfo["infoImage"] <> " " ? "<img class='card-img-top' alt='' style='width:100%; height:auto;' src='qr/{$plantInfo['infoImage']}'/>" : "") ?>
+        <?php endforeach ?>
+        </div>
+        <?php endif; ?>
+
     </div>
   </div>
   <br><br>
@@ -236,7 +245,7 @@ if (!isset($_SESSION['userID'])) {
     </div>
   </div>
 
-  <br><br><br>
+  <br><br>
   <div class="container-fluid">
     <div class="container pad">
       <?php foreach ($plantsInfo as $plantInfo) : ?>
@@ -251,7 +260,7 @@ if (!isset($_SESSION['userID'])) {
             </ol>
           </div>
           <div class="col-sm-6">
-            <?php echo "<img class='image1' src='images/plant2.jpg" . $plantInfo['infoImage'] . "' />"; ?>
+            <?php echo "<img class='image1' src='images/plant2.jpg" . "' />"; ?>
           </div>
         </div>
     </div>
@@ -325,3 +334,6 @@ include('includes/footer.php');
 <!-- <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script> -->
 
 </html>
+<?php 
+  ob_end_flush();
+  ?>
