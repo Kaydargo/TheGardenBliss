@@ -76,16 +76,16 @@ jQuery(document).ready(function() {
 			$('.top-content').backstretch("resize");
 		});
 	}
-	else if (window.location.pathname.includes('planner.php')){
-		$('.top-content').backstretch("images/IMG_0305-min.jpg");
+	// else if (window.location.pathname.includes('planner.php')){
+	// 	$('.top-content').backstretch("images/IMG_0305-min.jpg");
     
-		$('#top-navbar-1').on('shown.bs.collapse', function(){
-			$('.top-content').backstretch("resize");
-		});
-		$('#top-navbar-1').on('hidden.bs.collapse', function(){
-			$('.top-content').backstretch("resize");
-		});
-	}
+	// 	$('#top-navbar-1').on('shown.bs.collapse', function(){
+	// 		$('.top-content').backstretch("resize");
+	// 	});
+	// 	$('#top-navbar-1').on('hidden.bs.collapse', function(){
+	// 		$('.top-content').backstretch("resize");
+	// 	});
+	// }
 	else if (window.location.pathname.includes('login.php')){
 
 	}
